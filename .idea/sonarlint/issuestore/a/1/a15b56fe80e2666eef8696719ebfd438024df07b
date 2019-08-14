@@ -1,0 +1,11 @@
+
+vsquid:S1602"SRemove useless curly braces around statement and then remove useless return keyword(øì÷—şÿÿÿÿ8›¹í—½-
+Dsquid:S1170"!Make this final field static too.(ïèğ£ÿÿÿÿÿ8›¹í—½-
+?squid:S1170"!Make this final field static too.(ìãÈ×8›¹í—½-
+¤squid:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëé³×øÿÿÿÿ8›¹í—½-
+Ÿsquid:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(åº³8›¹í—½-
+?squid:S1170"!Make this final field static too.(üÓšç8›¹í—½-
+\squid:S1068"9Remove this unused "sqlSelectUserWithCars" private field.(ïèğ£ÿÿÿÿÿ8›¹í—½-
+]squid:UselessImportCheck	"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8›¹í—½-
+¤squid:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ç¢Èøÿÿÿÿ8›¹í—½-
+Ysquid:UselessImportCheck"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8›¹í—½-

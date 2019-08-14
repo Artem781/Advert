@@ -1,0 +1,10 @@
+
+Dsquid:S1989("&Add a "try/catch" block for "forward".(‚„ˆ„8İ´µ”½-
+bsquid:S2147"DCombine this catch with the one at line 29, which has the same body.(É®£8“››™½-
+;squid:S1989<"Add a "try/catch" block.(ª¢ùÅıÿÿÿÿ8İ´µ”½-
+rsquid:S20954"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ô£Çàıÿÿÿÿ8İ´µ”½-
+bsquid:S2147!"DCombine this catch with the one at line 29, which has the same body.(ıàÑÎ8“››™½-
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(—¸»Èıÿÿÿÿ8İ´µ”½-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(’•ìËûÿÿÿÿ8İ´µ”½-
+vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÿ›ÅÒ8İ´µ”½-
+Dsquid:S1989("&Add a "try/catch" block for "forward".(‚„ˆ„8İ´µ”½-

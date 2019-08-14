@@ -1,0 +1,8 @@
+
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÍÅÃ8ÖÎæ€É-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÍ²¹8ÖÎæ€É-
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(›€£°şÿÿÿÿ8ÖÎæ€É-
+isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(ÖÌ“Ú8ÖÎæ€É-
+V
+squid:S106'"9Replace this use of System.out or System.err by a logger.(º”÷ë8ÖÎæ€É-
+^squid:S1854&";Remove this useless assignment to local variable "service".(»¿æùÿÿÿÿ8ÖÎæ€É-

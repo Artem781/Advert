@@ -1,0 +1,13 @@
+
+Hsquid:S1481""*Remove this unused "users" local variable.(Ğ÷¤¤8¼ò•½-
+jsquid:S2095E"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(øõ‰èûÿÿÿÿ8¼ò•½-
+Ÿsquid:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(åº³8¼ò•½-
+Wsquid:S1854""9Remove this useless assignment to local variable "users".(Ğ÷¤¤8¼ò•½-
+rsquid:S2095#"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(­ìçÖüÿÿÿÿ8¼ò•½-
+?squid:S1170"!Make this final field static too.(üÓšç8¼ò•½-
+¤squid:S11862"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëé³×øÿÿÿÿ8¼ò•½-
+esquid:S2095%"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¼ò•½-
+Dsquid:S1170"!Make this final field static too.(ÓŒáĞøÿÿÿÿ8¼ò•½-
+¤squid:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ç¢Èøÿÿÿÿ8¼ò•½-
+Isquid:S1168"+Return an empty collection instead of null.(¥¹ï8¼ò•½-
+jsquid:S2095D"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8¼ò•½-

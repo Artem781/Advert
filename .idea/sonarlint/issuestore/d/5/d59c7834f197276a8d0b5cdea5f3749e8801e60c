@@ -1,0 +1,9 @@
+
+vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÿ›ÅÒ8Ôê˜å½-
+wsquid:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8Ôê˜å½-
+bsquid:S2147$"DCombine this catch with the one at line 32, which has the same body.(ıàÑÎ8Ôê˜å½-
+fsquid:S1192/"HDefine a constant instead of duplicating this literal "counter" 3 times.(ŸÜá”8Ôê˜å½-
+Isquid:S19899"&Add a "try/catch" block for "forward".(®åå¬şÿÿÿÿ8Ôê˜å½-
+bsquid:S2147""DCombine this catch with the one at line 32, which has the same body.(É®£8Ôê˜å½-
+Lsquid:S1068".Remove this unused "connection" private field.(ÿ›ÅÒ8Ôê˜å½-
+Isquid:S19899"&Add a "try/catch" block for "forward".(®åå¬şÿÿÿÿ8Ôê˜å½-

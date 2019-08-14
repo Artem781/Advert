@@ -1,0 +1,13 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªìşúÿÿÿÿ8Ôİ¦åÈ-
+nsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8à¦åÈ-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…Êãs8à¦åÈ-
+jsquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8Ôİ¦åÈ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÀÚğ×8Ôİ¦åÈ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ä‘×Ş8Ôİ¦åÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ØÙïùÿÿÿÿ8Ôİ¦åÈ-
+nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ôãªéøÿÿÿÿ8à¦åÈ-

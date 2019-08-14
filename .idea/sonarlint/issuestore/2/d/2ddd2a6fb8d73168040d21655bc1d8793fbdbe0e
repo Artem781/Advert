@@ -1,0 +1,16 @@
+
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(»áË¼8ğıÃıÈ-
+Csquid:S2129	" Remove this "String" constructor(Ş¡ã¶şÿÿÿÿ8ğıÃıÈ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(™ïòÊ8Û°®ıÈ-
+Šsquid:S1192"lDefine a constant instead of duplicating this literal "Ğ’Ğ¾Ğ·Ğ²Ñ€Ğ°Ñ‰Ğ°ĞµĞ¼Ğ¾Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ: " 3 times.(™ïòÊ8ğıÃıÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(´˜àÔüÿÿÿÿ8ğıÃıÈ-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âó¿Ãÿÿÿÿÿ8ê£­ıÈ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(»áË¼8ğıÃıÈ-
+usquid:S00117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¡ã¶şÿÿÿÿ8ğıÃıÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(øııÃûÿÿÿÿ8ğıÃıÈ-
+Csquid:S2129" Remove this "String" constructor(âó¿Ãÿÿÿÿÿ8ê£­ıÈ-

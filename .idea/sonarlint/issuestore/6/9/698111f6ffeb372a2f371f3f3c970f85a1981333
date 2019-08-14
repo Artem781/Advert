@@ -1,0 +1,19 @@
+
+tsquid:S2068"V'Password' detected in this expression, review this potentially hard-coded credential.(ÔØà²8…ª“±À-
+[
+squid:S1068"9Replace this use of System.out or System.err by a logger.(¸„Û¤ùÿÿÿÿ8…ª“±À-
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(ñ¥Ó„øÿÿÿÿ8òú¹È-
+nsquid:CommentedOutCodeLineG"<This block of commented-out lines of code should be removed.(‡ÛÂÎüÿÿÿÿ8…ª“±À-
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8…ª“±À-
+Rsquid:S1481"/Remove this unused "someString" local variable.(ü®ÈÓüÿÿÿÿ8…ª“±À-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ûþ€Õûÿÿÿÿ8…ª“±À-
+Isquid:S1481"+Remove this unused "dbUser" local variable.(…×­Ê8…ª“±À-
+nsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(’•ìËûÿÿÿÿ8…ª“±À-
+[
+squid:S106F"9Replace this use of System.out or System.err by a logger.(‘–ï”ÿÿÿÿÿ8…ª“±À-
+V
+squid:S106="9Replace this use of System.out or System.err by a logger.(ÀÚð×8¾ýõäÈ-
+Msquid:S1481"/Remove this unused "dbPassword" local variable.(ÔØà²8…ª“±À-
+ysquid:S2068+"V'password' detected in this expression, review this potentially hard-coded credential.(ðÏåŠÿÿÿÿÿ8…ª“±À-
+Msquid:S1481 "*Remove this unused "dbUrl" local variable.(ôíÇ×úÿÿÿÿ8…ª“±À-
+=squid:S20686" Remove this hard-coded password.(ýˆü8„†åÈ-
