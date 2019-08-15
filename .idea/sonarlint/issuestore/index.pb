@@ -119,8 +119,6 @@ n
 .src/main/java/by/it/databasetask/jsp/login.jsp,0\2\02b82d496df4c70277c51977523b44fcb56d2989
 Q
 !src/main/webapp/jsppage/error.jsp,f\5\f5b62fc100a6cf3d37f3682e994fa3b9a07ca9e3
-P
- src/main/webapp/jsppage/main.jsp,6\7\67a0938bffa59fadc6bcf6b601c41f47e75c2efe
 ^
 .src/main/java/by/it/databasetask/jsp/index.jsp,a\b\abc91d0806dd89277ec606ce8e7863be5c1741c9
 X
@@ -195,3 +193,5 @@ z
 Jsrc/main/java/by/it/advertproject/command/impl/ForwardToSignUpCommand.java,3\7\3705ff813d3a8755a3131b2278f57e8331bd512c
 q
 Asrc/main/java/by/it/advertproject/command/impl/SignInCommand.java,8\e\8ee409a878cb74a605e971a3aa41c720e1b427fc
+W
+'src/main/webapp/jsppage/userprofile.jsp,1\4\14ceee385c0eb07c3255f847c5e134ef3024ab15

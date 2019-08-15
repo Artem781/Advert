@@ -28,6 +28,8 @@ public class SignInCommand implements Command {
 //            page = ConfigurationManager.getProperty("path.page.main");
             page = "/jsppage/userprofile.jsp";
         } else {
+            request.setAttribute( "patternLogin","Login contains: letters, numbers, hyphens and underscores, from 3 to 16 characters.");
+            request.setAttribute( "patternPassword","Password contains: letters, numbers, hyphens and underscores, from 6 to 18 characters.");
             request.setAttribute("errorLoginPassMessage",
 //                    MessageManager.getProperty("message.loginerror"));
                     "incorrect login or password");

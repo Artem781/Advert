@@ -99,7 +99,8 @@
                 <label class="col-md-4 control-label" for="login">Login:</label>
                 <div class="col-md-4">
                     <input id="login" name="login" value="" type="text" placeholder=""
-                           class="form-control input-md" required="">
+                           class="form-control input-md" required="" pattern="^[a-z0-9_-]"
+                           minlength="3" maxlength="16">
 
                 </div>
             </div>
@@ -109,7 +110,8 @@
                 <label class="col-md-4 control-label" for="passwordinput">Password:</label>
                 <div class="col-md-4">
                     <input id="passwordinput" name="password" value="" type="password" placeholder=""
-                           class="form-control input-md" required="">
+                           class="form-control input-md" required="" pattern="^[a-z0-9_-]"
+                           minlength="6" maxlength="18">
                     <span class="help-block"></span>
                 </div>
             </div>
@@ -129,6 +131,10 @@
     </form>
     <br/>
     ${errorLoginPassMessage}
+    <br/>
+    ${patternLogin}
+    <br/>
+    ${patternPassword}
     <br/>
     ${wrongAction}
     <br/>
