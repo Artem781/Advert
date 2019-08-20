@@ -120,7 +120,7 @@ public class Account extends Bean {
             return this;
         }
 
-        public Builder withDateOfBirth(String dateOfBirth) {
+        public Builder withBirthday(String dateOfBirth) {
             account.birthday = dateOfBirth;
             return this;
         }

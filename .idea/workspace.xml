@@ -6,22 +6,79 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="advert added main package">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b968157a82b423f530842e9cb6882aa491de67e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b968157a82b423f530842e9cb6882aa491de67e" afterDir="false" />
+    <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="add pattern login and psw">
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a4c0e74edefc0a6ce4e583a4f90082fdb915c35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a4c0e74edefc0a6ce4e583a4f90082fdb915c35" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43c9a4fb292dc82bb458a56c43d6a5c494ffee4a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43c9a4fb292dc82bb458a56c43d6a5c494ffee4a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46ee7fc6d94696b0ccca06a9716cee74164afefd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46ee7fc6d94696b0ccca06a9716cee74164afefd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67a0938bffa59fadc6bcf6b601c41f47e75c2efe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7efd2db131e78726a905f3f66f48ecd7b4f4915c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7efd2db131e78726a905f3f66f48ecd7b4f4915c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81ede254c10041724dcadf86c9150abd91c61e08" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81ede254c10041724dcadf86c9150abd91c61e08" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b823b69e5fdc150ac65ed66567b109fb57b084c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b823b69e5fdc150ac65ed66567b109fb57b084c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/701e09d278b3bc32a95bb64bb34a8d85bd99fbba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/701e09d278b3bc32a95bb64bb34a8d85bd99fbba" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ee409a878cb74a605e971a3aa41c720e1b427fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ee409a878cb74a605e971a3aa41c720e1b427fc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9ca1a5d09f3fde1583c6bae3377fede2dc052420" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9ca1a5d09f3fde1583c6bae3377fede2dc052420" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a17ccbc0e9a152625113590104f813c79ef2d8b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a17ccbc0e9a152625113590104f813c79ef2d8b2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e28c2b69093ce2680b5169046dd56a3ce8044c60" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e28c2b69093ce2680b5169046dd56a3ce8044c60" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff9d14251a198c5ad8a0a99cf9a479269936411" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff9d14251a198c5ad8a0a99cf9a479269936411" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af5ae3f88ebd1defe3a80537024c437ba97a02f1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af5ae3f88ebd1defe3a80537024c437ba97a02f1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/bae18c6a99937ed136853b276ca33b8ad71945af" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/bae18c6a99937ed136853b276ca33b8ad71945af" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9bb109136ca97dd4cf5b39101d7b96e1852e464" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9bb109136ca97dd4cf5b39101d7b96e1852e464" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BeanCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BeanCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/bean/Account$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/bean/Account$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/bean/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/bean/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignInCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignInCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignUpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/AccountDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BeanCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BeanCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/TaskCookieServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/TaskSessionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/TestDaoFinalPrj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/controller/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/controller/Tools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/dao/InnerJoinById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/dao/InterfaceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/daoB/BaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/filter/EncodeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/filter/ImagesFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/pool/Connect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/pool/ConnectionCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/pool/CustomConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/databasetask/pool/ProxyConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignInCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignInCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignUpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/AccountDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BeanCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BeanCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/TaskCookieServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/TaskSessionServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/TestDaoFinalPrj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/controller/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/controller/Tools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/dao/InnerJoinById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/dao/InterfaceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/daoB/BaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/filter/EncodeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/filter/ImagesFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/pool/Connect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/pool/ConnectionCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/pool/CustomConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/databasetask/pool/ProxyConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/userprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/jsppage/userprofile.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,7 +127,7 @@
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="anaron: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="advert: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="roles: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -84,10 +141,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="864">
+              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,49 +153,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="113" column="54" selection-start-line="113" selection-start-column="54" selection-end-line="113" selection-end-column="54" />
+            <state relative-caret-position="3864">
+              <caret line="161" column="45" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/login.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="1968">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="504">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
-                <element signature="e#2041#2042#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/error.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+            <state relative-caret-position="1632">
+              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+              <folding>
+                <element signature="method#validatePasswordAndLogin#0;class#AccountService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -150,12 +210,12 @@
       <list>
         <option value="AnnotationType" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="jsf" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -179,17 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/it/databasetask/controller/FrontController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/TesterDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/TesterPool.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/signupsubmit.css" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/BaseDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/DbResourceManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/exception/ServiceException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/loginform.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/include/head.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/login.jsp" />
@@ -223,13 +272,24 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/logout.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/FrontController.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountServiceI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/impl/AccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Parameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/impl/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BeanCreator.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountDaoImplTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java" />
       </list>
     </option>
   </component>
@@ -248,10 +308,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-24" />
-    <option name="y" value="4" />
-    <option name="width" value="1380" />
-    <option name="height" value="358" />
+    <option name="x" value="654" />
+    <option name="y" value="5" />
+    <option name="width" value="711" />
+    <option name="height" value="756" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -259,6 +319,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,7 +381,7 @@
               <item name="by" type="462c0819:PsiDirectoryNode" />
               <item name="it" type="462c0819:PsiDirectoryNode" />
               <item name="advertproject" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="tester" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Advert" type="b2602c69:ProjectViewProjectNode" />
@@ -331,19 +392,8 @@
               <item name="by" type="462c0819:PsiDirectoryNode" />
               <item name="it" type="462c0819:PsiDirectoryNode" />
               <item name="advertproject" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Advert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="5. Database example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="by" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="advertproject" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="tester" type="462c0819:PsiDirectoryNode" />
+              <item name="examl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Advert" type="b2602c69:ProjectViewProjectNode" />
@@ -365,7 +415,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,7 +422,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565859332133" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566321493497" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -386,8 +435,11 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.it.advertproject.daofinalprj.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\avatar" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\java\by\it\databasetask" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\jsp\testjsp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp" />
@@ -399,11 +451,8 @@
       <recent name="by.it.advertproject.filter" />
       <recent name="by.it.advertproject.connectionpool" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\avatar" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\java\by\it\databasetask" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\jsp\testjsp" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.it.advertproject.daofinalprj.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -418,13 +467,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tommy">
-    <configuration name="AccountService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.service.AccountService" />
+  <component name="RunManager" selected="Application.NamesMethodLikeConstructor">
+    <configuration name="AccountDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.AccountDaoImplTester" />
       <module name="advert" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.service.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -438,6 +487,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="by.it.advertproject.tester.examl.methodcallinmethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NamesMethodLikeConstructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.namesmethodlikeconstructor.NamesMethodLikeConstructor" />
+      <module name="advert" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.namesmethodlikeconstructor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -543,93 +605,21 @@
         </option>
       </method>
     </configuration>
-    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
-      <deployment>
-        <artifact name="5. Database example:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="index_jsp_5__Database_example_3" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55789" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="5. Database example:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.PoolTester" />
       <item itemvalue="Application.Program" />
       <item itemvalue="Application.CallInSout" />
+      <item itemvalue="Application.AccountDaoImplTester" />
+      <item itemvalue="Application.NamesMethodLikeConstructor" />
       <item itemvalue="Tomcat Server.Tommy" />
-      <item itemvalue="Tomcat Server.index.jsp" />
-      <item itemvalue="Application.AccountService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AccountService" />
-        <item itemvalue="Application.CallInSout" />
+        <item itemvalue="Application.NamesMethodLikeConstructor" />
+        <item itemvalue="Application.AccountDaoImplTester" />
         <item itemvalue="Application.PoolTester" />
+        <item itemvalue="Application.CallInSout" />
         <item itemvalue="Application.Program" />
-        <item itemvalue="Tomcat Server.index.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -732,7 +722,14 @@
       <workItem from="1565774689021" duration="11118000" />
       <workItem from="1565788330956" duration="8083000" />
       <workItem from="1565802072760" duration="97000" />
-      <workItem from="1565856453268" duration="2826000" />
+      <workItem from="1565856453268" duration="5037000" />
+      <workItem from="1565862338075" duration="1198000" />
+      <workItem from="1565865036933" duration="11606000" />
+      <workItem from="1565948499578" duration="3051000" />
+      <workItem from="1565988686499" duration="742000" />
+      <workItem from="1566063325563" duration="6283000" />
+      <workItem from="1566234216203" duration="1432000" />
+      <workItem from="1566321103366" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -741,11 +738,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565678607623</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add pattern login and psw">
+      <created>1565859389781</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565859389781</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345665000" />
+    <option name="totallyTimeSpent" value="372559000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -758,28 +762,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6344086" visible="true" weight="0.1762481" />
-      <window_info id="Structure" order="1" sideWeight="0.3655914" side_tool="true" weight="0.16792738" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6344086" visible="true" weight="0.3494705" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Structure" order="4" sideWeight="0.3655914" side_tool="true" weight="0.16693419" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="0" weight="0.32872504" />
+      <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49924356" weight="0.32872504" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32718894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41013825" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49924356" weight="0.1920123" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49924356" weight="0.46388444" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.39170507" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.47772658" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32872504" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.43317974" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Regex Tester" order="12" weight="0.32872504" />
       <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32872504" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -793,10 +796,48 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.204236" />
+      <window_info anchor="right" id="Database" order="6" weight="0.22541603" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6344086" visible="true" weight="0.17549168" />
+      <window_info id="Structure" order="1" sideWeight="0.3655914" side_tool="true" weight="0.16792738" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49924356" weight="0.32872504" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32718894" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41013825" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49924356" weight="0.4654378" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.39170507" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.47772658" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32872504" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Regex Tester" order="12" weight="0.32872504" />
+      <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32872504" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.3258786" />
+      <window_info anchor="bottom" id="Application Servers" order="16" weight="0.32872504" />
+      <window_info anchor="bottom" id="Java Enterprise" order="17" weight="0.3258786" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.23041475" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.22541603" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -804,108 +845,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="advert" />
     <MESSAGE value="advert added main package" />
-    <option name="LAST_COMMIT_MESSAGE" value="advert added main package" />
+    <MESSAGE value="add pattern login and psw" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pattern login and psw" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/app.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/greetings.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/Res.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A0.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Child.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/classesmistaces/Parent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12590">
-          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-          <folding>
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5913#5914#0" expanded="true" />
-            <element signature="e#10225#10226#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/TesterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -974,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/methodcallinmethod/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -995,16 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/PoolTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,13 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -1066,13 +986,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>
@@ -1118,20 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a/schema/anaron/table/accounts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1166,38 +1065,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="408">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        <state relative-caret-position="2160">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/PoolTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Advert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Bean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/SecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2733">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BeanCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountDaoImplTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a/schema/anaron/table/accounts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="113" column="54" selection-start-line="113" selection-start-column="54" selection-end-line="113" selection-end-column="54" />
+        <state relative-caret-position="291">
+          <caret line="116" column="34" selection-start-line="116" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3864">
+          <caret line="161" column="45" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="504">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1206,11 +1240,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        <state relative-caret-position="1632">
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
           <folding>
-            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="method#validatePasswordAndLogin#0;class#AccountService#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>

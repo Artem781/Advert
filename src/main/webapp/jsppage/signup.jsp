@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<!--REGISTRATION - SIGN UP  -->
+<!--REGISTRATION - SIGN UP -->
 <html>
 <head>
     <title>Sign up</title>
@@ -58,7 +58,7 @@
                 <%--</li>--%>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Advert" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
@@ -72,85 +72,118 @@
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=forward_to_sign_up">Sign up</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=Logout">Logout</a>
-                </li>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="controller?command=Logout">Logout</a>--%>
+                <%--</li>--%>
             </ul>
 
         </div>
     </nav>
-<%--</div>--%>
-<form class="form-horizontal" action="controller" method="post">
-    <input type="hidden" name="command" value="signup" />
-    <fieldset>
+    <%--</div>--%>
+    <form class="form-horizontal" action="controller" method="post">
+        <input type="hidden" name="command" value="sign_up"/>
+        <input type="hidden" name="accesslevel" value="user"/>
+        <fieldset>
 
-        <!-- Form Name -->
-        <legend>Sign up</legend>
+            <!-- Form Name -->
+            <legend>Sign up</legend>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Name</label>
-            <div class="col-md-4">
-                <input id="name" name="name" type="text" placeholder="enter your name" class="form-control input-md" required="">
+            <!-- Name input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name">Name:*</label>
+                <div class="col-md-4">
+                    <input id="name" name="name" type="text" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block">
+                        The first name is between 1 and 25 characters.
+                        The first name can only start with an a-z (ignore case) character.
+                        After that the first name can contain a-z (ignore case) and [ '-,.].
+                        The first name can only end with an a-z (ignore case) character.
+                    </span>
 
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="login">Login</label>
-            <div class="col-md-4">
-                <input id="login" name="login" type="text" placeholder="enter login" class="form-control input-md" required="">
-                <span class="help-block">login min 5 symbols</span>
+            <!-- Login input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="login">Login:*</label>
+                <div class="col-md-4">
+                    <input id="login" name="login" type="text" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block">
+                    Login contains: letters, numbers, hyphens and underscores,
+                    from 3 to 16 characters.
+                    </span>
+                </div>
             </div>
-        </div>
 
-        <!-- Password input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="password">Password Input</label>
-            <div class="col-md-4">
-                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
-                <span class="help-block">min 8 symbols</span>
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordfirst">Password input:*</label>
+                <div class="col-md-4">
+                    <input id="passwordfirst" name="passwordfirst" type="password" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block">
+                        Password contains: letters, numbers, hyphens and underscores,
+                        from 6 to 18 characters.
+                    </span>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="tel">Telephone</label>
-            <div class="col-md-4">
-                <input id="tel" name="tel" type="text" placeholder="enter telephone number" class="form-control input-md" required="">
-                <span class="help-block">9 symols</span>
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordsecond">Password input confirm:*</label>
+                <div class="col-md-4">
+                    <input id="passwordsecond" name="passwordsecond" type="password" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block"></span>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="dateofbirth">Date of birth</label>
-            <div class="col-md-4">
-                <input id="dateofbirth" name="dateofbirth" type="text" placeholder="year month day" class="form-control input-md" required="">
-                <span class="help-block">help</span>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="dateofbirth">Birthday*</label>
+                <div class="col-md-4">
+                    <input id="dateofbirth" name="birthday" type="text" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block">
+                        This expression matches dates formatted as MM/DD/YYYY where months
+                        and days must be 2 digits each, zero padded.
+                    </span>
+                </div>
             </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">E-mail</label>
-            <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="enter email" class="form-control input-md" required="">
-
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">E-mail:*</label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="text" placeholder="enter email"
+                           class="form-control input-md" required="">
+                    <span class="help-block"></span>
+                </div>
             </div>
-        </div>
 
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="submitButton">Sign up</label>
-            <div class="col-md-4">
-                <button id="submitButton" name="submitButton" class="btn btn-success">signup</button>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="tel">Telephone:*</label>
+                <div class="col-md-4">
+                    <input id="tel" name="tel" type="text" placeholder=""
+                           class="form-control input-md" required="">
+                    <span class="help-block"></span>
+                </div>
             </div>
-        </div>
 
-    </fieldset>
-</form>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submitButton">Sign up</label>
+                <div class="col-md-4">
+                    <button id="submitButton" name="submitButton" class="btn btn-success">signup</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
 </div>
 
 </body>

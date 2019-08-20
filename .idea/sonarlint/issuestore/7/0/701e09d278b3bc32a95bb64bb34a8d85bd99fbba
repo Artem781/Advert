@@ -1,18 +1,5 @@
 
-Jsquid:S1481")Remove this unused "name" local variable.(õæâñıÿÿÿÿ8ŠÕçÆ-
-`squid:S1854"?Remove this useless assignment to local variable "dateOfBirth".(Şã½Šüÿÿÿÿ8ŠÕçÆ-
-Lsquid:S1481"0Remove this unused "accessLevel" local variable.(×ê­’8ŠÕçÆ-
-Ysquid:S1854"8Remove this useless assignment to local variable "name".(õæâñıÿÿÿÿ8ŠÕçÆ-
-Esquid:S1481")Remove this unused "page" local variable.(åñâ¤8ŠÕçÆ-
-Qsquid:S1481"0Remove this unused "dateOfBirth" local variable.(Şã½Šüÿÿÿÿ8ŠÕçÆ-
-[squid:S1854"?Remove this useless assignment to local variable "accessLevel".(×ê­’8ŠÕçÆ-
-Ksquid:S1481"*Remove this unused "email" local variable.(å†©µûÿÿÿÿ8ŠÕçÆ-
-Hsquid:S1481"-Remove this unused "password" local variable.(µĞÓ=8ŠÕçÆ-
-Dsquid:S1481"(Remove this unused "tel" local variable.(ÇÌê±8ŠÕçÆ-
-Zsquid:S1854"9Remove this useless assignment to local variable "email".(å†©µûÿÿÿÿ8ŠÕçÆ-
-Wsquid:S1854"<Remove this useless assignment to local variable "password".(µĞÓ=8ŠÕçÆ-
-Ssquid:S1854"7Remove this useless assignment to local variable "tel".(ÇÌê±8ŠÕçÆ-
-Msquid:S1481",Remove this unused "service" local variable.(²’ò¾ıÿÿÿÿ8ŠÕçÆ-
-\squid:S1854";Remove this useless assignment to local variable "service".(²’ò¾ıÿÿÿÿ8ŠÕçÆ-
-Psquid:S1068"/Remove this unused "PARAM_LOGIN" private field.(¡íá•øÿÿÿÿ8ŠÕçÆ-
-wsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(áºİçıÿÿÿÿ8ŠÕçÆ-
+Psquid:S1135"2Complete the task associated to this TODO comment.(úµç¢8éèŠ†Ê-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ı½»8éèŠ†Ê-
+hsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(ã¯¦8éèŠ†Ê-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ù§×š8éèŠ†Ê-

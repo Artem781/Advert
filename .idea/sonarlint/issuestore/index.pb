@@ -127,8 +127,6 @@ q
 Asrc/main/java/by/it/advertproject/command/impl/SignUpCommand.java,7\0\701e09d278b3bc32a95bb64bb34a8d85bd99fbba
 w
 Gsrc/main/java/by/it/advertproject/connectionpool/DbResourceManager.java,b\a\ba5010af8716d315cf864c9c387169a08990485a
-m
-=src/main/java/by/it/advertproject/service/AccountService.java,a\1\a17ccbc0e9a152625113590104f813c79ef2d8b2
 =
 greetings.txt,d\c\dcc141b8078d4faa86e3c9b0f991c40ce4cb2a79
 l
@@ -195,3 +193,11 @@ q
 Asrc/main/java/by/it/advertproject/command/impl/SignInCommand.java,8\e\8ee409a878cb74a605e971a3aa41c720e1b427fc
 W
 'src/main/webapp/jsppage/userprofile.jsp,1\4\14ceee385c0eb07c3255f847c5e134ef3024ab15
+h
+8src/main/java/by/it/advertproject/command/Parameter.java,5\c\5c713b71752b3c5b3e408ce641ef2c25c835ba93
+r
+Bsrc/main/java/by/it/advertproject/tester/AccountDaoImplTester.java,5\b\5b63564ed8c4d452ae645554bf8e503538a052be
+m
+=src/main/java/by/it/advertproject/service/AccountService.java,a\1\a17ccbc0e9a152625113590104f813c79ef2d8b2
+™
+isrc/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java,7\b\7b8c0224dea74c116400ee6552c281c26f3bf6d5

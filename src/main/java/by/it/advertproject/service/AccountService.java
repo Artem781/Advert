@@ -1,4 +1,4 @@
-package by.it.advertproject.service.impl;
+package by.it.advertproject.service;
 
 import by.it.advertproject.bean.Account;
 import by.it.advertproject.bean.Role;
@@ -17,8 +17,13 @@ public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
     private final static String LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
     private final static String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
+    private final static String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
+    private final static String DATE_DIRTHDAY_REGEX = "^(|(0[1-9])|(1[0-2]))\\/((0[1-9])|(1\\d)|(2\\d)|(3[0-1]))\\/((\\d{4}))$";
+    private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
+    private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
 
-    public boolean checkLogin(String login, String password) {
+
+    public boolean checkLoginPass(String login, String password) {
         if (login == null || password == null) {
             return false;
         }
@@ -75,6 +80,14 @@ public class AccountService {
         }
         if (!(validatePasswordAndLogin(psw, login))) {
             throw new ServiceException("message.not valid password or login");
+        }
+        if (!(Pattern.matches(NAME_REGEX, name) ||
+                Pattern.matches(LOGIN_PATTERN, login) ||
+                Pattern.matches(PASSWORD_PATTERN, psw) ||
+                Pattern.matches(DATE_DIRTHDAY_REGEX, birthday) ||
+                Pattern.matches(EMAIL_REGEX, email) ||
+                Pattern.matches(TEL_REGEX, tel))) {
+
         }
         AccountDao accountDao = new AccountDaoImpl();
         Account account = new Account.Builder().withName(name).withLogin(login)

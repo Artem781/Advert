@@ -58,7 +58,7 @@
                 <%--</li>--%>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Advert" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
@@ -72,74 +72,97 @@
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=forward_to_sign_up">Sign up</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=Logout">Logout</a>
-                </li>
+                <%--<li class="nav-item">--%>
+                    <%--<a class="nav-link" href="controller?command=Logout">Logout</a>--%>
+                <%--</li>--%>
             </ul>
 
         </div>
     </nav>
 <%--</div>--%>
 <form class="form-horizontal" action="controller" method="post">
-    <input type="hidden" name="command" value="signup" />
+    <input type="hidden" name="command" value="sign_up" />
+    <input type="hidden" name="accesslevel" value="user" />
     <fieldset>
 
         <!-- Form Name -->
         <legend>Sign up</legend>
 
-        <!-- Text input-->
+        <!-- Name input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Name</label>
+            <label class="col-md-4 control-label" for="name">Name:</label>
             <div class="col-md-4">
-                <input id="name" name="name" type="text" placeholder="enter your name" class="form-control input-md" required="">
+                <input id="name" name="name" type="text" placeholder=""
+                       class="form-control input-md" required="">
 
             </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Login input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="login">Login</label>
+            <label class="col-md-4 control-label" for="login">Login:</label>
             <div class="col-md-4">
-                <input id="login" name="login" type="text" placeholder="enter login" class="form-control input-md" required="">
-                <span class="help-block">login min 5 symbols</span>
+                <input id="login" name="login" type="text" placeholder=""
+                       class="form-control input-md" required="">
+                <span class="help-block">
+                    Login contains: letters, numbers, hyphens and underscores,
+                    from 3 to 16 characters.
+</span>
             </div>
         </div>
 
         <!-- Password input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="password">Password Input</label>
+            <label class="col-md-4 control-label" for="passwordfirst">Password input:</label>
             <div class="col-md-4">
-                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
-                <span class="help-block">min 8 symbols</span>
+                <input id="passwordfirst" name="passwordfirst" type="password" placeholder=""
+                       class="form-control input-md" required="">
+                <span class="help-block">Password contains: letters, numbers, hyphens and underscores, from 6 to 18 characters.
+</span>
+            </div>
+        </div>
+
+        <!-- Password input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="passwordsecond">Password input confirm:</label>
+            <div class="col-md-4">
+                <input id="passwordsecond" name="passwordsecond" type="password" placeholder=""
+                       class="form-control input-md" required="">
+                <span class="help-block"></span>
             </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="tel">Telephone</label>
+            <label class="col-md-4 control-label" for="dateofbirth">Birthday</label>
             <div class="col-md-4">
-                <input id="tel" name="tel" type="text" placeholder="enter telephone number" class="form-control input-md" required="">
-                <span class="help-block">9 symols</span>
+                <input id="dateofbirth" name="birthday" type="text" placeholder=""
+                       class="form-control input-md" required="">
+                <span class="help-block"></span>
             </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="dateofbirth">Date of birth</label>
+            <label class="col-md-4 control-label" for="email">E-mail:</label>
             <div class="col-md-4">
-                <input id="dateofbirth" name="dateofbirth" type="text" placeholder="year month day" class="form-control input-md" required="">
-                <span class="help-block">help</span>
+                <input id="email" name="email" type="text" placeholder="enter email"
+                       class="form-control input-md" required="">
+
             </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">E-mail</label>
+            <label class="col-md-4 control-label" for="tel">Telephone:</label>
             <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="enter email" class="form-control input-md" required="">
-
+                <input id="tel" name="tel" type="text" placeholder=""
+                       class="form-control input-md" required="">
+                <span class="help-block"></span>
             </div>
         </div>
+
+
 
         <!-- Button -->
         <div class="form-group">

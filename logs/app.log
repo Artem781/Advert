@@ -4,3 +4,9 @@
 2019-08-13 23:27:58,881 INFO  23:27:58.881 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-08-14 12:36:35,958 INFO  12:36:35.958 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-08-14 12:55:48,481 INFO  12:55:48.481 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-08-15 12:29:13,932 INFO  12:29:13.932 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-08-15 12:29:56,927 INFO  12:29:56.927 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-08-15 12:46:22,789 INFO  12:46:22.789 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-08-16 12:46:32,931 INFO  12:46:32.931 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-08-16 12:46:33,793 ERROR 12:46:33.793 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Cannot add or update a child row: a foreign key constraint fails (`anaron`.`accounts`, CONSTRAINT `fk_users_roles` FOREIGN KEY (`accesslevel`) REFERENCES `roles` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+2019-08-16 15:53:54,647 INFO  15:53:54.647 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.

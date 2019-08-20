@@ -1,2 +1,2 @@
 
-msquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÇÏ±‰
+ksquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÇÏ±‰

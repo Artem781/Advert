@@ -21,15 +21,16 @@ public class SignInCommand implements Command {
         String page ;
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
-        if (service.checkLogin(login, pass)) {
+
+        if (service.checkLoginPass(login, pass)) {
             request.setAttribute("user", login);
 // определение пути к userprofile.jsp
             //тут берется из property
 //            page = ConfigurationManager.getProperty("path.page.main");
             page = "/jsppage/userprofile.jsp";
         } else {
-            request.setAttribute( "patternLogin","Login contains: letters, numbers, hyphens and underscores, from 3 to 16 characters.");
-            request.setAttribute( "patternPassword","Password contains: letters, numbers, hyphens and underscores, from 6 to 18 characters.");
+//            request.setAttribute( "patternLogin","Login contains: letters, numbers, hyphens and underscores, from 3 to 16 characters.");
+//            request.setAttribute( "patternPassword","Password contains: letters, numbers, hyphens and underscores, from 6 to 18 characters.");
             request.setAttribute("errorLoginPassMessage",
 //                    MessageManager.getProperty("message.loginerror"));
                     "incorrect login or password");

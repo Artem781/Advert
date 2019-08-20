@@ -21,7 +21,7 @@ public class BeanCreator<T extends Bean> {
     private static final String NAME = "name";
     private static final String LOGIN = "login";
     private static final String PASSWORD = "password";
-    private static final String DATE_OF_BIRTH = "dateofbirth";
+    private static final String BIRTHDAY = "birthday";
     private static final String EMAIL = "email";
     private static final String TEL = "tel";
     private static final String ROLE = "accesslevel";
@@ -53,7 +53,7 @@ public class BeanCreator<T extends Bean> {
                             .withName(resultSet.getString(NAME))
                             .withLogin(resultSet.getString(LOGIN))
                             .withPassword(resultSet.getString(PASSWORD))
-                            .withDateOfBirth(resultSet.getString(DATE_OF_BIRTH))
+                            .withBirthday(resultSet.getString(BIRTHDAY))
                             .withEmail(resultSet.getString(EMAIL))
                             .withTel(resultSet.getString(TEL))
                             .withRole(Role.values()[resultSet.getInt(ROLE)])
