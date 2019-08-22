@@ -35,8 +35,15 @@ public class SignUpCommand implements Command {
         String birthday = request.getParameter(BIRTHDAY);
         String email = request.getParameter(PARAM_EMAIL);
         String tel = request.getParameter(PARAM_TEL);
-//        String accessLevel = request.getParameter(PARAM_ACCESS_LEVEL);
         Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
+        System.out.println("name: " + name + "\n" +
+                           "login: " + login + "\n" +
+                           "password: " + password + "\n" +
+                           "passwordConfirm: " + passwordConfirm + "\n" +
+                           "birthday: " + birthday + "\n" +
+                           "email: " + email + "\n" +
+                           "tel: " + tel + "\n" +
+                           "role" + role.name() + "\n");
         try {
             account = service.createAccount(name, login, password, passwordConfirm,
                     birthday, email, tel, role);

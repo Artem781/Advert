@@ -18,7 +18,8 @@ public class AccountService {
     private final static String LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
     private final static String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
     private final static String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
-    private final static String DATE_DIRTHDAY_REGEX = "^(|(0[1-9])|(1[0-2]))\\/((0[1-9])|(1\\d)|(2\\d)|(3[0-1]))\\/((\\d{4}))$";
+//   ([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))
+    private final static String DATE_BIRTHDAY_REGEX = "^(|(0[1-9])|(1[0-2]))\\/((0[1-9])|(1\\d)|(2\\d)|(3[0-1]))\\/((\\d{4}))$";
     private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
     private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
 
@@ -27,8 +28,7 @@ public class AccountService {
         if (login == null || password == null) {
             return false;
         }
-        //todo можно сократить эту запись?
-        if ((validateLogin(login)) == false || (validatePassword(password)) == false) {
+        if (!(validateLogin(login))  || !(validatePassword(password)) ) {
             return false;
         }
 //        String encryptedPassword = DigestUtils.md5Hex(password);
@@ -73,37 +73,34 @@ public class AccountService {
         return true;
     }
 
-    public Account createAccount(String name, String login, String psw, String pswConfirm,
-                                 String birthday, String email, String tel, Role role) throws ServiceException {
-        if (!psw.equals(pswConfirm)) {
+    public Account createAccount(String name, String login, String password,
+                                 String passwordConfirm, String birthday,
+                                 String email, String tel, Role role) throws ServiceException {
+        if (!password.equals(passwordConfirm)) {
             throw new ServiceException("message.non-confirm-password");
         }
-        if (!(validatePasswordAndLogin(psw, login))) {
+        if (!(validatePasswordAndLogin(password, login))) {
             throw new ServiceException("message.not valid password or login");
         }
-        if (!(Pattern.matches(NAME_REGEX, name) ||
+        if (Pattern.matches(NAME_REGEX, name) ||
                 Pattern.matches(LOGIN_PATTERN, login) ||
-                Pattern.matches(PASSWORD_PATTERN, psw) ||
-                Pattern.matches(DATE_DIRTHDAY_REGEX, birthday) ||
+                Pattern.matches(PASSWORD_PATTERN, password) ||
+                Pattern.matches(DATE_BIRTHDAY_REGEX, birthday) ||
                 Pattern.matches(EMAIL_REGEX, email) ||
-                Pattern.matches(TEL_REGEX, tel))) {
-
+                Pattern.matches(TEL_REGEX, tel)) {
+            System.out.println("from AccountService) method createAccount) not valid data ");
+            throw new ServiceException("message. not valid data");
         }
         AccountDao accountDao = new AccountDaoImpl();
         Account account = new Account.Builder().withName(name).withLogin(login)
-                .withPassword(psw).withBirthday(birthday).withEmail(email)
+                .withPassword(password).withBirthday(birthday).withEmail(email)
                 .withTel(tel).withRole(role).build();
-
-
         try {
             accountDao.create(account);
             account = accountDao.findAccountByLogin(account.getLogin());
         } catch (DaoException e) {
-            throw new ServiceException("message busy login");
+            throw new ServiceException("message busy login", e);
         }
-
         return account;
     }
-
-
 }

@@ -201,3 +201,17 @@ m
 =src/main/java/by/it/advertproject/service/AccountService.java,a\1\a17ccbc0e9a152625113590104f813c79ef2d8b2
 ™
 isrc/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java,7\b\7b8c0224dea74c116400ee6552c281c26f3bf6d5
+j
+:.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml,e\b\ebac7383e253a276a3992ad3d4e4ecc7d6b45c48
+^
+.target/database-example-0.1/jsppage/signin.jsp,6\4\647592d8c0ee45b0bbd6c61d281c9e421357f5fa
+^
+.target/database-example-0.1/jsppage/signup.jsp,c\d\cd0f1fe8de2cfecdf97c3f14049b9ffde49f609b
+c
+3target/database-example-0.1/jsppage/userprofile.jsp,6\a\6a31e72d64a5729f350944d6468d4b8c41888401
+‰
+Ysrc/main/java/by/it/advertproject/tester/examl/finalfields/FinalFieldsInitialisation.java,b\7\b754fa83808d6a526df52fdeaabcc1bcf35b59ad
+r
+Bsrc/main/java/by/it/advertproject/tester/AccountServiceTester.java,8\f\8f13d499f924066b2d6923eddb11681f6baa6415
+V
+&src/main/webapp/js/bootstrap.bundle.js,2\b\2b347781f6d9c5477343bb0c75848d71f53d9348

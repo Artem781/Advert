@@ -10,7 +10,6 @@ public enum CommandType {
     SIGN_UP(new SignUpCommand()),
     CREATE_ADVERT(new CreateAdvertCommand());
 
-
     CommandType(Command command) {
         this.command = command;
     }

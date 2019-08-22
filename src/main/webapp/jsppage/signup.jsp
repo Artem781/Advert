@@ -83,6 +83,9 @@
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
         <input type="hidden" name="accesslevel" value="user"/>
+        <br>
+        ${checkEnterData}
+        <br>
         <fieldset>
 
             <!-- Form Name -->
@@ -176,7 +179,7 @@
 
             <!-- Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="submitButton">Sign up</label>
+                <label class="col-md-4 control-label" for="submitButton"></label>
                 <div class="col-md-4">
                     <button id="submitButton" name="submitButton" class="btn btn-success">signup</button>
                 </div>
@@ -184,6 +187,7 @@
 
         </fieldset>
     </form>
+
 </div>
 
 </body>

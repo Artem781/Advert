@@ -15,7 +15,6 @@ public class CommandFactory {
         }
 // получение объекта, соответствующего команде
         try {
-            // на асtion еще вызвать replaceAll заменить подчеркивания
             CommandType currentType = CommandType
                     .valueOf(action.toUpperCase());
             System.out.println("from CommandFactory) CommandType: " + currentType.name());

@@ -1,5 +1,6 @@
 
+[
+squid:S106'"9Replace this use of System.out or System.err by a logger.(‚ìšÇıÿÿÿÿ8ì·öŸË-
 Psquid:S1135"2Complete the task associated to this TODO comment.(úµç¢8éèŠ†Ê-
 tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ı½»8éèŠ†Ê-
-hsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(ã¯¦8éèŠ†Ê-
 tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ù§×š8éèŠ†Ê-

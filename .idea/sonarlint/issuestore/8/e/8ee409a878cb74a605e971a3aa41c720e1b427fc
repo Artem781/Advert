@@ -1,10 +1,9 @@
 
-nsquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(”ÇÉ¼üÿÿÿÿ8û¥…†Ê-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÍ²¹8û¥…†Ê-
-nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(´«©Ûùÿÿÿÿ8û¥…†Ê-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(›€£°þÿÿÿÿ8û¥…†Ê-
 V
-squid:S106*"9Replace this use of System.out or System.err by a logger.(º”÷ë8û¥…†Ê-
-^squid:S1854)";Remove this useless assignment to local variable "service".(»¿æùÿÿÿÿ8û¥…†Ê-
-isquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ÖÌ“Ú8û¥…†Ê-
-tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÍÅÃž8û¥…†Ê-
-nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(›€£°þÿÿÿÿ8û¥…†Ê-
+squid:S106!"9Replace this use of System.out or System.err by a logger.(º”÷ë8û¥…†Ê-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÍÅÃž8û¥…†Ê-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÖÌ“Ú8û¥…†Ê-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´«©Ûùÿÿÿÿ8û¥…†Ê-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÍ²¹8û¥…†Ê-
+^squid:S1854 ";Remove this useless assignment to local variable "service".(»¿æùÿÿÿÿ8û¥…†Ê-

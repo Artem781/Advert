@@ -26,11 +26,11 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             preparedStatement.setLong(1, bean.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException(e.getMessage());
+            throw new DaoException(e.getMessage(),e);
         } finally {
             try {
                 closeResources(preparedStatement, connection);
-            } catch (Exception e) {
+            } catch (Exception e) { // FIXME: 22.08.2019 
                 logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
             }
         }

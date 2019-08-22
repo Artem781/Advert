@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 public enum ConnectionPool {
     INSTANCE;
 
-    private static Logger logger = LogManager.getRootLogger();
+    private final static Logger logger = LogManager.getRootLogger();
     private static final int DEFAULT_SIZE_POOL = 30;
     private static final int DEFAULT_HOURS_CHECK_DELAY = 24;
     private BlockingQueue<Connection> freeСonnectionBlockingQueue;
@@ -42,6 +42,7 @@ public enum ConnectionPool {
             initPoolData();
         } catch (ConnectionPoolException e) {
             //TODO что нужно писать в catch? как записать лог?
+           // не ловить
             throw new RuntimeException(e);
         }
         startConnectionCheck();
@@ -54,6 +55,7 @@ public enum ConnectionPool {
         } catch (ClassNotFoundException e) {
             //в логах и эксепшенах в константы выносить не надо) без локализации
             logger.log(Level.ERROR, "driver registration error.", e.getMessage());
+            // runtime exception
             throw new ConnectionPoolException(e);
         }
         freeСonnectionBlockingQueue = new LinkedBlockingDeque<>(poolSize);
@@ -140,7 +142,6 @@ public enum ConnectionPool {
         executorService.scheduleAtFixedRate(checkThread, 0, DEFAULT_HOURS_CHECK_DELAY,
                 TimeUnit.HOURS);
     }
-//TODO методы по закрытию конекшенов должны находиться в пуле или дао?
     public void closeConnection(Connection con, Statement st, ResultSet rs) {
         try {
             if (!(rs == null) || rs.isClosed()) {
