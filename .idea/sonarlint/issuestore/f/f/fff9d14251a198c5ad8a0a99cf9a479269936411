@@ -1,6 +1,6 @@
 
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(é¡‚¹8Ë¢ñýÈ-
-]squid:S1118":Add a private constructor to hide the implicit public one.(Ô“å‚øÿÿÿÿ8Ë¢ñýÈ-
 tsquid:S3008	"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8Ë¢ñýÈ-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(é¡‚¹8Ë¢ñýÈ-
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(‹ïê†ùÿÿÿÿ8Ë¢ñýÈ-
+]squid:S1118":Add a private constructor to hide the implicit public one.(Ô“å‚øÿÿÿÿ8Ë¢ñýÈ-

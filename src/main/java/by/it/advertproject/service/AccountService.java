@@ -18,8 +18,7 @@ public class AccountService {
     private final static String LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
     private final static String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
     private final static String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
-//   ([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))
-    private final static String DATE_BIRTHDAY_REGEX = "^(|(0[1-9])|(1[0-2]))\\/((0[1-9])|(1\\d)|(2\\d)|(3[0-1]))\\/((\\d{4}))$";
+    private final static String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
     private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
     private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
 
@@ -28,7 +27,7 @@ public class AccountService {
         if (login == null || password == null) {
             return false;
         }
-        if (!(validateLogin(login))  || !(validatePassword(password)) ) {
+        if (!(validateLogin(login)) || !(validatePassword(password))) {
             return false;
         }
 //        String encryptedPassword = DigestUtils.md5Hex(password);
@@ -76,21 +75,42 @@ public class AccountService {
     public Account createAccount(String name, String login, String password,
                                  String passwordConfirm, String birthday,
                                  String email, String tel, Role role) throws ServiceException {
+        if (!Pattern.matches(NAME_REGEX, name)) {
+            throw new ServiceException("message. login not valid");
+        }
+        if (!Pattern.matches(LOGIN_PATTERN, login)) {
+            throw new ServiceException("message. login not valid");
+        }
+        if (!Pattern.matches(PASSWORD_PATTERN, password)) {
+            throw new ServiceException("message. password not valid");
+        }
         if (!password.equals(passwordConfirm)) {
-            throw new ServiceException("message.non-confirm-password");
+            throw new ServiceException("message. password and password confirm not equals");
         }
-        if (!(validatePasswordAndLogin(password, login))) {
-            throw new ServiceException("message.not valid password or login");
+        if (!Pattern.matches(DATE_BIRTHDAY_REGEX, birthday)) {
+            throw new ServiceException("message. birthday not valid");
         }
-        if (Pattern.matches(NAME_REGEX, name) ||
-                Pattern.matches(LOGIN_PATTERN, login) ||
-                Pattern.matches(PASSWORD_PATTERN, password) ||
-                Pattern.matches(DATE_BIRTHDAY_REGEX, birthday) ||
-                Pattern.matches(EMAIL_REGEX, email) ||
-                Pattern.matches(TEL_REGEX, tel)) {
-            System.out.println("from AccountService) method createAccount) not valid data ");
-            throw new ServiceException("message. not valid data");
+        if (!Pattern.matches(EMAIL_REGEX, email)) {
+            throw new ServiceException("message. e-mail not valid");
         }
+        if (!Pattern.matches(TEL_REGEX, tel)) {
+            throw new ServiceException("message. tel not valid");
+        }
+//        if (Pattern.matches(NAME_REGEX, name) ||
+//                Pattern.matches(LOGIN_PATTERN, login) ||
+//                Pattern.matches(PASSWORD_PATTERN, password) ||
+//                Pattern.matches(DATE_BIRTHDAY_REGEX, birthday) ||
+//                Pattern.matches(EMAIL_REGEX, email) ||
+//                Pattern.matches(TEL_REGEX, tel)) {
+//            System.out.println(name + Pattern.matches(NAME_REGEX, name) + "\n" +
+//                    login + Pattern.matches(LOGIN_PATTERN, login) + "\n" +
+//                    password + Pattern.matches(PASSWORD_PATTERN, password) + "\n" +
+//                    birthday + Pattern.matches(DATE_BIRTHDAY_REGEX, birthday) + "\n" +
+//                    email + Pattern.matches(EMAIL_REGEX, email) + "\n" +
+//                    tel + Pattern.matches(TEL_REGEX, tel));
+//            System.out.println("from AccountService) method createAccount) not valid data ");
+//            throw new ServiceException("message. not valid data");
+//        }
         AccountDao accountDao = new AccountDaoImpl();
         Account account = new Account.Builder().withName(name).withLogin(login)
                 .withPassword(password).withBirthday(birthday).withEmail(email)

@@ -143,24 +143,23 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Birthday input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="dateofbirth">Birthday*</label>
+                <label class="col-md-4 control-label" for="dateofbirth">Birthday:*</label>
                 <div class="col-md-4">
                     <input id="dateofbirth" name="birthday" type="text" placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block">
-                        This expression matches dates formatted as MM/DD/YYYY where months
-                        and days must be 2 digits each, zero padded.
+                        date format (yyyy-mm-dd)
                     </span>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- E-mail input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="email">E-mail:*</label>
                 <div class="col-md-4">
-                    <input id="email" name="email" type="text" placeholder="enter email"
+                    <input id="email" name="email" type="text" placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>

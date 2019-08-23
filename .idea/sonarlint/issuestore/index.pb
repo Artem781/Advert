@@ -215,3 +215,5 @@ r
 Bsrc/main/java/by/it/advertproject/tester/AccountServiceTester.java,8\f\8f13d499f924066b2d6923eddb11681f6baa6415
 V
 &src/main/webapp/js/bootstrap.bundle.js,2\b\2b347781f6d9c5477343bb0c75848d71f53d9348
+m
+=src/main/java/by/it/advertproject/command/RequestContent.java,f\a\faedba75b574672efba8182b6c187c3310dea3e2

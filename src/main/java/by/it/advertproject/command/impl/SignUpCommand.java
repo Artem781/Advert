@@ -10,6 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 //todo как правильно устанавливать access level?
 public class SignUpCommand implements Command {
@@ -36,21 +38,21 @@ public class SignUpCommand implements Command {
         String email = request.getParameter(PARAM_EMAIL);
         String tel = request.getParameter(PARAM_TEL);
         Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
-        System.out.println("name: " + name + "\n" +
-                           "login: " + login + "\n" +
-                           "password: " + password + "\n" +
-                           "passwordConfirm: " + passwordConfirm + "\n" +
-                           "birthday: " + birthday + "\n" +
-                           "email: " + email + "\n" +
-                           "tel: " + tel + "\n" +
-                           "role" + role.name() + "\n");
+//        System.out.println("name: " + name + "\n" +
+//                           "login: " + login + "\n" +
+//                           "password: " + password + "\n" +
+//                           "passwordConfirm: " + passwordConfirm + "\n" +
+//                           "birthday: " + birthday + "\n" +
+//                           "email: " + email + "\n" +
+//                           "tel: " + tel + "\n" +
+//                           "role" + role.name() + "\n");
         try {
             account = service.createAccount(name, login, password, passwordConfirm,
                     birthday, email, tel, role);
             request.setAttribute("user", account.getName());
             page = "/jsppage/userprofile.jsp";
         } catch (ServiceException e) {
-            request.setAttribute("checkEnterData", "check the entered data.");
+            request.setAttribute("checkEnterData", e.getMessage());
             logger.log(Level.INFO, e.getMessage());
             page = "/jsppage/signup.jsp";
         }
