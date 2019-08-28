@@ -6,14 +6,15 @@ import by.it.advertproject.service.AccountService;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static by.it.advertproject.command.AttributeName.*;
+import static by.it.advertproject.command.ParameterName.*;
+
 public class SignInCommand implements Command {
-    private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD = "password";
 
     @Override
     public String execute(HttpServletRequest request) {
         AccountService service = new AccountService();
-        String page ;
+        String page;
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         if (service.checkLoginPass(login, pass)) {
@@ -23,11 +24,11 @@ public class SignInCommand implements Command {
         } else {
 //            request.setAttribute( "patternLogin","Login contains: letters, numbers, hyphens and underscores, from 3 to 16 characters.");
 //            request.setAttribute( "patternPassword","Password contains: letters, numbers, hyphens and underscores, from 6 to 18 characters.");
-            request.setAttribute("errorLoginPassMessage",
+            request.setAttribute(ATTR_NAME_ERROR_LOGIN_PASS_MESSAGE,
 //                    MessageManager.getProperty("message.loginerror"));
                     "incorrect login or password");
 //            page = ConfigurationManager.getProperty("path.page.login");
-        page = "/jsppage/signin.jsp";
+            page = "/jsppage/signin.jsp";
         }
         service = null;
         System.out.println("from SigninCommand. page: " + page);

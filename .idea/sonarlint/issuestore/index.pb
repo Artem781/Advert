@@ -193,8 +193,6 @@ q
 Asrc/main/java/by/it/advertproject/command/impl/SignInCommand.java,8\e\8ee409a878cb74a605e971a3aa41c720e1b427fc
 W
 'src/main/webapp/jsppage/userprofile.jsp,1\4\14ceee385c0eb07c3255f847c5e134ef3024ab15
-h
-8src/main/java/by/it/advertproject/command/Parameter.java,5\c\5c713b71752b3c5b3e408ce641ef2c25c835ba93
 r
 Bsrc/main/java/by/it/advertproject/tester/AccountDaoImplTester.java,5\b\5b63564ed8c4d452ae645554bf8e503538a052be
 m
@@ -217,3 +215,13 @@ V
 &src/main/webapp/js/bootstrap.bundle.js,2\b\2b347781f6d9c5477343bb0c75848d71f53d9348
 m
 =src/main/java/by/it/advertproject/command/RequestContent.java,f\a\faedba75b574672efba8182b6c187c3310dea3e2
+l
+<src/main/java/by/it/advertproject/command/AttributeName.java,d\b\dbd6c6d692baf67395ebe53239e394112dc92efa
+f
+6src/main/java/by/it/advertproject/command/Message.java,7\1\71290bc542e30de12ae625fc5da010b40da368ee
+l
+<src/main/java/by/it/advertproject/command/ParameterName.java,f\7\f742386df6144b4754997072cdcd517c9be762f9
+P
+ src/main/resources/db.properties,7\7\779348f654a78c25c1b2a58c09d119b35347dc0d
+T
+$src/main/resources/config.properties,f\a\fac4e92d770a0a6287eaad0e53c4efa350987f47

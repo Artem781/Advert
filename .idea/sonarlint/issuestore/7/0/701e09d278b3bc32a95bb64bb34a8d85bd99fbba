@@ -1,7 +1,7 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÝàûüÿÿÿÿ8Øà’ÊË-
-Xsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8úÃ ËË-
-\squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8úÃ ËË-
-rsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ù§×š8éèŠ†Ê-
-Nsquid:S1135"2Complete the task associated to this TODO comment.(úµç¢8éèŠ†Ê-
-rsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ýŽ½»8éèŠ†Ê-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ýŽ½»8öíÿîË-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ù§×š8öíÿîË-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(ïÝàûüÿÿÿÿ8öíÿîË-
+Psquid:S1135"2Complete the task associated to this TODO comment.(úµç¢8öíÿîË-
+Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8öíÿîË-
+^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8öíÿîË-

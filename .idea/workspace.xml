@@ -7,40 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/RequestContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/219934bcf5840e1ed20607a8eced20777187853a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/219934bcf5840e1ed20607a8eced20777187853a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46ee7fc6d94696b0ccca06a9716cee74164afefd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46ee7fc6d94696b0ccca06a9716cee74164afefd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/701e09d278b3bc32a95bb64bb34a8d85bd99fbba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/701e09d278b3bc32a95bb64bb34a8d85bd99fbba" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/704dfae93ac9c052f2d426a3e2560620bd97ba73" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/704dfae93ac9c052f2d426a3e2560620bd97ba73" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81ede254c10041724dcadf86c9150abd91c61e08" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81ede254c10041724dcadf86c9150abd91c61e08" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ee409a878cb74a605e971a3aa41c720e1b427fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ee409a878cb74a605e971a3aa41c720e1b427fc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a17ccbc0e9a152625113590104f813c79ef2d8b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a17ccbc0e9a152625113590104f813c79ef2d8b2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9bb109136ca97dd4cf5b39101d7b96e1852e464" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9bb109136ca97dd4cf5b39101d7b96e1852e464" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e28c2b69093ce2680b5169046dd56a3ce8044c60" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e28c2b69093ce2680b5169046dd56a3ce8044c60" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff9d14251a198c5ad8a0a99cf9a479269936411" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff9d14251a198c5ad8a0a99cf9a479269936411" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/impl/SignUpCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/connectionpool/ConnectionPool$PooledConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/connectionpool/ConnectionPool$PooledConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/connectionpool/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/connectionpool/ConnectionPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignUpCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool$PooledConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool$PooledConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signup.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -108,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/RequestContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
+            <state relative-caret-position="96">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,38 +93,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="65" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="65" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="74">
+              <caret line="19" column="83" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="225">
+              <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/LogoutCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="336">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -157,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignInCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="216">
               <caret line="9" column="43" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -167,28 +147,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/AccountDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/EmptyCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignUpCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+            <state relative-caret-position="216">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/DbParameter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="192">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -230,8 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A0.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/Res.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/mithodinmethod/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/methodinmethod/Main.java" />
@@ -267,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/finalfields/FinalFieldsInitialisation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandType.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Parameter.java" />
@@ -276,11 +265,14 @@
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/RequestContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" />
       </list>
     </option>
   </component>
@@ -310,7 +302,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -380,27 +371,29 @@
               <item name="5. Database example" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it" type="462c0819:PsiDirectoryNode" />
+              <item name="advertproject" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Advert" type="b2602c69:ProjectViewProjectNode" />
               <item name="5. Database example" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Advert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="5. Database example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsppage" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="by" type="462c0819:PsiDirectoryNode" />
+              <item name="it" type="462c0819:PsiDirectoryNode" />
+              <item name="advertproject" type="462c0819:PsiDirectoryNode" />
+              <item name="connectionpool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,7 +401,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566553566383" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566560683848" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -721,7 +714,10 @@
       <workItem from="1566459075952" duration="452000" />
       <workItem from="1566464224652" duration="2392000" />
       <workItem from="1566474093356" duration="7934000" />
-      <workItem from="1566550404582" duration="1791000" />
+      <workItem from="1566550404582" duration="3279000" />
+      <workItem from="1566761733200" duration="70000" />
+      <workItem from="1566995666928" duration="5000" />
+      <workItem from="1566995683769" duration="1888000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -751,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566474560262</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added param, attribute, config">
+      <created>1566553676593</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566553676593</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398540000" />
+    <option name="totallyTimeSpent" value="401991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -768,8 +771,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4608295" visible="true" weight="0.24357034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4608295" visible="true" weight="0.19894099" />
       <window_info id="Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -854,7 +858,8 @@
     <MESSAGE value="add pattern login and psw" />
     <MESSAGE value="so com" />
     <MESSAGE value="added command sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="added command sign up" />
+    <MESSAGE value="added param, attribute, config" />
+    <option name="LAST_COMMIT_MESSAGE" value="added param, attribute, config" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -992,23 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/LogoutCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3168">
@@ -1041,30 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/EmptyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,16 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountServiceTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -1199,13 +1153,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignInCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1230,30 +1184,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="168">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/RequestContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="96">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1261,11 +1201,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/EmptyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignInCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ForwardToSignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/LogoutCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="65" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="19" column="83" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

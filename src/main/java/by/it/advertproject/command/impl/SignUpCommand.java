@@ -13,17 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+import static by.it.advertproject.command.ParameterName.*;
+
 //todo как правильно устанавливать access level?
 public class SignUpCommand implements Command {
     private static final Logger logger = LogManager.getLogger(SignUpCommand.class);
-    private static final String PARAM_NAME = "name";
-    private static final String PARAM_LOGIN = "login";
-    private static final String PARAM_PASSWORD = "passwordfirst";
-    private static final String PARAM_PASSWORD_CONFIRM = "passwordsecond";
-    private static final String BIRTHDAY = "birthday";
-    private static final String PARAM_EMAIL = "email";
-    private static final String PARAM_TEL = "tel";
-    private static final String PARAM_ACCESS_LEVEL = "accesslevel";
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -31,10 +25,10 @@ public class SignUpCommand implements Command {
         Account account;
         String page = null;
         String name = request.getParameter(PARAM_NAME);
-        String login = request.getParameter(PARAM_LOGIN);
+        String login = request.getParameter(PARAM_NAME_LOGIN);
         String password = request.getParameter(PARAM_PASSWORD);
         String passwordConfirm = request.getParameter(PARAM_PASSWORD_CONFIRM);
-        String birthday = request.getParameter(BIRTHDAY);
+        String birthday = request.getParameter(PARAM_BIRTHDAY);
         String email = request.getParameter(PARAM_EMAIL);
         String tel = request.getParameter(PARAM_TEL);
         Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
