@@ -1,12 +1,12 @@
 
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤‘«›üÿÿÿÿ8ÏäÚ€É-
-nsquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(®¹Ùùÿÿÿÿ8ÏäÚ€É-
-ksquid:S1192"MUse already-defined constant 'COMMAND' instead of duplicating its value here.(†’ÿÔ8ÏäÚ€É-
+ksquid:S1192#"MUse already-defined constant 'COMMAND' instead of duplicating its value here.(†’ÿÔ8ÏäÚ€É-
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(¤‘«›üÿÿÿÿ8ÏäÚ€É-
 V
-squid:S106"9Replace this use of System.out or System.err by a logger.(†’ÿÔ8ÏäÚ€É-
-]squid:UselessImportCheck"2Remove this unused import 'java.util.Enumeration'.(»îÜ®8ÏäÚ€É-
-[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓÞÏÛ8ÏäÚ€É-
-isquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(ýšüÇ8ÏäÚ€É-
+squid:S106#"9Replace this use of System.out or System.err by a logger.(†’ÿÔ8ñöäôÍ-
+[squid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓÞÏÛ8ÏäÚ€É-
+hsquid:UselessImportCheck	"8Remove this unused import 'javax.servlet.ServletConfig'.(²ðÕ…ýÿÿÿÿ8ÏäÚ€É-
 V
-squid:S106""9Replace this use of System.out or System.err by a logger.(ÝÿÔÕ8ÏäÚ€É-
-hsquid:UselessImportCheck"8Remove this unused import 'javax.servlet.ServletConfig'.(²ðÕ…ýÿÿÿÿ8ÏäÚ€É-
+squid:S106+"9Replace this use of System.out or System.err by a logger.(ÝÿÔÕ8ÏäÚ€É-
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(®¹Ùùÿÿÿÿ8ÏäÚ€É-
+isquid:CommentedOutCodeLine6"<This block of commented-out lines of code should be removed.(ýšüÇ8ÏäÚ€É-
+]squid:UselessImportCheck"2Remove this unused import 'java.util.Enumeration'.(»îÜ®8ÏäÚ€É-

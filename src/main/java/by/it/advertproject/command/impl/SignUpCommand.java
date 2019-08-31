@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+import static by.it.advertproject.command.AttributeName.ATTR_NAME_CHECK_ENTER_DATA;
+import static by.it.advertproject.command.AttributeName.ATTR_NAME_USER;
 import static by.it.advertproject.command.ParameterName.*;
 
 //todo как правильно устанавливать access level?
@@ -43,10 +45,10 @@ public class SignUpCommand implements Command {
         try {
             account = service.createAccount(name, login, password, passwordConfirm,
                     birthday, email, tel, role);
-            request.setAttribute("user", account.getName());
+            request.setAttribute(ATTR_NAME_USER, account.getName());
             page = "/jsppage/userprofile.jsp";
         } catch (ServiceException e) {
-            request.setAttribute("checkEnterData", e.getMessage());
+            request.setAttribute(ATTR_NAME_CHECK_ENTER_DATA, e.getMessage());
             logger.log(Level.INFO, e.getMessage());
             page = "/jsppage/signup.jsp";
         }

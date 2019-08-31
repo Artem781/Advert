@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Error page</title>
+    <title>Error page</title>
     <%--<head>--%>
     <%--<title>Error Page</title>--%>
     <%--</head>--%>
@@ -24,7 +24,6 @@
     <![endif]-->
 </head>
 <body>
-
 
 
 <div class="container">
@@ -86,16 +85,15 @@
         </div>
     </nav>
 
+    <p>ERROR: ${message}</p>
 
-
-</div><p>ERROR: ${message}</p>
-
-Request from ${pageContext.errorData.requestURI} is failed
-<br/>
-Servlet name or type: ${pageContext.errorData.servletName}
-<br/>
-Status code: ${pageContext.errorData.statusCode}
-<br/>
-Exception: ${pageContext.errorData.throwable}
+    Request from ${pageContext.errorData.requestURI} is failed
+    <br/>
+    Servlet name or type: ${pageContext.errorData.servletName}
+    <br/>
+    Status code: ${pageContext.errorData.statusCode}
+    <br/>
+    Exception: ${pageContext.errorData.throwable}
+</div>
 </body>
 </html>

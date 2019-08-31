@@ -2,6 +2,8 @@ package by.it.advertproject.controller;
 
 import by.it.advertproject.command.Command;
 import by.it.advertproject.command.CommandFactory;
+import by.it.advertproject.command.RequestContent;
+import by.it.advertproject.exception.CommandException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -17,14 +19,21 @@ public abstract class AbstractController extends HttpServlet {
     private static final String COMMAND = "command";
     private static final String INDEX = "../index.jsp";
 
-    protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void process(HttpServletRequest request, HttpServletResponse response,
+                           RequestContent requestContent) throws ServletException, IOException {
         response.setContentType("text/html");
         String page = null;
-// определение команды, пришедшей из JSP
+        try {
+            requestContent.extractValues(request);
+        } catch (CommandException e) {
+            request.getSession().setAttribute("nullPage", "message nullpage");
+            response.sendRedirect(request.getContextPath() + page);
+        }
 //        ActionFactory client = new ActionFactory();
 //        ActionCommand command = client.defineCommand(request);
 
         System.out.print("+++++++++++++++++++++++\n command = " + request.getParameter("command") + "\n");
+        // определение команды, пришедшей из JSP
         Command command = CommandFactory.defineCommand(request.getParameter(COMMAND));
         /*
          * вызов реализованного метода execute() и передача параметров

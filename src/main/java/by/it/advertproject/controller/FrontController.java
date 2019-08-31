@@ -1,5 +1,6 @@
 package by.it.advertproject.controller;
 
+import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.connectionpool.ConnectionPool;
 
 import javax.servlet.ServletConfig;
@@ -15,12 +16,12 @@ public class FrontController extends AbstractController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        process(req, resp);
+        process(req, resp, new RequestContent());
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        process(req, resp);
+        process(req, resp, new RequestContent());
     }
 
     @Override

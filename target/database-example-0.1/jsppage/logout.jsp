@@ -79,6 +79,8 @@
 
         </div>
     </nav>
-</div><p>Cmd Logout: ${message}</p>
+    <p>Cmd Logout: ${message}</p>
+
+</div>
 </body>
 </html>

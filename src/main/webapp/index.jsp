@@ -92,8 +92,9 @@
 
         </div>
     </nav>
+    <h2>Index page</h2>
+
 </div>
-<h2>Index page</h2>
 <%--<form class="form-horizontal" method="post" action="controller">--%>
     <%--<fieldset>--%>
 

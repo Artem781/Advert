@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Map;
 
 public class RequestContent {
 
@@ -45,9 +46,17 @@ public class RequestContent {
     }
 
     public void insertAttributes(HttpServletRequest request) {
-        requestAttributes.forEach((k, v) -> request.setAttribute(k, v));
+        for (Map.Entry<String, Object> entry : requestAttributes.entrySet()) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            request.setAttribute(key, value);
+        }
         if (request.getSession(false) != null) {
-            sessionAttributes.forEach((k, v) -> request.getSession().setAttribute(k, v));
+            for (Map.Entry<String, Object> entry : sessionAttributes.entrySet()) {
+                String k = entry.getKey();
+                Object v = entry.getValue();
+                request.getSession().setAttribute(k, v);
+            }
         }
     }
 
