@@ -9,8 +9,11 @@ import by.it.advertproject.exception.ServiceException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.util.DigestUtils;
 
 import java.util.regex.Pattern;
+
+import static by.it.advertproject.command.Message.*;
 
 public class AccountService {
     //todo в методах сервиса нужно возвращать булен или сам объект?
@@ -22,37 +25,58 @@ public class AccountService {
     private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
     private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
 
-
-    public boolean checkLoginPass(String login, String password) {
-        if (login == null || password == null) {
-            return false;
+public Account checkLogin(String login, String password) throws ServiceException {
+//    String encryptedPassword = DigestUtils.md5Hex(password);
+    String encryptedPassword = password;
+    AccountDaoImpl accountDao = new AccountDaoImpl();
+    Account account;
+    try {
+        account = accountDao.findAccountByLogin(login);
+        if (account == null) {
+            throw new ServiceException(MESSAGE_LOGIN_ERROR);
         }
-        if (!(validateLogin(login)) || !(validatePassword(password))) {
-            return false;
+        if (!account.getPassword().equals(encryptedPassword)) {
+            logger.log(Level.WARN, account.getPassword() + " " + encryptedPassword);
+            throw new ServiceException(MESSAGE_PASSWORD_ERROR);
         }
-//        String encryptedPassword = DigestUtils.md5Hex(password);
-        AccountDaoImpl accountDao = new AccountDaoImpl();
-        Account account;
-        try {
-            account = accountDao.findAccountByLogin(login);
-            if (account == null) {
-                //todo бросать эксепшен или возвращать фолс?
-                return false;
-//                throw new ServiceException(MESSAGE_LOGIN_ERROR);
-            }
-//            if (!account.getPassword().equals(encryptedPassword)) {
-            if (!account.getPassword().equals(password)) {
-//                logger.log(Level.WARN, account.getPassword() + " " + encryptedPassword);
-                logger.log(Level.WARN, account.getPassword() + " " + password);
-                return false;
-//                throw new ServiceException(MESSAGE_PASSWORD_ERROR);
-            }
-        } catch (DaoException e) {
-            logger.log(Level.ERROR, e);
-            return false;
-        }
-        return true;
+    } catch (DaoException e) {
+        throw new ServiceException(CAN_NOT_LOGIN);
     }
+    return account;
+
+}
+
+
+//    public boolean checkLogin(String login, String password) {
+//        if (login == null || password == null) {
+//            return false;
+//        }
+//        if (!(validateLogin(login)) || !(validatePassword(password))) {
+//            return false;
+//        }
+////        String encryptedPassword = DigestUtils.md5Hex(password);
+//        AccountDaoImpl accountDao = new AccountDaoImpl();
+//        Account account;
+//        try {
+//            account = accountDao.findAccountByLogin(login);
+//            if (account == null) {
+//                //todo бросать эксепшен или возвращать фолс?
+//                return false;
+////                throw new ServiceException(MESSAGE_LOGIN_ERROR);
+//            }
+////            if (!account.getPassword().equals(encryptedPassword)) {
+//            if (!account.getPassword().equals(password)) {
+////                logger.log(Level.WARN, account.getPassword() + " " + encryptedPassword);
+//                logger.log(Level.WARN, account.getPassword() + " " + password);
+//                return false;
+////                throw new ServiceException(MESSAGE_PASSWORD_ERROR);
+//            }
+//        } catch (DaoException e) {
+//            logger.log(Level.ERROR, e);
+//            return false;
+//        }
+//        return true;
+//    }
 
     public boolean validateLogin(String login) {
         return (Pattern.matches(LOGIN_PATTERN, login)) ? true : false;

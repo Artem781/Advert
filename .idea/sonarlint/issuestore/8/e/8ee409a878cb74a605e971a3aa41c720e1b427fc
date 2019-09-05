@@ -1,7 +1,5 @@
 
-^squid:S1854";Remove this useless assignment to local variable "service".(»¿æùÿÿÿÿ8û¥…†Ê-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ïÍ²¹8û¥…†Ê-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(›€£°şÿÿÿÿ8û¥…†Ê-
-V
-squid:S106 "9Replace this use of System.out or System.err by a logger.(º”÷ë8û¥…†Ê-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÖÌ“Ú8û¥…†Ê-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(›Æöúÿÿÿÿ8…š‹ÁÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(äöÕïúÿÿÿÿ8…š‹ÁÏ-
+S
+squid:S106"9Replace this use of System.out or System.err by a logger.(­ú¸v8î†ÒÁÏ-

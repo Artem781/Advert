@@ -1,6 +1,8 @@
 
-tsquid:S3008	"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8Ë¢ñýÈ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‹ïê†ùÿÿÿÿ8Ë¢ñýÈ-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(é¡‚¹8Ë¢ñýÈ-
-]squid:S1118":Add a private constructor to hide the implicit public one.(Ô“å‚øÿÿÿÿ8Ë¢ñýÈ-
+Ksquid:S00108")Either remove or fill this block of code.(®«ž–ùÿÿÿÿ8÷ñÂÏ-
+[squid:S1118":Add a private constructor to hide the implicit public one.(Ô“å‚øÿÿÿÿ8ù‡“ËÎ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ë¸³úÿÿÿÿ8†Œ‹ÂÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8†Œ‹ÂÏ-
+rsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8ù‡“ËÎ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œ¹ý’8†Œ‹ÂÏ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(­Šù8†Œ‹ÂÏ-

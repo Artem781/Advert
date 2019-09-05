@@ -1,22 +1,20 @@
 
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ç‚â¿8÷íÿîË-
-nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(îØüÿÿÿÿ8÷íÿîË-
-dsquid:S1126E"AReplace this if-then-else statement by a single return statement.(ÆúÀÊıÿÿÿÿ8÷íÿîË-
-nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(æñÍÿÿÿÿÿ8÷íÿîË-
-tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ç‚â¿8÷íÿîË-
-vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8÷íÿîË-
-nsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(ÿ­°¡úÿÿÿÿ8÷íÿîË-
-vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8÷íÿîË-
-Psquid:S1135'"2Complete the task associated to this TODO comment.(Ï×«Á8÷íÿîË-
-vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£şÿÿÿÿ8÷íÿîË-
-nsquid:CommentedOutCodeLinen"<This block of commented-out lines of code should be removed.(¬†„üÿÿÿÿÿ8÷íÿîË-
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8÷íÿîË-
-Ksquid:S1125:"(Remove the literal "true" boolean value.(€œÙ§şÿÿÿÿ8÷íÿîË-
-`squid:S00107K"<Method has 8 parameters, which is greater than 7 authorized.(ÚŞÚŸûÿÿÿÿ8÷íÿîË-
-hsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(µş8÷íÿîË-
-nsquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(À‘­Âşÿÿÿÿ8÷íÿîË-
-qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(©á¡8÷íÿîË-
-nsquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(²šÍ•üÿÿÿÿ8÷íÿîË-
-nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(±é±Ùşÿÿÿÿ8÷íÿîË-
-Usquid:S1135"2Complete the task associated to this TODO comment.(°¡õ©úÿÿÿÿ8÷íÿîË-
-Esquid:S1125>"(Remove the literal "true" boolean value.(€ûÇ|8÷íÿîË-
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8…ÄâÀÏ-
+Isquid:S1125"(Remove the literal "true" boolean value.(€œÙ§şÿÿÿÿ8…ÄâÀÏ-
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8…ÄâÀÏ-
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8…ÄâÀÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬†„üÿÿÿÿÿ8…ÄâÀÏ-
+rsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ç‚â¿8…ÄâÀÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğÛÕ–úÿÿÿÿ8…ÄâÀÏ-
+Csquid:S1125"(Remove the literal "true" boolean value.(€ûÇ|8…ÄâÀÏ-
+^squid:S00107"<Method has 8 parameters, which is greater than 7 authorized.(ÚŞÚŸûÿÿÿÿ8…ÄâÀÏ-
+bsquid:S1126"AReplace this if-then-else statement by a single return statement.(ÆúÀÊıÿÿÿÿ8…ÄâÀÏ-
+Ssquid:S1135"2Complete the task associated to this TODO comment.(°¡õ©úÿÿÿÿ8…ÄâÀÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æñÍÿÿÿÿÿ8…ÄâÀÏ-
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ÚŠ‘Ç8…ÄâÀÏ-
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ç‚â¿8…ÄâÀÏ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±é±Ùşÿÿÿÿ8…ÄâÀÏ-
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(©á¡8…ÄâÀÏ-
+tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£şÿÿÿÿ8…ÄâÀÏ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µş8úäøÀÏ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŞÎÂÚ8…ÄâÀÏ-
