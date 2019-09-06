@@ -1,20 +1,24 @@
 
-tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8…ÄâÀÏ-
-Isquid:S1125"(Remove the literal "true" boolean value.(€œÙ§şÿÿÿÿ8…ÄâÀÏ-
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8…ÄâÀÏ-
-tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8…ÄâÀÏ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬†„üÿÿÿÿÿ8…ÄâÀÏ-
-rsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ç‚â¿8…ÄâÀÏ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğÛÕ–úÿÿÿÿ8…ÄâÀÏ-
-Csquid:S1125"(Remove the literal "true" boolean value.(€ûÇ|8…ÄâÀÏ-
-^squid:S00107"<Method has 8 parameters, which is greater than 7 authorized.(ÚŞÚŸûÿÿÿÿ8…ÄâÀÏ-
-bsquid:S1126"AReplace this if-then-else statement by a single return statement.(ÆúÀÊıÿÿÿÿ8…ÄâÀÏ-
-Ssquid:S1135"2Complete the task associated to this TODO comment.(°¡õ©úÿÿÿÿ8…ÄâÀÏ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æñÍÿÿÿÿÿ8…ÄâÀÏ-
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ÚŠ‘Ç8…ÄâÀÏ-
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ç‚â¿8…ÄâÀÏ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±é±Ùşÿÿÿÿ8…ÄâÀÏ-
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(©á¡8…ÄâÀÏ-
-tsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£şÿÿÿÿ8…ÄâÀÏ-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µş8úäøÀÏ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŞÎÂÚ8…ÄâÀÏ-
+Esquid:S1125r"(Remove the literal "true" boolean value.(€ûÇ|8…ÄâÀÏ-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ç‚â¿8…ÄâÀÏ-
+Lsquid:S1068".Remove this unused "NAME_REGEX" private field.(ú²°—8û÷”…Ğ-
+Ksquid:S1125n"(Remove the literal "true" boolean value.(€œÙ§şÿÿÿÿ8…ÄâÀÏ-
+jsquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8û÷”…Ğ-
+isquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(¢ÚÁ8û÷”…Ğ-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(©á¡8…ÄâÀÏ-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8…ÄâÀÏ-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ç‚â¿8…ÄâÀÏ-
+Rsquid:S1068"/Remove this unused "EMAIL_REGEX" private field.(êôù‹ûÿÿÿÿ8û÷”…Ğ-
+isquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(ŞÎÂÚ8…ÄâÀÏ-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8…ÄâÀÏ-
+nsquid:CommentedOutCodeLineN"<This block of commented-out lines of code should be removed.(ğÛÕ–úÿÿÿÿ8…ÄâÀÏ-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8…ÄâÀÏ-
+jsquid:CommentedOutCodeLineÏ"<This block of commented-out lines of code should be removed.(Ï“¤—8û÷”…Ğ-
+usquid:S2068¡"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÌÿÒ8«»£…Ğ-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µş8úäøÀÏ-
+dsquid:S1126y"AReplace this if-then-else statement by a single return statement.(ÆúÀÊıÿÿÿÿ8…ÄâÀÏ-
+Zsquid:S1068"7Remove this unused "DATE_BIRTHDAY_REGEX" private field.(àÀ¹£şÿÿÿÿ8û÷”…Ğ-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£şÿÿÿÿ8…ÄâÀÏ-
+Psquid:S1068"-Remove this unused "TEL_REGEX" private field.(®Û¯óøÿÿÿÿ8û÷”…Ğ-
+Psquid:S1135["2Complete the task associated to this TODO comment.(ÚŠ‘Ç8…ÄâÀÏ-
+jsquid:CommentedOutCodeLineµ"<This block of commented-out lines of code should be removed.(€„Ñ8û÷”…Ğ-

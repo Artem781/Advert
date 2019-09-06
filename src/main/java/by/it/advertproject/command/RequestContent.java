@@ -1,6 +1,9 @@
 package by.it.advertproject.command;
 
 import by.it.advertproject.exception.CommandException;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +18,7 @@ public class RequestContent {
     private HashMap<String, Object> requestAttributes;
     private HashMap<String, String[]> requestParameters;
     private HashMap<String, Object> sessionAttributes;
+    private static Logger Logger = LogManager.getRootLogger();
 
     public RequestContent() {
         requestParameters = new HashMap<>();
@@ -23,23 +27,35 @@ public class RequestContent {
     }
 
     public void extractValues(HttpServletRequest request) throws CommandException {
-
+        Logger.log(Level.INFO, "from RequestContent)==============================");
+        Logger.log(Level.INFO, "from RequestContent) extractValues method.");
         Enumeration<String> attrNames = request.getAttributeNames();
+        Logger.log(Level.INFO, "requestAttributes");
         while (attrNames.hasMoreElements()) {
             String name = attrNames.nextElement();
             Object attr = request.getAttribute(name);
+            Logger.log(Level.INFO, "name Attribute: " + name +
+                    "\t values Attribute: " + attr.toString());
             requestAttributes.put(name, attr);
         }
         Enumeration<String> paramNames = request.getParameterNames();
+        Logger.log(Level.INFO, "requestParameters");
         while (paramNames.hasMoreElements()) {
             String name = paramNames.nextElement();
+            Logger.log(Level.INFO, "name Parameter: " + name);
             String[] param = request.getParameterValues(name);
+            for (String element : param) {
+                Logger.log(Level.INFO, "values Parameter: " + element);
+            }
             requestParameters.put(name, param);
         }
         Enumeration<String> sessionAttrNames = request.getSession().getAttributeNames();
+        Logger.log(Level.INFO, "sessionAttributes");
         while (sessionAttrNames.hasMoreElements()) {
             String name = sessionAttrNames.nextElement();
             Object sessionAttr = request.getSession().getAttribute(name);
+            Logger.log(Level.INFO, "name sessionAttributes: " + name +
+                    "values sessionAttributes" + sessionAttr);
             sessionAttributes.put(name, sessionAttr);
         }
         session = request.getSession(false);

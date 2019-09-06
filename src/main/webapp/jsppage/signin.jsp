@@ -122,7 +122,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="signinbutton"></label>
                 <div class="col-md-4">
-                    <button id="signinbutton" type="submit" value="sign_in" name="signinbutton" class="btn btn-primary">
+                    <button id="signinbutton" type="submit" value="" name="signinbutton" class="btn btn-primary">
                         Sign in
                     </button>
                 </div>

@@ -241,3 +241,9 @@ j
 :src/main/java/by/it/advertproject/util/MessageManager.java,1\d\1d5dbf5a8bc9dd90590449605a8e230beb95303c
 j
 :src/main/java/by/it/advertproject/tester/LocaleTester.java,1\5\1558221c131340ddf0d52e4287b3bc8736b93bb4
+{
+Ksrc/main/java/by/it/advertproject/service/LoginPasswordValidationState.java,1\1\1133e73da175a84fccf91ab167e501af21520fe5
+p
+@src/main/java/by/it/advertproject/util/ConfigurationManager.java,8\8\8833d1f9c2def74dccf6eb5b82a0982ec031db19
+y
+Isrc/main/java/by/it/advertproject/command/impl/ToPersonalPageCommand.java,3\7\3774b87555d9b02d4c9aee269042d9f0bdf557bd

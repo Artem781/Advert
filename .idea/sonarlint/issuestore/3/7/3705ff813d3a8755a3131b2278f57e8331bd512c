@@ -1,5 +1,4 @@
 
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(÷àÓ¦8ò¨íşÈ-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úÜx8Óÿº”Ï-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰½ş©8É ¸”Ï-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úÜx8ƒº‹Ğ-
+tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8÷¶·‹Ğ-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰½ş©8É ¸”Ï-

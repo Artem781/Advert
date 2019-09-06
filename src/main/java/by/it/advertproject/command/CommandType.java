@@ -5,6 +5,7 @@ import by.it.advertproject.command.impl.*;
 public enum CommandType {
     FORWARD_TO_SIGN_UP(new ForwardToSignUpCommand()),
     FORWARD_TO_SIGN_IN(new ForwardToSignInCommand()),
+    FORWARD_TO_USER_PROFILE(new ForwardToUserProfileCommand()),
     SIGN_IN(new SignInCommand()),
     LOGOUT(new LogoutCommand()),
     SIGN_UP(new SignUpCommand()),
