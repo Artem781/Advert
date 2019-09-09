@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.LinkedList;
 import java.util.regex.Pattern;
 
 import static by.it.advertproject.command.Message.*;
@@ -114,33 +115,33 @@ public class AccountService {
     }
 
     public boolean validatePasswordAndLogin(String password, String login) {
-        if (!(Pattern.matches(LOGIN_PATTERN, login))) {
-            return false;
-        }
-        if (!Pattern.matches(PASSWORD_PATTERN, password)) {
+        if (!(Pattern.matches(LOGIN_PATTERN, login) || !Pattern.matches(PASSWORD_PATTERN, password))) {
             return false;
         }
         return true;
     }
 
+    // TODO: 07.09.2019 как делается чтобы в форме html печаталось сразу все невалидные значения
+    // TODO: 07.09.2019 может ли быть столько if в этом методе?
     public Account createAccount(String name, String login, String password,
                                  String passwordConfirm, String birthday,
                                  String email, String tel)
-                                    throws ServiceException {
-
+            throws ServiceException {
+        logger.log(Level.INFO, "from AccountService) createAccount method.");
         if (!passwordConfirm.equals(password)) {
             throw new ServiceException(NON_CONFIRM_PASSWORD_MESSAGE);
         }
+// Изменить названия
         LoginPasswordValidationState loginPasswordValidationState
-                = LoginPasswordValidator.validateLoginAndPassword(login, password);
-
+//                = LoginPasswordValidator.validateLoginAndPassword(login, password);
+                = LoginPasswordValidator.validateLoginAndPassword(login, password,
+                name, birthday, email, tel);
 //        String encryptedPassword = DigestUtils.md5Hex(password);
         String encryptedPassword = password;
         AccountDao accountDao = new AccountDaoImpl();
         Account account = new Account.Builder().withName(name).withLogin(login)
                 .withPassword(encryptedPassword).withBirthday(birthday).withEmail(email)
                 .withTel(tel).withRole(Role.USER).build();
-
         if (loginPasswordValidationState == LoginPasswordValidationState.VALID) {
             try {
                 accountDao.create(account);
@@ -159,11 +160,13 @@ public class AccountService {
                 = "^[a-z0-9_-]{3,16}$";
         private static final String RUSSIAN_LOGIN_PATTERN
                 = "([А-Я][а-я]{2,15})\\s([А-Я][а-я]{2,15})";
-//        private static final String PASSWORD_PATTERN = "[a-zA-Z0-9]{6,20}";
+        //        private static final String PASSWORD_PATTERN = "[a-zA-Z0-9]{6,20}";
         private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
 
-        private static LoginPasswordValidationState validateLoginAndPassword(String login, String password)
-                throws ServiceException {
+        //        private static LoginPasswordValidationState validateLoginAndPassword(String login, String password)
+        private static LoginPasswordValidationState validateLoginAndPassword(String login, String password,
+                                                                             String name, String birthday, String email,
+                                                                             String tel) throws ServiceException {
             LoginPasswordValidationState loginPasswordValidationState = LoginPasswordValidationState.VALID;
             if (!(Pattern.matches(ENGLISH_LOGIN_PATTERN, login) ||
                     Pattern.matches(RUSSIAN_LOGIN_PATTERN, login))) {
@@ -172,6 +175,22 @@ public class AccountService {
             if (!Pattern.matches(PASSWORD_PATTERN, password)) {
                 throw new ServiceException(PASSWORD_INCORRECT_FORMAT_MESSAGE);
             }
+////////////////////////////////////////////////////////////////////////
+            //added 6.09.2019
+            if (!Pattern.matches(NAME_REGEX, name)) {
+                throw new ServiceException(NAME_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(DATE_BIRTHDAY_REGEX, birthday)) {
+                throw new ServiceException(BIRTHDAY_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(EMAIL_REGEX, email)) {
+                throw new ServiceException(EMAIL_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(TEL_REGEX, tel)) {
+                throw new ServiceException(TEL_INCORRECT_FORMAT_MESSAGE);
+            }
+///////////////////////////////////////////////////////////////////////
+
             return loginPasswordValidationState;
         }
     }
@@ -181,7 +200,7 @@ public class AccountService {
 // ======createAccount method
 //
 //        if (!Pattern.matches(NAME_REGEX, name)) {
-//                throw new ServiceException("message. login not valid");
+//                throw new ServiceException("message. name not valid");
 //                }
 //                if (!Pattern.matches(LOGIN_PATTERN, login)) {
 //                throw new ServiceException("message. login not valid");

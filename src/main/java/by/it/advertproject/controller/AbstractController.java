@@ -24,7 +24,7 @@ public abstract class AbstractController extends HttpServlet {
 private final Logger LOGGER = LogManager.getRootLogger();
     protected void process(HttpServletRequest request, HttpServletResponse response,
                            RequestContent content) throws ServletException, IOException {
-//        response.setContentType("text/html");
+        response.setContentType("text/html");
         try {
             content.extractValues(request);
             Command command = CommandFactory.defineCommand(content);
@@ -35,9 +35,6 @@ private final Logger LOGGER = LogManager.getRootLogger();
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(router.getPath());
                 dispatcher.forward(request, response);
             } else {
-                LOGGER.log(Level.INFO, "from AbstractController. else/ " +
-                        "\n request.getContextPath(): " + request.getContextPath() +
-                        "\n router.getPath(): " + router.getPath());
                 response.sendRedirect(request.getContextPath() + router.getPath());
             }
         } catch (CommandException e) {

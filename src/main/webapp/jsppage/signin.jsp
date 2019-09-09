@@ -5,6 +5,14 @@
 <%--<fmt:setLocale value="${language}" scope="session"/>--%>
 <%--<fmt:bundle basename="pagecontext" prefix="label.">--%>
 <!-- SIGN IN - SIGN_IN -->
+<%@ page errorPage="error.jsp"
+         contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<fmt:setLocale value="${lang}" scope="session"/>
+<fmt:setBundle basename="messages" var="rb"/>
 <html>
 <head>
     <%--<title><fmt:message key="login.title"/></title>--%>
@@ -45,6 +53,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=ListAdvert">List Advert</a>
+                </li>
+                <li class="navbar-text">
+                    <fmt:message key="label.language" bundle="${rb}"/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="controller?command=set_lang&page=login">
+                        <fmt:message key="label.language.type" bundle="${rb}"/>
+                        <%--<i aria-hidden="true"></i>--%>
+                    </a>
                 </li>
 
 
@@ -91,13 +108,18 @@
         <fieldset>
 
             <!-- Form Name -->
-            <legend>Sign in</legend>
+            <legend>
+                Sign in
+                <fmt:message key="label.sign-in" bundle="${rb}"/>
+
+            </legend>
 
             <!-- Login input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="login">Login:*</label>
                 <div class="col-md-4">
-                    <input id="login" name="login" value="" type="text" placeholder=""
+                    <input id="login" name="login" value="" type="text"
+                           placeholder="<fmt:message key="label.login" bundle="${rb}"/>"
                            class="form-control input-md" required=""
                     <%--pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"--%>
                            class="form-control input-md">
@@ -110,7 +132,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="passwordinput">Password:*</label>
                 <div class="col-md-4">
-                    <input id="passwordinput" name="password" value="" type="password" placeholder=""
+                    <input id="passwordinput" name="password" value="" type="password"
+                           placeholder="<fmt:message key="label.password" bundle="${rb}"/>"
                            class="form-control input-md" required=""
                     <%--pattern="^[a-z0-9_-]*" minlength="6" maxlength="18"--%>
                            class="" form-control input-md>
@@ -122,7 +145,10 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="signinbutton"></label>
                 <div class="col-md-4">
-                    <button id="signinbutton" type="submit" value="" name="signinbutton" class="btn btn-primary">
+                    <button id="signinbutton" type="submit" value="" name="signinbutton"
+                            class="btn btn-primary">
+                        <fmt:message key="label.sign-in" bundle="${rb}"/>
+
                         Sign in
                     </button>
                 </div>

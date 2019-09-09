@@ -19,10 +19,11 @@ import static by.it.advertproject.command.ParameterName.*;
 import static java.util.Locale.ENGLISH;
 
 public class SignUpCommand implements Command {
-    private static final Logger logger = LogManager.getLogger(SignUpCommand.class);
+    private static Logger logger = LogManager.getLogger(SignUpCommand.class);
 
     @Override
     public Router execute(RequestContent content) {
+        logger.log(Level.INFO, "from SignUpCommand");
         String page;
         String name = content.getRequestParameters(PARAM_NAME, 0);
         String login = content.getRequestParameters(PARAM_NAME_LOGIN, 0);
@@ -32,33 +33,42 @@ public class SignUpCommand implements Command {
         String email = content.getRequestParameters(PARAM_EMAIL, 0);
         String tel = content.getRequestParameters(PARAM_TEL, 0);
 //    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
+        content.putRequestAttribute(ATTR_NAME_USER, name);
+        content.putRequestAttribute(ATTR_NAME_USER, name);
+        content.putRequestAttribute(ATTR_NAME_LOGIN, login);
+        content.putRequestAttribute(ATTR_NAME_BIRTHDAY, birthday);
+        content.putRequestAttribute(ATTR_NAME_EMAIL, email);
+        content.putRequestAttribute(ATTR_NAME_TELEPHONE, tel);
+        content.putRequestAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
         TransmissionType transmissionType;
         Account account;
         AccountService service = new AccountService();
+        logger.log(Level.INFO, "from SignUpCommand before try block");
         try {
             account = service.createAccount(name, login, pass, confirm, birthday, email, tel);
-            content.putSessionAttribute(ATTR_NAME_USER, login);
+            logger.log(Level.INFO, "from SignUpCommand) account: " + account);
+            content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putSessionAttribute(ATTR_NAME_LOGIN, login);
 //            page = CommandUrlBuilder.TO_PERSONAL_PAGE
+            logger.log(Level.INFO, "from SignUpCommand. before page.");
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             transmissionType = TransmissionType.FORWARD;
+            logger.log(Level.INFO, "from SignUpCommand. page: " + page);
         } catch (ServiceException e) {
+            logger.log(Level.INFO, "from SignUpCommand. catch block. e.getMessage(): " + e.getMessage());
             logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
 //            page = CommandUrlBuilder.TO_REGISTRATION
+            content.putRequestAttribute("errorMessageAttr", MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             page = CommandUrlBuilder.TO_SIGN_UP_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage()).getUrl();
             transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);
     }
-    }
-
-
-
-
+}
 
 
 //

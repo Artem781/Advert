@@ -1,6 +1,6 @@
 
+]squid:S2095o"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¿Ëà(
+’squid:S1192"{Define a constant instead of duplicating this literal "anaron.crashed, anaron.price, anaron.accountaccesslevelfk " 3 times.(†„Íè
+{squid:S14881"_Immediately return this expression instead of assigning it to the temporary variable "adverts".(ëÄ§şşÿÿÿÿ
 ‹squid:S1192"tDefine a constant instead of duplicating this literal "anaron.body, anaron.year, anaron.engine, anaron.at," 3 times.(öúğ†
 –squid:S1192"zDefine a constant instead of duplicating this literal "SELECT anaron.idadvert, anaron.title, anaron.description," 3 times.(Áâ«øøÿÿÿÿ
-]squid:S2095o"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¿Ëà(
-{squid:S14881"_Immediately return this expression instead of assigning it to the temporary variable "adverts".(ëÄ§şşÿÿÿÿ
-’squid:S1192"{Define a constant instead of duplicating this literal "anaron.crashed, anaron.price, anaron.accountaccesslevelfk " 3 times.(†„Íè

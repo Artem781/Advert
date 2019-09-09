@@ -1,12 +1,16 @@
 package by.it.advertproject.command;
 
 public class AttributeName {
-    public static final String ATTR_NAME_USER = "user";
+//    public static final String ATTR_NAME_USER = "user";
+    public static final String ATTR_NAME_USER = "nameUser";
     public static final String ATTR_NAME_CHECK_ENTER_DATA = "checkEnterData";
     public static final String ATTR_NAME_ERROR_LOGIN_PASS_MESSAGE = "errorLoginPassMessage";
     public static final String ATTR_NAME_ACCESS_LEVEL = "access_level";
     public static final String ATTR_NAME_ACCOUNT_ID = "accountId";
     public static final String ATTR_NAME_LOGIN = "login";
+    public static final String ATTR_NAME_TELEPHONE = "telAttr";
+    public static final String ATTR_NAME_EMAIL = "emailAttr";
+    public static final String ATTR_NAME_BIRTHDAY = "birthdayAttr";
     public static final String ATTR_NAME_POSTS = "posts";
     public static final String ATTR_NAME_ACCOUNT = "account";
     public static final String ATTR_LOGIN_ERROR = "login_error";

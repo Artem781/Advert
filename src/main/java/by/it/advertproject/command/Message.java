@@ -11,6 +11,10 @@ public class Message {
     public static final String NON_CONFIRM_PASSWORD_MESSAGE = "message.non-confirm-password";
     public static final String LOGIN_INCORRECT_FORMAT_MESSAGE = "message.non-valid-login";
     public static final String PASSWORD_INCORRECT_FORMAT_MESSAGE = "message.non-valid-password";
+    public static final String NAME_INCORRECT_FORMAT_MESSAGE = "message.non-valid-name";
+    public static final String BIRTHDAY_INCORRECT_FORMAT_MESSAGE = "message.non-valid-birthday";
+    public static final String EMAIL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-email";
+    public static final String TEL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-telephone";
     public static final String SUCCESS_UPDATE_MESSAGE = "messages.success-update-login-password";
     public static final String CREATE_POST_ERROR_MESSAGE = "message.can-not-create-post";
     public static final String UNSUPPORTED_IMAGE_FORMAT_MESSAGE = "message.invalid-photo-format";

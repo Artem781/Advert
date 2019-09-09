@@ -1,6 +1,6 @@
 
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡’ùÒ8Î¼”Ï-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“ÉËªÿÿÿÿÿ
-hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úÜx8‚¾½”Ï-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰½þ©8þØ»”Ï-
-tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8Ûìº‹Ð-
+tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8á†Ó³Ð-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰½þ©8á†Ó³Ð-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“ÉËªÿÿÿÿÿ8á†Ó³Ð-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡’ùÒ8á†Ó³Ð-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úÜx8á†Ó³Ð-

@@ -9,7 +9,9 @@ public enum CommandType {
     SIGN_IN(new SignInCommand()),
     LOGOUT(new LogoutCommand()),
     SIGN_UP(new SignUpCommand()),
+    SET_LANGUAGE_COMMAND(new SetLanguageCommand()),
     CREATE_ADVERT(new CreateAdvertCommand());
+
 
     CommandType(Command command) {
         this.command = command;

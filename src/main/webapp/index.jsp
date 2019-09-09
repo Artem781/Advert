@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>Index</title>
@@ -21,6 +22,7 @@
 </head>
 <body>
 
+<c:set var="lang" scope="session" value="en"/>
 <%--<jsp:forward page="/jsppage/signin.jsp"/>--%>
 
 <div class="container">
@@ -110,5 +112,6 @@
 
     <%--</fieldset>--%>
 <%--</form>--%>
+<script src="js/bootstrap.js.map"/>
 </body>
 </html>

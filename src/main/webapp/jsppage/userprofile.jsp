@@ -84,7 +84,7 @@
 
     <h3>Welcome</h3>
     <hr/>
-    ${user}, hello!
+    ${nameUser}, hello!
     <hr/>
     <a href="controller?command=logout">Logout</a>
 </div>

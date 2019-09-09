@@ -1,5 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!--REGISTRATION - SIGN UP -->
+<%@ page language="java" errorPage="error.jsp"
+         contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${lang}" scope="session"/>
+<fmt:setBundle basename="messages" var="rb"/>
+
+
 <html>
 <head>
     <title>Sign up</title>
@@ -89,13 +95,18 @@
         <fieldset>
 
             <!-- Form Name -->
-            <legend>Sign up</legend>
-
+            <legend>
+                <fmt:message key="label.sign-up" bundle="${rb}"/>
+            </legend>
+            <div class="alert-danger">
+                ${errorMessageAttr}
+            </div>
             <!-- Name input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">Name:*</label>
                 <div class="col-md-4">
-                    <input id="name" name="name" type="text" placeholder=""
+                    <input id="name" name="name" value="${nameUser}" type="text"
+                           placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block">
                         The first name is between 1 and 25 characters.
@@ -103,7 +114,6 @@
                         After that the first name can contain a-z (ignore case) and [ '-,.].
                         The first name can only end with an a-z (ignore case) character.
                     </span>
-
                 </div>
             </div>
 
@@ -111,7 +121,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="login">Login:*</label>
                 <div class="col-md-4">
-                    <input id="login" name="login" type="text" placeholder=""
+                    <input id="login" name="login" value="${login}" type="text"
+                           placeholder="<fmt:message key="label.login" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block">
                     Login contains: letters, numbers, hyphens and underscores,
@@ -124,7 +135,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="passwordfirst">Password input:*</label>
                 <div class="col-md-4">
-                    <input id="passwordfirst" name="passwordfirst" type="password" placeholder=""
+                    <input id="passwordfirst" name="passwordfirst" type="password"
+                           placeholder="<fmt:message key="label.password" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block">
                         Password contains: letters, numbers, hyphens and underscores,
@@ -137,7 +149,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="passwordsecond">Password input confirm:*</label>
                 <div class="col-md-4">
-                    <input id="passwordsecond" name="passwordsecond" type="password" placeholder=""
+                    <input id="passwordsecond" name="passwordsecond" type="password"
+                           placeholder="<fmt:message key="label.confirm" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>
@@ -147,10 +160,10 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="dateofbirth">Birthday:*</label>
                 <div class="col-md-4">
-                    <input id="dateofbirth" name="birthday" type="text" placeholder=""
+                    <input id="dateofbirth" name="birthday" value="${birthdayAttr}" type="text" placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block">
-                        date format (yyyy-mm-dd)
+                        date format (yyyy-mm-dd).
                     </span>
                 </div>
             </div>
@@ -159,17 +172,17 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="email">E-mail:*</label>
                 <div class="col-md-4">
-                    <input id="email" name="email" type="text" placeholder=""
+                    <input id="email" name="email" value="${emailAttr}" type="text" placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Telephone input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="tel">Telephone:*</label>
                 <div class="col-md-4">
-                    <input id="tel" name="tel" type="text" placeholder=""
+                    <input id="tel" name="tel" value="${telAttr}" type="text" placeholder=""
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>
@@ -180,7 +193,10 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submitButton"></label>
                 <div class="col-md-4">
-                    <button id="submitButton" name="submitButton" class="btn btn-success">signup</button>
+                    <button id="submitButton" name="submitButton" class="btn btn-success">
+                        <%--signup--%>
+                        <fmt:message key="label.sign-up" bundle="${rb}"/>
+                    </button>
                 </div>
             </div>
 

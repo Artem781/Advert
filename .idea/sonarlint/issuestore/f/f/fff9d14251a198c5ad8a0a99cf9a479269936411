@@ -1,8 +1,8 @@
 
-isquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(œ¹ý’8†Œ‹ÂÏ-
-tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8ù‡“ËÎ-
 nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(ë¸³úÿÿÿÿ8†Œ‹ÂÏ-
-nsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8†Œ‹ÂÏ-
-isquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(­Šù8†Œ‹ÂÏ-
 ]squid:S1118":Add a private constructor to hide the implicit public one.(Ô“å‚øÿÿÿÿ8ù‡“ËÎ-
+nsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8†Œ‹ÂÏ-
 Usquid:S1135""2Complete the task associated to this TODO comment.(½¿žÂûÿÿÿÿ8ßªÂ‡Ð-
+isquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(­Šù8†Œ‹ÂÏ-
+tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8ù‡“ËÎ-
+isquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(œ¹ý’8†Œ‹ÂÏ-
