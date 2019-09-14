@@ -1,6 +1,5 @@
 
 tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8á†Ó³Ð-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰½þ©8á†Ó³Ð-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“ÉËªÿÿÿÿÿ8á†Ó³Ð-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡’ùÒ8á†Ó³Ð-
-hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(úÜx8á†Ó³Ð-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡’ùÒ8á†Ó³Ð-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“ÉËªÿÿÿÿÿ8á†Ó³Ð-
+msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8“ÃƒÖÑ-

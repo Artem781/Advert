@@ -54,16 +54,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=ListAdvert">List Advert</a>
                 </li>
-
+                <li class="navbar-text">
+                    <fmt:message key="label.language" bundle="${rb}"/>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=set_lang&page=login">
                         <fmt:message key="label.language.type" bundle="${rb}"/>
                         <%--<i aria-hidden="true"></i>--%>
                     </a>
                 </li>
-                <li class="navbar-text">
-                    <fmt:message key="label.language" bundle="${rb}"/>
-                </li>
+
 
                 <%--<li class="nav-item dropdown">--%>
                 <%--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"--%>
@@ -109,9 +109,7 @@
 
             <!-- Form Name -->
             <legend>
-                Sign in
                 <fmt:message key="label.sign-in" bundle="${rb}"/>
-
             </legend>
 
             <!-- Login input-->

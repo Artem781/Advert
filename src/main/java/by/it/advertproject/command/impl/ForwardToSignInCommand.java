@@ -14,13 +14,9 @@ public class ForwardToSignInCommand implements Command {
     private static Logger Logger = LogManager.getRootLogger();
 
     @Override
-//    public String execute(HttpServletRequest request) {
     public Router execute(RequestContent content) {
-
         String page = "/jsppage/signin.jsp";
-//        String page = "/WEB-INF/jsp/signin.jsp";
         Logger.log(Level.INFO, "from ForwardToSignInCommand. page: " + page);
-//        return page;
         return new Router(page, TransmissionType.FORWARD);
     }
 }

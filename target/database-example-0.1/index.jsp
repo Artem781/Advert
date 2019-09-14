@@ -112,5 +112,6 @@
 
     <%--</fieldset>--%>
 <%--</form>--%>
+<script src="js/bootstrap.js.map"/>
 </body>
 </html>

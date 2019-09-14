@@ -16,6 +16,5 @@ public class ForwardToUserProfileCommand implements Command {
         String page = "/jsppage/userprofile.jsp";
         Logger.log(Level.INFO, "from ForwardToUserProfileCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
-
     }
 }

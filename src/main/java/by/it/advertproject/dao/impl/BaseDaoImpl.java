@@ -30,7 +30,8 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
         } finally {
             try {
                 closeResources(preparedStatement, connection);
-            } catch (Exception e) { // FIXME: 22.08.2019 
+            } catch (Exception e) {
+                //////////
                 logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
             }
         }

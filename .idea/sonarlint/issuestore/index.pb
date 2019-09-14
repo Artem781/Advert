@@ -245,9 +245,11 @@ j
 Ksrc/main/java/by/it/advertproject/service/LoginPasswordValidationState.java,1\1\1133e73da175a84fccf91ab167e501af21520fe5
 p
 @src/main/java/by/it/advertproject/util/ConfigurationManager.java,8\8\8833d1f9c2def74dccf6eb5b82a0982ec031db19
-y
-Isrc/main/java/by/it/advertproject/command/impl/ToPersonalPageCommand.java,3\7\3774b87555d9b02d4c9aee269042d9f0bdf557bd
 
 Osrc/main/java/by/it/advertproject/command/impl/ForwardToUserProfileCommand.java,2\9\294bfdec86f9db35d656f1c0821cb0e284b0a3b9
 v
 Fsrc/main/java/by/it/advertproject/command/impl/SetLanguageCommand.java,1\2\123db3330f98bbf89ae6e1d8a07b939662038403
+Y
+)src/main/resources/messages_en.properties,3\a\3a94c451cbbce6e4218fd28a50b4b17c2ba2ab09
+Y
+)src/main/resources/messages_ru.properties,c\9\c99ae9ddb03868c984bc481ce75a86c1da7381e4

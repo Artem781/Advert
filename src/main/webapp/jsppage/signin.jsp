@@ -109,9 +109,7 @@
 
             <!-- Form Name -->
             <legend>
-                Sign in
                 <fmt:message key="label.sign-in" bundle="${rb}"/>
-
             </legend>
 
             <!-- Login input-->

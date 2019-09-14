@@ -15,7 +15,6 @@ public class LogoutCommand implements Command {
     private static Logger Logger = LogManager.getRootLogger();
 
     @Override
-//    public String execute(HttpServletRequest request) {
     public Router execute(RequestContent content) {
 
 //        String page = ConfigurationManager.getProperty("path.page.index");
@@ -25,7 +24,6 @@ public class LogoutCommand implements Command {
 // уничтожение сессии
 //        request.getSession().invalidate();
         content.invalidateSession();
-//        return page;
         return new Router(page, TransmissionType.FORWARD);
     }
 }

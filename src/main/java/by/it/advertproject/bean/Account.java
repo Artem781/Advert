@@ -1,7 +1,6 @@
 package by.it.advertproject.bean;
 
 public class Account extends Bean {
-    //todo какое значение надо указывать в serialVersionUID ?
     static final long serialVersionUID = 42L;
     private String name;
     private String login;

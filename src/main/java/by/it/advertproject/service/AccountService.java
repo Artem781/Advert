@@ -121,7 +121,6 @@ public class AccountService {
         return true;
     }
 
-    // TODO: 07.09.2019 как делается чтобы в форме html печаталось сразу все невалидные значения
     // TODO: 07.09.2019 может ли быть столько if в этом методе?
     public Account createAccount(String name, String login, String password,
                                  String passwordConfirm, String birthday,

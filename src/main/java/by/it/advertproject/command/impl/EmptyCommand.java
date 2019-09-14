@@ -15,13 +15,11 @@ public class EmptyCommand implements Command {
     private static Logger Logger = LogManager.getRootLogger();
 
     @Override
-//    public String execute(HttpServletRequest request) {
     public Router execute(RequestContent content) {
 
 //        String page = ConfigurationManager.getProperty("path.page.index");
         String page = "/index.jsp";
         Logger.log(Level.INFO, "from EmptyCommand. page: " + page);
-//        return page;
         return new Router(page, TransmissionType.FORWARD);
     }
 }
