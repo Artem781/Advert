@@ -1,8 +1,13 @@
 
-nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(¼œ±Êúÿÿÿÿ8§Úµ‰Ó-
+nsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.( ŽÈðûÿÿÿÿ8¯¤õ§Ó-
 hsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(–Õ¶B8Ÿ–½‰Ó-
-hsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(½ûâv8ìŽ·‰Ó-
-nsquid:CommentedOutCodeLineg"<This block of commented-out lines of code should be removed.(¬ÂŽúÿÿÿÿÿ8§Úµ‰Ó-
+nsquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(¼œ±Êúÿÿÿÿ8§Úµ‰Ó-
+nsquid:CommentedOutCodeLinen"<This block of commented-out lines of code should be removed.(¸“êìûÿÿÿÿ8§Úµ‰Ó-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8úŸÉùÒ-
+[
+squid:S106H"9Replace this use of System.out or System.err by a logger.(Ö¬ß…ûÿÿÿÿ8ƒ‚ö§Ó-
 [squid:UselessImportCheck"1Remove this unused import 'java.util.LinkedList'.(»Äð18ìŽ·‰Ó-
-nsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(¸“êìûÿÿÿÿ8§Úµ‰Ó-
+nsquid:CommentedOutCodeLinek"<This block of commented-out lines of code should be removed.(¬ÂŽúÿÿÿÿÿ8§Úµ‰Ó-
+hsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(½ûâv8ìŽ·‰Ó-
+[
+squid:S106J"9Replace this use of System.out or System.err by a logger.(Ö¬ß…ûÿÿÿÿ8°ñö§Ó-

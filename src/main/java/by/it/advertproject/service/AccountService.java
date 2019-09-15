@@ -21,16 +21,10 @@ import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
 public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
-//    private final static String LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
-//    private final static String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
-//    private final static String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
-//    private final static String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
-//    private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
-//    private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
 
     public Account checkLogin(String login, String password) throws ServiceException {
-//    String encryptedPassword = DigestUtils.md5Hex(password);
-        String encryptedPassword = password;
+    String encryptedPassword = DigestUtils.md5Hex(password);
+//        String encryptedPassword = password;
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {
@@ -78,45 +72,11 @@ public class AccountService {
     }
 
 
-//    public boolean checkLogin(String login, String password) {
-//        if (login == null || password == null) {
-//            return false;
-//        }
-//        if (!(validateLogin(login)) || !(validatePassword(password))) {
-//            return false;
-//        }
-////        String encryptedPassword = DigestUtils.md5Hex(password);
-//        AccountDaoImpl accountDao = new AccountDaoImpl();
-//        Account account;
-//        try {
-//            account = accountDao.findAccountByLogin(login);
-//            if (account == null) {
-//                return false;
-////                throw new ServiceException(MESSAGE_LOGIN_ERROR);
-//            }
-////            if (!account.getPassword().equals(encryptedPassword)) {
-//            if (!account.getPassword().equals(password)) {
-////                logger.log(Level.WARN, account.getPassword() + " " + encryptedPassword);
-//                logger.log(Level.WARN, account.getPassword() + " " + password);
-//                return false;
-////                throw new ServiceException(MESSAGE_PASSWORD_ERROR);
-//            }
-//        } catch (DaoException e) {
-//            logger.log(Level.ERROR, e);
-//            return false;
-//        }
-//        return true;
-//    }
-
-    //    public Account createAccount(String name, String login, String password, String passwordConfirm, String birthday, String email, String tel) throws ServiceException {
+// TODO: 16.09.2019 проверяться уникальность логина только в базе данных как поле unique
     public Account createAccount(Map<String, String> parameterMap) throws ServiceException {
         logger.log(Level.INFO, "from AccountService) createAccount method.");
-        ////////////////////////////////////////////////////////////
-        //added 14.09.2019
         SignUpParameterValidationState signUpParameterValidationState
                 = SignUpParameterValidator.validateParameter(parameterMap);
-//                = SignUpParameterValidator.validateParameter(
-//                name, login, password, passwordConfirm, birthday, email, tel);
         logger.log(Level.INFO, "from AccountService) createAccount method. after SignUpParameterValidator ");
         String encryptedPassword = DigestUtils.md5Hex(parameterMap.get(PARAM_PASSWORD));
         AccountDao accountDao = new AccountDaoImpl();
@@ -136,37 +96,11 @@ public class AccountService {
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.create(account)");
                 account = accountDao.findAccountByLogin(account.getLogin());
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())");
-
             } catch (DaoException e) {
                 logger.log(Level.INFO, "from AccountService) createAccount method. throw new ServiceException(BUSY_LOGIN_MESSAGE)");
-
                 throw new ServiceException(BUSY_LOGIN_MESSAGE);
             }
         }
-
-
-//        if (!passwordConfirm.equals(password)) {
-//            throw new ServiceException(NON_CONFIRM_PASSWORD_MESSAGE);
-//        }
-// Изменить названия
-//        LoginPasswordValidationState loginPasswordValidationState
-////                = LoginPasswordValidator.validateLoginAndPassword(login, password);
-//                = LoginPasswordValidator.validateLoginAndPassword(login, password,
-//                name, birthday, email, tel);
-//        String encryptedPassword = DigestUtils.md5Hex(password);
-//        String encryptedPassword = password;
-//        AccountDao accountDao = new AccountDaoImpl();
-//        Account account = new Account.Builder().withName(name).withLogin(login)
-//                .withPassword(encryptedPassword).withBirthday(birthday).withEmail(email)
-//                .withTel(tel).withRole(Role.USER).build();
-//        if (loginPasswordValidationState == LoginPasswordValidationState.VALID) {
-//            try {
-//                accountDao.create(account);
-//                account = accountDao.findAccountByLogin(account.getLogin());
-//            } catch (DaoException e) {
-//                throw new ServiceException(BUSY_LOGIN_MESSAGE);
-//            }
-//        }
         return account;
     }
 
@@ -177,16 +111,12 @@ public class AccountService {
         private static final String PASSWORD_CONFIRM_PATTERN = "^[a-z0-9_-]{6,18}$";
         private static final String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
         private static final String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
-//        private static final String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
         private static final String EMAIL_REGEX = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
-
-        private static final String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
+        private static final String TEL_REGEX = "^(\\+)?([ 0-9]){10,16}$";
+        private static final String PASSWORD_EQUALS_CONFIRM_PASSWORD = "passEqualsConfirmPass";
 
 
         public static SignUpParameterValidationState validateParameter(Map<String, String> parameterMap) throws ServiceException {
-//        public static SignUpParameterValidationState validateParameter(String name, String login, String password,
-//                                                                       String passwordConfirm, String birthday,
-//                                                                       String email, String tel) throws ServiceException {
             SignUpParameterValidationState signUpParameterValidationState = SignUpParameterValidationState.VALID;
             logger.log(Level.INFO, "from AccountService) SignUpParameterValidator) validateParameter method.");
             Map<String, String> regexMap = new HashMap<>();
@@ -206,35 +136,18 @@ public class AccountService {
             errorMessageMap.put(PARAM_BIRTHDAY, BIRTHDAY_INCORRECT_FORMAT_MESSAGE);
             errorMessageMap.put(PARAM_EMAIL, EMAIL_INCORRECT_FORMAT_MESSAGE);
             errorMessageMap.put(PARAM_TEL, TEL_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMap.put(PASSWORD_EQUALS_CONFIRM_PASSWORD, NON_CONFIRM_PASSWORD_MESSAGE);
             logger.log(Level.INFO, "errorMessageMap size: " + errorMessageMap.size());
             logger.log(Level.INFO, "regexMap size: " + regexMap.size());
             logger.log(Level.INFO, "parameterMap size: " + parameterMap.size());
             StringBuilder errorMessageSb = new StringBuilder();
-            logger.log(Level.INFO, "errorMessageSb.length(): " + errorMessageSb.length());
-
-
-            int count = 0;
-            boolean resMatch;
             for (Map.Entry<String, String> element : parameterMap.entrySet()) {
-                logger.log(Level.INFO, "in for) count: " + count);
-                logger.log(Level.INFO, "(!Pattern.matches(\"" + regexMap.get(element.getKey()) + "\", " +
-                        element.getValue() + "))");
-                resMatch = (!Pattern.matches(regexMap.get(element.getKey()), element.getValue()));
-                logger.log(Level.INFO, "in for) resMatch: " + resMatch);
-                if (resMatch) {
-//                    errorMessageSb.append(MessageManager.getProperty(errorMessageMap.get(element.getKey()), ENGLISH) + "\n");
+                if (!Pattern.matches(regexMap.get(element.getKey()), element.getValue())) {
                     errorMessageSb.append(errorMessageMap.get(element.getKey()) + "\t");
-                    logger.log(Level.INFO, "in for) in if) errorMessageSb: " + errorMessageSb);
                 }
-                logger.log(Level.INFO, "in for) not go to if) ");
-                count++;
             }
-
             if (!parameterMap.get(PARAM_PASSWORD).equals(parameterMap.get(PARAM_PASSWORD_CONFIRM))) {
-                errorMessageSb.append(MessageManager.getProperty(NON_CONFIRM_PASSWORD_MESSAGE, ENGLISH) + "\n");
-//                errorMessageSb.append(NON_CONFIRM_PASSWORD_MESSAGE + "\n");
-                logger.log(Level.INFO, parameterMap.get(PARAM_PASSWORD_CONFIRM) + " not equals " +
-                        parameterMap.get(PARAM_PASSWORD));
+                errorMessageSb.append(errorMessageMap.get(PASSWORD_EQUALS_CONFIRM_PASSWORD));
             }
             if (errorMessageSb.length() != 0) {
                 logger.log(Level.INFO, "errorMessageSb !== null. errorMessageSb: " + errorMessageSb);
@@ -245,54 +158,13 @@ public class AccountService {
             return signUpParameterValidationState;
         }
     }
-
-    private static class LoginPasswordValidator {
-
-        private static final String ENGLISH_LOGIN_PATTERN
-//                = "([A-z][a-z]{2,15})\\s([A-Z][a-z]{2,15})";
-                = "^[a-z0-9_-]{3,16}$";
-        private static final String RUSSIAN_LOGIN_PATTERN
-                = "([А-Я][а-я]{2,15})\\s([А-Я][а-я]{2,15})";
-        //        private static final String PASSWORD_PATTERN = "[a-zA-Z0-9]{6,20}";
-        private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
-        private final static String LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
-        //        private final static String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
-        private final static String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
-        private final static String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
-        private final static String EMAIL_REGEX = "^.+@[^\\.].*\\.[a-z]{2,}$";
-        private final static String TEL_REGEX = "^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$";
-
-
-        //        private static LoginPasswordValidationState validateLoginAndPassword(String login, String password)
-        private static LoginPasswordValidationState validateLoginAndPassword(String login, String password,
-                                                                             String name, String birthday, String email,
-                                                                             String tel) throws ServiceException {
-            LoginPasswordValidationState loginPasswordValidationState = LoginPasswordValidationState.VALID;
-//            HashMap<String, Boolean> validParameter = new HashMap<>();
-
-            if (!(Pattern.matches(ENGLISH_LOGIN_PATTERN, login) ||
-                    Pattern.matches(RUSSIAN_LOGIN_PATTERN, login))) {
-                throw new ServiceException(LOGIN_INCORRECT_FORMAT_MESSAGE);
-            }
-//            if (!Pattern.matches(PASSWORD_PATTERN, password)) {
-//                throw new ServiceException(PASSWORD_INCORRECT_FORMAT_MESSAGE);
-//            }
-//            if (!Pattern.matches(NAME_REGEX, name)) {
-//                throw new ServiceException(NAME_INCORRECT_FORMAT_MESSAGE);
-//            }
-//            if (!Pattern.matches(DATE_BIRTHDAY_REGEX, birthday)) {
-//                throw new ServiceException(BIRTHDAY_INCORRECT_FORMAT_MESSAGE);
-//            }
-//            if (!Pattern.matches(EMAIL_REGEX, email)) {
-//                throw new ServiceException(EMAIL_INCORRECT_FORMAT_MESSAGE);
-//            }
-//            if (!Pattern.matches(TEL_REGEX, tel)) {
-//                throw new ServiceException(TEL_INCORRECT_FORMAT_MESSAGE);
-//            }
-            return loginPasswordValidationState;
-        }
-    }
 }
+
+
+
+
+
+
 
 
 // ======createAccount method

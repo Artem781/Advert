@@ -16,6 +16,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 import static by.it.advertproject.command.AttributeName.*;
+import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
 import static java.util.Locale.ENGLISH;
 
@@ -43,7 +44,6 @@ public class SignUpCommand implements Command {
         parameterMap.put(PARAM_TEL, tel);
 //    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
         content.putRequestAttribute(ATTR_NAME_USER, name);
-        content.putRequestAttribute(ATTR_NAME_USER, name);
         content.putRequestAttribute(ATTR_NAME_LOGIN, login);
         content.putRequestAttribute(ATTR_NAME_BIRTHDAY, birthday);
         content.putRequestAttribute(ATTR_NAME_EMAIL, email);
@@ -53,6 +53,7 @@ public class SignUpCommand implements Command {
         Account account;
         AccountService service = new AccountService();
         logger.log(Level.INFO, "from SignUpCommand before try block");
+        String messageManager = "";
         try {
 //            account = service.createAccount(name, login, pass, confirmPass, birthday, email, tel);
             account = service.createAccount(parameterMap);
@@ -61,7 +62,6 @@ public class SignUpCommand implements Command {
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putSessionAttribute(ATTR_NAME_LOGIN, login);
-//            page = CommandUrlBuilder.TO_PERSONAL_PAGE
             logger.log(Level.INFO, "from SignUpCommand. before page.");
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
@@ -69,16 +69,64 @@ public class SignUpCommand implements Command {
             logger.log(Level.INFO, "from SignUpCommand. page: " + page);
         } catch (ServiceException e) {
             logger.log(Level.INFO, "from SignUpCommand. catch block. e.getMessage(): " + e.getMessage());
-            logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
+            messageManager = e.getMessage().trim();
+            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
+                    MessageManager.getProperty(MESSAGE_INCORRECT_SIGN_UP_DATA, String.valueOf(ENGLISH)));
+            String[] splitAttr = messageManager.split("\t");
+            for (String element : splitAttr) {
+                logger.log(Level.INFO, "element: " + element);
+                switch (element.trim()) {
+                    case NAME_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_NAME,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case LOGIN_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_LOGIN,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case PASSWORD_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_PASSWORD,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case BIRTHDAY_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_BIRTHDAY,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case EMAIL_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_EMAIL,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case TEL_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_TEL,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case NON_CONFIRM_PASSWORD_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_PASS_NO_EQUALS_PASS_CONFIRM,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case BUSY_LOGIN_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_BUSY_LOGIN,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                }
+            }
+
+
+//            logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
 //            page = CommandUrlBuilder.TO_REGISTRATION
-            content.putRequestAttribute("errorMessageAttr", MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
+//            content.putRequestAttribute("errorMessageAttr", MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             page = CommandUrlBuilder.TO_SIGN_UP_PAGE
-                    .setParams(PARAM_NAME_FEEDBACK, e.getMessage()).getUrl();
+//                    .setParams(PARAM_NAME_FEEDBACK, e.getMessage()).getUrl();
+                    .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
             transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);
     }
 }
+
+
+
+
 
 
 //

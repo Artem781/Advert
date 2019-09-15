@@ -1,41 +1,41 @@
 
-nsquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(ðÛÕ–úÿÿÿÿ8ÝðÇùÒ-
-hsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(µþ8ÝðÇùÒ-
-osquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(Åè»”ÿÿÿÿÿ8ÀØàÓ-
-osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ÏÙßúùÿÿÿÿ8® Ó-
-wsquid:ModifiersOrderCheck‡"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8® Ó-
-wsquid:ModifiersOrderCheck†"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8ãý†Ó-
-Xsquid:S1068¯"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ý8ÝðÇùÒ-
-jsquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(Ï“¤—8® Ó-
-jsquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8® Ó-
-zsquid:S2068°"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8ÝðÇùÒ-
-Ssquid:S1068†"/Remove this unused "EMAIL_REGEX" private field.(êôù‹ûÿÿÿÿ8ãý†Ó-
-isquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(Šú„38® Ó-
-osquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(Îó–Ïþÿÿÿÿ8ÝðÇùÒ-
-Xsquid:S1068"4Remove this unused "PASSWORD_PATTERN" private field.(ÔØš»ùÿÿÿÿ8Ôð†Ó-
-Jsquid:S1172‹"&Remove these unused method parameters.(Ù›Õ†øÿÿÿÿ8® Ó-
-jsquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(€„Ñ8® Ó-
-osquid:CommentedOutCodeLineü"<This block of commented-out lines of code should be removed.(º¢Ñãþÿÿÿÿ8® Ó-
-jsquid:CommentedOutCodeLine›"<This block of commented-out lines of code should be removed.(«ÎÏ«8³¨ÉÿÒ-
-wsquid:ModifiersOrderCheck…"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£þÿÿÿÿ8ãý†Ó-
-jsquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(Ã˜’å8â‚ÃÿÒ-
-osquid:UnusedPrivateMethod‹"=Remove this unused private "validateLoginAndPassword" method.(Ù›Õ†øÿÿÿÿ8® Ó-
-rsquid:ModifiersOrderCheck„"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8¸Á†…Ó-
-[squid:S1068…"7Remove this unused "DATE_BIRTHDAY_REGEX" private field.(àÀ¹£þÿÿÿÿ8ãý†Ó-
-Psquid:S1068‚"1Remove this unused "LOGIN_PATTERN" private field.(©á¡8® Ó-
-zsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8® Ó-
-Msquid:S1068„".Remove this unused "NAME_REGEX" private field.(ú²°—8¸Á†…Ó-
-osquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(¡–ÞÝùÿÿÿÿ8¥ÃúüÒ-
-osquid:CommentedOutCodeLine€"<This block of commented-out lines of code should be removed.(žïŽ¼üÿÿÿÿ8® Ó-
-usquid:S2068±"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8½¦’†Ó-
-rsquid:ModifiersOrderCheck‚"EReorder the modifiers to comply with the Java Language Specification.(©á¡8® Ó-
+rsquid:ModifiersOrderChecký"EReorder the modifiers to comply with the Java Language Specification.(©á¡8® Ó-
+Msquid:S1068ÿ".Remove this unused "NAME_REGEX" private field.(ú²°—8¸Á†…Ó-
+osquid:CommentedOutCodeLine÷"<This block of commented-out lines of code should be removed.(º¢Ñãþÿÿÿÿ8® Ó-
+isquid:CommentedOutCodeLineþ"<This block of commented-out lines of code should be removed.(Šú„38® Ó-
 jsquid:CommentedOutCodeLine½"<This block of commented-out lines of code should be removed.(Â·æà8ÛµÄ‰Ó-
-nsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(ÚÓ»’ûÿÿÿÿ8å£¿‰Ó-
+rsquid:ModifiersOrderCheckÿ"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8¸Á†…Ó-
+Ssquid:S1068"/Remove this unused "EMAIL_REGEX" private field.(êôù‹ûÿÿÿÿ8ãý†Ó-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÏÙßúùÿÿÿÿ8® Ó-
+osquid:CommentedOutCodeLineæ"<This block of commented-out lines of code should be removed.(‘áÙéýÿÿÿÿ8™¸áÓ-
+Qsquid:S1068‚"-Remove this unused "TEL_REGEX" private field.(®Û¯óøÿÿÿÿ8® Ó-
+osquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(Îó–Ïþÿÿÿÿ8ÝðÇùÒ-
+jsquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8® Ó-
 jsquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.(ÕÞ¤ü8ùÁðŒÓ-
+^squid:S3985ô":Remove this unused private "LoginPasswordValidator" class.(ýýüÿÿÿÿ8® Ó-
+jsquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(Ã˜’å8â‚ÃÿÒ-
 nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ãà†¼ùÿÿÿÿ8ÝðÇùÒ-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(š½„Íûÿÿÿÿ8® Ó-
-^squid:S3985ù":Remove this unused private "LoginPasswordValidator" class.(ýýüÿÿÿÿ8® Ó-
+osquid:CommentedOutCodeLineÝ"<This block of commented-out lines of code should be removed.(Åè»”ÿÿÿÿÿ8ÀØàÓ-
+osquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(š½„Íûÿÿÿÿ8® Ó-
+wsquid:ModifiersOrderCheck‚"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8® Ó-
+[squid:S1068€"7Remove this unused "DATE_BIRTHDAY_REGEX" private field.(àÀ¹£þÿÿÿÿ8ãý†Ó-
+Psquid:S1068ý"1Remove this unused "LOGIN_PATTERN" private field.(©á¡8® Ó-
+usquid:S2068±"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8½¦’†Ó-
+osquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(¡–ÞÝùÿÿÿÿ8¥ÃúüÒ-
+nsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(ÚÓ»’ûÿÿÿÿ8å£¿‰Ó-
+hsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(µþ8ÝðÇùÒ-
 nsquid:CommentedOutCodeLinew"<This block of commented-out lines of code should be removed.(£ºÅÀûÿÿÿÿ8äÌÃ‰Ó-
-Qsquid:S1068‡"-Remove this unused "TEL_REGEX" private field.(®Û¯óøÿÿÿÿ8® Ó-
-isquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(¢ÚÁ8® Ó-
-osquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(‘áÙéýÿÿÿÿ8™¸áÓ-
+jsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(€„Ñ8® Ó-
+Xsquid:S1068ü"4Remove this unused "PASSWORD_PATTERN" private field.(ÔØš»ùÿÿÿÿ8Ôð†Ó-
+Jsquid:S1172†"&Remove these unused method parameters.(Ù›Õ†øÿÿÿÿ8® Ó-
+Xsquid:S1068¯"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ý8ÝðÇùÒ-
+zsquid:S2068°"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8ÝðÇùÒ-
+osquid:UnusedPrivateMethod†"=Remove this unused private "validateLoginAndPassword" method.(Ù›Õ†øÿÿÿÿ8® Ó-
+nsquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(ðÛÕ–úÿÿÿÿ8ÝðÇùÒ-
+wsquid:ModifiersOrderCheck€"EReorder the modifiers to comply with the Java Language Specification.(àÀ¹£þÿÿÿÿ8ãý†Ó-
+isquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(¢ÚÁ8® Ó-
+wsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8ãý†Ó-
+zsquid:S2068ü"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8® Ó-
+jsquid:CommentedOutCodeLineÁ"<This block of commented-out lines of code should be removed.(Ï“¤—8® Ó-
+jsquid:CommentedOutCodeLine›"<This block of commented-out lines of code should be removed.(«ÎÏ«8³¨ÉÿÒ-
+osquid:CommentedOutCodeLineû"<This block of commented-out lines of code should be removed.(žïŽ¼üÿÿÿÿ8® Ó-

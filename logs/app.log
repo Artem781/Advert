@@ -2007,3 +2007,85 @@ Password not confirmed.
 2019-09-15 00:55:57,172 INFO  00:55:57.172 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-09-15 00:55:57,266 ERROR 00:55:57.266 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Duplicate entry 'ivanlogin' for key 'accounts_login_uindex'
 2019-09-15 00:55:57,266 INFO  00:55:57.266 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. throw new ServiceException(BUSY_LOGIN_MESSAGE)
+2019-09-15 15:16:16,399 INFO  15:16:16.399 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method.
+2019-09-15 15:16:16,399 INFO  15:16:16.399 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method.
+2019-09-15 15:16:16,414 INFO  15:16:16.414 [main] INFO by.it.advertproject.service.AccountService - errorMessageMap size: 7
+2019-09-15 15:16:16,414 INFO  15:16:16.414 [main] INFO by.it.advertproject.service.AccountService - regexMap size: 7
+2019-09-15 15:16:16,414 INFO  15:16:16.414 [main] INFO by.it.advertproject.service.AccountService - parameterMap size: 7
+2019-09-15 15:16:16,414 INFO  15:16:16.414 [main] INFO by.it.advertproject.service.AccountService - errorMessageSb.length(): 0
+2019-09-15 15:16:16,414 INFO  15:16:16.414 [main] INFO by.it.advertproject.service.AccountService - in for) count: 0
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))", 1995-07-11))
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) count: 1
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})", ivaname))
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) count: 2
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{6,18}$", ivanpass))
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) count: 3
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$", +375285832823))
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - in for) count: 4
+2019-09-15 15:16:16,430 INFO  15:16:16.430 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{3,16}$", ivanlogin))
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) count: 5
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{6,18}$", ivanpass))
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) count: 6
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])", ivanemail@tut.by))
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method. return signUpParameterValidationState: VALID
+2019-09-15 15:16:16,446 INFO  15:16:16.446 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. after SignUpParameterValidator 
+2019-09-15 15:16:16,539 INFO  15:16:16.539 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. create account with Builder
+2019-09-15 15:16:16,539 INFO  15:16:16.539 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. try block
+2019-09-15 15:16:22,992 INFO  15:16:22.992 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-09-15 15:16:23,258 ERROR 15:16:23.258 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Duplicate entry 'ivanlogin' for key 'accounts_login_uindex'
+2019-09-15 15:16:23,258 INFO  15:16:23.258 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. throw new ServiceException(BUSY_LOGIN_MESSAGE)
+2019-09-15 15:17:54,090 INFO  15:17:54.090 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method.
+2019-09-15 15:17:54,090 INFO  15:17:54.090 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method.
+2019-09-15 15:17:54,090 INFO  15:17:54.090 [main] INFO by.it.advertproject.service.AccountService - errorMessageMap size: 7
+2019-09-15 15:17:54,090 INFO  15:17:54.090 [main] INFO by.it.advertproject.service.AccountService - regexMap size: 7
+2019-09-15 15:17:54,090 INFO  15:17:54.090 [main] INFO by.it.advertproject.service.AccountService - parameterMap size: 7
+2019-09-15 15:17:54,106 INFO  15:17:54.106 [main] INFO by.it.advertproject.service.AccountService - errorMessageSb.length(): 0
+2019-09-15 15:17:54,106 INFO  15:17:54.106 [main] INFO by.it.advertproject.service.AccountService - in for) count: 0
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))", 1995-07-11))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 1
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})", ivaname))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 2
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{6,18}$", ivanpass))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 3
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$", +375285832823))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 4
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{3,16}$", ivanlogin))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 5
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("^[a-z0-9_-]{6,18}$", ivanpass))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) count: 6
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - (!Pattern.matches("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])", ivanemail@tut.by))
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) resMatch: false
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - in for) not go to if) 
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method. return signUpParameterValidationState: VALID
+2019-09-15 15:17:54,121 INFO  15:17:54.121 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. after SignUpParameterValidator 
+2019-09-15 15:17:54,152 INFO  15:17:54.152 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. create account with Builder
+2019-09-15 15:17:54,152 INFO  15:17:54.152 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. try block
+2019-09-15 15:17:56,465 INFO  15:17:56.465 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-09-15 15:17:56,637 INFO  15:17:56.637 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.create(account)
+2019-09-15 15:17:56,669 INFO  15:17:56.669 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())

@@ -88,7 +88,7 @@
     <%--</div>--%>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
-        <input type="hidden" name="accesslevel" value="user"/>
+        <%--<input type="hidden" name="accesslevel" value="user"/>--%>
         <br>
         ${checkEnterData}
         <br>
@@ -101,90 +101,135 @@
             <div class="alert-danger">
                 ${errorMessageAttr}
             </div>
+            <div class="alert-danger">
+                ${incorrectNameAttr}
+            </div>
+
             <!-- Name input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="name">Name:*</label>
+                <label class="col-md-4 control-label" for="name">
+                    <fmt:message key="label.name" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="name" name="name" value="${nameUser}" type="text"
-                           placeholder=""
+                           placeholder="<fmt:message key="label.name-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block">
-                        The first name is between 1 and 25 characters.
-                        The first name can only start with an a-z (ignore case) character.
-                        After that the first name can contain a-z (ignore case) and [ '-,.].
-                        The first name can only end with an a-z (ignore case) character.
+                        <fmt:message key="label.format-name" bundle="${rb}"/>
                     </span>
                 </div>
             </div>
 
             <!-- Login input-->
+            <div class="alert-danger">
+                ${incorrectLoginAttr}
+            </div>
+            <div class="alert-danger">
+                ${busyLoginAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="login">Login:*</label>
+                <label class="col-md-4 control-label" for="login">
+                    <fmt:message key="label.login" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="login" name="login" value="${login}" type="text"
-                           placeholder="<fmt:message key="label.login" bundle="${rb}"/>"
+                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"
+                    <%--pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"--%>
                            class="form-control input-md" required="">
                     <span class="help-block">
-                    Login contains: letters, numbers, hyphens and underscores,
-                    from 3 to 16 characters.
+                        <fmt:message key="label.format-login" bundle="${rb}"/>
                     </span>
                 </div>
             </div>
 
             <!-- Password input-->
+            <div class="alert-danger">
+                ${incorrectPassAttr}
+            </div>
+            <div class="alert-danger">
+                ${noConfirmPassAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordfirst">Password input:*</label>
+                <label class="col-md-4 control-label" for="passwordfirst">
+                    <fmt:message key="label.pass" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="passwordfirst" name="passwordfirst" type="password"
-                           placeholder="<fmt:message key="label.password" bundle="${rb}"/>"
+                           placeholder="<fmt:message key="label.password-placeholder" bundle="${rb}"/>"
+                    <%--pattern="^[a-z0-9_-]*" minlength="6" maxlength="18"--%>
                            class="form-control input-md" required="">
                     <span class="help-block">
-                        Password contains: letters, numbers, hyphens and underscores,
-                        from 6 to 18 characters.
+                        <fmt:message key="label.format-pass" bundle="${rb}"/>
                     </span>
                 </div>
             </div>
 
-            <!-- Password input-->
+            <!-- Password confirm input-->
+            <div class="alert-danger">
+                ${incorrectPassAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordsecond">Password input confirm:*</label>
+                <label class="col-md-4 control-label" for="passwordsecond">
+                    <fmt:message key="label.pass-confirm" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="passwordsecond" name="passwordsecond" type="password"
-                           placeholder="<fmt:message key="label.confirm" bundle="${rb}"/>"
+                           placeholder="<fmt:message key="label.confirm-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>
             </div>
 
             <!-- Birthday input-->
+            <div class="alert-danger">
+                ${incorrectBirthAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="dateofbirth">Birthday:*</label>
+                <label class="col-md-4 control-label" for="dateofbirth"><fmt:message key="label.birth" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="dateofbirth" name="birthday" value="${birthdayAttr}" type="text" placeholder=""
+                    <input id="dateofbirth" name="birthday" value="${birthdayAttr}" type="text"
+                           placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required="">
-                    <span class="help-block">
-                        date format (yyyy-mm-dd).
+                    <span class="help-block"><fmt:message key="label.format-birth" bundle="${rb}"/>
                     </span>
                 </div>
             </div>
 
             <!-- E-mail input-->
+            <div class="alert-danger">
+                ${incorrectEmailAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="email">E-mail:*</label>
+                <label class="col-md-4 control-label" for="email"><fmt:message key="label.email" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="email" name="email" value="${emailAttr}" type="text" placeholder=""
+
+
+                    <!-- заменить type="text" на type="email" -->
+
+
+                    <input id="email" name="email" value="${emailAttr}" type="text"
+                           placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>
             </div>
 
             <!-- Telephone input-->
+            <div class="alert-danger">
+                ${incorrectTelAttr}
+            </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="tel">Telephone:*</label>
+                <label class="col-md-4 control-label" for="tel"><fmt:message key="label.tel" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="tel" name="tel" value="${telAttr}" type="text" placeholder=""
+                    <input id="tel" name="tel" value="${telAttr}" type="text"
+                           placeholder="<fmt:message key="label.tel-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required="">
-                    <span class="help-block"></span>
+                    <span class="help-block">
+                        <fmt:message key="label.format-tel" bundle="${rb}"/>
+                    </span>
                 </div>
             </div>
 

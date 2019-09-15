@@ -5,6 +5,7 @@ public class Message {
 //    public static final String MESSAGE_PASSWORD_ERROR = "massage.password-error";
 //    public static final String CAN_NOT_LOGIN = "message.can-not-login";
 
+    public static final String MESSAGE_INCORRECT_SIGN_UP_DATA = "massage.incorrect-sign-up-data";
     public static final String MESSAGE_LOGIN_ERROR = "message.login-error";
     public static final String MESSAGE_PASSWORD_ERROR = "massage.password-error";
     public static final String BUSY_LOGIN_MESSAGE = "message.busy-login";
@@ -16,6 +17,7 @@ public class Message {
     public static final String BIRTHDAY_INCORRECT_FORMAT_MESSAGE = "message.non-valid-birthday";
     public static final String EMAIL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-email";
     public static final String TEL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-telephone";
+
     public static final String SUCCESS_UPDATE_MESSAGE = "messages.success-update-login-password";
     public static final String CREATE_POST_ERROR_MESSAGE = "message.can-not-create-post";
     public static final String UNSUPPORTED_IMAGE_FORMAT_MESSAGE = "message.invalid-photo-format";

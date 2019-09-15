@@ -26,8 +26,10 @@ public enum CommandUrlBuilder {
 
         public CommandUrlBuilder setParams(String name, String param) {
             params = params + "&" + name + "=" + param;
+
             System.out.println("from CommandUrlBuilder\tTO_SIGN_UP_PAGE enum)" +
                     " setParams. params: " + params);
+
             return this;
         }
 
