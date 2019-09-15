@@ -68,7 +68,6 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public Account create(Account account) throws DaoException {
-        System.out.println(account.toString());
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {

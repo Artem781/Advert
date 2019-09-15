@@ -1,6 +1,6 @@
 
-Hsquid:S1068"'Remove this unused "cnt" private field.(¦˜±ûÿÿÿÿÿ8Òš£ßÈ-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¨Ü¯Îþÿÿÿÿ8áˆ¥ßÈ-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¹Ùð¼þÿÿÿÿ8áÒªßÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹Ùð¼þÿÿÿÿ8áÒªßÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨Ü¯Îþÿÿÿÿ8áˆ¥ßÈ-
+Jsquid:S1068"'Remove this unused "cnt" private field.(¦˜±ûÿÿÿÿÿ8Òš£ßÈ-

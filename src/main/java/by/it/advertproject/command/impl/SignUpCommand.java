@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 import static by.it.advertproject.command.AttributeName.*;
@@ -25,13 +26,21 @@ public class SignUpCommand implements Command {
     public Router execute(RequestContent content) {
         logger.log(Level.INFO, "from SignUpCommand");
         String page;
+        Map<String, String> parameterMap = new HashMap<>();
         String name = content.getRequestParameters(PARAM_NAME, 0);
+        parameterMap.put(PARAM_NAME, name);
         String login = content.getRequestParameters(PARAM_NAME_LOGIN, 0);
+        parameterMap.put(PARAM_NAME_LOGIN, login);
         String pass = content.getRequestParameters(PARAM_PASSWORD, 0);
-        String confirm = content.getRequestParameters(PARAM_PASSWORD_CONFIRM, 0);
+        parameterMap.put(PARAM_PASSWORD, pass);
+        String confirmPass = content.getRequestParameters(PARAM_PASSWORD_CONFIRM, 0);
+        parameterMap.put(PARAM_PASSWORD_CONFIRM, confirmPass);
         String birthday = content.getRequestParameters(PARAM_BIRTHDAY, 0);
+        parameterMap.put(PARAM_BIRTHDAY, birthday);
         String email = content.getRequestParameters(PARAM_EMAIL, 0);
+        parameterMap.put(PARAM_EMAIL, email);
         String tel = content.getRequestParameters(PARAM_TEL, 0);
+        parameterMap.put(PARAM_TEL, tel);
 //    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
         content.putRequestAttribute(ATTR_NAME_USER, name);
         content.putRequestAttribute(ATTR_NAME_USER, name);
@@ -45,8 +54,9 @@ public class SignUpCommand implements Command {
         AccountService service = new AccountService();
         logger.log(Level.INFO, "from SignUpCommand before try block");
         try {
-            account = service.createAccount(name, login, pass, confirm, birthday, email, tel);
-            logger.log(Level.INFO, "from SignUpCommand) account: " + account);
+//            account = service.createAccount(name, login, pass, confirmPass, birthday, email, tel);
+            account = service.createAccount(parameterMap);
+            logger.log(Level.INFO, "from SignUpCommand) try block) account: " + account);
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());

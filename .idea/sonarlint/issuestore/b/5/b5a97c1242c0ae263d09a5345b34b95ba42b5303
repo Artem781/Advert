@@ -1,5 +1,5 @@
 
-Ksquid:S1481"0Remove this unused "parentClass" local variable.(ëé8şüúáÈ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ô‡›Ÿ8îÆ áÈ-
-Zsquid:S1854"?Remove this useless assignment to local variable "parentClass".(ëé8şüúáÈ-
-Lsquid:S1481"+Remove this unused "object" local variable.(„Œ·Øúÿÿÿÿ8ÇÍĞâÈ-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ô‡›Ÿ8îÆ áÈ-
+\squid:S1854"?Remove this useless assignment to local variable "parentClass".(ëé8şüúáÈ-
+Msquid:S1481"0Remove this unused "parentClass" local variable.(ëé8şüúáÈ-
+Nsquid:S1481"+Remove this unused "object" local variable.(„Œ·Øúÿÿÿÿ8ÇÍĞâÈ-

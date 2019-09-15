@@ -172,7 +172,12 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="email">E-mail:*</label>
                 <div class="col-md-4">
-                    <input id="email" name="email" value="${emailAttr}" type="text" placeholder=""
+
+
+                    <!-- заменить type="text" на type="email" -->
+
+
+                    <input id="email" name="email" value="${emailAttr}" type="text" placeholder="Enter your email"
                            class="form-control input-md" required="">
                     <span class="help-block"></span>
                 </div>

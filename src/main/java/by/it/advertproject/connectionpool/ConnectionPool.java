@@ -41,9 +41,7 @@ public enum ConnectionPool {
         try {
             initPoolData();
         } catch (ConnectionPoolException e) {
-            // что нужно писать в catch? как записать лог?
-           // не ловить
-            throw new RuntimeException("ijubhiubiugb",e);
+            throw new RuntimeException("do not initPoolData",e);
         }
         startConnectionCheck();
     }
