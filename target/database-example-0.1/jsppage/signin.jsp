@@ -109,15 +109,18 @@
 
             <!-- Form Name -->
             <legend>
+
                 <fmt:message key="label.sign-in" bundle="${rb}"/>
             </legend>
 
             <!-- Login input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="login">Login:*</label>
+                <label class="col-md-4 control-label" for="login">
+                    <fmt:message key="label.login" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="login" name="login" value="" type="text"
-                           placeholder="<fmt:message key="label.login" bundle="${rb}"/>"
+                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required=""
                     <%--pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"--%>
                            class="form-control input-md">
@@ -128,10 +131,12 @@
 
             <!-- Password input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="passwordinput">Password:*</label>
+                <label class="col-md-4 control-label" for="passwordinput">
+                    <fmt:message key="label.pass" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="passwordinput" name="password" value="" type="password"
-                           placeholder="<fmt:message key="label.password" bundle="${rb}"/>"
+                           placeholder="<fmt:message key="label.password-placeholder" bundle="${rb}"/>"
                            class="form-control input-md" required=""
                     <%--pattern="^[a-z0-9_-]*" minlength="6" maxlength="18"--%>
                            class="" form-control input-md>
@@ -146,8 +151,6 @@
                     <button id="signinbutton" type="submit" value="" name="signinbutton"
                             class="btn btn-primary">
                         <fmt:message key="label.sign-in" bundle="${rb}"/>
-
-                        Sign in
                     </button>
                 </div>
             </div>

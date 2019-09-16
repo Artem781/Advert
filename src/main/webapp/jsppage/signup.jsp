@@ -85,6 +85,11 @@
 
         </div>
     </nav>
+
+
+
+
+
     <%--</div>--%>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
@@ -111,12 +116,18 @@
                     <fmt:message key="label.name" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="name" name="name" value="${nameUser}" type="text"
+                    <input id="name"
+                           name="name"
+                           value="${nameUser}"
+                           type="text"
                            placeholder="<fmt:message key="label.name-placeholder" bundle="${rb}"/>"
-                           class="form-control input-md" required="">
-                    <span class="help-block">
+                           class="form-control input-md"
+                           required=""
+                           aria-describedby="nameHelpBlock"
+                    >
+                    <small id="nameHelpBlock" class="text-muted">
                         <fmt:message key="label.format-name" bundle="${rb}"/>
-                    </span>
+                    </small>
                 </div>
             </div>
 
@@ -132,13 +143,19 @@
                     <fmt:message key="label.login" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="login" name="login" value="${login}" type="text"
+                    <input id="login"
+                           name="login"
+                           value="${login}"
+                           type="text"
                            placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"
                     <%--pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"--%>
-                           class="form-control input-md" required="">
-                    <span class="help-block">
+                           class="form-control input-md"
+                           required=""
+                           aria-describedby="loginHelpBlock"
+                    >
+                    <small id="loginHelpBlock" class="text-muted">
                         <fmt:message key="label.format-login" bundle="${rb}"/>
-                    </span>
+                    </small>
                 </div>
             </div>
 
@@ -154,13 +171,18 @@
                     <fmt:message key="label.pass" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="passwordfirst" name="passwordfirst" type="password"
+                    <input id="passwordfirst"
+                           name="passwordfirst"
+                           type="password"
                            placeholder="<fmt:message key="label.password-placeholder" bundle="${rb}"/>"
                     <%--pattern="^[a-z0-9_-]*" minlength="6" maxlength="18"--%>
-                           class="form-control input-md" required="">
-                    <span class="help-block">
+                           class="form-control input-md"
+                           required=""
+                           aria-describedby="passHelpBlock"
+                    >
+                    <small id="passHelpBlock" class="text-muted">
                         <fmt:message key="label.format-pass" bundle="${rb}"/>
-                    </span>
+                    </small>
                 </div>
             </div>
 
@@ -173,9 +195,12 @@
                     <fmt:message key="label.pass-confirm" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="passwordsecond" name="passwordsecond" type="password"
+                    <input id="passwordsecond"
+                           name="passwordsecond"
+                           type="password"
                            placeholder="<fmt:message key="label.confirm-placeholder" bundle="${rb}"/>"
-                           class="form-control input-md" required="">
+                           class="form-control input-md"
+                           required="">
                     <span class="help-block"></span>
                 </div>
             </div>
@@ -188,11 +213,16 @@
                 <label class="col-md-4 control-label" for="dateofbirth"><fmt:message key="label.birth" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="dateofbirth" name="birthday" value="${birthdayAttr}" type="text"
+                    <input id="dateofbirth"
+                           name="birthday" value="${birthdayAttr}"
+                           type="text"
                            placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"
-                           class="form-control input-md" required="">
-                    <span class="help-block"><fmt:message key="label.format-birth" bundle="${rb}"/>
-                    </span>
+                           class="form-control input-md"
+                           aria-describedby="birthHelpBlock"
+                           required="">
+                    <small id="birthHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-birth" bundle="${rb}"/>
+                    </small>
                 </div>
             </div>
 
@@ -209,10 +239,17 @@
                     <!-- заменить type="text" на type="email" -->
 
 
-                    <input id="email" name="email" value="${emailAttr}" type="text"
+                    <input id="email"
+                           name="email"
+                           value="${emailAttr}"
+                           type="text"
                            placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
-                           class="form-control input-md" required="">
-                    <span class="help-block"></span>
+                           class="form-control input-md"
+                           aria-describedby="emailHelpBlock"
+                           required="">
+                    <small id="emailHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-email" bundle="${rb}"/>
+                    </small>
                 </div>
             </div>
 
@@ -224,12 +261,17 @@
                 <label class="col-md-4 control-label" for="tel"><fmt:message key="label.tel" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-                    <input id="tel" name="tel" value="${telAttr}" type="text"
+                    <input id="tel"
+                           name="tel"
+                           value="${telAttr}"
+                           type="text"
                            placeholder="<fmt:message key="label.tel-placeholder" bundle="${rb}"/>"
-                           class="form-control input-md" required="">
-                    <span class="help-block">
+                           class="form-control input-md"
+                           aria-describedby="telHelpBlock"
+                           required="">
+                    <small id="telHelpBlock" class="text-muted">
                         <fmt:message key="label.format-tel" bundle="${rb}"/>
-                    </span>
+                    </small>
                 </div>
             </div>
 

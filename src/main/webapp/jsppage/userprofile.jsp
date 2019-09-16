@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <title>Profile</title>
+    <title>User profile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,11 +82,16 @@
     <%--</div>--%>
     <br>
 
-    <h3>Welcome</h3>
-    <hr/>
-    ${nameUser}, hello!
-    <hr/>
-    <a href="controller?command=logout">Logout</a>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p class="mb-0">Welcome ${nameUser}!</p>
+    </div>
+    <%--<h3>Welcome</h3>--%>
+    <%--<hr/>--%>
+    <%--${nameUser}, hello!--%>
+    <%--<hr/>--%>
+
+    <a href="controller?command=logout" class="badge badge-light">Logout</a>
 </div>
 
 </body>
