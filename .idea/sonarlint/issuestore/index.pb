@@ -259,3 +259,9 @@ Msrc/main/java/by/it/advertproject/service/SignUpParameterValidationState.java,
 Ksrc/main/java/by/it/advertproject/tester/examl/mapentryset/MapEntrySet.java,0\0\00774c0a429833aca3fdddf817c06d30cb46c1cf
 
 Osrc/main/java/by/it/advertproject/tester/AccountServiceCreateAccountTester.java,6\a\6abb20cfa73f39f1475bd1a0eeec8e5530c64d5d
+S
+#src/main/webapp/jsppage/profile.jsp,a\3\a3bdcc201c47ee2688e386f1525897c1cdac699d
+X
+(src/main/webapp/css/advertstylesheet.css,6\9\697f895816e8a353cdb435e81b1343bf23cf3928
+T
+$src/main/webapp/jsppage/createad.jsp,9\2\92c9260e22fa64dd2ea902e70ca3d263b67cd5e2

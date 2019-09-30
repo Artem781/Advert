@@ -20,7 +20,6 @@ public class SignInCommand implements Command {
 
     public Router execute(RequestContent content) {
         String page = null;
-//        String page =  "/jsppage/userprofile.jsp";
         String login = content.getRequestParameters(PARAM_NAME_LOGIN, 0);
         logger.log(Level.INFO, "from SignInCommand. String login = " + login);
         String pass = content.getRequestParameters(PARAM_NAME_PASSWORD, 0);
@@ -32,8 +31,10 @@ public class SignInCommand implements Command {
             account = service.checkLogin(login, pass);
             logger.log(Level.INFO, "from SignInCommand." + " create account: account = service.checkLogin(login, pass);");
             logger.log(Level.INFO, "account.getRole()" + account.getRole());
+            logger.log(Level.INFO, "user role: " + account.getRole().name());
+
             if (account.getRole().equals(Role.USER)) {
-                logger.log(Level.INFO, "user role: USER");
+                logger.log(Level.INFO, "user role: USER ");
                 content.putSessionAttribute(ATTR_NAME_USER, login);
                 logger.log(Level.INFO, "ATTR_NAME_USER = \"user\"\t values: " + login);
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
@@ -60,11 +61,18 @@ public class SignInCommand implements Command {
                         .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             }
         } catch (ServiceException e) {
+            logger.log(Level.INFO, "from SignInCommand. Catch block. ");
+            logger.log(Level.INFO, "from SignInCommand. Catch block. PARAM_NAME_FEEDBACK: " + PARAM_NAME_FEEDBACK);
+            logger.log(Level.INFO, "from SignInCommand. Catch block. \n e.getMessage(): " + e.getMessage());
+
+//            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             page = CommandUrlBuilder.TO_LOGIN
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
                     .getUrl();
-            transmissionType = TransmissionType.REDIRECT;
+            logger.log(Level.INFO, "from SignInCommand. Catch block. \n page: " + page);
+
+            transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);
 

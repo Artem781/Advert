@@ -105,6 +105,7 @@
     <br>
     <form class="form-horizontal" method="post" action="controller">
         <input type="hidden" name="command" value="sign_in"/>
+        ${errorMessageAttr}
         <fieldset>
 
             <!-- Form Name -->

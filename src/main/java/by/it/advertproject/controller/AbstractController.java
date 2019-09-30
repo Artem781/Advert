@@ -19,7 +19,9 @@ import java.util.Enumeration;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_ERROR_MESSAGE;
 
 public abstract class AbstractController extends HttpServlet {
-//    private static final String COMMAND = "command";
+    private static Logger logger = LogManager.getLogger(AbstractController.class);
+
+    //    private static final String COMMAND = "command";
 //    private static final String INDEX = "../index.jsp";
 private final Logger LOGGER = LogManager.getRootLogger();
     protected void process(HttpServletRequest request, HttpServletResponse response,
@@ -32,12 +34,16 @@ private final Logger LOGGER = LogManager.getRootLogger();
             router = command.execute(content);
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {
+                logger.log(Level.INFO, "from AbstractController. if block. ");
+
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(router.getPath());
                 dispatcher.forward(request, response);
             } else {
                 response.sendRedirect(request.getContextPath() + router.getPath());
             }
         } catch (CommandException e) {
+            logger.log(Level.INFO, "from AbstractController. Catch block. \n e.getMessage(): " + e.getMessage());
+
             response.sendRedirect(CommandUrlBuilder.TO_ERROR
                     .setParams(PARAM_NAME_ERROR_MESSAGE, e.getMessage())
                     .getUrl());

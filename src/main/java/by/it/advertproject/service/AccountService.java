@@ -25,7 +25,6 @@ public class AccountService {
 
     public Account checkLogin(String login, String password) throws ServiceException {
     String encryptedPassword = DigestUtils.md5Hex(password);
-//        String encryptedPassword = password;
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {

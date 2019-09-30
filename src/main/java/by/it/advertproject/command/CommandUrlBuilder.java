@@ -59,17 +59,21 @@ public enum CommandUrlBuilder {
     },
     TO_LOGIN {
 
-        private static final String COMMAND_URL = "/controller?command=to_login";
+//        private static final String COMMAND_URL = "/controller?command=to_login";
+        private static final String COMMAND_URL = "/controller?command=FORWARD_TO_SIGN_IN";
         private String params = "";
 
         public CommandUrlBuilder setParams(String name, String param) {
             params = params + "&" + name + "=" + param;
+            System.out.println(" from CommandUrlBuilder. TO_LOGIN. SetParams. params: " + params);
             return this;
         }
 
         public String getUrl() {
             String params = this.params;
             this.params = "";
+            System.out.println(" from CommandUrlBuilder. TO_LOGIN. getUrl. url: " + COMMAND_URL + params);
+
             return COMMAND_URL + params;
         }
 
