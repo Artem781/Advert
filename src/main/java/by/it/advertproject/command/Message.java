@@ -7,6 +7,7 @@ public class Message {
 
     public static final String MESSAGE_INCORRECT_SIGN_UP_DATA = "massage.incorrect-sign-up-data";
     public static final String MESSAGE_LOGIN_ERROR = "message.login-error";
+    public static final String MESSAGE_ERROR_LOGIN_PASSWORD = "message.login-password-error";
     public static final String MESSAGE_PASSWORD_ERROR = "massage.password-error";
     public static final String BUSY_LOGIN_MESSAGE = "message.busy-login";
     public static final String NON_CONFIRM_PASSWORD_MESSAGE = "message.non-confirm-password";

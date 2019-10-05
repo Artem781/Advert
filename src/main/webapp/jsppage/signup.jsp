@@ -87,29 +87,24 @@
     </nav>
 
 
-
-
-
     <%--</div>--%>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
         <%--<input type="hidden" name="accesslevel" value="user"/>--%>
-        <br>
-        ${checkEnterData}
-        <br>
         <fieldset>
-
+            <br>
             <!-- Form Name -->
             <legend>
                 <fmt:message key="label.sign-up" bundle="${rb}"/>
             </legend>
+            <br>
+            ${checkEnterData}
             <div class="alert-danger">
                 ${errorMessageAttr}
             </div>
             <div class="alert-danger">
                 ${incorrectNameAttr}
             </div>
-
             <!-- Name input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">

@@ -1,13 +1,14 @@
 
-wsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8ÝðÇùÒ-
-wsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùˆ–ïøÿÿÿÿ8˜â¯¸Ó-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ï“¤—8ºâü´Ó-
-Ssquid:S1135"2Complete the task associated to this TODO comment.(ÑŸƒìøÿÿÿÿ8ÁøãÈÓ-
-Ssquid:S1135"2Complete the task associated to this TODO comment.(ö¦¾Øüÿÿÿÿ8ó¸¶¹Ó-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(€„Ñ8ºâü´Ó-
-Usquid:S1068"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ý8ÝðÇùÒ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê¥¼Š8ºâü´Ó-
-msquid:UselessImportCheck"DRemove this unused import 'by.it.advertproject.util.MessageManager'.(Èû†Ú8íÃÍ¹Ó-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òÌùÿÿÿÿ8¦“¹Ó-
-rsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8½¦’†Ó-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¢ÚÁ8ºâü´Ó-
+jsquid:CommentedOutCodeLine®"<This block of commented-out lines of code should be removed.(€„Ñ8ºâü´Ó-
+tsquid:S2068q"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8½¦’†Ó-
+Usquid:S1135"2Complete the task associated to this TODO comment.(ÑŸƒìøÿÿÿÿ8ÁøãÈÓ-
+jsquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8ºâü´Ó-
+Wsquid:S1068o"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ý8ÝðÇùÒ-
+ysquid:S2068p"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8ÝðÇùÒ-
+jsquid:CommentedOutCodeLineÈ"<This block of commented-out lines of code should be removed.(Ï“¤—8ºâü´Ó-
+nsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(²šÍ•üÿÿÿÿ8ÍÑ—¹Ø-
+osquid:UselessImportCheck	"DRemove this unused import 'by.it.advertproject.util.MessageManager'.(Èû†Ú8íÃÍ¹Ó-
+nsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(îØüÿÿÿÿ8œþ˜¹Ø-
+Usquid:S1135M"2Complete the task associated to this TODO comment.(ö¦¾Øüÿÿÿÿ8ó¸¶¹Ó-
+ysquid:S2068v"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùˆ–ïøÿÿÿÿ8˜â¯¸Ó-
+isquid:CommentedOutCodeLineÎ"<This block of commented-out lines of code should be removed.(¢ÚÁ8ºâü´Ó-

@@ -62,16 +62,15 @@ public class SignInCommand implements Command {
             }
         } catch (ServiceException e) {
             logger.log(Level.INFO, "from SignInCommand. Catch block. ");
-            logger.log(Level.INFO, "from SignInCommand. Catch block. PARAM_NAME_FEEDBACK: " + PARAM_NAME_FEEDBACK);
-            logger.log(Level.INFO, "from SignInCommand. Catch block. \n e.getMessage(): " + e.getMessage());
-
-//            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
+            logger.log(Level.INFO, "from SignInCommand. Catch block. \n" +
+                    " e.getMessage(): " + e.getMessage());
+            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
+                    MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             page = CommandUrlBuilder.TO_LOGIN
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
                     .getUrl();
             logger.log(Level.INFO, "from SignInCommand. Catch block. \n page: " + page);
-
             transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);

@@ -30,11 +30,13 @@ public class AccountService {
         try {
             account = accountDao.findAccountByLogin(login);
             if (account == null) {
-                throw new ServiceException(MESSAGE_LOGIN_ERROR);
+//                throw new ServiceException(MESSAGE_LOGIN_ERROR);
+                throw new ServiceException(MESSAGE_ERROR_LOGIN_PASSWORD);
             }
             if (!account.getPassword().equals(encryptedPassword)) {
                 logger.log(Level.WARN, account.getPassword() + " " + encryptedPassword);
-                throw new ServiceException(MESSAGE_PASSWORD_ERROR);
+//                throw new ServiceException(MESSAGE_PASSWORD_ERROR);
+                throw new ServiceException(MESSAGE_ERROR_LOGIN_PASSWORD);
             }
         } catch (DaoException e) {
             throw new ServiceException(CAN_NOT_LOGIN);

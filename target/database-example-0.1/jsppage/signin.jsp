@@ -16,6 +16,8 @@
 <html>
 <head>
     <%--<title><fmt:message key="login.title"/></title>--%>
+
+    <!--  localisation -->
     <title>Sign in to AdvertApp</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -109,10 +111,22 @@
 
             <!-- Form Name -->
             <legend>
-
                 <fmt:message key="label.sign-in" bundle="${rb}"/>
             </legend>
-
+            <br>
+            <!--  localisation -->
+            <div class="alert-danger">
+                ${errorMessageAttr}
+            </div>
+            <div class="alert-danger">
+                ${errorLoginPassMessage}
+            </div>
+            <div class="alert-danger">
+                ${wrongAction}
+            </div>
+            <div class="alert-danger">
+                ${nullPage}
+            </div>
             <!-- Login input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="login">
@@ -158,17 +172,6 @@
         </fieldset>
 
     </form>
-    <br/>
-    ${errorLoginPassMessage}
-    <br/>
-    <%--${patternLogin}--%>
-    <%--<br/>--%>
-    <%--${patternPassword}--%>
-    <%--<br/>--%>
-    ${wrongAction}
-    <br/>
-    ${nullPage}
-    <br/>
 </div>
 <%--/////////////////////////////////////////////////////////////////--%>
 <%--<form name="loginForm" method="POST" action="controller">--%>

@@ -1,5 +1,10 @@
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<fmt:setLocale value="${lang}" scope="session"/>
+<fmt:setBundle basename="messages" var="rb"/>
+
 <html>
 <head>
     <title>Index</title>
@@ -22,7 +27,8 @@
 </head>
 <body>
 
-<c:set var="lang" scope="session" value="en"/>
+<%--<c:set var="lang" scope="session" value="en"/>--%>
+
 <%--<jsp:forward page="/jsppage/signin.jsp"/>--%>
 
 <div class="container">
@@ -39,8 +45,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <%--<li class="nav-item active">--%>
-                    <%--<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span--%>
-                            <%--class="sr-only">(current)</span></a>--%>
+                <%--<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span--%>
+                <%--class="sr-only">(current)</span></a>--%>
                 <%--</li>--%>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=ListAdvert">List Advert</a>
@@ -81,36 +87,59 @@
                     <a class="nav-link" href="controller?command=forward_to_sign_up">Sign up</a>
                 </li>
                 <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link" href="controller?command=Logout">Logout</a>--%>
+                <%--<a class="nav-link" href="controller?command=Logout">Logout</a>--%>
                 <%--</li>--%>
             </ul>
 
         </div>
     </nav>
-    <h2>Index page</h2>
+
+    <%--<h2>Index page</h2>--%>
+    <h2>
+        <fmt:message key="label.index" bundle="${rb}"/>
+    </h2>
+    <hr>
+
+    <div>
+        <fmt:message key="label.language" bundle="${rb}"/>
+    </div>
+    <hr>
+
+    <div>
+        <%--<a class="" href="controller?command=set_lang&page=login">--%>
+
+
+        <!-- проверить FORWARD_TO_SIGN_IN в нижнем регистре -->
+        <a class="" href="controller?command=set_lang&page=FORWARD_TO_SIGN_IN">
+        <%--<a class="" href="controller?command=set_lang&page=forward_to_sign_in">--%>
+            <fmt:message key="label.language.type" bundle="${rb}"/>
+            <i aria-hidden="true"></i>
+        </a>
+    </div>
+
 
 </div>
 <%--<form class="form-horizontal" method="post" action="controller">--%>
-    <%--<fieldset>--%>
+<%--<fieldset>--%>
 
-        <%--<!-- Form Name -->--%>
-        <%--<legend>Button name</legend>--%>
-        <%--Login:<br/>--%>
-        <%--<input type="text" name="login" value=""/>--%>
-        <%--<br/>Password:<br/>--%>
-        <%--<input type="password" name="password" value=""/>--%>
-        <%--<br/>--%>
-        <%--<!-- Button -->--%>
-        <%--<div class="form-group">--%>
-            <%--<label class="col-md-4 control-label" for="singlebutton">Single Button</label>--%>
-            <%--<div class="col-md-4">--%>
-                <%--<button type="submit" id="singlebutton" name="command" value="signin" class="btn btn-primary">try--%>
-                    <%--buttot--%>
-                <%--</button>--%>
-            <%--</div>--%>
-        <%--</div>--%>
+<%--<!-- Form Name -->--%>
+<%--<legend>Button name</legend>--%>
+<%--Login:<br/>--%>
+<%--<input type="text" name="login" value=""/>--%>
+<%--<br/>Password:<br/>--%>
+<%--<input type="password" name="password" value=""/>--%>
+<%--<br/>--%>
+<%--<!-- Button -->--%>
+<%--<div class="form-group">--%>
+<%--<label class="col-md-4 control-label" for="singlebutton">Single Button</label>--%>
+<%--<div class="col-md-4">--%>
+<%--<button type="submit" id="singlebutton" name="command" value="signin" class="btn btn-primary">try--%>
+<%--buttot--%>
+<%--</button>--%>
+<%--</div>--%>
+<%--</div>--%>
 
-    <%--</fieldset>--%>
+<%--</fieldset>--%>
 <%--</form>--%>
 <script src="js/bootstrap.js.map"/>
 </body>
