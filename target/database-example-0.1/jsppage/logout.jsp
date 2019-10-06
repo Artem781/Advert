@@ -1,5 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<fmt:setLocale value="${lang}" scope="session"/>
+<fmt:setBundle basename="messages" var="rb"/>
 <html>
 <head>
     <title>Logout</title>
@@ -66,11 +69,11 @@
             <%--<ul class="navbar rounded-right">--%>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav">
-                    <a class="nav-link" href="controller?command=forward_to_sign_in">Sign in
+                    <a class="nav-link" href="controller?command=to_sign_in">Sign in
                         <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="controller?command=forward_to_sign_up">Sign up</a>
+                    <a class="nav-link" href="controller?command=to_sign_up">Sign up</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?command=Logout">Logout</a>

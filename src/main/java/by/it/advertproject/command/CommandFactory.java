@@ -34,6 +34,8 @@ public class CommandFactory {
                 // TODO: 05.09.2019 ?
             }
         } catch (IllegalArgumentException e) {
+            Logger.log(Level.INFO, "from CommandFactory)defineCommand. catch block");
+
             content.putRequestAttribute(ATTR_NAME_WRONG_ACTION,
                     action + MessageManager.getProperty(WRONG_ACTION_MESSAGE, String.valueOf(ENGLISH)));
             throw new CommandException(COMMAND_NOT_DEFINE_ERROR);

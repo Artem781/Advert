@@ -24,12 +24,13 @@ public class SetLanguageCommand implements Command {
     private static final String NEXT_PAGE_EXCEPTION = "next page exception";
     private static final String SETTING = "setting";
     private static final String LOGIN = "login";
-    private static final String FORWARD_TO_SIGN_IN = "signin";
+    private static final String TO_INDEX_PAGE = "to-index";
     private static final String REGISTRATION = "registration";
     private static final String REGISTRATION_PAGE = "path.page.registration";
     private static final String SETTING_PAGE = "path.page.setting";
     private static final String LOGIN_PAGE = "path.page.login";
     private static final String SIGN_IN_PAGE = "path.page.signin";
+    private static final String INDEX_PAGE = "path.page.index";
     private static final String EMPTY_STRING = "";
     private static final String RUSSIAN = "ru";
     public static final String ENGLISH = "en";
@@ -67,9 +68,9 @@ public class SetLanguageCommand implements Command {
             case LOGIN:
                 page = ConfigurationManager.getProperty(LOGIN_PAGE);
                 break;
-            case FORWARD_TO_SIGN_IN:
-                page = ConfigurationManager.getProperty(SIGN_IN_PAGE);
-                logger.log(Level.INFO, "case FORWARD_TO_SIGN_IN: \n \t\t page = " + page);
+            case TO_INDEX_PAGE:
+                page = ConfigurationManager.getProperty(INDEX_PAGE);
+                logger.log(Level.INFO, "case INDEX_PAGE: \n \t\t page = " + page);
 
                 break;
             case SETTING:

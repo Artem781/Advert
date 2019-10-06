@@ -1,4 +1,3 @@
-<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -7,7 +6,10 @@
 
 <html>
 <head>
-    <title>Index</title>
+    <title>
+        <fmt:message key="label.index" bundle="${rb}"/>
+        <%--Index--%>
+    </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,12 +26,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 <body>
 
-<%--<c:set var="lang" scope="session" value="en"/>--%>
-
-<%--<jsp:forward page="/jsppage/signin.jsp"/>--%>
 
 <div class="container">
 
@@ -72,19 +72,24 @@
             <form class="form-inline my-2 my-lg-0">
 
                 <input class="form-control mr-sm-2" type="search" placeholder="Search advert" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    Search
+                </button>
             </form>
 
             <%--<ul class="navbar-nav mr-auto">--%>
             <%--<ul class="navbar rounded-right">--%>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav">
-                    <a class="nav-link" href="controller?command=forward_to_sign_in">Sign in
+                    <a class="nav-link" href="controller?command=to_sign_in">
+                        <fmt:message key="label.sign-in" bundle="${rb}"/>
+                        <%--Sign in--%>
                         <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <%--<a class="nav-link" href="controller?command=sign_up">SignUp</a>--%>
-                    <a class="nav-link" href="controller?command=forward_to_sign_up">Sign up</a>
+                    <a class="nav-link" href="controller?command=to_sign_up">
+                        <fmt:message key="label.sign-up" bundle="${rb}"/>
+                    </a>
                 </li>
                 <%--<li class="nav-item">--%>
                 <%--<a class="nav-link" href="controller?command=Logout">Logout</a>--%>
@@ -104,20 +109,12 @@
         <fmt:message key="label.language" bundle="${rb}"/>
     </div>
     <hr>
-
     <div>
-        <%--<a class="" href="controller?command=set_lang&page=login">--%>
-
-
-        <!-- проверить FORWARD_TO_SIGN_IN в нижнем регистре -->
-        <a class="" href="controller?command=set_lang&page=FORWARD_TO_SIGN_IN">
-        <%--<a class="" href="controller?command=set_lang&page=forward_to_sign_in">--%>
+        <a class="" href="controller?command=set_lang&page=to-index">
             <fmt:message key="label.language.type" bundle="${rb}"/>
             <i aria-hidden="true"></i>
         </a>
     </div>
-
-
 </div>
 <%--<form class="form-horizontal" method="post" action="controller">--%>
 <%--<fieldset>--%>

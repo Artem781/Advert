@@ -2,7 +2,7 @@ package by.it.advertproject.command;
 
 public enum CommandUrlBuilder {
     TO_USER_PROFILE_PAGE {
-        private static final String COMMAND_URL = "/controller?command=forward_to_user_profile";
+        private static final String COMMAND_URL = "/controller?command=to_user_profile";
         private String params = "";
 
         public CommandUrlBuilder setParams(String name, String param) {
@@ -21,7 +21,7 @@ public enum CommandUrlBuilder {
         }
     },
     TO_SIGN_UP_PAGE {
-        private static final String COMMAND_URL = "/controller?command=forward_to_sign_up";
+        private static final String COMMAND_URL = "/controller?command=to_sign_up";
         private String params = "";
 
         public CommandUrlBuilder setParams(String name, String param) {
@@ -60,7 +60,7 @@ public enum CommandUrlBuilder {
     TO_LOGIN {
 
 //        private static final String COMMAND_URL = "/controller?command=to_login";
-        private static final String COMMAND_URL = "/controller?command=FORWARD_TO_SIGN_IN";
+        private static final String COMMAND_URL = "/controller?command=TO_SIGN_IN";
         private String params = "";
 
         public CommandUrlBuilder setParams(String name, String param) {
