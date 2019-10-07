@@ -273,3 +273,9 @@ s
 Csrc/main/java/by/it/advertproject/command/impl/ToSignInCommand.java,7\e\7e8102bdf02bdfec543b637e5d64a1481263814e
 <
 question.txt,9\7\97592db36d963263c2650448dfe06328e73cb443
+y
+Isrc/main/java/by/it/advertproject/command/impl/ToCreateAdvertCommand.java,1\a\1a3d1abd3e88b9b6cce6aefcb83753b032a980ac
+X
+(src/main/webapp/jsppage/include/head.jsp,2\4\249e2ad0abbde36ca7fb6f846fe7f71e161faf73
+X
+(src/main/webapp/jsppage/include/menu.jsp,e\4\e4633ac24d25fcac9e248f455baa0f3a879c8d27

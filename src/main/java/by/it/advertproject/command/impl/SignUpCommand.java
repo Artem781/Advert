@@ -110,19 +110,14 @@ public class SignUpCommand implements Command {
                         break;
                 }
             }
-
-
-//            logger.log(Level.INFO, MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
-//            page = CommandUrlBuilder.TO_REGISTRATION
-//            content.putRequestAttribute("errorMessageAttr", MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
             page = CommandUrlBuilder.TO_SIGN_UP_PAGE
-//                    .setParams(PARAM_NAME_FEEDBACK, e.getMessage()).getUrl();
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
             transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);
     }
 }
+
 
 
 

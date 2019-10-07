@@ -14,6 +14,7 @@ public class ToCreateAdvertCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) throws CommandException {
+
         String page = "/jsppage/createad.jsp";
         Logger.log(Level.INFO, "from ToCreateAdvertCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
