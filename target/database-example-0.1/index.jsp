@@ -3,38 +3,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
-
 <html>
 <head>
     <title>
         <fmt:message key="label.index" bundle="${rb}"/>
     </title>
-
-
-    <%--<%@ include file="jsppage/include/head.jsp" %>--%>
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Bootstrap -->
-    <%--<link href="css/bootstrap.min.css" rel="stylesheet">--%>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
+    <%@ include file="jsppage/include/head.jsp" %>
 </head>
 <body>
-
-
 <div class="container">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,9 +28,9 @@
                 <%--<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span--%>
                 <%--class="sr-only">(current)</span></a>--%>
                 <%--</li>--%>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=ListAdvert">List Advert</a>
-                </li>
+                <%--<li class="nav-item">--%>
+                    <%--<a class="nav-link" href="controller?command=ListAdvert">List Advert</a>--%>
+                <%--</li>--%>
 
 
                 <%--<li class="nav-item dropdown">--%>

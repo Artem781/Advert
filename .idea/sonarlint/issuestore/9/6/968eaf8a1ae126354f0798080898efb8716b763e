@@ -2,4 +2,5 @@
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(æ–İ€ÿÿÿÿÿ8êşÛÈ-
 Dsquid:S1481"&Remove this unused "n" local variable.(Áİé…8ñ‹ÜÈ-
-hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œæ¥e8ÎÇ†ÜÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(áÍ§–üÿÿÿÿ8â…Ô‡Û-

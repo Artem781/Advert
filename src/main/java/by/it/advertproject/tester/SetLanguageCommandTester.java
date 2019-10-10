@@ -45,7 +45,6 @@ public class SetLanguageCommandTester {
 //            case REGISTRATION:
 //                page = ConfigurationManager.getProperty(REGISTRATION_PAGE);
 //                break;
-// TODO: 04.10.2019 правильно ли сдесь использовать дефолт и бросать исключение?
 
             default:
                 logger.log(Level.INFO, "from default");

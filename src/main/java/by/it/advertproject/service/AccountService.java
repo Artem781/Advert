@@ -19,7 +19,6 @@ import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
 import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
-// TODO: 16.09.2019 как перенести страницы jsp в папку веб инф.
 public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
 

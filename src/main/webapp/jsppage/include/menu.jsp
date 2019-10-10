@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>--%>
 
 <!--
@@ -23,10 +23,15 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <%--<a class="nav-item nav-link" href="do?command=Reset">Сброс БД</a>--%>
+            </li>
             <c:choose>
                 <c:when test="${nameUser==null}">
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="do?command=Reset">Сброс БД</a>
+                            <%--<a class="nav-item nav-link" href="do?command=Reset">Сброс БД</a>--%>
+                        <a class="nav-item nav-link" href="do?command=Reset">Reset BD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link" href="do?command=SignUp">Регистрация</a>
@@ -44,10 +49,8 @@
                     </li>
 
 
-
-
-                    <!--     Проверить левел юзера и левел админа-->
-                    <c:if test="${access_level==1}">
+                    <!-- Проверить левел юзера и левел админа-->
+                    <c:if test="${access_level==ADMIN}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

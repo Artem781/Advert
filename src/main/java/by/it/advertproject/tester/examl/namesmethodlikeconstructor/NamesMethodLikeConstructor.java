@@ -2,17 +2,18 @@ package by.it.advertproject.tester.examl.namesmethodlikeconstructor;
 
 public class NamesMethodLikeConstructor {
     public static void main(String[] args) {
-        class Point{
+        class PointClass {
             int x, y;
 
-            public Point(int x, int y) {
+            public PointClass(int x, int y) {
                 this.x = x;
                 this.y = y;
+                System.out.println("from PointClass constructor");
             }
-            void Point(){
 
+            void PointClass() {
+                System.out.println("from PointClass method");
             }
         }
-
     }
 }

@@ -31,7 +31,7 @@ public class CommandFactory {
             Logger.log(Level.INFO, "from CommandFactory)defineCommand. currentEnum: " + currentEnum.name());
             current = currentEnum.getCommand();
             if(current == null){
-                // TODO: 05.09.2019 ?
+                // TODO: 05.09.2019 бросать исключение?
             }
         } catch (IllegalArgumentException e) {
             Logger.log(Level.INFO, "from CommandFactory)defineCommand. catch block");

@@ -6,30 +6,9 @@
 <html>
 <head>
     <title>User profile</title>
-
-
     <%@ include file="include/head.jsp" %>
-
-
-<%--<meta charset="utf-8">--%>
-    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
-    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <%--<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->--%>
-
-    <%--<!-- Bootstrap -->--%>
-    <%--&lt;%&ndash;<link href="css/bootstrap.min.css" rel="stylesheet">&ndash;%&gt;--%>
-    <%--<link href="../css/bootstrap.min.css" rel="stylesheet">--%>
-
-    <%--<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->--%>
-    <%--<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->--%>
-    <%--<!--[if lt IE 9]>--%>
-    <%--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>--%>
-    <%--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--%>
-    <%--<![endif]-->--%>
-
 </head>
 <body>
-
 <div class="container">
 
     <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">--%>
@@ -47,12 +26,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="controller?command=Create_Advert">Create Advert <span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="controller?command=to_create_advert">
+                        <fmt:message key="label.to-create-advert" bundle="${rb}"/>
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=List_Advert">List Advert</a>
-                </li>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="controller?command=List_Advert">List Advert</a>--%>
+                <%--</li>--%>
 
 
                 <%--<li class="nav-item dropdown">--%>
@@ -95,23 +76,12 @@
 
         </div>
     </nav>
-    <%--</div>--%>
     <br>
-
     <div class="alert alert-success" role="alert">
         <h4 class="alert-heading">Well done!</h4>
         <p class="mb-0">Welcome ${nameUser}!</p>
     </div>
-        <a href="controller?command=logout" class="badge badge-light">
-        <fmt:message key="label.logout" bundle="${rb}"/>
-    </a>
     <hr>
-    <div>
-        <a href="controller?command=to_create_advert" class="badge badge-light">
-            <fmt:message key="label.to-create-advert" bundle="${rb}"/>
-        </a>
-    </div>
-
 </div>
 
 </body>

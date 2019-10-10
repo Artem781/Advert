@@ -94,7 +94,7 @@ public class SetLanguageCommand implements Command {
             case REGISTRATION:
                 page = ConfigurationManager.getProperty(REGISTRATION_PAGE);
                 break;
-// TODO: 04.10.2019 правильно ли сдесь использовать дефолт и бросать исключение?
+// TODO: 04.10.2019 правильно ли здесь использовать дефолт и бросать исключение?
 
             default:
                 logger.log(Level.INFO, "from default");
@@ -103,8 +103,6 @@ public class SetLanguageCommand implements Command {
         }
 
         logger.log(Level.INFO, "String page = " + page);
-
-
         return new Router(page, TransmissionType.FORWARD);
     }
 }

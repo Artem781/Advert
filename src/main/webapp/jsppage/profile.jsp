@@ -10,6 +10,10 @@
 
 
 
+
+
+
+
 <html>
 
 <head>
@@ -28,7 +32,7 @@
           <%--crossorigin="anonymous"--%>
     >
     <link rel="stylesheet"
-          href="../css/advertstylesheet.css"
+          href="../css/customadvertstyle.css"
     >
     <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
 

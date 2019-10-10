@@ -1,9 +1,9 @@
 
 osquid:CommentedOutCodeLine€"<This block of commented-out lines of code should be removed.(¼œ±Êúÿÿÿÿ8„Õ­Ú-
-W"squid:SwitchLastCaseIsDefaultCheckN""Add a default case to this switch.(ûÊÒÉ8éåŸ´Ó-
 [squid:UselessImportCheck"1Remove this unused import 'java.util.LinkedList'.(»Äð18ìŽ·‰Ó-
-hsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(–Õ¶B8Ÿ–½‰Ó-
-osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(¸“êìûÿÿÿÿ8„Õ­Ú-
-osquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(¬ÂŽúÿÿÿÿÿ8„Õ­Ú-
 msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8úŸÉùÒ-
 hsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(½ûâv8ìŽ·‰Ó-
+hsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(–Õ¶B8Ÿ–½‰Ó-
+W"squid:SwitchLastCaseIsDefaultCheckN""Add a default case to this switch.(ûÊÒÉ8éåŸ´Ó-
+osquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(¬ÂŽúÿÿÿÿÿ8„Õ­Ú-
+osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(¸“êìûÿÿÿÿ8„Õ­Ú-

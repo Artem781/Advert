@@ -6,35 +6,10 @@
 <html>
 <head>
     <%--<title><fmt:message key="login.title"/></title>--%>
-
     <title>Sign in to AdvertApp</title>
-
-
-        <%@ include file="include/head.jsp" %>
-
-
-
-    <%--<meta charset="utf-8">--%>
-    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
-    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <%--<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->--%>
-
-    <%--<!-- Bootstrap -->--%>
-    <%--&lt;%&ndash;<link href="css/bootstrap.min.css" rel="stylesheet">&ndash;%&gt;--%>
-    <%--<link href="../css/bootstrap.min.css" rel="stylesheet">--%>
-
-    <%--<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->--%>
-    <%--<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->--%>
-    <%--<!--[if lt IE 9]>--%>
-    <%--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>--%>
-    <%--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--%>
-    <%--<![endif]-->--%>
-
-
+    <%@ include file="include/head.jsp" %>
 </head>
 <body>
-
-
 <div class="container">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,22 +21,22 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=ListAdvert">List Advert</a>
-                </li>
-                <li class="navbar-text">
-                    <fmt:message key="label.language" bundle="${rb}"/>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?command=set_lang&page=login">
-                        <fmt:message key="label.language.type" bundle="${rb}"/>
-                        <%--<i aria-hidden="true"></i>--%>
-                    </a>
-                </li>
+                <%--<li class="nav-item active">--%>
+                <%--<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span--%>
+                <%--class="sr-only">(current)</span></a>--%>
+                <%--</li>--%>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="controller?command=ListAdvert">List Advert</a>--%>
+                <%--</li>--%>
+                <%--<li class="navbar-text">--%>
+                <%--<fmt:message key="label.language" bundle="${rb}"/>--%>
+                <%--</li>--%>
+                <%--<li class="nav-item">--%>
+                <%--<a class="nav-link" href="controller?command=set_lang&page=login">--%>
+                <%--<fmt:message key="label.language.type" bundle="${rb}"/>--%>
+                <%--&lt;%&ndash;<i aria-hidden="true"></i>&ndash;%&gt;--%>
+                <%--</a>--%>
+                <%--</li>--%>
 
 
                 <%--<li class="nav-item dropdown">--%>
@@ -173,7 +148,7 @@
 
     </form>
 </div>
-<%--/////////////////////////////////////////////////////////////////--%>
+<%--//////////////////////////////////////////////////////////////////////--%>
 <%--<form name="loginForm" method="POST" action="controller">--%>
 <%--<input type="hidden" name="command" value="login" />--%>
 <%--Login:<br/>--%>

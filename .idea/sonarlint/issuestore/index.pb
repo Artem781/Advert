@@ -255,8 +255,6 @@ Ksrc/main/java/by/it/advertproject/tester/examl/mapentryset/MapEntrySet.java,0\
 Osrc/main/java/by/it/advertproject/tester/AccountServiceCreateAccountTester.java,6\a\6abb20cfa73f39f1475bd1a0eeec8e5530c64d5d
 S
 #src/main/webapp/jsppage/profile.jsp,a\3\a3bdcc201c47ee2688e386f1525897c1cdac699d
-X
-(src/main/webapp/css/advertstylesheet.css,6\9\697f895816e8a353cdb435e81b1343bf23cf3928
 T
 $src/main/webapp/jsppage/createad.jsp,9\2\92c9260e22fa64dd2ea902e70ca3d263b67cd5e2
 [
@@ -279,3 +277,11 @@ X
 (src/main/webapp/jsppage/include/head.jsp,2\4\249e2ad0abbde36ca7fb6f846fe7f71e161faf73
 X
 (src/main/webapp/jsppage/include/menu.jsp,e\4\e4633ac24d25fcac9e248f455baa0f3a879c8d27
+w
+Gsrc/main/java/by/it/advertproject/tester/examl/finalfields/ClassBB.java,5\8\58b8a364d7aa0d2cf34af9f6bfc9966e73e51f3f
+P
+ src/main/webapp/img/icon-car.svg,4\2\4209d288206e67c1f62b1fb632836631c099d3e5
+[
++src/main/webapp/jsppage/include/navmenu.jsp,6\4\640f31c61aaa2904a8e79fded0478ea887ec0893
+Y
+)src/main/webapp/css/customadvertstyle.css,b\4\b47178f7aa66ba6b1777b65c65daf79da6446523

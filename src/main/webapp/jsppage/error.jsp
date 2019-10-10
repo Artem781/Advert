@@ -2,42 +2,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
-<fmt:setBundle basename="messages" var="rb"/><html>
+<fmt:setBundle basename="messages" var="rb"/>
+<html>
 <head>
-
     <title>Error page</title>
-
-
-
     <%@ include file="include/head.jsp" %>
-
-
-
-
-    <%--<meta charset="utf-8">--%>
-    <%--<meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
-    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <%--<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->--%>
-
-    <%--<!-- Bootstrap -->--%>
-    <%--&lt;%&ndash;<link href="css/bootstrap.min.css" rel="stylesheet">&ndash;%&gt;--%>
-    <%--<link href="../css/bootstrap.min.css" rel="stylesheet">--%>
-
-    <%--<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->--%>
-    <%--<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->--%>
-    <%--<!--[if lt IE 9]>--%>
-    <%--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>--%>
-    <%--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>--%>
-    <%--<![endif]-->--%>
-
-
-
-
-
 </head>
 <body>
-
-
 <div class="container">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
