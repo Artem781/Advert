@@ -31,7 +31,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="controller?command=to_sign_in">
                             <fmt:message key="label.sign-in" bundle="${rb}"/>
-                                <%--Sign in--%>
                             <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -45,7 +44,9 @@
             </c:when>
             <c:otherwise>
             <li class="nav-item dropdown">
-                <a class="nav-item nav-link" href="do?command=CreateAd">Create ad</a>
+                <a class="nav-item nav-link" href="do?command=CreateAd">
+                    Create ad
+                </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-item nav-link" href="do?command=Profile">Profile</a>
@@ -74,9 +75,13 @@
 
 
             <form class="form-inline my-2 my-lg-0" action="do?command=SearchResult" method="POST">
-                <input class="form-control mr-sm-2" id="search" name="search" pattern="[a-zA-Zа-яА-Я0-9- ]*"
+                <input class="form-control mr-sm-2"
+                       id="search"
+                       name="search"
+                       pattern="[a-zA-Zа-яА-Я0-9- ]*"
                        minlength="1"
-                       maxlength="45" placeholder="">
+                       maxlength="45"
+                       placeholder="">
                 <button class="btn btn-outline-success my-2 my-sm-0" id="gosearch" name="gosearch" value="gosearch">
                     Search
                 </button>

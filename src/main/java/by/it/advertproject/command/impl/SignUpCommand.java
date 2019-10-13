@@ -53,7 +53,7 @@ public class SignUpCommand implements Command {
         Account account;
         AccountService service = new AccountService();
         logger.log(Level.INFO, "from SignUpCommand before try block");
-        String messageManager = "";
+        String messageManager;
         try {
 //            account = service.createAccount(name, login, pass, confirmPass, birthday, email, tel);
             account = service.createAccount(parameterMap);

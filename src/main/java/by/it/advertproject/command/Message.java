@@ -10,6 +10,7 @@ public class Message {
     public static final String MESSAGE_ERROR_LOGIN_PASSWORD = "message.login-password-error";
     public static final String MESSAGE_PASSWORD_ERROR = "massage.password-error";
     public static final String BUSY_LOGIN_MESSAGE = "message.busy-login";
+    public static final String CAN_NOT_CREATE_AD_MESSAGE = "message.can-not-create-ad";
     public static final String NON_CONFIRM_PASSWORD_MESSAGE = "message.non-confirm-password";
     public static final String LOGIN_INCORRECT_FORMAT_MESSAGE = "message.non-valid-login";
     public static final String PASSWORD_INCORRECT_FORMAT_MESSAGE = "message.non-valid-password";

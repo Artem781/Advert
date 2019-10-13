@@ -2089,3 +2089,7 @@ Password not confirmed.
 2019-09-15 15:17:56,465 INFO  15:17:56.465 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-09-15 15:17:56,637 INFO  15:17:56.637 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.create(account)
 2019-09-15 15:17:56,669 INFO  15:17:56.669 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())
+2019-10-13 13:19:34,680 INFO  13:19:34.680 [main] INFO by.it.advertproject.bean.Advert - from Advert) withPrice method.1244
+2019-10-13 13:21:31,609 INFO  13:21:31.609 [main] INFO by.it.advertproject.bean.Advert - from Advert) withPrice method.1244
+2019-10-13 13:22:21,665 INFO  13:22:21.665 [main] INFO by.it.advertproject.bean.Advert - from Advert) withPrice method.1244
+2019-10-13 13:50:05,623 INFO  13:50:05.623 [main] INFO by.it.advertproject.bean.Advert - from Advert) withYear method.3

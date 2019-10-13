@@ -1,9 +1,16 @@
 package by.it.advertproject.bean;
 
+import by.it.advertproject.service.AccountService;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Advert extends Bean {
+    private static final Logger logger = LogManager.getLogger(Advert.class);
+
     static final long serialVersionUID = 42L;
     private String title;
     private String description;
@@ -18,7 +25,7 @@ public class Advert extends Bean {
     private String equipment;
     private int milage;
     private String crashed;
-//    private double price;
+    //    private double price;
     private BigDecimal price;
     private long accountIdFk;
 
@@ -217,6 +224,10 @@ public class Advert extends Bean {
 
         private Advert advert;
 
+        public Builder() {
+            this.advert = new Advert();
+        }
+
         public Builder withIdAdvert(long id) {
             advert.setId(id);
             return this;
@@ -292,7 +303,7 @@ public class Advert extends Bean {
             return this;
         }
 
-        public Builder withAccountIdFk(int accountIdFk) {
+        public Builder withAccountIdFk(long accountIdFk) {
             advert.accountIdFk = accountIdFk;
             return this;
         }
@@ -300,6 +311,5 @@ public class Advert extends Bean {
         public Advert build() {
             return advert;
         }
-
     }
 }

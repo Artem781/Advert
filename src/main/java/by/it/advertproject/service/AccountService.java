@@ -44,7 +44,7 @@ public class AccountService {
 
     }
 
-    public static Account findAccount(String login) throws ServiceException {
+    public Account findAccount(String login) throws ServiceException {
         AccountDao accountDao = new AccountDaoImpl();
         Account account = null;
         try {
@@ -58,7 +58,7 @@ public class AccountService {
         return account;
     }
 
-    public static Account findAccount(long id) throws ServiceException {
+    public Account findAccount(long id) throws ServiceException {
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {

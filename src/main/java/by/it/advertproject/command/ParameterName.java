@@ -11,7 +11,26 @@ public class ParameterName {
     public static final String PARAM_TEL = "tel";
     public static final String PARAM_ACCESS_LEVEL = "accesslevel";
 
+    public static final String PARAM_CAR_TITLE = "cartitle";
+    public static final String PARAM_CAR_BRAND = "carbrand";
+    public static final String PARAM_CAR_MODEL = "carmodel";
+    public static final String PARAM_CAR_COLOR = "carcolor";
+    public static final String PARAM_CAR_BODY = "carbody";
+    public static final String PARAM_CAR_PRODUCTION_YEAR = "productionyear";
+    public static final String PARAM_ENGINE_VOLUME = "enginevolume";
+    public static final String PARAM_AT_TYPE = "attype";
+    public static final String PARAM_CAR_DRIVEUNIT = "cardriveunit";
+    public static final String PARAM_CAR_EQUIPMENT = "carequipment";
+    public static final String PARAM_CAR_MILLAGE = "carmillage";
+    public static final String PARAM_IF_CRASHED = "ifcrashed";
+    public static final String PARAM_CAR_DESCRIPTION = "cardescription";
+    public static final String PARAM_CAR_PRICE = "carprice";
+    public static final String PARAM_CAR_PHOTO_UPLOAD = "carphotoupload";
+    public static final String PARAM_CREATE_AD = "createad";
+
+
     public static final String PARAM_NAME_PAGE_ID = "page_id";
+    public static final String PARAM_NAME_PAGE_LOGIN = "page_login";
     public static final String PARAM_NAME_FEEDBACK = "feedback";
     public static final String PARAM_NAME_COMMENT_ID = "comment_id";
     public static final String PARAM_NAME_COMMENT_MESSAGE = "comment_message";
@@ -26,6 +45,7 @@ public class ParameterName {
     public static final String PARAM_NAME_TAG = "tag";
     public static final String PARAM_NAME_ERROR_MESSAGE = "errorMessage";
     public static final String PARAM_NAME_PAGE = "page";
+
     public ParameterName() {
     }
 }

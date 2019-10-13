@@ -1,5 +1,7 @@
 package by.it.advertproject.bean;
 
+import java.util.Objects;
+
 public class Account extends Bean {
     static final long serialVersionUID = 42L;
     private String name;
@@ -90,6 +92,26 @@ public class Account extends Bean {
                 ", tel='" + tel + '\'' +
                 ", role=" + role +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Account)) return false;
+        if (!super.equals(o)) return false;
+        Account account = (Account) o;
+        return Objects.equals(getName(), account.getName()) &&
+                Objects.equals(getLogin(), account.getLogin()) &&
+                Objects.equals(getPassword(), account.getPassword()) &&
+                Objects.equals(getBirthday(), account.getBirthday()) &&
+                Objects.equals(getEmail(), account.getEmail()) &&
+                Objects.equals(getTel(), account.getTel()) &&
+                getRole() == account.getRole();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getName(), getLogin(), getPassword(), getBirthday(), getEmail(), getTel(), getRole());
     }
 
     public static class Builder {

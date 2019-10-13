@@ -203,8 +203,6 @@ c
 Ysrc/main/java/by/it/advertproject/tester/examl/finalfields/FinalFieldsInitialisation.java,b\7\b754fa83808d6a526df52fdeaabcc1bcf35b59ad
 r
 Bsrc/main/java/by/it/advertproject/tester/AccountServiceTester.java,8\f\8f13d499f924066b2d6923eddb11681f6baa6415
-V
-&src/main/webapp/js/bootstrap.bundle.js,2\b\2b347781f6d9c5477343bb0c75848d71f53d9348
 m
 =src/main/java/by/it/advertproject/command/RequestContent.java,f\a\faedba75b574672efba8182b6c187c3310dea3e2
 l
@@ -237,8 +235,6 @@ j
 :src/main/java/by/it/advertproject/util/MessageManager.java,1\d\1d5dbf5a8bc9dd90590449605a8e230beb95303c
 j
 :src/main/java/by/it/advertproject/tester/LocaleTester.java,1\5\1558221c131340ddf0d52e4287b3bc8736b93bb4
-{
-Ksrc/main/java/by/it/advertproject/service/LoginPasswordValidationState.java,1\1\1133e73da175a84fccf91ab167e501af21520fe5
 p
 @src/main/java/by/it/advertproject/util/ConfigurationManager.java,8\8\8833d1f9c2def74dccf6eb5b82a0982ec031db19
 v
@@ -283,5 +279,19 @@ P
  src/main/webapp/img/icon-car.svg,4\2\4209d288206e67c1f62b1fb632836631c099d3e5
 [
 +src/main/webapp/jsppage/include/navmenu.jsp,6\4\640f31c61aaa2904a8e79fded0478ea887ec0893
-Y
-)src/main/webapp/css/customadvertstyle.css,b\4\b47178f7aa66ba6b1777b65c65daf79da6446523
+j
+:src/main/webapp/jsppage/include/testerjsp/headeradvert.jsp,3\4\34fb4c6971cc137790b8142b2b8ce0e1b0aa9635
+h
+8src/main/webapp/jsppage/include/testerjsp/mainadvert.jsp,3\d\3defb0eee13290581135605efee66527e5f3fd47
+O
+src/main/webapp/js/bootstrap.js,d\4\d4e6b9e1c4f8590713363191b14777838a5253be
+Q
+!src/main/webapp/css/bootstrap.css,1\3\13ff1c87977647caa2991b40a1e919c79e2b4c31
+Z
+*src/main/webapp/jquery/jquery-3.2.1.min.js,8\d\8dfc8e0772dc6d6a22a5f21f228f1e93936aec2e
+L
+src/main/webapp/js/popper.js,8\f\8f9d50d267e54b84c89693541c085fd5f57ed23e
+}
+Msrc/main/java/by/it/advertproject/service/AdvertParameterValidationState.java,b\8\b89e46aa50b6b363608564ed52af8d43174afa6d
+l
+<src/main/java/by/it/advertproject/service/AdvertService.java,0\2\029e4ce233862f30f8c04b6bf69bd94557178477

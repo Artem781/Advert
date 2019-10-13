@@ -40,6 +40,9 @@ public class SignInCommand implements Command {
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
                 logger.log(Level.INFO, "ATTR_NAME_ACCESS_LEVEL = \"access_level\"\t values: "
                         + account.getRole());
+                logger.log(Level.INFO, "\naccount.getRole(): " + account.getRole() +
+                                          "\naccount.getRole().name(): " + account.getRole().name() +
+                                          "\naccount.getRole().ordinal(): " + account.getRole().ordinal())  ;
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 logger.log(Level.INFO, "ATTR_NAME_ACCOUNT_ID = \"accountId\"\t values: "
                         + account.getId());

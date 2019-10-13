@@ -14,7 +14,7 @@ public class ToIndexCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) {
-        String page = "index.jsp";
+        String page = "/index.jsp";
         Logger.log(Level.INFO, "from ToIndexCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
     }
