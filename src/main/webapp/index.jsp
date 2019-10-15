@@ -11,129 +11,120 @@
         <fmt:message key="label.index" bundle="${rb}"/>
     </title>
     <%@ include file="jsppage/include/head.jsp" %>
+
+
+    <%--<style>--%>
+    <%--.form__error {--%>
+    <%--color: red;--%>
+    <%--text-align: left;--%>
+    <%--font-size: 12px;--%>
+    <%--display: block;--%>
+    <%--margin-top: 3px;--%>
+    <%--display: none;--%>
+    <%--}--%>
+
+    <%--input:valid:not(:placeholder-shown) {--%>
+    <%--border-color: green;--%>
+    <%--}--%>
+
+    <%--input:invalid:not(:placeholder-shown) {--%>
+    <%--border-color: red;--%>
+    <%--}--%>
+
+    <%--input:invalid:not(:placeholder-shown) + .form__error {--%>
+    <%--display: block;--%>
+    <%--}--%>
+
+    <%--.zoom_img img {--%>
+    <%---moz-transition: all 1s ease-out;--%>
+    <%---o-transition: all 1s ease-out;--%>
+    <%---webkit-transition: all 1s ease-out;--%>
+    <%--}--%>
+
+    <%--.zoom_img img:hover {--%>
+    <%---webkit-transform: scale(1.1);--%>
+    <%---moz-transform: scale(1.1);--%>
+    <%---o-transform: scale(1.1);--%>
+    <%--}--%>
+    <%--</style>--%>
+
+
 </head>
 <body>
 <div class="container">
 
 
+    <header>
+        <%@include file="jsppage/include/menu.jsp" %>
+    </header>
 
-<header>
-    <%@include file="jsppage/include/menu.jsp" %>
-</header>
-
-<div class="container ">
-    <br>
-    <hr>
-    <h2>
-        ${lang}
-    </h2>
-    <br>
-    <hr>
-    <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">--%>
-    <%--<a class="navbar-brand" href=".">--%>
-    <%--Home--%>
-    <%--</a>--%>
-    <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"--%>
-    <%--aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--%>
-    <%--<span class="navbar-toggler-icon"></span>--%>
-    <%--</button>--%>
-
-    <%--<div class="collapse navbar-collapse" id="navbarSupportedContent">--%>
-    <%--<ul class="navbar-nav mr-auto">--%>
-    <%--&lt;%&ndash;<li class="nav-item active">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span&ndash;%&gt;--%>
-    <%--&lt;%&ndash;class="sr-only">(current)</span></a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="nav-link" href="controller?command=ListAdvert">List Advert</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-
-
-    <%--&lt;%&ndash;<li class="nav-item dropdown">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"&ndash;%&gt;--%>
-    <%--&lt;%&ndash;data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;Dropdown&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<div class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="dropdown-item" href="#">Action</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="dropdown-item" href="#">Another action</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<div class="dropdown-divider"></div>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="dropdown-item" href="#">Something else here</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-    <%--</ul>--%>
-    <%--<form class="form-inline my-2 my-lg-0">--%>
-
-    <%--<input class="form-control mr-sm-2" type="search" placeholder="Search advert" aria-label="Search">--%>
-    <%--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">--%>
-    <%--Search--%>
-    <%--</button>--%>
-    <%--</form>--%>
-
-    <%--&lt;%&ndash;<ul class="navbar-nav mr-auto">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<ul class="navbar rounded-right">&ndash;%&gt;--%>
-    <%--<ul class="nav navbar-nav navbar-right">--%>
-    <%--<li class="nav">--%>
-    <%--<a class="nav-link" href="controller?command=to_sign_in">--%>
-    <%--<fmt:message key="label.sign-in" bundle="${rb}"/>--%>
-    <%--&lt;%&ndash;Sign in&ndash;%&gt;--%>
-    <%--<span class="sr-only">(current)</span></a>--%>
-    <%--</li>--%>
-    <%--<li class="nav-item">--%>
-    <%--<a class="nav-link" href="controller?command=to_sign_up">--%>
-    <%--<fmt:message key="label.sign-up" bundle="${rb}"/>--%>
-    <%--</a>--%>
-    <%--</li>--%>
-    <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;<a class="nav-link" href="controller?command=Logout">Logout</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-    <%--</ul>--%>
-
-    <%--</div>--%>
-    <%--</nav>--%>
-
-    <%--<h2>Index page</h2>--%>
-    <h2>
-        <fmt:message key="label.index" bundle="${rb}"/>
-    </h2>
-    <hr>
-
-    <div>
-        <fmt:message key="label.language" bundle="${rb}"/>
+    <div class="container ">
+        <br>
+        <hr>
+        <h2>
+            ${lang}
+        </h2>
+        <br>
+        <hr>
+        <h2>
+            <fmt:message key="label.index" bundle="${rb}"/>
+        </h2>
+        <hr>
+        <div>
+            <fmt:message key="label.language" bundle="${rb}"/>
+        </div>
+        <hr>
+        <div>
+            <a class="" href="controller?command=set_lang&page=to-index">
+                <fmt:message key="label.language.type" bundle="${rb}"/>
+                <i aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
-    <hr>
-    <div>
-        <a class="" href="controller?command=set_lang&page=to-index">
-            <fmt:message key="label.language.type" bundle="${rb}"/>
-            <i aria-hidden="true"></i>
-        </a>
+
+
+    <div class="page-header">
+        <h3>Объявления</h3>
     </div>
-</div>
-<%--<form class="form-horizontal" method="post" action="controller">--%>
-<%--<fieldset>--%>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">Заголовок</div>
+        <div class="col-md-2">Описание</div>
+        <div class="col-md-1">Марка</div>
+        <div class="col-md-1">Модель</div>
+        <div class="col-md-1">Цвет</div>
+        <div class="col-md-1">Год</div>
+        <div class="col-md-1">Объем двигателя</div>
+        <div class="col-md-2">Цена</div>
+    </div>
+    <c:forEach items="${ads}" var="ad">
+        <br>
+        <div class="row">
+            <div class="zoom_img">
+                <div class="col-md-1">
 
-<%--<!-- Form Name -->--%>
-<%--<legend>Button name</legend>--%>
-<%--Login:<br/>--%>
-<%--<input type="text" name="login" value=""/>--%>
-<%--<br/>Password:<br/>--%>
-<%--<input type="password" name="password" value=""/>--%>
-<%--<br/>--%>
-<%--<!-- Button -->--%>
-<%--<div class="form-group">--%>
-<%--<label class="col-md-4 control-label" for="singlebutton">Single Button</label>--%>
-<%--<div class="col-md-4">--%>
-<%--<button type="submit" id="singlebutton" name="command" value="signin" class="btn btn-primary">try--%>
-<%--buttot--%>
-<%--</button>--%>
-<%--</div>--%>
-<%--</div>--%>
+                    <a target="_blank" href="images/ad${ad.id}">
+                        <img src="images/ad${ad.id}"
+                             height="40px"
+                             alt="${ad.price}"
+                             onmouseover="this.height=150" ;
+                             onmouseout="this.height=40"
+                        />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2">${ad.title}</div>
+            <div class="col-md-2">${ad.description}</div>
+            <div class="col-md-1">${ad.brnd}</div>
+            <div class="col-md-1">${ad.model}</div>
+            <div class="col-md-1">${ad.color}</div>
+            <div class="col-md-1">${ad.year}</div>
+            <div class="col-md-1">${ad.engine} л.</div>
+            <div class="col-md-2">${ad.price} руб.</div>
+        </div>
+        <hr>
+    </c:forEach>
 
-<%--</fieldset>--%>
-<%--</form>--%>
 
 </div>
 

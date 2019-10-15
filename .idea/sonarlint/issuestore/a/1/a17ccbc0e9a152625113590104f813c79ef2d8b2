@@ -1,13 +1,13 @@
 
+Wsquid:S1068n"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ı8£Á×Ù-
+jsquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8£Á×Ù-
+tsquid:S2068p"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8£Á×Ù-
+jsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(Ï“¤—8£Á×Ù-
 nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(²šÍ•üÿÿÿÿ8£Á×Ù-
 osquid:UselessImportCheck	"DRemove this unused import 'by.it.advertproject.util.MessageManager'.(Èû†Ú8£Á×Ù-
-jsquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.(Ê¥¼Š8£Á×Ù-
-jsquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(€„Ñ8£Á×Ù-
-Wsquid:S1068n"9Remove this unused "RUSSIAN_LOGIN_PATTERN" private field.(ÿ‹…ı8£Á×Ù-
-ysquid:S2068o"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8£Á×Ù-
-nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(îØüÿÿÿÿ8£Á×Ù-
-jsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(Ï“¤—8£Á×Ù-
-tsquid:S2068p"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùå¨¹8£Á×Ù-
 ysquid:S2068u"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(Ùˆ–ïøÿÿÿÿ8£Á×Ù-
+ysquid:S2068o"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ÔØš»ùÿÿÿÿ8£Á×Ù-
+jsquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(€„Ñ8£Á×Ù-
 isquid:CommentedOutCodeLineÍ"<This block of commented-out lines of code should be removed.(¢ÚÁ8£Á×Ù-
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(îØüÿÿÿÿ8£Á×Ù-
 Usquid:S1135L"2Complete the task associated to this TODO comment.(ö¦¾Øüÿÿÿÿ8£Á×Ù-

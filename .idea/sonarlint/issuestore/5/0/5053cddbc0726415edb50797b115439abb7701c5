@@ -1,25 +1,26 @@
 
-osquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-nsquid:CommentedOutCodeLinex"<This block of commented-out lines of code should be removed.(îÖ—úùÿÿÿÿ8ùãÇèÛ-
-nsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ëˆ˜Ÿýÿÿÿÿ8ùãÇèÛ-
-isquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(Ç÷¹Ð8ùãÇèÛ-
-Usquid:S1135^"2Complete the task associated to this TODO comment.(°¢Çùÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLine¶"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-isquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(–Õ¶B8ùãÇèÛ-
-osquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(´úß±úÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLineÂ"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-Wsquid:S1481"3Remove this unused "messageManager" local variable.(Ù­§Åûÿÿÿÿ8ùãÇèÛ-
-jsquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(ÇÔâì8ùãÇèÛ-
-jsquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(ÜÏþá8ùãÇèÛ-
-nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(—¤º«üÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLine®"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-hsquid:CommentedOutCodeLine|"<This block of commented-out lines of code should be removed.(½ûâv8ùãÇèÛ-
-zsquid:S1192 "\Define a constant instead of duplicating this literal "from CreateAdvertCommand: " 17 times.(¦Ðâð8ùãÇèÛ-
-osquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(¡‰ŒÆüÿÿÿÿ8ùãÇèÛ-
-osquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8ùãÇèÛ-
-isquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(ŽŽøÕ8ùãÇèÛ-
-msquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8Àð‚åÛ-
-isquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(¾ÚG8ùãÇèÛ-
+xsquid:S1192"\Define a constant instead of duplicating this literal "from CreateAdvertCommand: " 17 times.(¦Ðâð8Ê§ªÜ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŽŽøÕ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ëˆ˜Ÿýÿÿÿÿ8Ê§ªÜ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç÷¹Ð8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(—¤º«üÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´úß±úÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½œà¼ùÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(îÖ—úùÿÿÿÿ8Ê§ªÜ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½ûâv8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡‰ŒÆüÿÿÿÿ8Ê§ªÜ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Õ¶B8Ê§ªÜ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜÏþá8Ê§ªÜ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÇÔâì8Ê§ªÜ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÚG8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
+Ssquid:S1135"2Complete the task associated to this TODO comment.(°¢Çùÿÿÿÿ8Ê§ªÜ-
+Tsquid:S1481"3Remove this unused "messageManager" local variable.(Ù­§Åûÿÿÿÿ8Ê§ªÜ-
+ksquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8Ê§ªÜ-
