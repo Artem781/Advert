@@ -46,6 +46,7 @@ public class AttributeName {
     public static final String ATTR_CAR_DESCRIPTION = "car_description_attr";
     public static final String ATTR_CAR_PRICE = "car_price_attr";
     public static final String ATTR_CREATED_ADVERT = "created_advert_attr";
+    public static final String ATTR_OBJECT_ADVERT = "object_advert_attr";
     public AttributeName() {
     }
 }

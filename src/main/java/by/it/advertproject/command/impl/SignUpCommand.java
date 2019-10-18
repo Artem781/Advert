@@ -52,17 +52,15 @@ public class SignUpCommand implements Command {
         TransmissionType transmissionType;
         Account account;
         AccountService service = new AccountService();
-        logger.log(Level.INFO, "from SignUpCommand before try block");
         String messageManager;
         try {
-//            account = service.createAccount(name, login, pass, confirmPass, birthday, email, tel);
             account = service.createAccount(parameterMap);
-            logger.log(Level.INFO, "from SignUpCommand) try block) account: " + account);
+            // TODO: 15.10.2019 В сессию или в реквест можно передавать сам объект account?
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putSessionAttribute(ATTR_NAME_LOGIN, login);
-            logger.log(Level.INFO, "from SignUpCommand. before page.");
+            content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             transmissionType = TransmissionType.FORWARD;

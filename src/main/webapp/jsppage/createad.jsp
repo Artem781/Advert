@@ -6,64 +6,60 @@
 <html>
 <head>
     <title>
-        <fmt:message key="label.createad" bundle="${rb}"/>
+        <fmt:message key="label.create-ad" bundle="${rb}"/>
     </title>
     <%@include file="include/head.jsp" %>
-
 </head>
 <body>
 <div class="container">
     <header>
         <%@include file="include/menu.jsp" %>
     </header>
-    <h2>Create advert</h2>
-
+    <h2>
+        <fmt:message key="label.create-ad" bundle="${rb}"/>
+    </h2>
     <form class="form-horizontal"
           action="controller?command=create_advert"
           method="POST"
     <%--enctype="multipart/form-data"--%>
     >
         <fieldset>
+            <!-- Form Create advert -->
+            <legend>
+                <fmt:message key="label.create-ad" bundle="${rb}"/>
+            </legend>
 
-            <!-- Form Name -->
-            <legend>Создать объявление</legend>
-
-            <!-- Text input-->
+            <!-- Title input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="title">
-                    Заголовок объявления
+                    <fmt:message key="label.car-title" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
                     <input id="title"
                            name="cartitle"
-                           value=""
+                           value="${car_title_attr}"
                            type="text"
-                           placeholder=" "
+                           placeholder=""
                            class="form-control input-md"
-                           required
-                           pattern="[a-zа-яA-Z-А-Я][a-zа-яA-ZА-Я0-9\-!?,. ]*"
-                           minlength="8"
-                           maxlength="50">
+                    <%--required--%>
+                    <%--pattern="[a-zа-яA-Z-А-Я][a-zа-яA-ZА-Я0-9\-!?,. ]*"--%>
+                    <%--minlength="8"--%>
+                    <%--maxlength="50">--%>
                     <span class="form__error">
-                        <div>латиница, кириллица</div>
-                        <div>первый символ - буква в верхнем или нижнем регистре</div>
-                        <div>от 8 до 50 символов</div>
-                        <div>буквы в верхнем и нижнем регистре, цифры</div>
-                        <div>символы \ - ! ? , . ]*</div>
+                        <fmt:message key="label.format-car-title" bundle="${rb}"/>
                       </span>
                 </div>
             </div>
 
-
-            <!-- Select Basic -->
+            <!-- Select Brand -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="brnd">
-                    Выберите марку
+                    <fmt:message key="label.choose-brand" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
                     <select id="brnd"
                             name="carbrand"
-                            value=""
+                            value="${car_brand_attr}"
                             class="form-control">
                         <option value="Acura">Acura</option>
                         <option value="Aston Martin">Aston Martin</option>
@@ -121,44 +117,61 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Model input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="model">Модель</label>
+                <label class="col-md-4 control-label" for="model">
+                    <fmt:message key="label.choose-model" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="model"
                            name="carmodel"
-                           value=""
-                           type="text" placeholder=" " class="form-control input-md" required
-                           pattern="[a-zA-Zа-яА-Я0-9 ]*" minlength="1" maxlength="45">
+                           value="${car_model_attr}"
+                           type="text"
+                           placeholder=""
+                           class="form-control input-md"
+                    <%--required--%>
+                    <%--pattern="[a-zA-Zа-яА-Я0-9 ]*" --%>
+                    <%--minlength="1" --%>
+                    <%--maxlength="45"--%>
+                    >
                     <span class="form__error">
-                        <div>латиница, кириллица</div>
-                        <div>от 1 до 45 символов</div>
-                        <div>буквы в верхнем и нижнем регистре, цифры</div>
+                        <fmt:message key="label.format-car-model" bundle="${rb}"/>
                       </span>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Color input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="color">Цвет</label>
+                <label class="col-md-4 control-label" for="color">
+                    <fmt:message key="label.choose-color" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="color" name="carcolor" value=""
-                           type="text" placeholder=" " class="form-control input-md" required
-                           pattern="[a-zA-Zа-яА-Я- ]*" minlength="1" maxlength="45">
+                    <input id="color"
+                           name="carcolor"
+                           value="${car_color_attr}"
+                           type="text"
+                           placeholder=""
+                           class="form-control input-md"
+                    <%--required--%>
+                    <%--pattern="[a-zA-Zа-яА-Я- ]*"--%>
+                    <%--minlength="1"--%>
+                    <%--maxlength="45"--%>
+                    >
                     <span class="form__error">
-                        <div>латиница, кириллица</div>
-                        <div>от 1 до 45 символов</div>
-                        <div>буквы в верхнем и нижнем регистре</div>
-                        <div>символ "-"</div>
-                      </span>
+                        <fmt:message key="label.format-car-color" bundle="${rb}"/>
+                    </span>
                 </div>
             </div>
 
-            <!-- Select Basic -->
+            <!-- Select body -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="body">Кузов</label>
+                <label class="col-md-4 control-label" for="body">
+                    <fmt:message key="label.choose-body" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <select id="body" name="carbody" value=""
+                    <select id="body"
+                            name="carbody"
+                            value="${car_body_attr}"
                             class="form-control">
                         <option value="Sedan">Седан</option>
                         <option value="Hatchback">Хэтчбек</option>
@@ -178,49 +191,79 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Production year input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="year">Год выпуска</label>
+                <label class="col-md-4 control-label" for="year">
+                    <fmt:message key="label.choose-prod-year" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="year" name="productionyear" value=""
-                           type="number" placeholder=" " class="form-control input-md" required
-                           minlength="4" maxlength="4" min="1900" max="2019">
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="engine">Обьем двигателя</label>
-                <div class="col-md-4">
-                    <input id="engine" name="enginevolume" value=""
-                           type="number" step="0.1" placeholder="2.5"
+                    <input id="year"
+                           name="productionyear"
+                           value="${car_production_year_attr}"
+                           type="number"
+                           placeholder=""
                            class="form-control input-md"
-                           required>
-
+                    <%--required--%>
+                    <%--minlength="4" --%>
+                    <%--maxlength="4"--%>
+                    <%--min="1900" --%>
+                    <%--max="2019">--%>
                 </div>
             </div>
 
-            <!-- Multiple Radios (inline) -->
+            <!-- Volume engine input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="at-0">Коробка передач</label>
+                <label class="col-md-4 control-label" for="engine">
+                    <fmt:message key="label.choose-vol-engine" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+                    <input id="engine"
+                           name="enginevolume"
+                           value="${car_engine_volume_attr}"
+                           type="number"
+                           step="0.1"
+                    <%--placeholder="2.5"--%>
+                    <%--required--%>
+                           class="form-control input-md"
+                    >
+                </div>
+            </div>
+
+            <!-- At Multiple Radios (inline) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="at-0">
+                    <fmt:message key="label.choose-at" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <label class="radio-inline" for="at-0">
-                        <input type="radio" name="attype" value=""
-                               id="at-0" value="Automatic" checked="checked">
-                        Автоматическая
+                        <input type="radio"
+                               name="attype"
+                               id="at-0"
+                               value="${car_at_type_attr}"
+                               checked="checked"
+                        >
+                        <fmt:message key="label.choose-at-automatic" bundle="${rb}"/>
                     </label>
                     <label class="radio-inline" for="at-1">
-                        <input type="radio" name="attype" value="" id="at-1" value="Manual">
-                        Механическая
+                        <input type="radio"
+                               name="attype"
+                               value="${car_at_type_attr}"
+                               id="at-1"
+                        >
+                        <fmt:message key="label.choose-at-mechanical" bundle="${rb}"/>
                     </label>
                 </div>
             </div>
 
-            <!-- Select Basic -->
+            <!-- Select drive unit -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="driveunit">Привод</label>
+                <label class="col-md-4 control-label" for="driveunit">
+                    <fmt:message key="label.choose-drive-unit" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <select id="driveunit" name="cardriveunit" value=""
+                    <select id="driveunit"
+                            name="cardriveunit"
+                            value="${car_driveunit_attr}"
                             class="form-control">
                         <option value="FWD">Передний</option>
                         <option value="RWD">Задний</option>
@@ -230,11 +273,15 @@
                 </div>
             </div>
 
-            <!-- Select Basic -->
+            <!-- Select equipment -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="equipment">Комплектация</label>
+                <label class="col-md-4 control-label" for="equipment">
+                    <fmt:message key="label.choose-equipment" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <select id="equipment" name="carequipment" value=""
+                    <select id="equipment"
+                            name="carequipment"
+                            value="${car_equipment_attr}"
                             class="form-control">
                         <option value="Base">Базовая</option>
                         <option value="Minimal">Минимальная</option>
@@ -245,53 +292,82 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Text Mileage-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="millage">Пробег</label>
+                <label class="col-md-4 control-label" for="millage">
+                    <fmt:message key="label.choose-mileage" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="millage" name="carmillage" value=""
-                           type="number" placeholder=" " class="form-control input-md"
-                           required="">
-
+                    <input id="millage"
+                           name="carmillage"
+                           value="${car_millage_attr}"
+                           type="number"
+                           placeholder=" "
+                    <%--required=""--%>
+                           class="form-control input-md"
+                    >
                 </div>
             </div>
 
-            <!-- Multiple Radios (inline) -->
+            <!-- Is crashed Multiple Radios (inline) -->
             <div class="form-group">
-                <label class="col-md-4 control-label">Бывал ли авто в ДТП?</label>
+                <label class="col-md-4 control-label">
+                    <fmt:message key="label.choose-is-crashed" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <label class="radio-inline" for="crashed-0">
-                        <input type="radio" name="ifcrashed" value=""
-                               id="crashed-0" value="No" checked="checked">
-                        Нет
+                        <input type="radio"
+                               name="ifcrashed"
+                               id="crashed-0"
+                               value="${car_if_crashed_attr}"
+                               checked="checked">
+                        <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>
                     </label>
                     <label class="radio-inline" for="crashed-1">
-                        <input type="radio" name="ifcrashed" value=""
-                               id="crashed-1" value="Yes">
-                        Да
+                        <input type="radio"
+                               name="ifcrashed"
+                               id="crashed-1"
+                               value="${car_if_crashed_attr}"
+                        >
+                        <fmt:message key="label.choose-is-crashed-yes" bundle="${rb}"/>
                     </label>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Description input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="description">Описание</label>
+                <label class="col-md-4 control-label" for="description">
+                    <fmt:message key="label.choose-description" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <textarea id="description" name="cardescription" value=""
-                              minlength="7" maxlength="2000" placeholder=" "
-                              class="form-control input-md" required></textarea>
+                    <textarea id="description"
+                              name="cardescription"
+                              value="${car_description_attr}"
+                    <%--minlength="7"--%>
+                    <%--maxlength="2000"--%>
+                    <%--required--%>
+                              placeholder=" "
+                              class="form-control input-md"
+                    >
+                    </textarea>
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Price input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="price">Цена</label>
+                <label class="col-md-4 control-label" for="price">
+                    <fmt:message key="label.choose-price" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
-                    <input id="price" name="carprice" value=""
-                           type="number" step="0.01" placeholder="1500.75"
+                    <input id="price"
+                           name="carprice"
+                           value="${car_price_attr}"
+                           type="number"
+                    <%--step="0.01"--%>
+                    <%--placeholder="1500.75"--%>
+                    <%--required--%>
                            class="form-control input-md"
-                           required>
-
+                    >
                 </div>
             </div>
 
@@ -309,7 +385,8 @@
                 <label class="col-md-4 control-label" for="createad"></label>
                 <div class="col-md-4">
                     <button id="createad" name="createad" value=""
-                            class="btn btn-primary">Создать объявление
+                            class="btn btn-primary">
+                        <fmt:message key="label.create-advert" bundle="${rb}"/>
                     </button>
                 </div>
             </div>
@@ -317,11 +394,8 @@
         </fieldset>
     </form>
 
-
     <div/>
-    <script src="../jquery/jquery-3.2.1.min.js"></script>
-    <script src="../js/popper.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    <%@ include file="include/scriptbottom.jsp" %>
 </div>
 </body>
 </html>

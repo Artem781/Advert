@@ -5,7 +5,8 @@ import by.it.advertproject.command.impl.*;
 public enum CommandType {
     TO_SIGN_UP(new ToSignUpCommand()),
     TO_SIGN_IN(new ToSignInCommand()),
-    TO_INDEX(new ToIndexCommand()),
+//    TO_INDEX(new ToMainCommand()),
+    TO_MAIN(new ToMainCommand()),
     TO_USER_PROFILE(new ToUserProfileCommand()),
     TO_CREATE_ADVERT(new ToCreateAdvertCommand()),
     SIGN_IN(new SignInCommand()),

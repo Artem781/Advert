@@ -24,13 +24,14 @@ public class SetLanguageCommand implements Command {
     private static final String NEXT_PAGE_EXCEPTION = "next page exception";
     private static final String SETTING = "setting";
     private static final String LOGIN = "login";
-    private static final String TO_INDEX_PAGE = "to-index";
+    private static final String MAIN = "to-main";
     private static final String REGISTRATION = "registration";
     private static final String REGISTRATION_PAGE = "path.page.registration";
     private static final String SETTING_PAGE = "path.page.setting";
     private static final String LOGIN_PAGE = "path.page.login";
     private static final String SIGN_IN_PAGE = "path.page.signin";
     private static final String INDEX_PAGE = "path.page.index";
+    private static final String MAIN_PAGE = "path.page.main";
     private static final String EMPTY_STRING = "";
     private static final String RUSSIAN = "ru";
     public static final String ENGLISH = "en";
@@ -41,7 +42,6 @@ public class SetLanguageCommand implements Command {
         logger.log(Level.INFO, "From SetLanguageCommand");
         logger.log(Level.INFO, "ATTR_NAME_LANG = " + ATTR_NAME_LANG);
         logger.log(Level.INFO, "String lang = " + lang);
-
         if (lang == null) {
             content.putSessionAttribute(ATTR_NAME_LANG, ENGLISH);
             logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_LANG, ENGLISH)");
@@ -50,15 +50,12 @@ public class SetLanguageCommand implements Command {
                 lang = RUSSIAN;
                 content.putSessionAttribute(ATTR_NAME_LANG, RUSSIAN);
                 logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_LANG, RUSSIAN)");
-
             } else {
                 lang = ENGLISH;
                 content.putSessionAttribute(ATTR_NAME_LANG, ENGLISH);
                 logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_LANG, ENGLISH)");
-
             }
         }
-
         String nextPage = content.getRequestParameters(PARAM_NAME_PAGE, 0);
         logger.log(Level.INFO, "String nextPage = " + nextPage);
 
@@ -68,10 +65,9 @@ public class SetLanguageCommand implements Command {
             case LOGIN:
                 page = ConfigurationManager.getProperty(LOGIN_PAGE);
                 break;
-            case TO_INDEX_PAGE:
-                page = ConfigurationManager.getProperty(INDEX_PAGE);
-                logger.log(Level.INFO, "case INDEX_PAGE: \n \t\t page = " + page);
-
+            case MAIN:
+                page = ConfigurationManager.getProperty(MAIN_PAGE);
+                logger.log(Level.INFO, "case MAIN: page = " + page);
                 break;
             case SETTING:
                 long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);

@@ -1,26 +1,22 @@
 
-xsquid:S1192"\Define a constant instead of duplicating this literal "from CreateAdvertCommand: " 17 times.(¦Ğâğ8Ê§ªÜ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(øÕ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ëˆ˜Ÿıÿÿÿÿ8Ê§ªÜ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç÷¹Ğ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(—¤º«üÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´úß±úÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½œà¼ùÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(îÖ—úùÿÿÿÿ8Ê§ªÜ-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½ûâv8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡‰ŒÆüÿÿÿÿ8Ê§ªÜ-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Õ¶B8Ê§ªÜ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜÏşá8Ê§ªÜ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÇÔâì8Ê§ªÜ-
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÚG8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8Ê§ªÜ-
-Ssquid:S1135"2Complete the task associated to this TODO comment.(°¢Çùÿÿÿÿ8Ê§ªÜ-
-Tsquid:S1481"3Remove this unused "messageManager" local variable.(Ù­§Åûÿÿÿÿ8Ê§ªÜ-
 ksquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8Ê§ªÜ-
+Tsquid:S1481"3Remove this unused "messageManager" local variable.(Ù­§Åûÿÿÿÿ8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+ksquid:UselessImportCheck"=Remove this unused import 'by.it.advertproject.bean.Account'.(¥ÏÒÖûÿÿÿÿ8ÒÏäùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+Ssquid:S1135"2Complete the task associated to this TODO comment.(…‚„¢øÿÿÿÿ8Ê‰ÜùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+Nsquid:S1135"2Complete the task associated to this TODO comment.(‹’öş8ªüÂùÜ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÇÔâì8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(îÖ—úùÿÿÿÿ8ŞŞºùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡‰ŒÆüÿÿÿÿ8–•×ùÜ-
+Zsquid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8Œå¿ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½œà¼ùÿÿÿÿ8ÍçÓùÜ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÚG8–•×ùÜ-
+Ssquid:S1135"2Complete the task associated to this TODO comment.(˜Ìşÿÿÿÿ8ıœìùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´úß±úÿÿÿÿ8ŞŞºùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è¶òºúÿÿÿÿ8–•×ùÜ-

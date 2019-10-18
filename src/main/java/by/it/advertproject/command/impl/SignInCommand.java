@@ -32,6 +32,7 @@ public class SignInCommand implements Command {
             logger.log(Level.INFO, "from SignInCommand." + " create account: account = service.checkLogin(login, pass);");
             logger.log(Level.INFO, "account.getRole()" + account.getRole());
             logger.log(Level.INFO, "user role: " + account.getRole().name());
+            content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
 
             if (account.getRole().equals(Role.USER)) {
                 logger.log(Level.INFO, "user role: USER ");

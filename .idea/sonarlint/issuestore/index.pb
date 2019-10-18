@@ -261,8 +261,6 @@ x
 Hsrc/main/java/by/it/advertproject/command/impl/ToUserProfileCommand.java,b\7\b7f34fe2b3818bdf37c402247752969bbbe23828
 s
 Csrc/main/java/by/it/advertproject/command/impl/ToSignUpCommand.java,d\1\d19d98463d93813e4e8f77bdaf7e5c9baf180583
-r
-Bsrc/main/java/by/it/advertproject/command/impl/ToIndexCommand.java,f\f\ffc69acde521695677df2a198954ddc593471ad0
 s
 Csrc/main/java/by/it/advertproject/command/impl/ToSignInCommand.java,7\e\7e8102bdf02bdfec543b637e5d64a1481263814e
 <
@@ -287,10 +285,6 @@ O
 src/main/webapp/js/bootstrap.js,d\4\d4e6b9e1c4f8590713363191b14777838a5253be
 Q
 !src/main/webapp/css/bootstrap.css,1\3\13ff1c87977647caa2991b40a1e919c79e2b4c31
-Z
-*src/main/webapp/jquery/jquery-3.2.1.min.js,8\d\8dfc8e0772dc6d6a22a5f21f228f1e93936aec2e
-L
-src/main/webapp/js/popper.js,8\f\8f9d50d267e54b84c89693541c085fd5f57ed23e
 }
 Msrc/main/java/by/it/advertproject/service/AdvertParameterValidationState.java,b\8\b89e46aa50b6b363608564ed52af8d43174afa6d
 l
@@ -319,7 +313,7 @@ Y
 )src/main/webapp/css/bootstrap.min.css.map,0\f\0fa2ce6d872781c1ea1c51f8041c3b1af26fc863
 S
 #src/main/webapp/js/bootstrap.min.js,1\8\1889f9b14c3ebc945fcc5e57e57acfd4fba5aea9
-P
- src/main/webapp/js/popper.min.js,8\4\84e38e03b73ad3fda291468e265284d9c65130db
-M
-src/main/webapp/js/tooltip.js,8\c\8c1e4ca48c8d5da02b50bcf23568b1d9e1c7dacc
+V
+&src/main/webapp/img/svg/arrow_left.svg,c\7\c7331d00a759bfaf7a13fddc509b9ce315adead6
+`
+0src/main/webapp/jsppage/include/scriptbottom.jsp,2\4\240f81fe19d2ebb8d18842aa25dc675efbf6131c

@@ -6,80 +6,14 @@
 
 <html>
 <head>
-    <title>Sign up</title>
+    <title><fmt:message key="label.sign-up" bundle="${rb}"/></title>
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
 <div class="container">
-
-<header>
-    <%@include file="include/menu.jsp" %>
-</header>
-
-<%--<div class="container">--%>
-
-    <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">--%>
-        <%--<a class="navbar-brand" href=".">Home</a>--%>
-        <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"--%>
-                <%--aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--%>
-            <%--<span class="navbar-toggler-icon"></span>--%>
-        <%--</button>--%>
-
-        <%--<div class="collapse navbar-collapse" id="navbarSupportedContent">--%>
-            <%--<ul class="navbar-nav mr-auto">--%>
-                <%--&lt;%&ndash;<li class="nav-item active">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="nav-link" href="controller?command=CreateAdvert">Create Advert <span&ndash;%&gt;--%>
-                <%--&lt;%&ndash;class="sr-only">(current)</span></a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="nav-link" href="controller?command=ListAdvert">List Advert</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-
-
-                <%--&lt;%&ndash;<li class="nav-item dropdown">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"&ndash;%&gt;--%>
-                <%--&lt;%&ndash;data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;Dropdown&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<div class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="dropdown-item" href="#">Action</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="dropdown-item" href="#">Another action</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<div class="dropdown-divider"></div>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="dropdown-item" href="#">Something else here</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-            <%--</ul>--%>
-            <%--<form class="form-inline my-2 my-lg-0">--%>
-                <%--<input class="form-control mr-sm-2" type="search" placeholder="Search Advert" aria-label="Search">--%>
-                <%--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>--%>
-            <%--</form>--%>
-
-            <%--&lt;%&ndash;<ul class="navbar-nav mr-auto">&ndash;%&gt;--%>
-            <%--&lt;%&ndash;<ul class="navbar rounded-right">&ndash;%&gt;--%>
-            <%--<ul class="nav navbar-nav navbar-right">--%>
-                <%--<li class="nav">--%>
-                    <%--<a class="nav-link" href="controller?command=to_sign_in">--%>
-                        <%--<fmt:message key="label.sign-in" bundle="${rb}"/>--%>
-                        <%--<span class="sr-only">(current)</span></a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link" href="controller?command=to_sign_up">--%>
-                        <%--<fmt:message key="label.sign-up" bundle="${rb}"/>--%>
-                    <%--</a>--%>
-                <%--</li>--%>
-                <%--&lt;%&ndash;<li class="nav-item">&ndash;%&gt;--%>
-                <%--&lt;%&ndash;<a class="nav-link" href="controller?command=Logout">Logout</a>&ndash;%&gt;--%>
-                <%--&lt;%&ndash;</li>&ndash;%&gt;--%>
-            <%--</ul>--%>
-
-        <%--</div>--%>
-    <%--</nav>--%>
-
-
-    <%--</div>--%>
+    <header>
+        <%@include file="include/menu.jsp" %>
+    </header>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
         <%--<input type="hidden" name="accesslevel" value="user"/>--%>
@@ -198,11 +132,13 @@
                 ${incorrectBirthAttr}
             </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="dateofbirth"><fmt:message key="label.birth" bundle="${rb}"/>
+                <label class="col-md-4 control-label" for="dateofbirth">
+                    <fmt:message key="label.birth" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
                     <input id="dateofbirth"
-                           name="birthday" value="${birthdayAttr}"
+                           name="birthday"
+                           value="${birthdayAttr}"
                            type="text"
                            placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"
                            class="form-control input-md"
@@ -219,7 +155,8 @@
                 ${incorrectEmailAttr}
             </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="email"><fmt:message key="label.email" bundle="${rb}"/>
+                <label class="col-md-4 control-label" for="email">
+                    <fmt:message key="label.email" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
 
@@ -264,22 +201,21 @@
                 </div>
             </div>
 
-
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="submitButton"></label>
                 <div class="col-md-4">
-                    <button id="submitButton" name="submitButton" class="btn btn-primary">
+                    <button id="submitButton"
+                            name="submitButton"
+                            class="btn btn-primary">
                         <%--signup--%>
                         <fmt:message key="label.sign-up" bundle="${rb}"/>
                     </button>
                 </div>
             </div>
-
         </fieldset>
     </form>
-
-<%--</div>--%>
 </div>
+<%@ include file="include/scriptbottom.jsp" %>
 </body>
 </html>
