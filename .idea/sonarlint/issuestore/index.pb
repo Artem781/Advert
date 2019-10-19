@@ -269,14 +269,10 @@ y
 Isrc/main/java/by/it/advertproject/command/impl/ToCreateAdvertCommand.java,1\a\1a3d1abd3e88b9b6cce6aefcb83753b032a980ac
 X
 (src/main/webapp/jsppage/include/head.jsp,2\4\249e2ad0abbde36ca7fb6f846fe7f71e161faf73
-X
-(src/main/webapp/jsppage/include/menu.jsp,e\4\e4633ac24d25fcac9e248f455baa0f3a879c8d27
 w
 Gsrc/main/java/by/it/advertproject/tester/examl/finalfields/ClassBB.java,5\8\58b8a364d7aa0d2cf34af9f6bfc9966e73e51f3f
 P
  src/main/webapp/img/icon-car.svg,4\2\4209d288206e67c1f62b1fb632836631c099d3e5
-[
-+src/main/webapp/jsppage/include/navmenu.jsp,6\4\640f31c61aaa2904a8e79fded0478ea887ec0893
 j
 :src/main/webapp/jsppage/include/testerjsp/headeradvert.jsp,3\4\34fb4c6971cc137790b8142b2b8ce0e1b0aa9635
 h
@@ -317,3 +313,11 @@ V
 &src/main/webapp/img/svg/arrow_left.svg,c\7\c7331d00a759bfaf7a13fddc509b9ce315adead6
 `
 0src/main/webapp/jsppage/include/scriptbottom.jsp,2\4\240f81fe19d2ebb8d18842aa25dc675efbf6131c
+q
+Asrc/main/java/by/it/advertproject/command/impl/ToMainCommand.java,8\5\8515ad3b9433cd751c36dc1be17befc6ae8c503d
+[
++src/main/webapp/jsppage/include/menuend.jsp,7\3\7341d16b349ce928c7aa3cfbd4ce65bd197ad593
+P
+ src/main/webapp/jsppage/main.jsp,6\7\67a0938bffa59fadc6bcf6b601c41f47e75c2efe
+]
+-src/main/webapp/jsppage/include/menustart.jsp,f\1\f1b3a14ad4f5a2f71cfedd55acc16690115dc524

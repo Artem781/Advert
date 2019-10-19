@@ -13,7 +13,11 @@
 <body>
 <div class="container">
     <header>
-        <%@include file="include/menu.jsp" %>
+        <%@include file="include/menustart.jsp" %>
+        <a class="dropdown-item" href="controller?command=set_lang&page=to-createad">
+            <fmt:message key="label.language.type" bundle="${rb}"/>
+        </a>
+        <%@include file="include/menuend.jsp" %>
     </header>
     <h2>
         <fmt:message key="label.create-ad" bundle="${rb}"/>

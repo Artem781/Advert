@@ -25,13 +25,29 @@ public class SetLanguageCommand implements Command {
     private static final String SETTING = "setting";
     private static final String LOGIN = "login";
     private static final String MAIN = "to-main";
+    private static final String CREATE_AD = "to-createad";
+    private static final String SIGN_IN = "to-signin";
+    private static final String SIGN_UP = "to-signup";
+    private static final String USER_PROFILE = "to-userprofile";
+
+
+
+
     private static final String REGISTRATION = "registration";
     private static final String REGISTRATION_PAGE = "path.page.registration";
     private static final String SETTING_PAGE = "path.page.setting";
     private static final String LOGIN_PAGE = "path.page.login";
     private static final String SIGN_IN_PAGE = "path.page.signin";
+    private static final String SIGN_UP_PAGE = "path.page.signup";
     private static final String INDEX_PAGE = "path.page.index";
     private static final String MAIN_PAGE = "path.page.main";
+    private static final String CREATE_AD_PAGE = "path.page.createad";
+    private static final String USER_PROFILE_PAGE = "path.page.userprofile";
+
+
+
+
+
     private static final String EMPTY_STRING = "";
     private static final String RUSSIAN = "ru";
     public static final String ENGLISH = "en";
@@ -68,6 +84,22 @@ public class SetLanguageCommand implements Command {
             case MAIN:
                 page = ConfigurationManager.getProperty(MAIN_PAGE);
                 logger.log(Level.INFO, "case MAIN: page = " + page);
+                break;
+            case CREATE_AD:
+                page = ConfigurationManager.getProperty(CREATE_AD_PAGE);
+                logger.log(Level.INFO, "case CREATE_AD: page = " + page);
+                break;
+            case SIGN_IN:
+                page = ConfigurationManager.getProperty(SIGN_IN_PAGE);
+                logger.log(Level.INFO, "case SIGN_IN: page = " + page);
+                break;
+            case SIGN_UP:
+                page = ConfigurationManager.getProperty(SIGN_UP_PAGE);
+                logger.log(Level.INFO, "case SIGN_UP: page = " + page);
+                break;
+            case USER_PROFILE:
+                page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
+                logger.log(Level.INFO, "case USER_PROFILE: page = " + page);
                 break;
             case SETTING:
                 long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);

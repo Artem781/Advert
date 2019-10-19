@@ -32,35 +32,38 @@ public class SignInCommand implements Command {
             logger.log(Level.INFO, "from SignInCommand." + " create account: account = service.checkLogin(login, pass);");
             logger.log(Level.INFO, "account.getRole()" + account.getRole());
             logger.log(Level.INFO, "user role: " + account.getRole().name());
-            content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
+//            content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
 
             if (account.getRole().equals(Role.USER)) {
                 logger.log(Level.INFO, "user role: USER ");
-                content.putSessionAttribute(ATTR_NAME_USER, login);
-                logger.log(Level.INFO, "ATTR_NAME_USER = \"user\"\t values: " + login);
+                content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
+                content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
+                content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
+                content.putSessionAttribute(ATTR_NAME_USER, account.getName());
+                logger.log(Level.INFO, "ATTR_NAME_USER = \"user\"\t values: " + account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
-                logger.log(Level.INFO, "ATTR_NAME_ACCESS_LEVEL = \"access_level\"\t values: "
-                        + account.getRole());
+                logger.log(Level.INFO, "ATTR_NAME_ACCESS_LEVEL = \"access_level\" values: " + account.getRole());
                 logger.log(Level.INFO, "\naccount.getRole(): " + account.getRole() +
                                           "\naccount.getRole().name(): " + account.getRole().name() +
                                           "\naccount.getRole().ordinal(): " + account.getRole().ordinal())  ;
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
-                logger.log(Level.INFO, "ATTR_NAME_ACCOUNT_ID = \"accountId\"\t values: "
-                        + account.getId());
+                logger.log(Level.INFO, "ATTR_NAME_ACCOUNT_ID = \"accountId\" values: " + account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);
                 logger.log(Level.INFO, "ATTR_NAME_LOGIN = \"login\"\t values: " + login);
                 logger.log(Level.INFO, "PARAM_NAME_PAGE_ID = \"page_id\"\t values: " + PARAM_NAME_PAGE_ID);
                 logger.log(Level.INFO, "String.valueOf(account.getId()): " + String.valueOf(account.getId()));
-//                page = CommandUrlBuilder.TO_PERSONAL_PAGE.
                 page = CommandUrlBuilder.TO_USER_PROFILE_PAGE.setParams(
                         PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
                 logger.log(Level.INFO, "page: " + page);
             } else if (account.getRole().equals(Role.ADMINISTRATOR)) {
                 logger.log(Level.INFO, "user role: ADMINISTRATOR");
-                content.putRequestAttribute(ATTR_NAME_USER, login);
+                content.putRequestAttribute(ATTR_NAME_USER, account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);
+                content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
+                content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
+                content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
                 page = CommandUrlBuilder.TO_PERSONAL_PAGE
                         .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             }
@@ -78,9 +81,12 @@ public class SignInCommand implements Command {
             transmissionType = TransmissionType.FORWARD;
         }
         return new Router(page, transmissionType);
-
     }
 }
+
+
+
+
 
 
 //

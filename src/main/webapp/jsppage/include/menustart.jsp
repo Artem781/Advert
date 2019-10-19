@@ -63,11 +63,11 @@
                                 <fmt:message key="label.admin" bundle="${rb}"/>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <%--<a class="dropdown-item" href="do?command=EditUsers">--%>
+                                    <%--<a class="dropdown-item" href="do?command=EditUsers">--%>
                                 <a class="dropdown-item" href="controller?command=edit_users">
                                     <fmt:message key="label.users" bundle="${rb}"/>
                                 </a>
-                                <%--<a class="dropdown-item" href="do?command=EditAds">--%>
+                                    <%--<a class="dropdown-item" href="do?command=EditAds">--%>
                                 <a class="dropdown-item" href="controller?command=edit_advert">
                                     <fmt:message key="label.adverts" bundle="${rb}"/>
                                 </a>
@@ -77,17 +77,17 @@
                     </c:if>
                 </c:otherwise>
             </c:choose>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkLang" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    <fmt:message key="label.language" bundle="${rb}"/>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkLang">
-                    <a class="dropdown-item" href="controller?command=set_lang&page=to-main">
-                        <fmt:message key="label.language.type" bundle="${rb}"/>
-                    </a>
-                </div>
-            </li>
+            <%--<li class="nav-item dropdown">--%>
+                <%--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkLang" data-toggle="dropdown"--%>
+                   <%--aria-haspopup="true" aria-expanded="false">--%>
+                    <%--<fmt:message key="label.language" bundle="${rb}"/>--%>
+                <%--</a>--%>
+                <%--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkLang">--%>
+                    <%--<a class="dropdown-item" href="controller?command=set_lang&page=to-main">--%>
+                        <%--<fmt:message key="label.language.type" bundle="${rb}"/>--%>
+                    <%--</a>--%>
+                <%--</div>--%>
+            <%--</li>--%>
         </ul>
 
         <%--<div class="col-md-1" style="left: 35px">--%>
@@ -102,9 +102,9 @@
                    id="search"
                    name="search"
                    value=""
-                   <%--pattern="[a-zA-Zа-яА-Я0-9- ]*"--%>
-                   <%--minlength="1"--%>
-                   <%--maxlength="45"--%>
+            <%--pattern="[a-zA-Zа-яА-Я0-9- ]*"--%>
+            <%--minlength="1"--%>
+            <%--maxlength="45"--%>
                    placeholder="<fmt:message key="label.by-car-brand" bundle="${rb}"/>"
             >
             <button class="btn btn-outline-success my-2 my-sm-0"
@@ -140,12 +140,30 @@
         <%--</div>--%>
 
 
-        <c:if test="${nameUser!=null}">
-            <form class="form-inline my-2 my-lg-0" action="controller?command=Logout" method="POST">
-                <button id="logout" name="logout" class="btn btn-dark">
-                    <fmt:message key="label.logout" bundle="${rb}"/>
-                </button>
-            </form>
-        </c:if>
-    </div>
-</nav>
+        <div class="dropdown form-inline my-2 my-lg-0">
+            <button class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                <fmt:message key="label.language" bundle="${rb}"/>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<%--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+                <%--<a class="dropdown-item" href="controller?command=set_lang&page=to-main">--%>
+                    <%--<fmt:message key="label.language.type" bundle="${rb}"/>--%>
+                <%--</a>--%>
+<%--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--%>
+
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<c:if test="${nameUser!=null}">--%>
+            <%--<form class="form-inline my-2 my-lg-0" action="controller?command=Logout" method="POST">--%>
+                <%--<button id="logout" name="logout" class="btn btn-dark">--%>
+                    <%--<fmt:message key="label.logout" bundle="${rb}"/>--%>
+                <%--</button>--%>
+            <%--</form>--%>
+        <%--</c:if>--%>
+    <%--</div>--%>
+<%--</nav>--%>

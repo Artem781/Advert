@@ -99,7 +99,7 @@ public class CreateAdvertCommand implements Command {
                     .setParams(PARAM_NAME_PAGE_ID, accountId.toString()).getUrl();
             transmissionType = TransmissionType.FORWARD;
             logger.log(Level.INFO, "from CreateAdvertCommand. page: " + page);
-        } catch (ServiceException | DaoException e) {
+        } catch (ServiceException e) {
             logger.log(Level.INFO, "from CreateAdvertCommand. catch block. e.getMessage(): " + e.getMessage());
 //            messageManager = e.getMessage().trim();
 //            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,

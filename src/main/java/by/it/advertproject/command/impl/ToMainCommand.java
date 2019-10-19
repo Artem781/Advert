@@ -14,7 +14,7 @@ public class ToMainCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) {
-        String page = "main.jsp";
+        String page = "/jsppage/main.jsp";
         Logger.log(Level.INFO, "from ToMainCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
     }

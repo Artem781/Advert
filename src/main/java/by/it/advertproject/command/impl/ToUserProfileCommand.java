@@ -13,7 +13,7 @@ public class ToUserProfileCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) {
-        String page = "userprofile.jsp";
+        String page = "/jsppage/userprofile.jsp";
         Logger.log(Level.INFO, "from ToUserProfileCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
     }

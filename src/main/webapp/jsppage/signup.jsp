@@ -12,7 +12,11 @@
 <body>
 <div class="container">
     <header>
-        <%@include file="include/menu.jsp" %>
+        <%@include file="include/menustart.jsp" %>
+        <a class="dropdown-item" href="controller?command=set_lang&page=to-signup">
+            <fmt:message key="label.language.type" bundle="${rb}"/>
+        </a>
+        <%@include file="include/menuend.jsp" %>
     </header>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>

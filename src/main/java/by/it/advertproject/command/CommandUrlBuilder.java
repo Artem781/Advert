@@ -77,8 +77,6 @@ public enum CommandUrlBuilder {
         }
     },
     TO_LOGIN {
-
-//        private static final String COMMAND_URL = "/controller?command=to_login";
         private static final String COMMAND_URL = "/controller?command=TO_SIGN_IN";
         private String params = "";
 
@@ -92,10 +90,8 @@ public enum CommandUrlBuilder {
             String params = this.params;
             this.params = "";
             System.out.println(" from CommandUrlBuilder. TO_LOGIN. getUrl. url: " + COMMAND_URL + params);
-
             return COMMAND_URL + params;
         }
-
     },
     TO_REGISTRATION {
 

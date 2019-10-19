@@ -11,7 +11,7 @@
 <body>
 <div class="container">
 <header>
-    <%@include file="include/menu.jsp" %>
+    <%@include file="include/menustart.jsp" %>
 </header>
 <p>Cmd Logout: ${message}</p>
 </div>

@@ -29,7 +29,7 @@ public class AdvertService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
 
 
-    public Advert createAdvert(Map<String, String> carAdParameterMap, Long accountId) throws ServiceException, DaoException {
+    public Advert createAdvert(Map<String, String> carAdParameterMap, Long accountId) throws ServiceException {
         logger.log(Level.INFO, "from AdvertService) createAdvert method.");
         AdvertParameterValidationState advertParameterValidationState
                 = AdvertParameterValidator.AdvertValidateParameter(carAdParameterMap);
@@ -86,7 +86,7 @@ public class AdvertService {
         private static final String DRIVEUNIT_REGEX = "[a-zA-Zа-яА-Я0-9()]{1,45}";
         private static final String EQUIPMENT_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
 
-        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) throws ServiceException {
+        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap){
             AdvertParameterValidationState advertParameterValidationState = AdvertParameterValidationState.VALID;
             logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method.");
             Map<String, String> advertRegexMap = new HashMap<>();
