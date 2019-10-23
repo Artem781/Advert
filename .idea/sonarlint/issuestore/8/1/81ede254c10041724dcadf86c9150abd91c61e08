@@ -1,15 +1,15 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷–Û³ýÿÿÿÿ8Ó˜¼ŽÐ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³„‰«þÿÿÿÿ8Ó˜¼ŽÐ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÆŒøæ8Ó˜¼ŽÐ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–„ô8Ó˜¼ŽÐ-
-ssquid:S00116"QRename this field "LOGGER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ‡øÿÿÿÿ8¡ÕÃŽÐ-
-„squid:S1845"cRename field "LOGGER" to prevent any misunderstanding/clash with field "logger" defined on line 22.(ëÈ‡øÿÿÿÿ8Á°ÀŠØ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.( Ð€­8Ó˜¼ŽÐ-
-Ysquid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓÞÏÛ8Ó˜¼ŽÐ-
 fsquid:UselessImportCheck"8Remove this unused import 'javax.servlet.ServletConfig'.(²ðÕ…ýÿÿÿÿ8Ó˜¼ŽÐ-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–ðºÅ8Ó˜¼ŽÐ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÏŠ±Þûÿÿÿÿ8Ó˜¼ŽÐ-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜèÎ•ûÿÿÿÿ8Ó˜¼ŽÐ-
-[squid:UselessImportCheck"2Remove this unused import 'java.util.Enumeration'.(»îÜ®8Ó˜¼ŽÐ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷–Û³ýÿÿÿÿ8Ó˜¼ŽÐ-
 Ksquid:S1068"*Remove this unused "LOGGER" private field.(ëÈ‡øÿÿÿÿ8ÌŽÿ³Ð-
+Ysquid:UselessImportCheck"0Remove this unused import 'java.io.PrintWriter'.(ÓÞÏÛ8Ó˜¼ŽÐ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÆŒøæ8Ó˜¼ŽÐ-
+„squid:S1845"cRename field "LOGGER" to prevent any misunderstanding/clash with field "logger" defined on line 22.(ëÈ‡øÿÿÿÿ8Á°ÀŠØ-
+ssquid:S00116"QRename this field "LOGGER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ‡øÿÿÿÿ8¡ÕÃŽÐ-
+[squid:UselessImportCheck"2Remove this unused import 'java.util.Enumeration'.(»îÜ®8Ó˜¼ŽÐ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜèÎ•ûÿÿÿÿ8Ó˜¼ŽÐ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÏŠ±Þûÿÿÿÿ8Ó˜¼ŽÐ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³„‰«þÿÿÿÿ8Ó˜¼ŽÐ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.( Ð€­8Ó˜¼ŽÐ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–ðºÅ8Ó˜¼ŽÐ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–„ô8Ó˜¼ŽÐ-

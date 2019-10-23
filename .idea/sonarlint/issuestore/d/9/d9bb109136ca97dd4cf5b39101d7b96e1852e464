@@ -1,6 +1,7 @@
 
-csquid:S2095H"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Å¥Íóÿÿÿÿÿ
-dsquid:S2259\"GA "NullPointerException" could be thrown; "resultSet" is nullable here.(ˆ¤¡8¢ò‡…Ç-
 dsquid:S2259"HA "NullPointerException" could be thrown; "connection" is nullable here.(ø›”Éùÿÿÿÿ
-jsquid:S2095/"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Œõ„¡ÿÿÿÿÿ8„àîîÆ-
-Fsquid:S1940\")Use the opposite operator ("!=") instead.(ˆ¤¡8Ü‡…Ç-
+Fsquid:S1940]")Use the opposite operator ("!=") instead.(ˆ¤¡8Ü‡…Ç-
+Psquid:S1135""2Complete the task associated to this TODO comment.(Óø“8 Çº®Ş-
+dsquid:S2259]"GA "NullPointerException" could be thrown; "resultSet" is nullable here.(ˆ¤¡8¢ò‡…Ç-
+csquid:S2095I"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Å¥Íóÿÿÿÿÿ
+jsquid:S20950"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Œõ„¡ÿÿÿÿÿ8„àîîÆ-

@@ -2,28 +2,23 @@ package by.it.advertproject.service;
 
 import by.it.advertproject.bean.Account;
 import by.it.advertproject.bean.Advert;
-import by.it.advertproject.bean.Role;
 import by.it.advertproject.dao.AccountDao;
 import by.it.advertproject.dao.AdvertDao;
 import by.it.advertproject.dao.impl.AccountDaoImpl;
 import by.it.advertproject.dao.impl.AdvertDaoImpl;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_LOGIN;
 import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
-import static by.it.advertproject.command.ParameterName.PARAM_TEL;
 
 public class AdvertService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
@@ -33,13 +28,10 @@ public class AdvertService {
         logger.log(Level.INFO, "from AdvertService) createAdvert method.");
         AdvertParameterValidationState advertParameterValidationState
                 = AdvertParameterValidator.AdvertValidateParameter(carAdParameterMap);
-
-
         logger.log(Level.INFO, "from AdvertService) createAdvert method. after AdvertParameterValidator ");
         AdvertDao advertDao = new AdvertDaoImpl();
         AccountDao accountDao = new AccountDaoImpl();
         logger.log(Level.INFO, "from AdvertService) createAdvert method. before Advert.Builder() ");
-
         Advert advert = new Advert.Builder()
                 .withTitle(carAdParameterMap.get(PARAM_CAR_TITLE))
                 .withDescription(carAdParameterMap.get(PARAM_CAR_DESCRIPTION))
@@ -76,6 +68,16 @@ public class AdvertService {
         return advert;
     }
 
+    public List<Advert> findAdvertBelongAccount(Account account) throws DaoException {
+        logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.");
+        AdvertDao advertDao = new AdvertDaoImpl();
+        // TODO: 20.10.2019 из стринг в лонг
+        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));
+        logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.\n" +
+                "List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));\n");
+        return advertList;
+    }
+
     private static class AdvertParameterValidator {
         private static final String TITLE_REGEX = "[a-zа-яA-Z-А-Я][a-zа-яA-ZА-Я0-9\\-!?,. ]{7,49}";
         private static final String DESCRIPTION_REGEX = "[a-zа-яA-Z-А-Я0-9.,?!\\- ]{7,2000}";
@@ -86,7 +88,7 @@ public class AdvertService {
         private static final String DRIVEUNIT_REGEX = "[a-zA-Zа-яА-Я0-9()]{1,45}";
         private static final String EQUIPMENT_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
 
-        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap){
+        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) {
             AdvertParameterValidationState advertParameterValidationState = AdvertParameterValidationState.VALID;
             logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method.");
             Map<String, String> advertRegexMap = new HashMap<>();

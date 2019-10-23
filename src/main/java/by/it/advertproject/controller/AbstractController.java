@@ -35,7 +35,6 @@ private final Logger LOGGER = LogManager.getRootLogger();
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {
                 logger.log(Level.INFO, "from AbstractController. if block. ");
-
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(router.getPath());
                 dispatcher.forward(request, response);
             } else {

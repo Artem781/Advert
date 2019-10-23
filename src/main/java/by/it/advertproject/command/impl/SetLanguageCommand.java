@@ -31,8 +31,6 @@ public class SetLanguageCommand implements Command {
     private static final String USER_PROFILE = "to-userprofile";
 
 
-
-
     private static final String REGISTRATION = "registration";
     private static final String REGISTRATION_PAGE = "path.page.registration";
     private static final String SETTING_PAGE = "path.page.setting";
@@ -43,9 +41,6 @@ public class SetLanguageCommand implements Command {
     private static final String MAIN_PAGE = "path.page.main";
     private static final String CREATE_AD_PAGE = "path.page.createad";
     private static final String USER_PROFILE_PAGE = "path.page.userprofile";
-
-
-
 
 
     private static final String EMPTY_STRING = "";

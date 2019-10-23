@@ -96,223 +96,101 @@
         <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
     </div>
     <hr>
-    <h3>
-        ${created_advert_attr}
-    </h3>
     <br>
-    <div class="page-header">
-        <h3><fmt:message key="label.profile" bundle="${rb}"/> ${nameUser}</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <caption align="left">
+                <fmt:message key="label.profile" bundle="${rb}"/> ${nameUser}
+            </caption>
+            <thead class="thead-light">
+            <tr>
+                <th scope="col"><fmt:message key="label.table-login" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="label.table-name" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="label.table-date-of-birth" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="label.table-email" bundle="${rb}"/></th>
+                <th scope="col"><fmt:message key="label.table-tel" bundle="${rb}"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>${login}</td>
+                <td>${nameUser}</td>
+                <td>${birthdayAttr}</td>
+                <td>${emailAttr}</td>
+                <td>${telAttr}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+    <br>
+    <hr>
     <div class="row">
-        <div class="col-md-2"><fmt:message key="label.table-login" bundle="${rb}"/></div>
-        <div class="col-md-2"><fmt:message key="label.table-name" bundle="${rb}"/></div>
-        <div class="col-md-2"><fmt:message key="label.table-date-of-birth" bundle="${rb}"/></div>
-        <div class="col-md-2"><fmt:message key="label.table-email" bundle="${rb}"/></div>
-        <div class="col-md-2"><fmt:message key="label.table-tel" bundle="${rb}"/></div>
-        <div class="col-md-2">just empty</div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-2">${login}</div>
-        <div class="col-md-2">${nameUser}</div>
-        <div class="col-md-2">${birthdayAttr}</div>
-        <div class="col-md-2">${emailAttr}</div>
-        <div class="col-md-2">${telAttr}</div>
-        <div class="col-md-2"></div>
-    </div>
-    <br>
-    <%--<div class="container">--%>
-        <div class="row">
-            <div class="page-header">
-                <h3>
-                    <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
-                </h3>
-            </div>
-            <div>
-                <label class="switch">
-                    <input type="checkbox" onclick="toggle_visibility('list','edit')">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+        <div class="page-header">
+            <h3>
+                <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+            </h3>
         </div>
-    <%--</div>--%>
-    <br>
+        <div>
+            <label class="switch">
+                <input type="checkbox" onclick="toggle_visibility('list','edit')">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
     <div id="list" style="display: block">
-        <div class="row">
-            <div class="col-md-2"><fmt:message key="label.ad-title" bundle="${rb}"/></div>
-            <div class="col-md-3"><fmt:message key="label.ad-description" bundle="${rb}"/></div>
-            <div class="col-md-1"><fmt:message key="label.ad-brand" bundle="${rb}"/></div>
-            <div class="col-md-1"><fmt:message key="label.ad-model" bundle="${rb}"/></div>
-            <div class="col-md-1"><fmt:message key="label.ad-color" bundle="${rb}"/></div>
-            <div class="col-md-1"><fmt:message key="label.ad-engine-volume" bundle="${rb}"/></div>
-            <div class="col-md-1"><fmt:message key="label.ad-price" bundle="${rb}"/></div>
-            <div class="col-md-2">just empty</div>
+        <c:set var="countAdvert" scope="session" value="1"/>
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <caption align="left">
+                    <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                </caption>
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-model" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-color" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-body" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-year" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-transmission" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-drive-unit" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-equipment" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-mileage" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-crashed" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-engine-volume" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-price" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.ad-photo" bundle="${rb}"/></th>
+                </tr>
+                </thead>
+                <tbody class="table table-striped">
+                <c:forEach var="ad" items="${listAdvertAttr}">
+                    <tr>
+                        <th scope="row">${countAdvert}</th>
+                        <td>${ad.getTitle()}</td>
+                        <td>${ad.getDescription()}</td>
+                        <td>${ad.getBrand()}</td>
+                        <td>${ad.getModel()}</td>
+                        <td>${ad.getColor()}</td>
+                        <td>${ad.getBody()}</td>
+                        <td>${ad.getYear()}</td>
+                        <td>${ad.getAt()}</td>
+                        <td>${ad.getDriveunit()}</td>
+                        <td>${ad.getEquipment()}</td>
+                        <td>${ad.getMilage()}</td>
+                        <td>${ad.getCrashed()}</td>
+                        <td>${ad.getEngine()}</td>
+                        <td>${ad.getPrice()}</td>
+                        <td>@photo</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
-        <c:forEach items="${ads}" var="ad">
-            <br>
-            <div class="row">
-
-                <div class="zoom_img">
-                    <div class="col-md-1">
-                        <a target="_blank" href="images/ad${ad.id}">
-                            <img src="images/ad${ad.id}" height="40px" alt="${ad.price}"
-                                 onmouseover="this.height=150" ;
-                                 onmouseout="this.height=40"/>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-2">${ad.title}</div>
-                <div class="col-md-3">${ad.description}</div>
-                <div class="col-md-1">${ad.brnd}</div>
-                <div class="col-md-1">${ad.model}</div>
-                <div class="col-md-1">${ad.color}</div>
-                <div class="col-md-1">${ad.year}</div>
-                <div class="col-md-1">${ad.engine} л.</div>
-                <div class="col-md-2">${ad.price} руб.</div>
-                <hr>
-            </div>
-        </c:forEach>
     </div>
-    <%--<div id="edit" style="display: none">--%>
-        <%--<c:forEach items="${ads}" var="ad">--%>
-            <%--<form class="update-ads-${ad.id}" action="do?command=Profile" method="POST" enctype="multipart/form-data">--%>
-                <%--<div class="row">--%>
-
-                    <%--<div class="hiden">--%>
-                        <%--<label for="id">ID</label>--%>
-                        <%--<input readonly type="number" id="id" class="form-control input-md" name="id" value="${ad.id}"/>--%>
-                    <%--</div>--%>
-
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="title">Заголовок</label>--%>
-                        <%--<input id="title" name="title" type="text" value="${ad.title}" placeholder=" "--%>
-                               <%--class="form-control input-md" required--%>
-                               <%--pattern="[a-zа-яA-Z-А-Я][a-zа-яA-ZА-Я0-9\-!?,. ]*" minlength="8" maxlength="50">--%>
-                        <%--<span class="form__error">--%>
-                        <%--<div>латиница, кириллица</div>--%>
-                        <%--<div>первый символ - буква в верхнем или нижнем регистре</div>--%>
-                        <%--<div>от 8 до 50 символов</div>--%>
-                        <%--<div>буквы в верхнем и нижнем регистре, цифры</div>--%>
-                        <%--<div>символы \ - ! ? , . ]*</div>--%>
-                      <%--</span>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="description">Описание</label>--%>
-                        <%--<input minlength="7" max="2000" type="text" id="description" class="form-control input-md"--%>
-                               <%--name="description"--%>
-                               <%--value="${ad.description}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="brnd">Марка</label>--%>
-                        <%--<input readonly type="text" id="brnd" class="form-control input-md" name="brnd"--%>
-                               <%--value="${ad.brnd}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="model">Модель</label>--%>
-                        <%--<input readonly type="text" id="model" class="form-control input-md" name="model"--%>
-                               <%--value="${ad.model}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="color">Цвет</label>--%>
-                        <%--<input id="color" name="color" type="text" value="${ad.color}" placeholder=" "--%>
-                               <%--class="form-control input-md" required--%>
-                               <%--pattern="[a-zA-Zа-яА-Я- ]*" minlength="1" maxlength="45">--%>
-                        <%--<span class="form__error">--%>
-                        <%--<div>латиница, кириллица</div>--%>
-                        <%--<div>от 1 до 45 символов</div>--%>
-                        <%--<div>буквы в верхнем и нижнем регистре</div>--%>
-                        <%--<div>символ "-"</div>--%>
-                      <%--</span>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="body">Кузов</label>--%>
-                        <%--<input readonly id="body" type="text" class="form-control input-md" name="body"--%>
-                               <%--value="${ad.body}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="year">Год</label>--%>
-                        <%--<input id="year" name="year" type="number" value="${ad.year}" placeholder=" "--%>
-                               <%--class="form-control input-md" required--%>
-                               <%--minlength="4" maxlength="4" min="1900" max="2019">--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="engine">Объем двигателя</label>--%>
-                        <%--<input id="engine" name="engine" type="number" value="${ad.engine}" step="0.1" placeholder="2.5"--%>
-                               <%--class="form-control input-md"--%>
-                               <%--required/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="at">Коробка передач</label>--%>
-                        <%--<input readonly id="at" class="form-control input-md" name="at" value="${ad.at}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="driveunit">Привод</label>--%>
-                        <%--<input readonly id="driveunit" class="form-control input-md" name="driveunit"--%>
-                               <%--value="${ad.driveunit}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="equipment">Комплектация</label>--%>
-                        <%--<input readonly id="equipment" class="form-control input-md" name="equipment"--%>
-                               <%--value="${ad.equipment}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="millage">Пробег</label>--%>
-                        <%--<input id="millage" type="number" class="form-control input-md" name="millage"--%>
-                               <%--value="${ad.millage}"/>--%>
-                    <%--</div>--%>
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="crashed">ДТП</label>--%>
-                        <%--<input id="crashed" class="form-control" name="crashed" required value="${ad.crashed}">--%>
-
-                    <%--</div>--%>
-
-                    <%--<div class="col-md-3">--%>
-                        <%--<label for="price">Цена</label>--%>
-                        <%--<input id="price" type="number" step="0.01" class="form-control input-md" required name="price"--%>
-                               <%--value="${ad.price}"/>--%>
-                    <%--</div>--%>
-
-
-                    <%--<div class=hiden>--%>
-                        <%--<label for="id_User">Пользователь</label>--%>
-                        <%--<input readonly id="id_User" class="form-control input-md" name="id_User"--%>
-                               <%--value="${ad.id_User}"/>--%>
-                            <%--&lt;%&ndash;<select disabled id="id_User" name="id_User" class="form-control">&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<c:forEach items="${users}" var="user">&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<option value="${user.id}"&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;user=${user.id} ${user.id==ad.id_User?"selected":""}>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;${user.login}&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;</option>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;</c:forEach>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;</select>&ndash;%&gt;--%>
-                    <%--</div>--%>
-
-
-                    <%--<div class="col-md-3">--%>
-                        <%--<label class="col-md-3 control-label" for="upload">Фото</label>--%>
-                        <%--<div class="col-md-3">--%>
-                            <%--<input id="upload" name="upload" class="input-file" type="file">--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-
-                    <%--<div class="container">--%>
-                        <%--<br>--%>
-                        <%--<button id="delete" name="delete" value="delete" class="btn btn-danger">--%>
-                            <%--Удалить--%>
-                        <%--</button>--%>
-                        <%--<button id="update" name="update" value="update" class="btn btn-success">--%>
-                            <%--Обновить--%>
-                        <%--</button>--%>
-                    <%--</div>--%>
-
-                <%--</div>--%>
-            <%--</form>--%>
-            <%--<hr>--%>
-        <%--</c:forEach>--%>
-    <%--</div>--%>
-
-
+    <br>
+    <hr>
 </div>
 
 

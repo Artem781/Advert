@@ -22,12 +22,12 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
     static final String TABLE_NAME = "advert";
     //language=SQL
     private static final String SQL_SELECT_ADVERT_BY_TITLE =
-            "SELECT anaron.idadvert, anaron.title, anaron.description," +
-                    " anaron.brand, anaron.model, anaron.color, " +
-                    "anaron.body, anaron.year, anaron.engine, anaron.at," +
-                    " anaron.driveunit, anaron.equipment, anaron.mileage, " +
-                    "anaron.crashed, anaron.price, anaron.accountaccesslevelfk " +
-                    "FROM anaron.advert WHERE title = ?";
+            "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
+                    " anaron.advert.brand, anaron.advert.model, anaron.advert.color, " +
+                    "anaron.advert.body, anaron.advert.year, anaron.advert.engine," +
+                    " anaron.advert.at, anaron.advert.driveunit, anaron.advert.equipment, " +
+                    "anaron.advert.mileage, anaron.advert.crashed, anaron.advert.price," +
+                    " anaron.advert.accountidfk FROM anaron.advert WHERE anaron.advert.title = ?";
 
     @Override
     public List<Advert> findAdvertByTitle(String patternTitle) throws DaoException {
@@ -35,13 +35,32 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
         return entities.isEmpty() ? null : (List<Advert>) entities.get(0);
     }
 
+
+    //language=SQL
+    private static final String SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK =
+            "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
+                    " anaron.advert.brand, anaron.advert.model, anaron.advert.color, " +
+                    "anaron.advert.body, anaron.advert.year, anaron.advert.engine," +
+                    " anaron.advert.at, anaron.advert.driveunit, anaron.advert.equipment, " +
+                    "anaron.advert.mileage, anaron.advert.crashed, anaron.advert.price," +
+                    " anaron.advert.accountidfk FROM anaron.advert WHERE anaron.advert.accountidfk = ?";
+
+    @Override
+    public List<Advert> findCountAdvertByAccountIdFk(String AccountIdFk) throws DaoException {
+        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method.");
+        List<Advert> entities = findBy(SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK, TABLE_NAME, AccountIdFk);
+        boolean isEmpty = entities.isEmpty();
+        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. entities.toString() = " + entities.toString());
+        return entities.isEmpty() ? null : entities;
+    }
+
     //language=SQL
     private static final String SQL_SQLECT_ALL_ADVERTS =
-            "SELECT anaron.idadvert, anaron.title, anaron.description," +
-                    "anaron.brand, anaron.model, anaron.color," +
-                    "anaron.body, anaron.year, anaron.engine, anaron.at," +
-                    "anaron.driveunit, anaron.equipment, anaron.mileage," +
-                    "anaron.crashed, anaron.price, anaron.accountaccesslevelfk " +
+            "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
+                    "anaron.advert.brand, anaron.advert.model, anaron.advert.color," +
+                    "anaron.advert.body, anaron.advert.year, anaron.advert.engine, anaron.advert.at," +
+                    "anaron.advert.driveunit, anaron.advert.equipment, anaron.advert.mileage," +
+                    "anaron.advert.crashed, anaron.advert.price, anaron.advert.accountidfk " +
                     " FROM anaron.advert";
 
     @Override
@@ -56,7 +75,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
                     " anaron.brand, anaron.model, anaron.color, " +
                     "anaron.body, anaron.year, anaron.engine, anaron.at," +
                     " anaron.driveunit, anaron.equipment, anaron.mileage, " +
-                    "anaron.crashed, anaron.price, anaron.accountaccesslevelfk " +
+                    "anaron.crashed, anaron.price, anaron.accountidfk " +
                     "FROM anaron.advert WHERE idadvert = ?";
 
     @Override
@@ -65,6 +84,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
         return adverts.isEmpty() ? null : adverts.get(0);
 
     }
+
 
     //language=SQL
     private static final String SQL_DELETE_ADVERT =
@@ -81,7 +101,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
             "INSERT INTO anaron.advert " +
                     "(title, description, brand, model, color, body, year," +
                     " engine, at, driveunit, equipment, mileage, crashed, " +
-                    "price, accountaccesslevelfk)" +
+                    "price, accountidfk)" +
                     " Values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     @Override
@@ -134,7 +154,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
                     "advert.body = ?, advert.year = ?, advert.engine = ?," +
                     " advert.at = ?, advert.driveunit = ?, advert.equipment = ?," +
                     " advert.mileage = ?, advert.crashed = ?, advert.price = ?," +
-                    " advert.accountaccesslevelfk = ?,WHERE accounts.id = ?";
+                    " advert.accountidfk = ?,WHERE accounts.id = ?";
 
     @Override
     public void update(Advert advert) throws DaoException {

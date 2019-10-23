@@ -20,7 +20,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     //language=SQL
     private static final String SQL_SELECT_ALL_ACCOUNTS =
             "select idaccounts, name, login, password, birthday, email, tel, " +
-                    "accesslevel from accounts";
+                    "accesslevel from account";
 
     @Override
     public List<Account> findAll() throws DaoException {
@@ -31,7 +31,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     //language=SQL
     private static final String SQL_SELECT_ACCOUNT_BY_ID =
             "select idaccounts, name, login, password, birthday, email, tel, accesslevel " +
-                    "from accounts where idaccounts = ?";
+                    "from account where idaccounts = ?";
 
     @Override
     public Account findBeanById(long index) throws DaoException {
@@ -42,7 +42,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     //language=SQL
     private static final String SQL_SELECT_ACCOUNT_BY_LOGIN =
             "select idaccounts, name, login, password, birthday, email, tel, accesslevel " +
-                    "from accounts where login = ?";
+                    "from account where login = ?";
 
     @Override
     public Account findAccountByLogin(String loginPattern) throws DaoException {
@@ -54,7 +54,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     // вначало класса
     //language=SQL
     private static final String SQL_DELETE_ACCOUNT =
-            "DELETE FROM accounts WHERE accounts.idaccounts = ?";
+            "DELETE FROM account WHERE account.idaccounts = ?";
 
     @Override
     public void delete(Account account) throws DaoException {
@@ -63,7 +63,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     //language=SQL
     private static final String SQL_CREATE_ACCOUNT = "INSERT INTO " +
-            "accounts ( name, login, password, birthday, email, tel, accesslevel)" +
+            "account ( name, login, password, birthday, email, tel, accesslevel)" +
             " Values ( ?, ?, ?, ?, ?, ?, ?)";
 
     @Override
@@ -102,10 +102,10 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     }
 
     //language=SQL
-    private static final String SQL_UPDATE_ACCOUNT = "UPDATE accounts SET accounts.name = ?," +
-            " accounts.login = ?, accounts.password= ?," +
-            " accounts.birthday = ?, accounts.email = ?," +
-            " accounts.tel = ?, accounts.accesslevel = ? WHERE accounts.id = ?";
+    private static final String SQL_UPDATE_ACCOUNT = "UPDATE account SET account.name = ?," +
+            " account.login = ?, account.password= ?," +
+            " account.birthday = ?, account.email = ?," +
+            " account.tel = ?, account.accesslevel = ? WHERE account.id = ?";
 
     @Override
     public void update(Account account) throws DaoException {

@@ -41,7 +41,7 @@ public class BeanCreator<T extends Bean> {
     private static final String MILEAGE = "mileage";
     private static final String CRASHED = "crashed";
     private static final String PRICE = "price";
-    private static final String ACCOUNT_ACCESS_LEVEL_FK = "accountaccesslevelfk";
+    private static final String ACCOUNT_ID_FK = "accountidfk";
 
     T create(String tableName, ResultSet resultSet) throws SQLException, DaoException {
         try {
@@ -76,7 +76,7 @@ public class BeanCreator<T extends Bean> {
                             .withMileage(resultSet.getInt(MILEAGE))
                             .withCrashed(resultSet.getString(CRASHED))
                             .withPrice(resultSet.getBigDecimal(PRICE))
-                            .withAccountIdFk(resultSet.getInt(ACCOUNT_ACCESS_LEVEL_FK))
+                            .withAccountIdFk(resultSet.getInt(ACCOUNT_ID_FK))
                             .build();
                     break;
                 default:

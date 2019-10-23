@@ -1,5 +1,5 @@
 
-Osquid:S11536"1Directly append the argument of String.valueOf().(Ê®Ø8›Á×Ù-
-nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(äöÕïúÿÿÿÿ8›Á×Ù-
-isquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(Æ—Öş8‚ÌÑøİ-
-nsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(›Æöúÿÿÿÿ8›Á×Ù-
+Osquid:S1153@"1Directly append the argument of String.valueOf().(Ê®Ø8İãØÈŞ-
+isquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(Æ—Öş8İãØÈŞ-
+nsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(›Æöúÿÿÿÿ8İãØÈŞ-
+nsquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(äöÕïúÿÿÿÿ8İãØÈŞ-

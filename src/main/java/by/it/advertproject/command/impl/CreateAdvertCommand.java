@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static by.it.advertproject.command.AttributeName.*;
@@ -90,6 +91,13 @@ public class CreateAdvertCommand implements Command {
         String messageManager;
         try {
             advert = advertService.createAdvert(carAdParameterMap, accountId);
+
+            List<Advert> sessionAttributeList = (List<Advert>) content.getSessionAttribute(ATTR_NAME_LIST_ADVERT);
+            sessionAttributeList.add(advert);
+            logger.log(Level.INFO, "from CreateAdvertCommand. sessionAttributeList.add(advert);");
+            content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, sessionAttributeList);
+
+
             content.putRequestAttribute(ATTR_CREATED_ADVERT, "Well done");
             // TODO: 15.10.2019 Можно ли самого Advert как объект передавать в сессию или request?
             content.putRequestAttribute(ATTR_OBJECT_ADVERT, advert);

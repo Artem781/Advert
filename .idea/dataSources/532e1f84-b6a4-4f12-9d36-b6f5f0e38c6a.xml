@@ -1124,7 +1124,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="283" parent="2" name="accounts"/>
+    <table id="283" parent="2" name="account"/>
     <table id="284" parent="2" name="advert"/>
     <table id="285" parent="3" name="fix_car"/>
     <table id="286" parent="3" name="fix_user"/>
@@ -1286,7 +1286,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="284" name="accountaccesslevelfk">
+    <column id="314" parent="284" name="accountidfk">
       <Position>16</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1297,7 +1297,7 @@
       <Type>fulltext</Type>
     </index>
     <index id="316" parent="284" name="fk_ads_users1">
-      <ColNames>accountaccesslevelfk</ColNames>
+      <ColNames>accountidfk</ColNames>
       <Type>btree</Type>
     </index>
     <key id="317" parent="284" name="PRIMARY">
@@ -1306,9 +1306,9 @@
       <Primary>1</Primary>
     </key>
     <foreign-key id="318" parent="284" name="fk_ads_users1">
-      <ColNames>accountaccesslevelfk</ColNames>
+      <ColNames>accountidfk</ColNames>
       <RefSchemaName>anaron</RefSchemaName>
-      <RefTableName>accounts</RefTableName>
+      <RefTableName>account</RefTableName>
       <RefColNames>idaccounts</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>

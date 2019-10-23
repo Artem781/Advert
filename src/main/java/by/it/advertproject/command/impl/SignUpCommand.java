@@ -1,10 +1,13 @@
 package by.it.advertproject.command.impl;
 
 import by.it.advertproject.bean.Account;
+import by.it.advertproject.bean.Advert;
 import by.it.advertproject.bean.Role;
 import by.it.advertproject.command.*;
+import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
 import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.AdvertService;
 import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -13,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import static by.it.advertproject.command.AttributeName.*;
@@ -52,9 +56,13 @@ public class SignUpCommand implements Command {
         TransmissionType transmissionType;
         Account account;
         AccountService service = new AccountService();
+        AdvertService advertService = new AdvertService();
+
         String messageManager;
         try {
             account = service.createAccount(parameterMap);
+            List<Advert> advertList = advertService.findAdvertBelongAccount(account);
+            content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, advertList);
             // TODO: 15.10.2019 В сессию или в реквест можно передавать сам объект account?
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
@@ -65,7 +73,7 @@ public class SignUpCommand implements Command {
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             transmissionType = TransmissionType.FORWARD;
             logger.log(Level.INFO, "from SignUpCommand. page: " + page);
-        } catch (ServiceException e) {
+        } catch (ServiceException | DaoException e) {
             logger.log(Level.INFO, "from SignUpCommand. catch block. e.getMessage(): " + e.getMessage());
             messageManager = e.getMessage().trim();
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
@@ -115,11 +123,6 @@ public class SignUpCommand implements Command {
         return new Router(page, transmissionType);
     }
 }
-
-
-
-
-
 
 
 //

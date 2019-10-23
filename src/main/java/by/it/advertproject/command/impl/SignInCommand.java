@@ -2,14 +2,19 @@ package by.it.advertproject.command.impl;
 
 
 import by.it.advertproject.bean.Account;
+import by.it.advertproject.bean.Advert;
 import by.it.advertproject.bean.Role;
 import by.it.advertproject.command.*;
+import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
 import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.AdvertService;
 import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 import static by.it.advertproject.command.AttributeName.*;
 import static by.it.advertproject.command.ParameterName.*;
@@ -26,15 +31,20 @@ public class SignInCommand implements Command {
         logger.log(Level.INFO, "from SignInCommand. String pass = " + pass);
         TransmissionType transmissionType = TransmissionType.FORWARD;
         Account account;
-        AccountService service = new AccountService();
+        AccountService accountService = new AccountService();
+        AdvertService advertService = new AdvertService();
         try {
-            account = service.checkLogin(login, pass);
-            logger.log(Level.INFO, "from SignInCommand." + " create account: account = service.checkLogin(login, pass);");
+            account = accountService.checkLogin(login, pass);
+            logger.log(Level.INFO, "from SignInCommand." + " create account: account = accountService.checkLogin(login, pass);");
             logger.log(Level.INFO, "account.getRole()" + account.getRole());
             logger.log(Level.INFO, "user role: " + account.getRole().name());
 //            content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
 
             if (account.getRole().equals(Role.USER)) {
+                logger.log(Level.INFO, "from SignInCommand. if (account.getRole().equals(Role.USER))");
+                List<Advert> advertList = advertService.findAdvertBelongAccount(account);
+                logger.log(Level.INFO, "from SignInCommand. List<Advert> advertList = advertService.findAdvertBelongAccount(account);");
+                content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, advertList);
                 logger.log(Level.INFO, "user role: USER ");
                 content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
@@ -44,8 +54,8 @@ public class SignInCommand implements Command {
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
                 logger.log(Level.INFO, "ATTR_NAME_ACCESS_LEVEL = \"access_level\" values: " + account.getRole());
                 logger.log(Level.INFO, "\naccount.getRole(): " + account.getRole() +
-                                          "\naccount.getRole().name(): " + account.getRole().name() +
-                                          "\naccount.getRole().ordinal(): " + account.getRole().ordinal())  ;
+                        "\naccount.getRole().name(): " + account.getRole().name() +
+                        "\naccount.getRole().ordinal(): " + account.getRole().ordinal());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 logger.log(Level.INFO, "ATTR_NAME_ACCOUNT_ID = \"accountId\" values: " + account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);
@@ -79,14 +89,16 @@ public class SignInCommand implements Command {
                     .getUrl();
             logger.log(Level.INFO, "from SignInCommand. Catch block. \n page: " + page);
             transmissionType = TransmissionType.FORWARD;
-        }
+        } catch (DaoException e) {
+            logger.log(Level.INFO, "from SignInCommand. Catch block. DaoException.  e.getMessage = " +e.getMessage() +
+                    "\n page: " + page);
+
+            page = CommandUrlBuilder.TO_LOGIN
+                    .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
+                    .getUrl();        }
         return new Router(page, transmissionType);
     }
 }
-
-
-
-
 
 
 //

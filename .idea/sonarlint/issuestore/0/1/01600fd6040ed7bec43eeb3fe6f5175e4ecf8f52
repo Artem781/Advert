@@ -1,7 +1,7 @@
 
-esquid:UselessImportCheck";Remove this unused import 'org.apache.logging.log4j.Level'.(±âØl8¬µÏ©Ü-
-gsquid:S1192°"HDefine a constant instead of duplicating this literal "\n<br>" 14 times.(¨ÉÊ€8³†¥©¿-
-fsquid:S00107#"BConstructor has 15 parameters, which is greater than 7 authorized.(¾ù¿ıÿÿÿÿ8³†¥©¿-
-Msquid:S1068"*Remove this unused "logger" private field.(ğİ‚¢ıÿÿÿÿ8¬µÏ©Ü-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡øÀß8†¼›íÆ-
-wsquid:UselessImportCheck"GRemove this unused import 'by.it.advertproject.service.AccountService'.(¯øêüÿÿÿÿ8¢øÜ¤Ü-
+dsquid:S1192"HDefine a constant instead of duplicating this literal "\n<br>" 14 times.(¨ÉÊ€8³†¥©¿-
+csquid:UselessImportCheck";Remove this unused import 'org.apache.logging.log4j.Level'.(±âØl8¬µÏ©Ü-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡øÀß8†¼›íÆ-
+dsquid:S00107"BConstructor has 15 parameters, which is greater than 7 authorized.(¾ù¿ıÿÿÿÿ8³†¥©¿-
+Ksquid:S1068"*Remove this unused "logger" private field.(ğİ‚¢ıÿÿÿÿ8¬µÏ©Ü-
+usquid:UselessImportCheck"GRemove this unused import 'by.it.advertproject.service.AccountService'.(¯øêüÿÿÿÿ8¢øÜ¤Ü-
