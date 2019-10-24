@@ -1,7 +1,7 @@
 
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÆáùşÿÿÿÿ8Í¦·¯Ş-
-\squid:S1854";Remove this useless assignment to local variable "isEmpty".(ô¼¬¹øÿÿÿÿ8óñŸ°Ş-
-±squid:S1192"Define a constant instead of duplicating this literal "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," 3 times.(ô«şÀùÿÿÿÿ8¿ô®Ş-
-Msquid:S1481",Remove this unused "isEmpty" local variable.(ô¼¬¹øÿÿÿÿ8óñŸ°Ş-
-bsquid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¿Ëà(8áÜ®Ş-
-€squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "adverts".(ëÄ§şşÿÿÿÿ8áÜ®Ş-
+³squid:S1192"Define a constant instead of duplicating this literal "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," 3 times.(ô«şÀùÿÿÿÿ8¿ô®Ş-
+esquid:S2095ƒ"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(¿Ëà(8áÜ®Ş-
+‚squid:S1488D"_Immediately return this expression instead of assigning it to the temporary variable "adverts".(ëÄ§şşÿÿÿÿ8áÜ®Ş-
+Osquid:S14814",Remove this unused "isEmpty" local variable.(ô¼¬¹øÿÿÿÿ8óñŸ°Ş-
+usquid:S001171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÆáùşÿÿÿÿ8Í¦·¯Ş-
+^squid:S18544";Remove this useless assignment to local variable "isEmpty".(ô¼¬¹øÿÿÿÿ8óñŸ°Ş-

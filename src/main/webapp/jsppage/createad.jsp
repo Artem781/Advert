@@ -25,8 +25,9 @@
     <form class="form-horizontal"
           action="controller?command=create_advert"
           method="POST"
-    <%--enctype="multipart/form-data"--%>
-    >
+          <%--enctype="multipart/form-data">--%>
+        <%--<input type="hidden" name="command" value="create_advert"/>--%>
+
         <fieldset>
             <!-- Form Create advert -->
             <legend>
@@ -244,7 +245,7 @@
                                name="attype"
                                id="at-0"
                                value="${car_at_type_attr}"
-                               checked="checked"
+                               <%--checked="checked"--%>
                         >
                         <fmt:message key="label.choose-at-automatic" bundle="${rb}"/>
                     </label>
@@ -324,7 +325,8 @@
                                name="ifcrashed"
                                id="crashed-0"
                                value="${car_if_crashed_attr}"
-                               checked="checked">
+                               <%--checked="checked"--%>
+                        >
                         <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>
                     </label>
                     <label class="radio-inline" for="crashed-1">
@@ -375,14 +377,52 @@
                 </div>
             </div>
 
-            <!-- File Button -->
+
+
+
+
+
+
+
+
+            <%--<!-- File Button -->--%>
             <%--<div class="form-group">--%>
-            <%--<label class="col-md-4 control-label" for="upload">Фото</label>--%>
-            <%--<div class="col-md-4">--%>
-            <%--<input id="upload" name="carphotoupload"                            value=""--%>
-            <%--class="input-file" type="file">--%>
+                <%--<label class="col-md-4 control-label" for="upload">Фото</label>--%>
+                <%--<div class="col-md-4">--%>
+                    <%--<input id="upload" name="upload" class="input-file" type="file">--%>
+                <%--</div>--%>
             <%--</div>--%>
-            <%--</div>--%>
+
+
+
+
+
+
+
+
+            <%--<div class="row">--%>
+                <%--<div class="col-md-4">--%>
+                    <%--<div class="row user-wrapper">--%>
+                        <%--<div class="col-md-4 avatar-wr">--%>
+                            <%--<img class="avatar"--%>
+                                 <%--src="upload?command=get_account_image&account_id=${account.getId()}"--%>
+                                 <%--alt="">--%>
+                        <%--</div>--%>
+                        <%--<div class="col-md-8">--%>
+                            <%--<div class="row">--%>
+                                <%--<a class="avatar-link"--%>
+                                   <%--href="controller?command=TO_PERSONAL_PAGE&page_id=${account.getId()}">${account.getLogin()}</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="row button-wr">--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+
+
+
+
+
 
             <!-- Button -->
             <div class="form-group">

@@ -26,7 +26,7 @@ public abstract class AbstractController extends HttpServlet {
 private final Logger LOGGER = LogManager.getRootLogger();
     protected void process(HttpServletRequest request, HttpServletResponse response,
                            RequestContent content) throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html; charset=UTF-8");
         try {
             content.extractValues(request);
             Command command = CommandFactory.defineCommand(content);

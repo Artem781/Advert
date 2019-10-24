@@ -89,14 +89,25 @@
         </a>
         <%@include file="include/menuend.jsp" %>
     </header>
-    <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
-    <br>
-    <div class="alert alert-success" role="alert">
-        <%--<h4 class="alert-heading">Well done!</h4>--%>
-        <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
+
+    <div class="row">
+        <div class="col-md-9">
+            <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
+            <br>
+            <div class="alert alert-success" role="alert">
+                <%--<h4 class="alert-heading">Well done!</h4>--%>
+                <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
+            </div>
+            <hr>
+        </div>
+        <div class="col-md-3">
+            <div class=" float-right">
+                <img src="../images/img-01.png" class="rounded float-right" alt="avatar">
+            </div>
+        </div>
     </div>
-    <hr>
     <br>
+    <hr>
     <div class="table-responsive">
         <table class="table">
             <caption align="left">

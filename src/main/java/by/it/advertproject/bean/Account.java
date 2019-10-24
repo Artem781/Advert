@@ -3,6 +3,7 @@ package by.it.advertproject.bean;
 import java.util.Objects;
 
 public class Account extends Bean {
+
     static final long serialVersionUID = 42L;
     private String name;
     private String login;

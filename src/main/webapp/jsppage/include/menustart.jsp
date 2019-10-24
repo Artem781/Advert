@@ -52,8 +52,8 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-item nav-link" href="controller?command=to_profile">
-                            <fmt:message key="label.profile" bundle="${rb}"/>
+                        <a class="nav-item nav-link" href="controller?command=to_edit_profile">
+                            <fmt:message key="label.edit-profile" bundle="${rb}"/>
                         </a>
                     </li>
                     <c:if test="${access_level==ADMIN}">

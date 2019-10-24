@@ -3,6 +3,7 @@ package by.it.advertproject.command;
 import by.it.advertproject.command.impl.img.LoadAccountPhotoCommand;
 import by.it.advertproject.command.impl.img.LoadPostImageCommand;
 import by.it.advertproject.exception.CommandException;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,10 +16,14 @@ public class ImageLoadCommandFactory {
 
     public static ImageLoadCommand defineCommand(RequestContent content)
             throws CommandException {
+        logger.log(Level.INFO, "from ImageLoadCommandFactory. method defineCommand. ");
+
         String action = content.getRequestParameters(PARAM_NAME_COMMAND, 0);
         if (action == null || action.isEmpty()) {
             return null;
         }
+        logger.log(Level.INFO, "from ImageLoadCommandFactory. String action = " + action);
+
 //        ImageLoadCommand imageLoadCommand = null;
         ImageLoadCommand imageLoadCommand;
         switch (action) {

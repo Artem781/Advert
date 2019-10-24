@@ -23,7 +23,7 @@ public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
 
     public Account checkLogin(String login, String password) throws ServiceException {
-    String encryptedPassword = DigestUtils.md5Hex(password);
+        String encryptedPassword = DigestUtils.md5Hex(password);
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {
@@ -72,8 +72,36 @@ public class AccountService {
         return account;
     }
 
+    public void updatePhoto(long accountId, byte[] photo) throws ServiceException {
+        logger.log(Level.INFO, "From AccountService. updatePhoto method. ");
 
-// TODO: 16.09.2019 проверяться уникальность логина только в базе данных как поле unique
+        AccountDaoImpl accountDao = new AccountDaoImpl();
+        try {
+            logger.log(Level.INFO, "From AccountService. try block. ");
+
+            Account account = accountDao.findBeanById(accountId);
+            logger.log(Level.INFO, "From AccountService. account = " + account.toString());
+
+            if (account == null) {
+                logger.log(Level.INFO, "From AccountService. account == null ");
+
+                throw new ServiceException(ACCOUNT_IS_NULL);
+            }
+            account.setPhoto(photo);
+            logger.log(Level.INFO, "From AccountService. account.setPhoto(photo) ");
+
+            accountDao.update(account);
+            logger.log(Level.INFO, "From AccountService. try block. end line");
+
+        } catch (DaoException e) {
+            logger.log(Level.INFO, "From AccountService. catch block. ");
+
+            throw new ServiceException(LOAD_FILE_ERROR_MESSAGE);
+        }
+    }
+
+
+    // TODO: 16.09.2019 проверяться уникальность логина только в базе данных как поле unique
     public Account createAccount(Map<String, String> parameterMap) throws ServiceException {
         logger.log(Level.INFO, "from AccountService) createAccount method.");
         SignUpParameterValidationState signUpParameterValidationState
@@ -160,12 +188,6 @@ public class AccountService {
         }
     }
 }
-
-
-
-
-
-
 
 
 // ======createAccount method

@@ -29,6 +29,7 @@ public class SetLanguageCommand implements Command {
     private static final String SIGN_IN = "to-signin";
     private static final String SIGN_UP = "to-signup";
     private static final String USER_PROFILE = "to-userprofile";
+    private static final String EDIT_PROFILE = "to_edit_profile";
 
 
     private static final String REGISTRATION = "registration";
@@ -41,6 +42,7 @@ public class SetLanguageCommand implements Command {
     private static final String MAIN_PAGE = "path.page.main";
     private static final String CREATE_AD_PAGE = "path.page.createad";
     private static final String USER_PROFILE_PAGE = "path.page.userprofile";
+    private static final String EDIT_PROFILE_PAGE = "path.page.editprofile";
 
 
     private static final String EMPTY_STRING = "";
@@ -95,6 +97,10 @@ public class SetLanguageCommand implements Command {
             case USER_PROFILE:
                 page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
                 logger.log(Level.INFO, "case USER_PROFILE: page = " + page);
+                break;
+            case EDIT_PROFILE:
+                page = ConfigurationManager.getProperty(EDIT_PROFILE_PAGE);
+                logger.log(Level.INFO, "case EDIT_PROFILE_PAGE: page = " + page);
                 break;
             case SETTING:
                 long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);

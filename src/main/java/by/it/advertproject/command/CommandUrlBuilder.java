@@ -62,7 +62,7 @@ public enum CommandUrlBuilder {
     },
     TO_PERSONAL_PAGE {
 
-        private static final String COMMAND_URL = "/controller?command=to_personal_page";
+        private static final String COMMAND_URL = "/controller?command=to_main";
         private String params = "";
 
         public CommandUrlBuilder setParams(String name, String param) {
