@@ -45,8 +45,8 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     //language=SQL
     private static final String SQL_SELECT_ACCOUNT_BY_LOGIN =
             "select anaron.account.idaccounts, anaron.account.name, anaron.account.login, anaron.account.password, " +
-                    "anaron.account.birthday, anaron.account.email, anaron.account.tel, anaron.account.accesslevel " +
-                    "from account where anaron.account.login = ?";
+                    "anaron.account.birthday, anaron.account.email, anaron.account.tel, anaron.account.accesslevel," +
+                    "anaron.account.photo from account where anaron.account.login = ?";
 
     @Override
     public Account findAccountByLogin(String loginPattern) throws DaoException {

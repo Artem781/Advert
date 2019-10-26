@@ -3,6 +3,7 @@
 <%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
+<!DOCTYPE html>
 <html>
 <head>
     <title>
@@ -20,7 +21,7 @@
         <%@include file="include/menuend.jsp" %>
     </header>
     <br>
-    <form class="form-horizontal" method="post" action="controller">
+    <form class="form-horizontal" method="post" action="controller" autocomplete="off">
         <input type="hidden" name="command" value="sign_in"/>
         <fieldset>
 
@@ -73,6 +74,11 @@
                 </div>
             </div>
 
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="save">
+                <label name="save" class="form-check-label" for="save">запомнить меня пока не работает</label>
+            </div>
+
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="signinbutton"></label>
@@ -86,6 +92,18 @@
         </fieldset>
     </form>
 </div>
-<%@ include file="include/scriptbottom.jsp" %>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

@@ -9,4 +9,5 @@
     </form>
 </c:if>
 </div>
+</div>
 </nav>

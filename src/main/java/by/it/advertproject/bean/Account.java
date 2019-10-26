@@ -1,5 +1,6 @@
 package by.it.advertproject.bean;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Account extends Bean {
@@ -95,13 +96,14 @@ public class Account extends Bean {
     @Override
     public String toString() {
         return "Account{" +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", birthday='" + birthday + '\'' +
                 ", email='" + email + '\'' +
                 ", tel='" + tel + '\'' +
                 ", role=" + role +
+                ", photo=" + Arrays.toString(photo) +
                 '}';
     }
 

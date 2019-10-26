@@ -34,6 +34,8 @@ public class SignInCommand implements Command {
         AccountService accountService = new AccountService();
         AdvertService advertService = new AdvertService();
         try {
+            logger.log(Level.INFO, "from SignInCommand. try block ");
+
             account = accountService.checkLogin(login, pass);
             logger.log(Level.INFO, "from SignInCommand." + " create account: account = accountService.checkLogin(login, pass);");
             logger.log(Level.INFO, "account.getRole()" + account.getRole());

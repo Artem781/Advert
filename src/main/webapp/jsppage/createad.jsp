@@ -3,6 +3,7 @@
 <%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
+<!DOCTYPE html>
 <html>
 <head>
     <title>
@@ -377,53 +378,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-            <%--<!-- File Button -->--%>
-            <%--<div class="form-group">--%>
-                <%--<label class="col-md-4 control-label" for="upload">Фото</label>--%>
-                <%--<div class="col-md-4">--%>
-                    <%--<input id="upload" name="upload" class="input-file" type="file">--%>
-                <%--</div>--%>
-            <%--</div>--%>
-
-
-
-
-
-
-
-
-            <%--<div class="row">--%>
-                <%--<div class="col-md-4">--%>
-                    <%--<div class="row user-wrapper">--%>
-                        <%--<div class="col-md-4 avatar-wr">--%>
-                            <%--<img class="avatar"--%>
-                                 <%--src="upload?command=get_account_image&account_id=${account.getId()}"--%>
-                                 <%--alt="">--%>
-                        <%--</div>--%>
-                        <%--<div class="col-md-8">--%>
-                            <%--<div class="row">--%>
-                                <%--<a class="avatar-link"--%>
-                                   <%--href="controller?command=TO_PERSONAL_PAGE&page_id=${account.getId()}">${account.getLogin()}</a>--%>
-                            <%--</div>--%>
-                            <%--<div class="row button-wr">--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-
-
-
-
-
-
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="createad"></label>
@@ -439,8 +393,19 @@
     </form>
 
     <div/>
-    <%@ include file="include/scriptbottom.jsp" %>
+
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
+
 </body>
 </html>
 

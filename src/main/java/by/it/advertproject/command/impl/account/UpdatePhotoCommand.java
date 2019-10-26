@@ -33,7 +33,7 @@ public class UpdatePhotoCommand implements Command {
         AccountService accountService = new AccountService();
         try {
             long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
-            page = CommandUrlBuilder.TO_PERSONAL_PAGE
+            page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(accountId))
                     .getUrl();
             logger.log(Level.INFO, "from UpdatePhotoCommand. page = " + page);

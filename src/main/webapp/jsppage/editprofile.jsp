@@ -3,8 +3,8 @@
 <%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>
         <fmt:message key="label.edit-profile" bundle="${rb}"/>
@@ -42,9 +42,6 @@
             </div>
 
 
-            <input type="submit" name="Send File">
-
-
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
@@ -52,55 +49,38 @@
                     <button type="submit"
                             id="singlebutton"
                             name="singlebutton"
-                            class="btn btn-primary">Button</button>
+                            class="btn btn-primary">Button
+                    </button>
                 </div>
             </div>
 
 
-
-
-
         </fieldset>
     </form>
-    <%--<form method="post" action="upload" enctype="multipart/form-data">--%>
-        <%--<input type="hidden" name="command" value="update_photo"/>--%>
-
-        <%--<table border="0">--%>
-            <%--<tr>--%>
-                <%--<td>Enter your name:</td>--%>
-                <%--<td><input type="text" name="name"--%>
-                           <%--&lt;%&ndash;size="50"&ndash;%&gt;--%>
-                <%--></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>upload your photo:</td>--%>
-                <%--<td><input type="file" name="file"--%>
-                           <%--&lt;%&ndash;size="50"&ndash;%&gt;--%>
-                <%--></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td colspan="2"><input type="submit" value="save"></td>--%>
-            <%--</tr>--%>
-        <%--</table>--%>
-
-    <%--</form>--%>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
+            data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
+    </button>
 
 
 </div>
-<%@ include file="include/scriptbottom.jsp" %>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({trigger: 'hover'});
+    });
+</script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

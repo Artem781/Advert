@@ -3,11 +3,13 @@
 <%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
+<!DOCTYPE html>
 <html>
 <head>
     <title><fmt:message key="label.user-profile" bundle="${rb}"/></title>
     <%@ include file="include/head.jsp" %>
 
+    <link rel="stylesheet" type="text/css" href="../css/personalPage.css">
 
     <style>
         div.hiden { /* this will hide all divs on the page */
@@ -90,22 +92,32 @@
         <%@include file="include/menuend.jsp" %>
     </header>
 
+    <br>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-auto">
             <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
-            <br>
-            <div class="alert alert-success" role="alert">
-                <%--<h4 class="alert-heading">Well done!</h4>--%>
-                <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
-            </div>
-            <hr>
-        </div>
-        <div class="col-md-3">
-            <div class=" float-right">
-                <img src="../images/img-01.png" class="rounded float-right" alt="avatar">
-            </div>
         </div>
     </div>
+    <%--<div class="row">--%>
+        <%--<div class="col-md-8">--%>
+            <%--<div class="alert alert-success" role="alert">--%>
+                <%--&lt;%&ndash;<h4 class="alert-heading">Well done!</h4>&ndash;%&gt;--%>
+                <%--<p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>--%>
+                <%--<br>--%>
+                <%--<p>accountId: ${accountId}</p>--%>
+                <%--<p>\${account.getId()}: ${accountId}</p>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-md-4">--%>
+            <%--<img class="rounded img-fluid"--%>
+            <%--&lt;%&ndash;src="upload?command=get_account_image&account_id=${account.getId()}"&ndash;%&gt;--%>
+                 <%--src="upload?command=get_account_image&account_id=73"--%>
+                 <%--alt=""--%>
+                 <%--&lt;%&ndash;style="width:150px;"&ndash;%&gt;--%>
+            <%-->--%>
+        <%--</div>--%>
+    <%--</div>--%>
+
     <br>
     <hr>
     <div class="table-responsive">
@@ -136,17 +148,24 @@
     <br>
     <hr>
     <div class="row">
-        <div class="page-header">
-            <h3>
-                <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
-            </h3>
+
+
+        <div class="col-md-12">
+
+            <div class="page-header">
+                <h3>
+                    <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                </h3>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggle_visibility('list','edit')">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
-        <div>
-            <label class="switch">
-                <input type="checkbox" onclick="toggle_visibility('list','edit')">
-                <span class="slider round"></span>
-            </label>
-        </div>
+
+
     </div>
     <div id="list" style="display: block">
         <c:set var="countAdvert" scope="session" value="1"/>
@@ -205,6 +224,15 @@
 </div>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
 <script type="text/javascript">
     function toggle_visibility(id, id2) {
         var e = document.getElementById(id);
@@ -220,6 +248,6 @@
             c.style.display = 'block';
     }
 </script>
-<%@ include file="include/scriptbottom.jsp" %>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

@@ -19,18 +19,23 @@ public class ImageLoadCommandFactory {
         logger.log(Level.INFO, "from ImageLoadCommandFactory. method defineCommand. ");
 
         String action = content.getRequestParameters(PARAM_NAME_COMMAND, 0);
+        logger.log(Level.INFO, "from ImageLoadCommandFactory. String action = " + action);
+
         if (action == null || action.isEmpty()) {
             return null;
         }
-        logger.log(Level.INFO, "from ImageLoadCommandFactory. String action = " + action);
 
 //        ImageLoadCommand imageLoadCommand = null;
         ImageLoadCommand imageLoadCommand;
         switch (action) {
             case PARAM_VALUE_POST_IMG:
+                logger.log(Level.INFO, "from ImageLoadCommandFactory. case PARAM_VALUE_POST_IMG:");
+
                 imageLoadCommand = new LoadPostImageCommand();
                 break;
             case PARAM_VALUE_ACCOUNT_IMG:
+                logger.log(Level.INFO, "from ImageLoadCommandFactory. case PARAM_VALUE_ACCOUNT_IMG");
+
                 imageLoadCommand = new LoadAccountPhotoCommand();
                 break;
             default:

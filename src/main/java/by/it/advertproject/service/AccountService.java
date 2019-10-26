@@ -23,11 +23,17 @@ public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
 
     public Account checkLogin(String login, String password) throws ServiceException {
+        logger.log(Level.INFO, "from AccountService. method checkLogin ");
+
         String encryptedPassword = DigestUtils.md5Hex(password);
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {
+            logger.log(Level.INFO, "from AccountService. try block ");
+
             account = accountDao.findAccountByLogin(login);
+            logger.log(Level.INFO, "from AccountService. account: " + account.toString());
+
             if (account == null) {
 //                throw new ServiceException(MESSAGE_LOGIN_ERROR);
                 throw new ServiceException(MESSAGE_ERROR_LOGIN_PASSWORD);

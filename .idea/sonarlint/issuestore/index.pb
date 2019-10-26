@@ -339,3 +339,9 @@ Bsrc/main/java/by/it/advertproject/controller/UploadController.java,8\4\849198c
 Nsrc/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java,8\3\835abc801bc8a190dc7bfd99d209c7e5d3694b49
 W
 'src/main/webapp/jsppage/editprofile.jsp,8\d\8dc925c89ebfdaf80efb437c46e2bc79c346de91
+b
+2src/main/webapp/vendor/bootstrap/css/bootstrap.css,5\a\5a1213ab69462c6dd6f8ab895a6b5c4a30cd62b7
+`
+0src/main/webapp/vendor/bootstrap/js/bootstrap.js,7\2\7233750b189e21133dff3856becd9ec400ad505c
+a
+1src/main/webapp/vendor/jquery/jquery-3.4.1.min.js,4\3\43a9797357d79050d4ffc9c12aa90b00a2e4e7dc

@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -25,6 +26,7 @@ public class BeanCreator<T extends Bean> {
     private static final String EMAIL = "email";
     private static final String TEL = "tel";
     private static final String ROLE = "accesslevel";
+    private static final String PHOTO = "photo";
 
     private static final String ID_ADVERT = "idadvert";
     private static final String TITLE = "title";
@@ -58,6 +60,9 @@ public class BeanCreator<T extends Bean> {
                             .withTel(resultSet.getString(TEL))
                             .withRole(Role.values()[resultSet.getInt(ROLE)])
                             .build();
+                    if (resultSet.getBinaryStream(PHOTO) != null) {
+                        ((Account) bean).setPhoto(resultSet.getBinaryStream(PHOTO).readAllBytes());
+                    }
                     break;
                 case AdvertDaoImpl.TABLE_NAME:
                     bean = new Advert.Builder()
@@ -84,7 +89,7 @@ public class BeanCreator<T extends Bean> {
                     throw new DaoException(INTERNAL_ERROR);
             }
             return (T) bean;
-        } catch (DaoException e) {
+        } catch (IOException e) {
             logger.log(Level.ERROR, e.getMessage());
             throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
         }

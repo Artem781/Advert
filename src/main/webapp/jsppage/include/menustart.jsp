@@ -1,4 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+
 
 
     <%--<a class="navbar-brand" href="#">--%>
@@ -14,11 +16,13 @@
     <c:choose>
         <c:when test="${nameUser==null}">
             <a class="navbar-brand" href="controller?command=to_main">
+                <i class="fa fa-home fa-fw"></i>
                 <fmt:message key="label.home" bundle="${rb}"/>
             </a>
         </c:when>
         <c:otherwise>
             <a class="navbar-brand" href="controller?command=to_user_profile">
+                <i class="fa fa-home fa-fw"></i>
                 <fmt:message key="label.home" bundle="${rb}"/>
             </a>
         </c:otherwise>
@@ -102,12 +106,14 @@
                    id="search"
                    name="search"
                    value=""
+                   type="text"
             <%--pattern="[a-zA-Zа-яА-Я0-9- ]*"--%>
             <%--minlength="1"--%>
             <%--maxlength="45"--%>
                    placeholder="<fmt:message key="label.by-car-brand" bundle="${rb}"/>"
             >
             <button class="btn btn-outline-success my-2 my-sm-0"
+                    type="button"
                     id="gosearch"
                     name="gosearch"
                     value="gosearch">
