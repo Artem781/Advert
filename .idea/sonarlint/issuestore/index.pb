@@ -345,3 +345,7 @@ b
 0src/main/webapp/vendor/bootstrap/js/bootstrap.js,7\2\7233750b189e21133dff3856becd9ec400ad505c
 a
 1src/main/webapp/vendor/jquery/jquery-3.4.1.min.js,4\3\43a9797357d79050d4ffc9c12aa90b00a2e4e7dc
+^
+.src/main/webapp/vendor/fontawesome/css/all.css,3\6\3674531cc521f9d7a60e2f6c612ea71a106b103b
+T
+$src/main/webapp/css/personalPage.css,1\b\1beed85c3a22fd1184c9410af3a1156a5ef9c15b

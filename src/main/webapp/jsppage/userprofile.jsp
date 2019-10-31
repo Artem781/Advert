@@ -9,7 +9,7 @@
     <title><fmt:message key="label.user-profile" bundle="${rb}"/></title>
     <%@ include file="include/head.jsp" %>
 
-    <link rel="stylesheet" type="text/css" href="../css/personalPage.css">
+    <%--<link rel="stylesheet" type="text/css" href="../css/personalPage.css">--%>
 
     <style>
         div.hiden { /* this will hide all divs on the page */
@@ -83,145 +83,154 @@
 
 </head>
 <body>
-<div class="container">
-    <header>
+<%--<div class="container">--%>
+<header>
+    <div class="container-fluid">
         <%@include file="include/menustart.jsp" %>
         <a class="dropdown-item" href="controller?command=set_lang&page=to-userprofile">
             <fmt:message key="label.language.type" bundle="${rb}"/>
         </a>
         <%@include file="include/menuend.jsp" %>
-    </header>
-
-    <br>
-    <div class="row">
-        <div class="col-md-auto">
-            <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
-        </div>
     </div>
-    <%--<div class="row">--%>
-        <%--<div class="col-md-8">--%>
-            <%--<div class="alert alert-success" role="alert">--%>
-                <%--&lt;%&ndash;<h4 class="alert-heading">Well done!</h4>&ndash;%&gt;--%>
-                <%--<p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>--%>
-                <%--<br>--%>
-                <%--<p>accountId: ${accountId}</p>--%>
-                <%--<p>\${account.getId()}: ${accountId}</p>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="col-md-4">--%>
-            <%--<img class="rounded img-fluid"--%>
-            <%--&lt;%&ndash;src="upload?command=get_account_image&account_id=${account.getId()}"&ndash;%&gt;--%>
-                 <%--src="upload?command=get_account_image&account_id=73"--%>
-                 <%--alt=""--%>
-                 <%--&lt;%&ndash;style="width:150px;"&ndash;%&gt;--%>
-            <%-->--%>
-        <%--</div>--%>
-    <%--</div>--%>
-
-    <br>
-    <hr>
-    <div class="table-responsive">
-        <table class="table">
-            <caption align="left">
-                <fmt:message key="label.profile" bundle="${rb}"/> ${nameUser}
-            </caption>
-            <thead class="thead-light">
-            <tr>
-                <th scope="col"><fmt:message key="label.table-login" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="label.table-name" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="label.table-date-of-birth" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="label.table-email" bundle="${rb}"/></th>
-                <th scope="col"><fmt:message key="label.table-tel" bundle="${rb}"/></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>${login}</td>
-                <td>${nameUser}</td>
-                <td>${birthdayAttr}</td>
-                <td>${emailAttr}</td>
-                <td>${telAttr}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <br>
-    <hr>
-    <div class="row">
+</header>
 
 
-        <div class="col-md-12">
+<main>
+    <div class="container-fluid">
 
-            <div class="page-header">
-                <h3>
-                    <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
-                </h3>
+        <br>
+        <div class="row">
+            <div class="col-md-auto">
+                <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
             </div>
-            <div>
-                <label class="switch">
-                    <input type="checkbox" onclick="toggle_visibility('list','edit')">
-                    <span class="slider round"></span>
-                </label>
+        </div>
+        <div class="row">
+            <div class="col-md-8" style="height: 200px;">
+                <div class="alert alert-success" role="alert">
+                    <%--<h4 class="alert-heading">Well done!</h4>--%>
+                    <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
+                    <p>accountId: ${accountId}</p>
+                    <p>\${account.getId()}: ${accountId}</p>
+                </div>
+            </div>
+            <div class="col-md-4" style="height: 200px;">
+                <img class="rounded img-fluid"
+                <%--src="upload?command=get_account_image&account_id=${account.getId()}"--%>
+                     src="upload?command=get_account_image&account_id=73"
+                     alt=""
+                <%--style="width:150px;"--%>
+                >
             </div>
         </div>
 
-
-    </div>
-    <div id="list" style="display: block">
-        <c:set var="countAdvert" scope="session" value="1"/>
+        <br>
+        <hr>
         <div class="table-responsive">
-            <table class="table table-bordered ">
+            <table class="table">
                 <caption align="left">
-                    <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                    <fmt:message key="label.profile" bundle="${rb}"/> ${nameUser}
                 </caption>
                 <thead class="thead-light">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-model" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-color" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-body" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-year" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-transmission" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-drive-unit" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-equipment" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-mileage" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-crashed" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-engine-volume" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-price" bundle="${rb}"/></th>
-                    <th scope="col"><fmt:message key="label.ad-photo" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.table-login" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.table-name" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.table-date-of-birth" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.table-email" bundle="${rb}"/></th>
+                    <th scope="col"><fmt:message key="label.table-tel" bundle="${rb}"/></th>
                 </tr>
                 </thead>
-                <tbody class="table table-striped">
-                <c:forEach var="ad" items="${listAdvertAttr}">
-                    <tr>
-                        <th scope="row">${countAdvert}</th>
-                        <td>${ad.getTitle()}</td>
-                        <td>${ad.getDescription()}</td>
-                        <td>${ad.getBrand()}</td>
-                        <td>${ad.getModel()}</td>
-                        <td>${ad.getColor()}</td>
-                        <td>${ad.getBody()}</td>
-                        <td>${ad.getYear()}</td>
-                        <td>${ad.getAt()}</td>
-                        <td>${ad.getDriveunit()}</td>
-                        <td>${ad.getEquipment()}</td>
-                        <td>${ad.getMilage()}</td>
-                        <td>${ad.getCrashed()}</td>
-                        <td>${ad.getEngine()}</td>
-                        <td>${ad.getPrice()}</td>
-                        <td>@photo</td>
-                    </tr>
-                </c:forEach>
+                <tbody>
+                <tr>
+                    <td>${login}</td>
+                    <td>${nameUser}</td>
+                    <td>${birthdayAttr}</td>
+                    <td>${emailAttr}</td>
+                    <td>${telAttr}</td>
+                </tr>
                 </tbody>
             </table>
         </div>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h3>
+                        <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                    </h3>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" onclick="toggle_visibility('list','edit')">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="list" style="display: block">
+            <c:set var="countAdvert" scope="session" value="1"/>
+            <div class="table-responsive">
+                <table class="table table-bordered ">
+                    <caption align="left">
+                        <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                    </caption>
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-model" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-color" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-body" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-year" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-transmission" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-drive-unit" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-equipment" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-mileage" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-crashed" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-engine-volume" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-price" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-photo" bundle="${rb}"/></th>
+                    </tr>
+                    </thead>
+                    <tbody class="table table-striped">
+                    <c:forEach var="ad" items="${listAdvertAttr}">
+                        <tr>
+                            <th scope="row">${countAdvert}</th>
+                            <td>${ad.getTitle()}</td>
+                            <td>${ad.getDescription()}</td>
+                            <td>${ad.getBrand()}</td>
+                            <td>${ad.getModel()}</td>
+                            <td>${ad.getColor()}</td>
+                            <td>${ad.getBody()}</td>
+                            <td>${ad.getYear()}</td>
+                            <td>${ad.getAt()}</td>
+                            <td>${ad.getDriveunit()}</td>
+                            <td>${ad.getEquipment()}</td>
+                            <td>${ad.getMilage()}</td>
+                            <td>${ad.getCrashed()}</td>
+                            <td>${ad.getEngine()}</td>
+                            <td>${ad.getPrice()}</td>
+                            <td>@photo</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <hr>
     </div>
-    <br>
-    <hr>
-</div>
+</main>
+
+<footer>
+    <div class="container-fluid">
+    </div>
+</footer>
+<%--</div>--%>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
