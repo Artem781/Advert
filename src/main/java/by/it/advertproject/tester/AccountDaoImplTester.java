@@ -18,6 +18,6 @@ public class AccountDaoImplTester {
             System.out.println("from catch: " );
         }
 
-
+        System.out.println("finish");
     }
 }

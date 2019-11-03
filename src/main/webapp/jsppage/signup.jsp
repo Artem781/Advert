@@ -210,10 +210,9 @@
                 <label class="col-md-4 control-label" for="submitButton"></label>
                 <div class="col-md-4">
                     <button id="submitButton"
-                            type="button"
+                            type="submit"
                             name="submitButton"
                             class="btn btn-primary">
-                        <%--signup--%>
                         <fmt:message key="label.sign-up" bundle="${rb}"/>
                     </button>
                 </div>

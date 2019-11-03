@@ -2093,3 +2093,20 @@ Password not confirmed.
 2019-10-13 13:21:31,609 INFO  13:21:31.609 [main] INFO by.it.advertproject.bean.Advert - from Advert) withPrice method.1244
 2019-10-13 13:22:21,665 INFO  13:22:21.665 [main] INFO by.it.advertproject.bean.Advert - from Advert) withPrice method.1244
 2019-10-13 13:50:05,623 INFO  13:50:05.623 [main] INFO by.it.advertproject.bean.Advert - from Advert) withYear method.3
+2019-11-04 00:16:25,366 INFO  00:16:25.366 [pool-1-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 00:30:03,860 INFO  00:30:03.860 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 00:32:10,611 INFO  00:32:10.611 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 00:32:10,658 ERROR 00:32:10.658 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Duplicate entry 'tomcat' for key 'account_login_uindex'
+2019-11-04 00:32:59,429 INFO  00:32:59.429 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 00:38:35,654 INFO  00:38:35.654 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method.
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method.
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - errorMessageMap size: 8
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - regexMap size: 7
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - parameterMap size: 7
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - from AccountService) SignUpParameterValidator) validateParameter method. return signUpParameterValidationState: VALID
+2019-11-04 00:38:35,669 INFO  00:38:35.669 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. after SignUpParameterValidator 
+2019-11-04 00:38:35,685 INFO  00:38:35.685 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. create account with Builder
+2019-11-04 00:38:35,685 INFO  00:38:35.685 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. try block
+2019-11-04 00:38:37,388 INFO  00:38:37.388 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 00:38:37,434 INFO  00:38:37.434 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.create(account)
+2019-11-04 00:38:37,434 INFO  00:38:37.434 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())

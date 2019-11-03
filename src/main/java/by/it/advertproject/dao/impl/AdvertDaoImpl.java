@@ -38,12 +38,12 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
 
     //language=SQL
     private static final String SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK =
-            "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
-                    " anaron.advert.brand, anaron.advert.model, anaron.advert.color, " +
-                    "anaron.advert.body, anaron.advert.year, anaron.advert.engine," +
-                    " anaron.advert.at, anaron.advert.driveunit, anaron.advert.equipment, " +
-                    "anaron.advert.mileage, anaron.advert.crashed, anaron.advert.price," +
-                    " anaron.advert.accountidfk FROM anaron.advert WHERE anaron.advert.accountidfk = ?";
+            "SELECT advert.idadvert, advert.title, advert.description," +
+                    " advert.brand, advert.model, advert.color, " +
+                    "advert.body, advert.year, advert.engine," +
+                    " advert.at, advert.driveunit, advert.equipment, " +
+                    "advert.mileage, advert.crashed, advert.price," +
+                    " advert.accountidfk FROM advert WHERE advert.accountidfk = ?";
 
     @Override
     public List<Advert> findCountAdvertByAccountIdFk(String AccountIdFk) throws DaoException {
