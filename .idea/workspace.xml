@@ -7,187 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/adv.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/0/00774c0a429833aca3fdddf817c06d30cb46c1cf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029e4ce233862f30f8c04b6bf69bd94557178477" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0aad0c81a328f25000ea0c88cb051890a8775242" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0add52f8bf4a6169f413ae9afa89dba15e9ad520" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fa2ce6d872781c1ea1c51f8041c3b1af26fc863" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/123db3330f98bbf89ae6e1d8a07b939662038403" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13ff1c87977647caa2991b40a1e919c79e2b4c31" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14ceee385c0eb07c3255f847c5e134ef3024ab15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/1558221c131340ddf0d52e4287b3bc8736b93bb4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/1889f9b14c3ebc945fcc5e57e57acfd4fba5aea9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a3d1abd3e88b9b6cce6aefcb83753b032a980ac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1beed85c3a22fd1184c9410af3a1156a5ef9c15b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d5dbf5a8bc9dd90590449605a8e230beb95303c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/240f81fe19d2ebb8d18842aa25dc675efbf6131c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/249e2ad0abbde36ca7fb6f846fe7f71e161faf73" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34fb4c6971cc137790b8142b2b8ce0e1b0aa9635" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/3674531cc521f9d7a60e2f6c612ea71a106b103b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a6467963d44d5b71601ea82295b551aee73ded8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a94c451cbbce6e4218fd28a50b4b17c2ba2ab09" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3db7f34d7f1aa0ac58709ee4bb48745c5eeaad41" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3defb0eee13290581135605efee66527e5f3fd47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/4209d288206e67c1f62b1fb632836631c099d3e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43a9797357d79050d4ffc9c12aa90b00a2e4e7dc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/4762994f52e92715328f3daefdae9e3993493bfd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cd0f9b01cb804577c8fac7537c71dc0591f1698" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4ce3adae2eacde8c9d91ab281d4b96129baba33a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/536d77ab4acfb8ba5d6654482956e58028e34f70" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58b8a364d7aa0d2cf34af9f6bfc9966e73e51f3f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a1213ab69462c6dd6f8ab895a6b5c4a30cd62b7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b63564ed8c4d452ae645554bf8e503538a052be" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/6160eee87e6828ea5af9710e51e7ae89137579ca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/647592d8c0ee45b0bbd6c61d281c9e421357f5fa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66f65fc42219240020bc1122185dff6f96f94dea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67a0938bffa59fadc6bcf6b601c41f47e75c2efe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6a31e72d64a5729f350944d6468d4b8c41888401" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6abb20cfa73f39f1475bd1a0eeec8e5530c64d5d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6fa6e8d20f4fbcfcae184186d4cd286148a1753e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7031c4b209d54c794a920a014dc4f76017565b54" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71290bc542e30de12ae625fc5da010b40da368ee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/7233750b189e21133dff3856becd9ec400ad505c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/7341d16b349ce928c7aa3cfbd4ce65bd197ad593" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/779348f654a78c25c1b2a58c09d119b35347dc0d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a733d9007e7f2e6524521eeaaeb810c36cf0fdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b8c0224dea74c116400ee6552c281c26f3bf6d5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c5f6a11bdc5ad5b42e8d4b0a1a8a1cd288f3553" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d53836770a62775a485e28a5b7c05cad67f5ee5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e8102bdf02bdfec543b637e5d64a1481263814e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/835abc801bc8a190dc7bfd99d209c7e5d3694b49" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/849198c328a50a6d9de3d4dc0f8a7d43d7efd7a1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/8515ad3b9433cd751c36dc1be17befc6ae8c503d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8833d1f9c2def74dccf6eb5b82a0982ec031db19" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89e0dbefff737783b433549331634aa189251d0b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8dc925c89ebfdaf80efb437c46e2bc79c346de91" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f13d499f924066b2d6923eddb11681f6baa6415" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92c9260e22fa64dd2ea902e70ca3d263b67cd5e2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97592db36d963263c2650448dfe06328e73cb443" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97af4924abb72d5476bc98d0b5b17d2fad8d7714" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99e132914ee1623f65a3efc52b061b5b319688eb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f7d33fafe563473b53746ed361b83334ce664e3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b754fa83808d6a526df52fdeaabcc1bcf35b59ad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7f34fe2b3818bdf37c402247752969bbbe23828" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b89e46aa50b6b363608564ed52af8d43174afa6d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c0dbacebd90022c88745dfab5bf682e9d766d9b4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c30bbe767e86e89f4176cefb3219db01a94ebb91" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7331d00a759bfaf7a13fddc509b9ce315adead6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c77d529d365c532b57ec68edf49f5b809885cefa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c870588429858c4710a56adf8ece7a5e0f651740" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c99ae9ddb03868c984bc481ce75a86c1da7381e4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd0f1fe8de2cfecdf97c3f14049b9ffde49f609b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf495d85d6b01ee9542dc819573e6fbf5f06e54e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d19d98463d93813e4e8f77bdaf7e5c9baf180583" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d35943ca819339b43455e50a8433f44a03d3e96d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4e6b9e1c4f8590713363191b14777838a5253be" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/dbd6c6d692baf67395ebe53239e394112dc92efa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd5c6f9cb3651d41db42ea5d4308962d8d2de6f7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de2d98f53a0a7d5622fe8c4274d90b0ccee57331" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e16b98014bca869617a0eb72cf483a323404ac78" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebac7383e253a276a3992ad3d4e4ecc7d6b45c48" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1b3a14ad4f5a2f71cfedd55acc16690115dc524" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f742386df6144b4754997072cdcd517c9be762f9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fac4e92d770a0a6287eaad0e53c4efa350987f47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/faedba75b574672efba8182b6c187c3310dea3e2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/BaseDaoImplTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/include/testjsp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/advert_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/SomeTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignInCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountDaoImplTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountDaoImplTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/META-INF/5. Database example.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/META-INF/advert.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Advert$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Advert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Bean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/bean/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/CommandType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/CreateAdvertCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/EmptyCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignInCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/command/impl/SignUpCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionCheckThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool$PooledConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/DbParameter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/connectionpool/DbResourceManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/constantmessage/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/controller/AbstractController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/controller/FrontController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/AccountDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/AdvertDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/BaseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/AccountDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/AdvertDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/dao/impl/BeanCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/exception/CommandException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/exception/ConnectionPoolException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/exception/DaoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/exception/ServiceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/filter/SecurityFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/service/AccountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/PoolTester.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/A0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/A1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/Res.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/classesmistaces/Parent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/methodcallinmethod/CallInSout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/methodcallinmethod/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/polomorfizm/Child.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/polomorfizm/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/advertproject/tester/examl/polomorfizm/Parent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/dao/CrudDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/dao/UsersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/dao/UsersDaoJdbcImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/dao/UsersDaojdbcTemplateImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/model/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/servlets/UsersServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/by/it/db/servlets/UsersServletWithDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/log4j-api-2.11.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/log4j-core-2.11.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/mysql-connector-java-8.0.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/spring-beans-5.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/spring-core-5.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/spring-jcl-5.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/spring-jdbc-5.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/lib/spring-tx-5.1.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/logout.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/signup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database-example-0.1/jsppage/userprofile.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -354,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BaseDaoImplTester">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AccountDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.AccountDaoImplTester" />
       <module name="database-example" />
@@ -370,6 +193,45 @@
     </configuration>
     <configuration name="BaseDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.BaseDaoImplTester" />
+      <module name="database-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polomorfizm.Main" />
+      <module name="database-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.polomorfizm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.som.MainClass" />
+      <module name="database-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SomeTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.SomeTester" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
@@ -525,235 +387,22 @@
         </option>
       </method>
     </configuration>
-    <configuration name="createad.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsppage/createad.jsp" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
-      <deployment>
-        <artifact name="database-example:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="createad_jsp_Advert" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54741" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="signin.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsppage/signin.jsp" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
-      <deployment>
-        <artifact name="database-example:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="signin_jsp_Advert" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54745" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="signup.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/jsppage/signup.jsp" />
-      <option name="UPDATING_POLICY" value="hot-swap-classes" />
-      <deployment>
-        <artifact name="database-example:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="signup_jsp_Advert" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54742" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.AccountDaoImplTester" />
       <item itemvalue="Application.BaseDaoImplTester" />
       <item itemvalue="Tomcat Server.Tom" />
       <item itemvalue="Tomcat Server.Tommy" />
-      <item itemvalue="Tomcat Server.signup.jsp" />
-      <item itemvalue="Tomcat Server.signin.jsp" />
-      <item itemvalue="Tomcat Server.createad.jsp" />
+      <item itemvalue="Application.SomeTester" />
+      <item itemvalue="Application.MainClass" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.SomeTester" />
         <item itemvalue="Application.BaseDaoImplTester" />
         <item itemvalue="Application.AccountDaoImplTester" />
-        <item itemvalue="Tomcat Server.signup.jsp" />
-        <item itemvalue="Tomcat Server.createad.jsp" />
-        <item itemvalue="Tomcat Server.signin.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -972,7 +621,7 @@
       <workItem from="1572870650609" duration="151000" />
       <workItem from="1572870909084" duration="9355000" />
       <workItem from="1572949678902" duration="3549000" />
-      <workItem from="1572953256392" duration="760000" />
+      <workItem from="1572953256392" duration="7816000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -1170,7 +819,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572818376799</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix column name">
+      <created>1572954306024</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572954306024</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1199,7 +855,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="so com" />
     <MESSAGE value="added command sign up" />
     <MESSAGE value="added param, attribute, config" />
     <MESSAGE value="fill class param and attribute" />
@@ -1224,7 +879,19 @@
     <MESSAGE value="added load ava" />
     <MESSAGE value="added load ava1" />
     <MESSAGE value="create dumb" />
-    <option name="LAST_COMMIT_MESSAGE" value="create dumb" />
+    <MESSAGE value="fix column name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix column name" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Main.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="regexState">
     <option name="map">
