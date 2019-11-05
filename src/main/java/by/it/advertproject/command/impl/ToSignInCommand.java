@@ -38,7 +38,8 @@ public class ToSignInCommand implements Command {
         return new Router(page, TransmissionType.FORWARD);
 
 
-//        String page = "/jsppage/signin.jsp";
+////        String page = "/jsppage/signin.jsp";
+//        String page = "/jsppage/testjsp.jsp";
 //        Logger.log(Level.INFO, "from ToSignInCommand. page: " + page);
 //        return new Router(page, TransmissionType.FORWARD);
     }

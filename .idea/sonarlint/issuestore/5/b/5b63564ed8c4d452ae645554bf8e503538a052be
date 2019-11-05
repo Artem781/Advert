@@ -1,0 +1,6 @@
+
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(á”³ç8‡«ÆÎÉ-
+_squid:S1854"<Remove this useless assignment to local variable "account1".(í¥ ÿÿÿÿÿ8ÈÖÅÎÉ-
+Psquid:S1481"-Remove this unused "account1" local variable.(í¥ ÿÿÿÿÿ8ÈÖÅÎÉ-
+jsquid:S1192"GDefine a constant instead of duplicating this literal "tomcat" 6 times.(šü×Íýÿÿÿÿ8£Óþ­É-

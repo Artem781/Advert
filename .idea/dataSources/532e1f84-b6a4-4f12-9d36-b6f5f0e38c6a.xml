@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MySQL - @localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.15">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
     <root id="1">
       <ServerVersion>8.0.18</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -10,12 +10,10 @@
     <schema id="2" parent="1" name="anaron">
       <Current>1</Current>
       <Collation>utf8_general_ci</Collation>
-      <Visible>1</Visible>
     </schema>
     <schema id="3" parent="1" name="information_schema">
       <Current>1</Current>
       <Collation>utf8_general_ci</Collation>
-      <Visible>1</Visible>
     </schema>
     <schema id="4" parent="1" name="mysql">
       <Collation>utf8mb4_0900_ai_ci</Collation>
@@ -1331,43 +1329,36 @@
     <column id="349" parent="279" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="350" parent="279" name="login">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="351" parent="279" name="password">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="352" parent="279" name="birthday">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="353" parent="279" name="email">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="354" parent="279" name="tel">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="355" parent="279" name="accesslevel">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="356" parent="279" name="photo">

@@ -2110,3 +2110,12 @@ Password not confirmed.
 2019-11-04 00:38:37,388 INFO  00:38:37.388 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-11-04 00:38:37,434 INFO  00:38:37.434 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.create(account)
 2019-11-04 00:38:37,434 INFO  00:38:37.434 [main] INFO by.it.advertproject.service.AccountService - from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())
+2019-11-04 16:26:00,731 INFO  16:26:00.731 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 16:27:24,367 INFO  16:27:24.367 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 16:27:24,415 ERROR 16:27:24.415 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Duplicate entry 'tomcat' for key 'account_login_uindex'
+2019-11-04 16:28:46,472 INFO  16:28:46.472 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 16:28:56,832 INFO  16:28:56.832 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 16:28:56,872 ERROR 16:28:56.872 [main] ERROR by.it.advertproject.dao.impl.AccountDaoImpl - Duplicate entry 'tomcaaat' for key 'account_login_uindex'
+2019-11-04 18:39:21,401 INFO  18:39:21.401 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-04 18:41:54,830 INFO  18:41:54.830 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-05 13:30:47,758 INFO  13:30:47.758 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.

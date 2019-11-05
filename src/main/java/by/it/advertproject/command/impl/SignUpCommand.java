@@ -12,8 +12,6 @@ import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -57,7 +55,6 @@ public class SignUpCommand implements Command {
         Account account;
         AccountService service = new AccountService();
         AdvertService advertService = new AdvertService();
-
         String messageManager;
         try {
             account = service.createAccount(parameterMap);

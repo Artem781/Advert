@@ -1,0 +1,6 @@
+
+;squid:S11181"Hide this public constructor.(Ç¡¤ª8À­Ğ-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(¦ÇÆ¶8À­Ğ-
+ysquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(·şšïÿÿÿÿÿ8À­Ğ-
+Ÿsquid:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ç¡¤ª8À­Ğ-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(âá‘ˆ8À­Ğ-

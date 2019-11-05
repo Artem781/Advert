@@ -129,6 +129,8 @@ public class AccountService {
                 logger.log(Level.INFO, "from AccountService) createAccount method. try block");
                 accountDao.create(account);
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.create(account)");
+                logger.log(Level.INFO, "from AccountService) account.getLogin(): " + account.getLogin());
+
                 account = accountDao.findAccountByLogin(account.getLogin());
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())");
             } catch (DaoException e) {

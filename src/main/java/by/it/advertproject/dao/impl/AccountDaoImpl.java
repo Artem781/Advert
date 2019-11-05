@@ -50,7 +50,16 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public Account findAccountByLogin(String loginPattern) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) findAccountByLogin method.");
+
         List<Account> accounts = findBy(SQL_SELECT_ACCOUNT_BY_LOGIN, TABLE_NAME, loginPattern);
+        boolean empty = accounts.isEmpty();
+        logger.log(Level.INFO, "from AccountDaoImpl) accounts.isEmpty(): " + accounts.isEmpty());
+        if (!empty){
+            logger.log(Level.INFO, "from AccountDaoImpl). accounts.toString(): " + accounts.toString());
+
+        }
+
         return accounts.isEmpty() ? null : accounts.get(0);
     }
 
@@ -67,7 +76,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     //language=SQL
     private static final String SQL_CREATE_ACCOUNT = "INSERT INTO " +
-            "account ( name, login, password, birthday, email, tel, accesslevel, photo)" +
+            "anaron.account ( name, login, password, birthday, email, tel, accesslevel, photo)" +
             " Values ( ?, ?, ?, ?, ?, ?, ?, ?)";
 
     @Override

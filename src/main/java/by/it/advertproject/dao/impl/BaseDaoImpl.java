@@ -65,23 +65,50 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
+            System.out.println("111111111111111111111111111111");
             connection = ConnectionPool.INSTANCE.takeConnection();
+            System.out.println("2222222222222222222222222222222222");
+
             preparedStatement = connection.prepareStatement(sqlSelect);
+            System.out.println("333333333333333333333333333333333");
+            System.out.println("value.length: " + value.length);
             for (int i = 0; i < value.length; i++) {
+                System.out.println("44444444444444444444444444444444");
+                String s = value[i];
+                System.out.println("value[i]: " + value[i]);
+                System.out.println("i + 1 = " + (i+1));
                 preparedStatement.setString(i + 1, value[i]);
+                System.out.println("55555555555555555555555555555");
+
             }
+            System.out.println("6666666666666666666666666");
+
             resultSet = preparedStatement.executeQuery();
+            System.out.println("777777777777777777777777");
+
             BeanCreator<T> beanCreator = new BeanCreator<>();
             while (resultSet.next()) {
+                System.out.println("888888888888888888888888888");
+
                 T bean = beanCreator.create(table, resultSet);
+                System.out.println("999999999999999");
+
                 beans.add(bean);
+                System.out.println("10 10 10 10 10 10");
+
             }
+            System.out.println("11 11 11 11 11 11 11 11 11 11 11 11 11 1");
+
         } catch (SQLException e) {
+            System.out.println(" 12 12 12 12 12 1 2");
+
             throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
         } finally {
             try {
                 closeResources(preparedStatement, connection);
             } catch (Exception e) {
+                System.out.println("13 13 13 13 13 13");
+
                 logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
             }
         }

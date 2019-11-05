@@ -1,0 +1,12 @@
+
+Zsquid:S1481"7Remove this unused "setLanguageCommand" local variable.(õ‰€’ÿÿÿÿÿ8þû·×Ù-
+isquid:S1854"FRemove this useless assignment to local variable "setLanguageCommand".(õ‰€’ÿÿÿÿÿ8þû·×Ù-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±¯€¤8þû·×Ù-
+nsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(´ÞáÄøÿÿÿÿ8þû·×Ù-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Í¢ö¤8þû·×Ù-
+nsquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(ä•„üÿÿÿÿ8þû·×Ù-
+isquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(¨Ó‹¤8þû·×Ù-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Þ½¤¡ýÿÿÿÿ8þû·×Ù-
+Gsquid:S1481")Remove this unused "page" local variable.(åñâ¤8þû·×Ù-
+isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(±¯€¤8þû·×Ù-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(šÎ©±üÿÿÿÿ8þû·×Ù-

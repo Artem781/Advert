@@ -1,0 +1,28 @@
+
+bsquid:HiddenFieldCheck"9Rename "params" which hides the field declared at line 6.(¦–¡‚8‹¨ÏçÛ-
+csquid:HiddenFieldCheck#":Rename "params" which hides the field declared at line 25.(¦–¡‚8“‡¼®Ğ-
+csquid:HiddenFieldCheckZ":Rename "params" which hides the field declared at line 81.(¦–¡‚8õñúøİ-
+V
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(™ÆÀŸ8‹¨ÏçÛ-
+csquid:HiddenFieldCheckk":Rename "params" which hides the field declared at line 99.(¦–¡‚8õñúøİ-
+[
+squid:S1061"9Replace this use of System.out or System.err by a logger.(ìê‡§øÿÿÿÿ8ì±¾®Ğ-
+[
+squid:S106U"9Replace this use of System.out or System.err by a logger.(˜ ‹Åûÿÿÿÿ8õñúøİ-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(˜†«'8“‡¼®Ğ-
+csquid:HiddenFieldCheck8":Rename "params" which hides the field declared at line 44.(¦–¡‚8“‡¼®Ğ-
+zsquid:S1192"WDefine a constant instead of duplicating this literal "COMMAND_URL + params: " 3 times.(òïã®úÿÿÿÿ8‹¨ÏçÛ-
+xsquid:S1192"UDefine a constant instead of duplicating this literal " setParams. params: " 3 times.(·Òùİûÿÿÿÿ8‹¨ÏçÛ-
+csquid:HiddenFieldCheckJ":Rename "params" which hides the field declared at line 66.(¦–¡‚8ì±¾®Ğ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(öÎ¢‚şÿÿÿÿ8‹¨ÏçÛ-
+esquid:HiddenFieldCheck‰";Rename "params" which hides the field declared at line 129.(¦–¡‚8õñúøİ-
+dsquid:HiddenFieldCheckz";Rename "params" which hides the field declared at line 114.(¦–¡‚8õñúøİ-
+V
+squid:S106%"9Replace this use of System.out or System.err by a logger.(úØ‰ú8“‡¼®Ğ-
+[
+squid:S106\"9Replace this use of System.out or System.err by a logger.(òÇ¢Ïûÿÿÿÿ8õñúøİ-
+V
+squid:S106:"9Replace this use of System.out or System.err by a logger.(‚ÑÉÉ8ì±¾®Ğ-

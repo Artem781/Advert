@@ -1,0 +1,4 @@
+
+Å%squid:RedundantThrowsDeclarationCheck"‡Remove the declaration of thrown exception 'by.it.advertproject.exception.CommandException', as it cannot be thrown from method's body.(üÓ¯·ÿÿÿÿÿ8Ò‡ÑùÒ-
+_squid:S2441F"<Make "Object" serializable or don't store it in the session.(üžÌùÿÿÿÿ8Ò‡ÑùÒ-
+tsquid:S3008"QRename this field "Logger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¥Áùÿÿÿÿ8Ò‡ÑùÒ-

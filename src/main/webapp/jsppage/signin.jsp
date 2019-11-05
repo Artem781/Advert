@@ -79,6 +79,11 @@
                 <label name="save" class="form-check-label" for="save">запомнить меня пока не работает</label>
             </div>
 
+
+
+
+
+
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="signinbutton"></label>
@@ -89,6 +94,8 @@
                     </button>
                 </div>
             </div>
+
+
         </fieldset>
     </form>
 </div>

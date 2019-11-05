@@ -1,0 +1,28 @@
+
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(þ¿Ú·8õíÿîË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ú²°—8õíÿîË-
+msquid:S11926"OUse already-defined constant 'TEL_REGEX' instead of duplicating its value here.(Áà¦â8õíÿîË-
+psquid:S11921"SUse already-defined constant 'LOGIN_PATTERN' instead of duplicating its value here.(Ÿ¯êI8õíÿîË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(«Ó‚¦8õíÿîË-
+hsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(ïí¶]8õíÿîË-
+ysquid:S11922"VUse already-defined constant 'PASSWORD_PATTERN' instead of duplicating its value here.(žÙ½ƒþÿÿÿÿ8õíÿîË-
+isquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(ê ÛŸ8õíÿîË-
+isquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(¬ûè8õíÿîË-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8õíÿîË-
+Nsquid:S14811"1Remove this unused "matchesRegEx" local variable.(Ÿ¯êI8õíÿîË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ç‚â¿8õíÿîË-
+tsquid:S2068"V'PASSWORD' detected in this expression, review this potentially hard-coded credential.(ç‚â¿8õíÿîË-
+|squid:S11924"YUse already-defined constant 'DATE_BIRTHDAY_REGEX' instead of duplicating its value here.(šì³¿þÿÿÿÿ8õíÿîË-
+esquid:S1854"BRemove this useless assignment to local variable "accountService".(ÞÒìÀûÿÿÿÿ8õíÿîË-
+]squid:S18541"@Remove this useless assignment to local variable "matchesRegEx".(Ÿ¯êI8õíÿîË-
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(©á¡8õíÿîË-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(êôù‹ûÿÿÿÿ8õíÿîË-
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(®Û¯óøÿÿÿÿ8õíÿîË-
+nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(õÜÿøÿÿÿÿ8õíÿîË-
+V
+squid:S106-"9Replace this use of System.out or System.err by a logger.(žÍÿ¾8õíÿîË-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(²ë®ùÿÿÿÿ8õíÿîË-
+nsquid:S11923"PUse already-defined constant 'NAME_REGEX' instead of duplicating its value here.(‹‡·í8õíÿîË-
+Vsquid:S1481"3Remove this unused "accountService" local variable.(ÞÒìÀûÿÿÿÿ8õíÿîË-
+osquid:S11925"QUse already-defined constant 'EMAIL_REGEX' instead of duplicating its value here.(öŽð£8õíÿîË-
+nsquid:CommentedOutCodeLineU"<This block of commented-out lines of code should be removed.(Ôùãüÿÿÿÿ8õíÿîË-
