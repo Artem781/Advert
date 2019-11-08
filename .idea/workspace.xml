@@ -7,10 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/SomeTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/Res.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/Res.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/tester/examl/A0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/tester/examl/A1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,20 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="AccountDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.AccountDaoImplTester" />
-      <module name="database-example" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tommy">
     <configuration name="BaseDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.BaseDaoImplTester" />
       <module name="database-example" />
@@ -230,6 +228,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Res" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polimorfizm2.Res" />
+      <module name="database-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SomeTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.SomeTester" />
       <module name="database-example" />
@@ -241,78 +252,6 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tom" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="adv">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Advert" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55451" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="adv" />
-        </option>
       </method>
     </configuration>
     <configuration name="Tommy" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="9">
@@ -388,21 +327,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AccountDaoImplTester" />
       <item itemvalue="Application.BaseDaoImplTester" />
-      <item itemvalue="Tomcat Server.Tom" />
-      <item itemvalue="Tomcat Server.Tommy" />
       <item itemvalue="Application.SomeTester" />
       <item itemvalue="Application.MainClass" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Res" />
+      <item itemvalue="Tomcat Server.Tommy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Res" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainClass" />
         <item itemvalue="Application.SomeTester" />
         <item itemvalue="Application.BaseDaoImplTester" />
-        <item itemvalue="Application.AccountDaoImplTester" />
       </list>
     </recent_temporary>
   </component>
@@ -621,7 +559,9 @@
       <workItem from="1572870650609" duration="151000" />
       <workItem from="1572870909084" duration="9355000" />
       <workItem from="1572949678902" duration="3549000" />
-      <workItem from="1572953256392" duration="7816000" />
+      <workItem from="1572953256392" duration="13494000" />
+      <workItem from="1573036131385" duration="793000" />
+      <workItem from="1573052644360" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -826,17 +766,15 @@
       <option name="project" value="LOCAL" />
       <updated>1572954306024</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix column name">
+      <created>1572976712663</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572976712663</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -886,9 +824,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Main.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

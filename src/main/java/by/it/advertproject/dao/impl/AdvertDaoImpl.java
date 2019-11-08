@@ -51,6 +51,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
         List<Advert> entities = findBy(SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK, TABLE_NAME, AccountIdFk);
         boolean isEmpty = entities.isEmpty();
         logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. entities.toString() = " + entities.toString());
+        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. entities.isEmpty() = " + entities.isEmpty());
         return entities.isEmpty() ? null : entities;
     }
 
@@ -71,12 +72,12 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
 
     //language=SQL
     private static final String SQL_SELECT_ADVERT_BY_ID =
-            "SELECT anaron.idadvert, anaron.title, anaron.description," +
-                    " anaron.brand, anaron.model, anaron.color, " +
-                    "anaron.body, anaron.year, anaron.engine, anaron.at," +
-                    " anaron.driveunit, anaron.equipment, anaron.mileage, " +
-                    "anaron.crashed, anaron.price, anaron.accountidfk " +
-                    "FROM anaron.advert WHERE idadvert = ?";
+            "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
+                    " anaron.advert.brand, anaron.advert.model, anaron.advert.color, " +
+                    "anaron.advert.body, anaron.advert.year, anaron.advert.engine, anaron.advert.at," +
+                    " anaron.advert.driveunit, anaron.advert.equipment, anaron.advert.mileage, " +
+                    "anaron.advert.crashed, anaron.advert.price, anaron.advert.accountidfk " +
+                    "FROM anaron.advert WHERE anaron.advert.idadvert = ?";
 
     @Override
     public Advert findBeanById(long index) throws DaoException {
@@ -154,7 +155,8 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
                     "advert.body = ?, advert.year = ?, advert.engine = ?," +
                     " advert.at = ?, advert.driveunit = ?, advert.equipment = ?," +
                     " advert.mileage = ?, advert.crashed = ?, advert.price = ?," +
-                    " advert.accountidfk = ?,WHERE accounts.id = ?";
+//                    " advert.accountidfk = ? WHERE accounts.id = ?";
+                    " advert.accountidfk = ? WHERE anaron.account.idaccounts = ?";
 
     @Override
     public void update(Advert advert) throws DaoException {

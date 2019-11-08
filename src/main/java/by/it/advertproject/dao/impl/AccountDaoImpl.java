@@ -47,19 +47,16 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
             "select anaron.account.idaccounts, anaron.account.name, anaron.account.login, anaron.account.password, " +
                     "anaron.account.birthday, anaron.account.email, anaron.account.tel, anaron.account.accesslevel," +
                     "anaron.account.photo from account where anaron.account.login = ?";
-
     @Override
     public Account findAccountByLogin(String loginPattern) throws DaoException {
         logger.log(Level.INFO, "from AccountDaoImpl) findAccountByLogin method.");
-
         List<Account> accounts = findBy(SQL_SELECT_ACCOUNT_BY_LOGIN, TABLE_NAME, loginPattern);
         boolean empty = accounts.isEmpty();
         logger.log(Level.INFO, "from AccountDaoImpl) accounts.isEmpty(): " + accounts.isEmpty());
-        if (!empty){
+        if (!empty) {
             logger.log(Level.INFO, "from AccountDaoImpl). accounts.toString(): " + accounts.toString());
 
         }
-
         return accounts.isEmpty() ? null : accounts.get(0);
     }
 
@@ -81,37 +78,79 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public Account create(Account account) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) create method.");
+
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
+            logger.log(Level.INFO, "from AccountDaoImpl) try {");
             connection = ConnectionPool.INSTANCE.takeConnection();
+            logger.log(Level.INFO, "from AccountDaoImpl) connection = ConnectionPool.INSTANCE.takeConnection();");
+
             preparedStatement = connection.prepareStatement(
                     SQL_CREATE_ACCOUNT, PreparedStatement.RETURN_GENERATED_KEYS);
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement = connection.prepareStatement(SQL_CREATE_ACCOUNT, PreparedStatement.RETURN_GENERATED_KEYS);");
+
             preparedStatement.setString(1, account.getName());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(1, account.getName());");
+
             preparedStatement.setString(2, account.getLogin());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(2, account.getLogin());");
+
             preparedStatement.setString(3, account.getPassword());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(3, account.getPassword());");
+
             preparedStatement.setString(4, account.getBirthday());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(4, account.getBirthday());");
+
             preparedStatement.setString(5, account.getEmail());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(5, account.getEmail());");
+
             preparedStatement.setString(6, account.getTel());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setString(6, account.getTel());");
+
             preparedStatement.setInt(7, account.getRole().ordinal());
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setInt(7, account.getRole().ordinal());");
+
             preparedStatement.setBlob(8, new ByteArrayInputStream(account.getPhoto()));
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.setBlob(8, new ByteArrayInputStream(account.getPhoto()));");
+
             preparedStatement.executeUpdate();
+            logger.log(Level.INFO, "from AccountDaoImpl) preparedStatement.executeUpdate();");
+
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            logger.log(Level.INFO, "from AccountDaoImpl) ResultSet generatedKeys = preparedStatement.getGeneratedKeys();");
+
+
             if (generatedKeys.next()) {
+                logger.log(Level.INFO, "from AccountDaoImpl) true");
+
                 account.setId(generatedKeys.getLong(1));
             } else {
+                logger.log(Level.INFO, "from AccountDaoImpl) false");
+
                 throw new DaoException(INTERNAL_ERROR);
             }
+            logger.log(Level.INFO, "from AccountDaoImpl) return account;");
+
             return account;
         } catch (SQLException e) {
             logger.log(Level.ERROR, e.getMessage());
             throw new DaoException(INTERNAL_ERROR);
         } finally {
+            logger.log(Level.INFO, "from AccountDaoImpl) finally {");
+
             try {
                 closeResources(preparedStatement, connection);
+                logger.log(Level.INFO, "from AccountDaoImpl) closeResources(preparedStatement, connection);");
+
             } catch (Exception e) {
+                logger.log(Level.INFO, "from AccountDaoImpl) } catch (Exception e) {");
+
                 logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
             }
+            logger.log(Level.INFO, "from AccountDaoImpl) end method {");
+
         }
     }
 

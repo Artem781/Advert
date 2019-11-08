@@ -26,7 +26,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             preparedStatement.setLong(1, bean.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException(e.getMessage(),e);
+            throw new DaoException(e.getMessage(), e);
         } finally {
             try {
                 closeResources(preparedStatement, connection);
@@ -64,6 +64,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
+//        ResultSet resultSet;
         try {
             System.out.println("111111111111111111111111111111");
             connection = ConnectionPool.INSTANCE.takeConnection();
@@ -76,7 +77,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
                 System.out.println("44444444444444444444444444444444");
                 String s = value[i];
                 System.out.println("value[i]: " + value[i]);
-                System.out.println("i + 1 = " + (i+1));
+                System.out.println("i + 1 = " + (i + 1));
                 preparedStatement.setString(i + 1, value[i]);
                 System.out.println("55555555555555555555555555555");
 
@@ -101,6 +102,9 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
 
         } catch (SQLException e) {
             System.out.println(" 12 12 12 12 12 1 2");
+            System.out.println(" SQLException. e.getSQLState() " + e.getSQLState());
+            System.out.println(" SQLException. e.getMessage() " + e.getMessage());
+            System.out.println(" SQLException. e.getLocalizedMessage() " + e.getLocalizedMessage());
 
             throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
         } finally {

@@ -109,6 +109,7 @@ public class Account extends Bean {
 
     @Override
     public boolean equals(Object o) {
+        if (this == null) return false;
         if (this == o) return true;
         if (!(o instanceof Account)) return false;
         if (!super.equals(o)) return false;

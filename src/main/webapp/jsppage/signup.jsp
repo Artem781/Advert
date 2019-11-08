@@ -21,7 +21,6 @@
 
 
 
-
 <%--    <form action="/controller" method="post">--%>
 <%--        First name:<br>--%>
 <%--        <input type="text" name="firstname" value="Mickey">--%>
