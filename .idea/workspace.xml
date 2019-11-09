@@ -7,21 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/BaseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/A1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/Res.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/Res.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/tester/examl/A0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/tester/examl/A1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/MainExpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/MainExpert.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +126,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572509878183" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SharingPic" />
+    <property name="last_opened_file_path" value="D:/JAVA/Progects_Idea/algos" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -146,7 +134,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.44143167" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -188,20 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tommy">
-    <configuration name="BaseDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.BaseDaoImplTester" />
-      <module name="database-example" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MergeSort">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polomorfizm.Main" />
       <module name="database-example" />
@@ -228,12 +203,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Res" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polimorfizm2.Res" />
+    <configuration name="MainExpert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.taskexpert.MainExpert" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm2.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.taskexpert.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -241,12 +216,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SomeTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.SomeTester" />
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.taskexpert.mergesort.MergeSort" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.taskexpert.mergesort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Res" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polimorfizm2.Res" />
+      <module name="database-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -327,20 +315,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BaseDaoImplTester" />
-      <item itemvalue="Application.SomeTester" />
       <item itemvalue="Application.MainClass" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Res" />
+      <item itemvalue="Application.MainExpert" />
       <item itemvalue="Tomcat Server.Tommy" />
+      <item itemvalue="Application.MergeSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSort" />
+        <item itemvalue="Application.MainExpert" />
         <item itemvalue="Application.Res" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainClass" />
-        <item itemvalue="Application.SomeTester" />
-        <item itemvalue="Application.BaseDaoImplTester" />
       </list>
     </recent_temporary>
   </component>
@@ -562,6 +550,8 @@
       <workItem from="1572953256392" duration="13494000" />
       <workItem from="1573036131385" duration="793000" />
       <workItem from="1573052644360" duration="2665000" />
+      <workItem from="1573218743218" duration="12460000" />
+      <workItem from="1573246306212" duration="16054000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -773,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572976712663</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix column name">
+      <created>1573218926926</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1573218926926</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
