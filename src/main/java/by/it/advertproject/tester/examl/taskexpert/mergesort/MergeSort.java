@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MergeSort {
+    MergeSort() {
+        System.out.println("constructor MergeSort");
+    }
 
 
     // Helper method to print out the integer array.
@@ -14,7 +17,8 @@ public class MergeSort {
         }
         System.out.println();
     }
-    private static void printList (List<Integer> list){
+
+    private static void printList(List<Integer> list) {
         for (Integer element :
                 list) {
             System.out.print("\t" + element);
@@ -26,7 +30,7 @@ public class MergeSort {
         a.addAll(b);
 
         System.out.println("Initial Array: ");
-        printList(a);
+//        printList(a);
 
         Integer[] sourceArray = new Integer[a.size()];
         a.toArray(sourceArray);
@@ -40,29 +44,55 @@ public class MergeSort {
         printList(a);
     }
 
-
-
     // Breaks down the array to single or null elements in array.   source array
     private Integer[] mergeSort(Integer[] sourceArray) {
+        System.out.println("sourceArray.length: " + sourceArray.length);
+        for (Integer element : sourceArray) {
+            System.out.print("\tsourceArray el: " + element);
+        }
+        System.out.println();
         if (sourceArray.length <= 1) {
             return sourceArray;
         }
         Integer[] left = new Integer[sourceArray.length / 2];
+        System.out.println("left.length: " + left.length);
         Integer[] right = new Integer[sourceArray.length - left.length];
+        System.out.println("right.length: " + right.length);
         System.arraycopy(sourceArray, 0, left, 0, left.length);
+        for (Integer element : left) {
+            System.out.print("\tLeft element: " + element);
+        }
+        System.out.println();
         System.arraycopy(sourceArray, left.length, right, 0, right.length);
+        for (Integer element : right) {
+            System.out.print("\tRight element: " + element);
+        }
+        System.out.println("\nleft = mergeSort(left);");
         left = mergeSort(left);
+        System.out.println("right = mergeSort(right);");
         right = mergeSort(right);
+        System.out.println("return merge(left, right);");
+        System.out.println("left.length: " + left.length);
+        for (Integer element : left) {
+            System.out.println("Left element: " + element);
+        }
+        System.out.println("right.length: " + right.length);
+        for (Integer element : right) {
+            System.out.println("Right element: " + element);
+        }
         return merge(left, right);
     }
 
     // Merges the left and right array in ascending order.
     private Integer[] merge(Integer[] left, Integer[] right) {
+        System.out.println("merge method");
         // Merged result array.
         Integer[] result = new Integer[left.length + right.length];
+        System.out.println("result.length: " + result.length);
         // Declare and initialize pointers for all arrays.
         int leftPointer, rightPointer, resultPointer;
         leftPointer = rightPointer = resultPointer = 0;
+        System.out.println("while");
         // While there are items in either array...
         while (leftPointer < left.length || rightPointer < right.length) {
             // If there are items in BOTH arrays...
@@ -70,8 +100,12 @@ public class MergeSort {
                 // If left item is less than right item...
                 if (left[leftPointer] < right[rightPointer]) {
                     result[resultPointer++] = left[leftPointer++];
+                    System.out.println("result[resultPointer++]: " + result[resultPointer++]);
+                    System.out.println("left[leftPointer++]: " + left[leftPointer++]);
                 } else {
                     result[resultPointer++] = right[rightPointer++];
+                    System.out.println("result[resultPointer++]: " + result[resultPointer++]);
+                    System.out.println("right[rightPointer++]: " + right[rightPointer++]);
                 }
             }
             // If there are only items in the left array...
@@ -86,54 +120,6 @@ public class MergeSort {
         return result;
     }
 
-
-
-
-//
-//    // Breaks down the array to single or null elements in array.   source array
-//    private int[] mergeSort(int[] sourceArray) {
-//        if (sourceArray.length <= 1) {
-//            return sourceArray;
-//        }
-//        int[] left = new int[sourceArray.length / 2];
-//        int[] right = new int[sourceArray.length - left.length];
-//        System.arraycopy(sourceArray, 0, left, 0, left.length);
-//        System.arraycopy(sourceArray, left.length, right, 0, right.length);
-//        left = mergeSort(left);
-//        right = mergeSort(right);
-//        return merge(left, right);
-//    }
-//
-//    // Merges the left and right array in ascending order.
-//    private int[] merge(int[] left, int[] right) {
-//        // Merged result array.
-//        int[] result = new int[left.length + right.length];
-//        // Declare and initialize pointers for all arrays.
-//        int leftPointer, rightPointer, resultPointer;
-//        leftPointer = rightPointer = resultPointer = 0;
-//        // While there are items in either array...
-//        while (leftPointer < left.length || rightPointer < right.length) {
-//            // If there are items in BOTH arrays...
-//            if (leftPointer < left.length && rightPointer < right.length) {
-//                // If left item is less than right item...
-//                if (left[leftPointer] < right[rightPointer]) {
-//                    result[resultPointer++] = left[leftPointer++];
-//                } else {
-//                    result[resultPointer++] = right[rightPointer++];
-//                }
-//            }
-//            // If there are only items in the left array...
-//            else if (leftPointer < left.length) {
-//                result[resultPointer++] = left[leftPointer++];
-//            }
-//            // If there are only items in the right array...
-//            else if (rightPointer < right.length) {
-//                result[resultPointer++] = right[rightPointer++];
-//            }
-//        }
-//        return result;
-//    }
-
     public static void main(String args[]) {
         ArrayList<Integer> arrayList1 = new ArrayList<>();
         arrayList1.add(1);
@@ -143,6 +129,7 @@ public class MergeSort {
         arrayList2.add(2);
         arrayList2.add(6);
         arrayList2.add(8);
+        arrayList2.add(9);
         MergeSort mergeSort = new MergeSort();
         mergeSort.merge(arrayList1, arrayList2);
 

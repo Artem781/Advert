@@ -7,9 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/buble/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/insertsort/IS7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSortForExpert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSortNextVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/PartitionArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/QuickSortNextVersion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/selectionsort/SS7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/selectionsort/SelectionSortNextVersion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/MainExpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/MainExpert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,12 +78,12 @@
         <option value="AnnotationType" />
         <option value="FxmlFile" />
         <option value="jsf" />
-        <option value="Interface" />
         <option value="Prorerties" />
         <option value="JavaScript File" />
-        <option value="Enum" />
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -126,7 +134,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572509878183" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="D:/JAVA/Progects_Idea/algos" />
+    <property name="last_opened_file_path" value="D:/JAVA/Progects_Idea/JavaEEproject" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -176,13 +184,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MergeSort">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polomorfizm.Main" />
+  <component name="RunManager" selected="Application.MainArchitec">
+    <configuration name="Fourth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.sololearn.increment.Fourth" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.polomorfizm.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.sololearn.increment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,12 +198,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.som.MainClass" />
+    <configuration name="IceCream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.sololearn.increment.enumvanilia.IceCream" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm1.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.sololearn.increment.enumvanilia.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,12 +211,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainExpert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.taskexpert.MainExpert" />
+    <configuration name="Inh1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.innerclasses.Inh1" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.taskexpert.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.innerclasses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -216,12 +224,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.taskexpert.mergesort.MergeSort" />
+    <configuration name="MainArchitec" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.sololearn.increment.jn4.MainArchitec" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.taskexpert.mergesort.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.sololearn.increment.jn4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -229,12 +237,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Res" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.polimorfizm2.Res" />
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.sololearn.increment.jn1.Start" />
       <module name="database-example" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.it.advertproject.tester.examl.polimorfizm2.*" />
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.sololearn.increment.jn1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -315,20 +323,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MainClass" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Res" />
-      <item itemvalue="Application.MainExpert" />
+      <item itemvalue="Application.Fourth" />
+      <item itemvalue="Application.Start" />
+      <item itemvalue="Application.IceCream" />
+      <item itemvalue="Application.Inh1" />
       <item itemvalue="Tomcat Server.Tommy" />
-      <item itemvalue="Application.MergeSort" />
+      <item itemvalue="Application.MainArchitec" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MergeSort" />
-        <item itemvalue="Application.MainExpert" />
-        <item itemvalue="Application.Res" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.MainArchitec" />
+        <item itemvalue="Application.Inh1" />
+        <item itemvalue="Application.IceCream" />
+        <item itemvalue="Application.Fourth" />
+        <item itemvalue="Application.Start" />
       </list>
     </recent_temporary>
   </component>
@@ -551,7 +559,14 @@
       <workItem from="1573036131385" duration="793000" />
       <workItem from="1573052644360" duration="2665000" />
       <workItem from="1573218743218" duration="12460000" />
-      <workItem from="1573246306212" duration="16054000" />
+      <workItem from="1573246306212" duration="24078000" />
+      <workItem from="1573320039498" duration="4741000" />
+      <workItem from="1573410796886" duration="5925000" />
+      <workItem from="1573423665965" duration="3791000" />
+      <workItem from="1573497396628" duration="10614000" />
+      <workItem from="1573759758881" duration="1540000" />
+      <workItem from="1573829730048" duration="2309000" />
+      <workItem from="1573919576662" duration="3011000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -770,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573218926926</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix column name">
+      <created>1573300125453</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1573300125453</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -824,6 +846,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java</url>
           <line>60</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
