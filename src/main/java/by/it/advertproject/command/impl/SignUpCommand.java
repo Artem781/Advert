@@ -64,6 +64,7 @@ public class SignUpCommand implements Command {
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
+            content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putSessionAttribute(ATTR_NAME_LOGIN, login);
             content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE

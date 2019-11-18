@@ -9,6 +9,8 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCOUNT_ID;
+
 public class ToEditProfile implements Command {
     private static org.apache.logging.log4j.Logger Logger = LogManager.getRootLogger();
 

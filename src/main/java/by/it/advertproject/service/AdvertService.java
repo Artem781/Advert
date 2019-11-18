@@ -30,7 +30,7 @@ public class AdvertService {
                 = AdvertParameterValidator.AdvertValidateParameter(carAdParameterMap);
         logger.log(Level.INFO, "from AdvertService) createAdvert method. after AdvertParameterValidator ");
         AdvertDao advertDao = new AdvertDaoImpl();
-        AccountDao accountDao = new AccountDaoImpl();
+//        AccountDao accountDao = new AccountDaoImpl();
         logger.log(Level.INFO, "from AdvertService) createAdvert method. before Advert.Builder() ");
         Advert advert = new Advert.Builder()
                 .withTitle(carAdParameterMap.get(PARAM_CAR_TITLE))
@@ -57,11 +57,11 @@ public class AdvertService {
             try {
                 logger.log(Level.INFO, "from AdvertService) createAdvert method. try block");
 
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. create account with Builder");
+                logger.log(Level.INFO, "from AdvertService) createAdvert method. create advert with Builder");
                 advertDao.create(advert);
                 logger.log(Level.INFO, "from AdvertService) createAdvert method. advertDao.create(advertDao)");
             } catch (DaoException e) {
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. throw new ServiceException(BUSY_LOGIN_MESSAGE)");
+                logger.log(Level.INFO, "from AdvertService) createAdvert method. throw new ServiceException(CAN_NOT_CREATE_AD_MESSAGE) e.getMessage(): " + e.getMessage());
                 throw new ServiceException(CAN_NOT_CREATE_AD_MESSAGE);
             }
         }

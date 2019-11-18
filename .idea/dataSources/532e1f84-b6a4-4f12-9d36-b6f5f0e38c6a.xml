@@ -1461,20 +1461,18 @@
     <column id="375" parent="280" name="accountidfk">
       <Position>16</Position>
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="376" parent="280" name="PRIMARY">
+    <index id="376" parent="280" name="advert_ibfk_1">
+      <ColNames>accountidfk</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="377" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idadvert</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="377" parent="280" name="accountidfk">
-      <ColNames>idadvert</ColNames>
-      <RefTableName>account</RefTableName>
-      <RefColNames>idaccounts</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
-    </foreign-key>
     <column id="378" parent="281" name="CHARACTER_SET_NAME">
       <Position>1</Position>
       <DataType>varchar(64)|0s</DataType>

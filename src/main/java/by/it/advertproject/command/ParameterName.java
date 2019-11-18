@@ -22,6 +22,8 @@ public class ParameterName {
     public static final String PARAM_CAR_DRIVEUNIT = "cardriveunit";
     public static final String PARAM_CAR_EQUIPMENT = "carequipment";
     public static final String PARAM_CAR_MILLAGE = "carmillage";
+    public static final String PARAM_IF_CRASHED_TRUE = "if-crashed-true";
+    public static final String PARAM_IF_CRASHED_FALSE = "if-crashed-false";
     public static final String PARAM_IF_CRASHED = "ifcrashed";
     public static final String PARAM_CAR_DESCRIPTION = "cardescription";
     public static final String PARAM_CAR_PRICE = "carprice";

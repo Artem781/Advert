@@ -23,8 +23,6 @@ public class ToSignInCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) {
-
-
         String page = ConfigurationManager.getProperty(LOGIN_PAGE);
         String lang = (String) content.getSessionAttribute(ATTR_NAME_LANG);
         String feedbackType = content.getRequestParameters(PARAM_NAME_FEEDBACK, 0);

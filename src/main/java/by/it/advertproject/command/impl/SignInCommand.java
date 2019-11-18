@@ -72,6 +72,7 @@ public class SignInCommand implements Command {
                 content.putRequestAttribute(ATTR_NAME_USER, account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
+                content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);
                 content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());

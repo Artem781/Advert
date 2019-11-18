@@ -62,7 +62,9 @@
     <%--<hr>--%>
     <%--</c:forEach>--%>
 
-
+    <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
+            data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
+    </button>
 </div>
 
 
@@ -74,6 +76,12 @@
         crossorigin="anonymous"></script>
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({trigger: 'hover'});
+    });
+</script>
 
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>

@@ -5,14 +5,12 @@ import by.it.advertproject.bean.Advert;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
+import by.it.advertproject.service.AccountService;
 import by.it.advertproject.service.AdvertService;
-import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.http.HttpServletRequest;
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,8 +51,10 @@ public class CreateAdvertCommand implements Command {
         carAdParameterMap.put(PARAM_CAR_EQUIPMENT, carEquipment);
         String carMillage = content.getRequestParameters(PARAM_CAR_MILLAGE, 0);
         carAdParameterMap.put(PARAM_CAR_MILLAGE, carMillage);
-        String ifCrashed = content.getRequestParameters(PARAM_IF_CRASHED, 0);
-        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashed);
+        String ifCrashedTrue = content.getRequestParameters(PARAM_IF_CRASHED_TRUE, 0);
+        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedTrue);
+        String ifCrashedFalse = content.getRequestParameters(PARAM_IF_CRASHED_FALSE, 0);
+        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedFalse);
         String carDescription = content.getRequestParameters(PARAM_CAR_DESCRIPTION, 0);
         carAdParameterMap.put(PARAM_CAR_DESCRIPTION, carDescription);
         String carPrice = content.getRequestParameters(PARAM_CAR_PRICE, 0);
@@ -80,28 +80,29 @@ public class CreateAdvertCommand implements Command {
         content.putRequestAttribute(ATTR_CAR_DRIVEUNIT, carDriveUnit);
         content.putRequestAttribute(ATTR_CAR_EQUIPMENT, carEquipment);
         content.putRequestAttribute(ATTR_CAR_MILLAGE, carMillage);
-        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashed);
+        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedTrue);
+        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedFalse);
         content.putRequestAttribute(ATTR_CAR_DESCRIPTION, carDescription);
         content.putRequestAttribute(ATTR_CAR_PRICE, carPrice);
 //        content.putRequestAttribute(PARAM_CAR_PHOTO_UPLOAD, carPhotoUpload);
         TransmissionType transmissionType;
+        Account account;
         Advert advert;
+        AccountService accountService = new AccountService();
         AdvertService advertService = new AdvertService();
         logger.log(Level.INFO, "from CreateAdvertCommand before try block");
         String messageManager;
         try {
             advert = advertService.createAdvert(carAdParameterMap, accountId);
-
-            List<Advert> sessionAttributeList = (List<Advert>) content.getSessionAttribute(ATTR_NAME_LIST_ADVERT);
-            sessionAttributeList.add(advert);
+            account = accountService.findAccount(accountLogin);
+            List<Advert> sessionAttributeList = advertService.findAdvertBelongAccount(account);
             logger.log(Level.INFO, "from CreateAdvertCommand. sessionAttributeList.add(advert);");
             content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, sessionAttributeList);
-
-
-            content.putRequestAttribute(ATTR_CREATED_ADVERT, "Well done");
-            // TODO: 15.10.2019 Можно ли самого Advert как объект передавать в сессию или request?
+//            content.putRequestAttribute(ATTR_CREATED_ADVERT, "Well done");
+//            // TODO: 15.10.2019 Можно ли самого Advert как объект передавать в сессию или request?
             content.putRequestAttribute(ATTR_OBJECT_ADVERT, advert);
             content.putRequestAttribute(ATTR_NAME_LOGIN, accountLogin);
+            content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             logger.log(Level.INFO, "from CreateAdvertCommand) try block) advert: " + advert);
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, accountId.toString()).getUrl();
@@ -150,10 +151,15 @@ public class CreateAdvertCommand implements Command {
 //                        break;
 //                }
 //            }
-            page = CommandUrlBuilder.TO_SIGN_UP_PAGE
+            page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
             transmissionType = TransmissionType.FORWARD;
-        }
+        } catch (DaoException e) {
+            logger.log(Level.INFO, "from CreateAdvertCommand. catch block. DaoException e.getMessage(): " + e.getMessage());
+
+            page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
+                    .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
+            transmissionType = TransmissionType.FORWARD;        }
         return new Router(page, transmissionType);
     }
 }

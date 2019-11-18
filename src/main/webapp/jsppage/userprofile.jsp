@@ -115,8 +115,8 @@
             </div>
             <div class="col-md-4" style="height: 200px;">
                 <img class="rounded img-fluid"
-                <%--src="upload?command=get_account_image&account_id=${account.getId()}"--%>
-                     src="upload?command=get_account_image&account_id=73"
+                src="upload?command=get_account_image&account_id=${account.getId()}"
+<%--                     src="upload?command=get_account_image&account_id=73"--%>
                      alt=""
                 <%--style="width:150px;"--%>
                 >
@@ -128,7 +128,7 @@
         <div class="table-responsive">
             <table class="table">
                 <caption align="left">
-                    <fmt:message key="label.profile" bundle="${rb}"/> ${nameUser}
+                    <fmt:message key="label.profile" bundle="${rb}"/>: ${nameUser}
                 </caption>
                 <thead class="thead-light">
                 <tr>
@@ -228,6 +228,9 @@
 
 <footer>
     <div class="container-fluid">
+        <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
+                data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
+        </button>
     </div>
 </footer>
 <%--</div>--%>
@@ -256,6 +259,12 @@
         else
             c.style.display = 'block';
     }
+</script>
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({trigger: 'hover'});
+    });
 </script>
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>

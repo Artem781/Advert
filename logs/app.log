@@ -2119,3 +2119,15 @@ Password not confirmed.
 2019-11-04 18:39:21,401 INFO  18:39:21.401 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-11-04 18:41:54,830 INFO  18:41:54.830 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
 2019-11-05 13:30:47,758 INFO  13:30:47.758 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:13:00,104 INFO  22:13:00.104 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:13:00,173 ERROR 22:13:00.173 [main] ERROR by.it.advertproject.dao.impl.AdvertDaoImpl - Column 'title' cannot be null
+2019-11-18 22:13:37,679 INFO  22:13:37.679 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:13:37,726 ERROR 22:13:37.726 [main] ERROR by.it.advertproject.dao.impl.AdvertDaoImpl - Cannot add or update a child row: a foreign key constraint fails (`anaron`.`advert`, CONSTRAINT `accountidfk` FOREIGN KEY (`idadvert`) REFERENCES `account` (`idaccounts`))
+2019-11-18 22:17:08,481 INFO  22:17:08.481 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:43:21,343 INFO  22:43:21.343 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:43:21,399 ERROR 22:43:21.399 [main] ERROR by.it.advertproject.dao.impl.AdvertDaoImpl - Cannot add or update a child row: a foreign key constraint fails (`anaron`.`advert`, CONSTRAINT `advert_ibfk_1` FOREIGN KEY (`accountidfk`) REFERENCES `account` (`idaccounts`) ON DELETE CASCADE ON UPDATE CASCADE)
+2019-11-18 22:44:04,956 INFO  22:44:04.956 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:44:04,989 ERROR 22:44:04.989 [main] ERROR by.it.advertproject.dao.impl.AdvertDaoImpl - Cannot add or update a child row: a foreign key constraint fails (`anaron`.`advert`, CONSTRAINT `advert_ibfk_1` FOREIGN KEY (`accountidfk`) REFERENCES `account` (`idaccounts`))
+2019-11-18 22:44:33,584 INFO  22:44:33.584 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:44:45,181 INFO  22:44:45.181 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
+2019-11-18 22:58:47,796 INFO  22:58:47.796 [pool-2-thread-1] INFO by.it.advertproject.connectionpool.ConnectionCheckThread - START CHECK CONNECTIONS THREAD.
