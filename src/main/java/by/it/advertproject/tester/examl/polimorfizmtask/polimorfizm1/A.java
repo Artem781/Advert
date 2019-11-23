@@ -1,4 +1,4 @@
-package by.it.advertproject.tester.examl.polimorfizm1;
+package by.it.advertproject.tester.examl.polimorfizmtask.polimorfizm1;
 
 public class A {
     static {

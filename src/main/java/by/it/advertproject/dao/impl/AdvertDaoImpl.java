@@ -56,7 +56,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
     }
 
     //language=SQL
-    private static final String SQL_SQLECT_ALL_ADVERTS =
+    private static final String SQL_SELECT_ALL_ADVERTS =
             "SELECT anaron.advert.idadvert, anaron.advert.title, anaron.advert.description," +
                     "anaron.advert.brand, anaron.advert.model, anaron.advert.color," +
                     "anaron.advert.body, anaron.advert.year, anaron.advert.engine, anaron.advert.at," +
@@ -66,7 +66,9 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
 
     @Override
     public List<Advert> findAll() throws DaoException {
-        List<Advert> adverts = super.findAllEntities(SQL_SQLECT_ALL_ADVERTS, TABLE_NAME);
+        logger.log(Level.INFO, "from AdvertDaoImpl) findAll method.");
+        List<Advert> adverts = super.findAllEntities(SQL_SELECT_ALL_ADVERTS, TABLE_NAME);
+        logger.log(Level.INFO, "from AdvertDaoImpl) findAll method. return adverts;");
         return adverts;
     }
 

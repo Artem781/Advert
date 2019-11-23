@@ -34,10 +34,8 @@ public class LoadAccountPhotoCommand implements ImageLoadCommand {
 
         byte[] photo;
         logger.log(Level.INFO, "from LoadAccountPhotoCommand. equestContent.getRequestParameters(PARAM_NAME_ACCOUNT_ID, 0) " + PARAM_NAME_ACCOUNT_ID);
-
-//        long accountId = Long.parseLong(requestContent.getRequestParameters(PARAM_NAME_ACCOUNT_ID, 0));
         long accountId = Long.parseLong(requestContent.getRequestParameters(PARAM_NAME_ACCOUNT_ID, 0));
-        requestContent.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
+
 
         logger.log(Level.INFO, "from LoadAccountPhotoCommand. long accountId = " + accountId);
 
@@ -71,5 +69,4 @@ public class LoadAccountPhotoCommand implements ImageLoadCommand {
         }
         return photo;
     }
-
 }

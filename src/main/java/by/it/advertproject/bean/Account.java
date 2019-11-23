@@ -107,6 +107,7 @@ public class Account extends Bean {
                 '}';
     }
 
+    // TODO: 20.11.2019 будет ли ошибкой метод equals сравнивать по одному полю? Например по id?
     @Override
     public boolean equals(Object o) {
         if (this == null) return false;
@@ -123,6 +124,7 @@ public class Account extends Bean {
                 getRole() == account.getRole();
     }
 
+    // TODO: 20.11.2019 будет ли ошибкой метод hashCode сгенерировать по одному полю? Например по id?
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), getName(), getLogin(), getPassword(), getBirthday(), getEmail(), getTel(), getRole());

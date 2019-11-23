@@ -1,7 +1,7 @@
 package by.it.advertproject.command;
 
 import by.it.advertproject.command.impl.*;
-import by.it.advertproject.command.impl.account.UpdatePhotoCommand;
+import by.it.advertproject.command.impl.account.*;
 
 public enum CommandType {
     TO_SIGN_UP(new ToSignUpCommand()),
@@ -11,6 +11,7 @@ public enum CommandType {
     TO_USER_PROFILE(new ToUserProfileCommand()),
     TO_CREATE_ADVERT(new ToCreateAdvertCommand()),
     UPDATE_PHOTO(new UpdatePhotoCommand()),
+    UPDATE_PROFILE_DATA(new UpdateProfileCommand()),
     SIGN_IN(new SignInCommand()),
     LOGOUT(new LogoutCommand()),
     SIGN_UP(new SignUpCommand()),

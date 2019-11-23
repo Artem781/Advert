@@ -101,7 +101,7 @@
         <br>
         <div class="row">
             <div class="col-md-auto">
-                <h2><fmt:message key="label.user-profile" bundle="${rb}"/></h2>
+                <h2>${nameUser} <fmt:message key="label.profile" bundle="${rb}"/></h2>
             </div>
         </div>
         <div class="row">
@@ -113,12 +113,12 @@
                     <p>\${account.getId()}: ${accountId}</p>
                 </div>
             </div>
-            <div class="col-md-4" style="height: 200px;">
-                <img class="rounded img-fluid"
-                src="upload?command=get_account_image&account_id=${account.getId()}"
-<%--                     src="upload?command=get_account_image&account_id=73"--%>
+            <div class="col-md-4">
+                <%--                <img class="rounded img-fluid"--%>
+                <img class="img-responsive"
+                     src="upload?command=get_account_image&account_id=${accountId}"
                      alt=""
-                <%--style="width:150px;"--%>
+                     width="100%" height="auto"
                 >
             </div>
         </div>
@@ -158,6 +158,10 @@
                     <h3>
                         <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
                     </h3>
+                    <label class="switch">
+                        <input type="checkbox" onclick="toggle_visibility('list','edit')">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
                 <div>
                     <label class="switch">
@@ -166,8 +170,6 @@
                     </label>
                 </div>
             </div>
-
-
         </div>
         <div id="list" style="display: block">
             <c:set var="countAdvert" scope="session" value="1"/>
@@ -197,7 +199,7 @@
                     </tr>
                     </thead>
                     <tbody class="table table-striped">
-                    <c:forEach var="ad" items="${listAdvertAttr}">
+                    <c:forEach var="ad" items="${listUserAdvertAttr}">
                         <tr>
                             <th scope="row">${countAdvert}</th>
                             <td>${ad.getTitle()}</td>
@@ -223,6 +225,74 @@
         </div>
         <br>
         <hr>
+        <%--////////////////////////////////////////////////////////////////////////////////////////////////////////        --%>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h3>
+                        <fmt:message key="label.all-advert" bundle="${rb}"/>
+                    </h3>
+                </div>
+                <%--                <div>--%>
+                <%--                    <label class="switch">--%>
+                <%--                        <input type="checkbox" onclick="toggle_visibility('list','edit')">--%>
+                <%--                        <span class="slider round"></span>--%>
+                <%--                    </label>--%>
+                <%--                </div>--%>
+            </div>
+        </div>
+        <div id="list" style="display: block">
+            <c:set var="countAdvert" scope="session" value="1"/>
+            <div class="table-responsive">
+                <table class="table table-bordered ">
+                    <caption align="left">
+                        <fmt:message key="label.all-advert" bundle="${rb}"/>
+                    </caption>
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-model" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-color" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-body" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-year" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-transmission" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-drive-unit" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-equipment" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-mileage" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-crashed" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-engine-volume" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-price" bundle="${rb}"/></th>
+                        <th scope="col"><fmt:message key="label.ad-photo" bundle="${rb}"/></th>
+                    </tr>
+                    </thead>
+                    <tbody class="table table-striped">
+                    <c:forEach var="allAd" items="${listAllAdvertAttr}">
+                        <tr>
+                            <th scope="row">${countAdvert}</th>
+                            <td>${allAd.getTitle()}</td>
+                            <td>${allAd.getDescription()}</td>
+                            <td>${allAd.getBrand()}</td>
+                            <td>${allAd.getModel()}</td>
+                            <td>${allAd.getColor()}</td>
+                            <td>${allAd.getBody()}</td>
+                            <td>${allAd.getYear()}</td>
+                            <td>${allAd.getAt()}</td>
+                            <td>${allAd.getDriveunit()}</td>
+                            <td>${allAd.getEquipment()}</td>
+                            <td>${allAd.getMilage()}</td>
+                            <td>${allAd.getCrashed()}</td>
+                            <td>${allAd.getEngine()}</td>
+                            <td>${allAd.getPrice()}</td>
+                            <td>@photo</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </main>
 

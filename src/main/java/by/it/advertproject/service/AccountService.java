@@ -6,7 +6,6 @@ import by.it.advertproject.dao.AccountDao;
 import by.it.advertproject.dao.impl.AccountDaoImpl;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.util.MessageManager;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -17,7 +16,6 @@ import java.util.regex.Pattern;
 
 import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
-import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
 public class AccountService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
@@ -110,8 +108,8 @@ public class AccountService {
     // TODO: 16.09.2019 проверяться уникальность логина только в базе данных как поле unique
     public Account createAccount(Map<String, String> parameterMap) throws ServiceException {
         logger.log(Level.INFO, "from AccountService) createAccount method.");
-        SignUpParameterValidationState signUpParameterValidationState
-                = SignUpParameterValidator.validateParameter(parameterMap);
+        UserDataValidationState userDataValidationState
+                = DataParameterValidator.validateParameter(parameterMap);
         logger.log(Level.INFO, "from AccountService) createAccount method. after SignUpParameterValidator ");
         String encryptedPassword = DigestUtils.md5Hex(parameterMap.get(PARAM_PASSWORD));
         AccountDao accountDao = new AccountDaoImpl();
@@ -124,7 +122,7 @@ public class AccountService {
                 .withTel(parameterMap.get(PARAM_TEL))
                 .withRole(Role.USER).build();
         logger.log(Level.INFO, "from AccountService) createAccount method. create account with Builder");
-        if (signUpParameterValidationState == SignUpParameterValidationState.VALID) {
+        if (userDataValidationState == UserDataValidationState.VALID) {
             try {
                 logger.log(Level.INFO, "from AccountService) createAccount method. try block");
                 accountDao.create(account);
@@ -141,7 +139,47 @@ public class AccountService {
         return account;
     }
 
-    private static class SignUpParameterValidator {
+    public Account updateProfileData(long accountId, String name, String password, String confirm, String email, String tel) throws ServiceException {
+        logger.log(Level.INFO, "from AccountService. updateProfileData method. ");
+        AccountDaoImpl accountDao = new AccountDaoImpl();
+        UserDataValidationState userDataValidationState;
+        Account account;
+        if (password.equals(confirm)) {
+            try {
+                logger.log(Level.INFO, "from AccountService. updateProfileData method. try block ");
+                account = accountDao.findBeanById(accountId);
+                if (account == null) {
+                    logger.log(Level.INFO, "from AccountService. updateProfileData method. try block (account == null) ");
+                    throw new ServiceException(ACCOUNT_IS_NULL);
+                }
+            } catch (DaoException e) {
+                logger.log(Level.INFO, "from AccountService. updateProfileData method. catch block ");
+                throw new ServiceException(MESSAGE_LOGIN_ERROR);
+            }
+            account.setName(name);
+            String encryptedPassword = DigestUtils.md5Hex(password);
+            account.setPassword(encryptedPassword);
+            userDataValidationState = DataParameterValidator
+                    .validateParameter(name, password, tel, email);
+            if (userDataValidationState == UserDataValidationState.VALID) {
+                try {
+                    logger.log(Level.INFO, "from AccountService. updateProfileData method. try block accountDao.update(account)");
+                    accountDao.update(account);
+                } catch (DaoException e) {
+                    logger.log(Level.INFO, "from AccountService. updateProfileData method. catch (DaoException e)");
+
+                    throw new ServiceException(BUSY_LOGIN_MESSAGE);
+                }
+            }
+        } else {
+            logger.log(Level.INFO, "from AccountService. updateProfileData method. } else {");
+            throw new ServiceException(NON_CONFIRM_PASSWORD_MESSAGE);
+        }
+        logger.log(Level.INFO, "from AccountService. updateProfileData method.  return account");
+        return account;
+    }
+
+    private static class DataParameterValidator {
         private static final String ENGLISH_LOGIN_PATTERN = "^[a-z0-9_-]{3,16}$";
         private static final String RUSSIAN_LOGIN_PATTERN = "([А-Я][а-я]{2,15})\\s([А-Я][а-я]{2,15})";
         private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
@@ -152,9 +190,27 @@ public class AccountService {
         private static final String TEL_REGEX = "^(\\+)?([ 0-9]){10,16}$";
         private static final String PASSWORD_EQUALS_CONFIRM_PASSWORD = "passEqualsConfirmPass";
 
+        public static UserDataValidationState validateParameter(String name, String password, String tel, String email) throws ServiceException {
+            UserDataValidationState validationState = UserDataValidationState.VALID;
+            if (!(Pattern.matches(NAME_REGEX, name)
+//                    || Pattern.matches(RUSSIAN_LOGIN_PATTERN, login)
+            )) {
+                throw new ServiceException(LOGIN_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(PASSWORD_PATTERN, password)) {
+                throw new ServiceException(PASSWORD_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(EMAIL_REGEX, email)) {
+                throw new ServiceException(EMAIL_INCORRECT_FORMAT_MESSAGE);
+            }
+            if (!Pattern.matches(TEL_REGEX, tel)) {
+                throw new ServiceException(TEL_INCORRECT_FORMAT_MESSAGE);
+            }
+            return validationState;
+        }
 
-        public static SignUpParameterValidationState validateParameter(Map<String, String> parameterMap) throws ServiceException {
-            SignUpParameterValidationState signUpParameterValidationState = SignUpParameterValidationState.VALID;
+        public static UserDataValidationState validateParameter(Map<String, String> parameterMap) throws ServiceException {
+            UserDataValidationState userDataValidationState = UserDataValidationState.VALID;
             logger.log(Level.INFO, "from AccountService) SignUpParameterValidator) validateParameter method.");
             Map<String, String> regexMap = new HashMap<>();
             regexMap.put(PARAM_NAME, NAME_REGEX);
@@ -191,8 +247,8 @@ public class AccountService {
                 throw new ServiceException(String.valueOf(errorMessageSb));
             }
             logger.log(Level.INFO, "from AccountService) SignUpParameterValidator) validateParameter method. " +
-                    "return signUpParameterValidationState: " + signUpParameterValidationState.name());
-            return signUpParameterValidationState;
+                    "return signUpParameterValidationState: " + userDataValidationState.name());
+            return userDataValidationState;
         }
     }
 }

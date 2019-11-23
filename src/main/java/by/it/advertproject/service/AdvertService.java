@@ -23,7 +23,6 @@ import static by.it.advertproject.command.ParameterName.*;
 public class AdvertService {
     private static final Logger logger = LogManager.getLogger(AccountService.class);
 
-
     public Advert createAdvert(Map<String, String> carAdParameterMap, Long accountId) throws ServiceException {
         logger.log(Level.INFO, "from AdvertService) createAdvert method.");
         AdvertParameterValidationState advertParameterValidationState
@@ -75,6 +74,14 @@ public class AdvertService {
         List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));
         logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.\n" +
                 "List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));\n");
+        return advertList;
+    }
+
+    public List<Advert> findAllAdvert() throws DaoException {
+        logger.log(Level.INFO, "from AdvertService) findAllAdvert method.");
+        AdvertDao advertDao = new AdvertDaoImpl();
+        List<Advert> advertList = advertDao.findAll();
+        logger.log(Level.INFO, "from AdvertService) findAllAdvert method. return advertList");
         return advertList;
     }
 

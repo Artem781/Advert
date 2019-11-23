@@ -44,9 +44,14 @@ public class SignInCommand implements Command {
 
             if (account.getRole().equals(Role.USER)) {
                 logger.log(Level.INFO, "from SignInCommand. if (account.getRole().equals(Role.USER))");
-                List<Advert> advertList = advertService.findAdvertBelongAccount(account);
-                logger.log(Level.INFO, "from SignInCommand. List<Advert> advertList = advertService.findAdvertBelongAccount(account);");
-                content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, advertList);
+                List<Advert> userAdvertList = advertService.findAdvertBelongAccount(account);
+                logger.log(Level.INFO, "from SignInCommand. List<Advert> userAdvertList = advertService.findAdvertBelongAccount(account);");
+                content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, userAdvertList);
+
+                List<Advert> allAdvertList = advertService.findAllAdvert();
+                logger.log(Level.INFO, "from SignInCommand. List<Advert> allAdvertList = advertService.findAllAdvert();");
+                content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
+
                 logger.log(Level.INFO, "user role: USER ");
                 content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());

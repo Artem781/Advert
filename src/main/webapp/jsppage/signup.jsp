@@ -258,10 +258,9 @@
                     </button>
                 </div>
             </div>
-
-
         </fieldset>
     </form>
+
     <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
             data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
     </button>

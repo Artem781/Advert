@@ -1,4 +1,4 @@
-package by.it.advertproject.tester.examl.polomorfizm;
+package by.it.advertproject.tester.examl.polimorfizmtask.polomorfizm;
 
 public class Child extends Parent {
     private int cnt = 0;

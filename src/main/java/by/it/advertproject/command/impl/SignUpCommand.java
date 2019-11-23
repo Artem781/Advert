@@ -12,8 +12,8 @@ import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +45,7 @@ public class SignUpCommand implements Command {
         String tel = content.getRequestParameters(PARAM_TEL, 0);
         parameterMap.put(PARAM_TEL, tel);
 //    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
-        content.putRequestAttribute(ATTR_NAME_USER, name);
+//        content.putRequestAttribute(ATTR_NAME_USER, name);
         content.putRequestAttribute(ATTR_NAME_LOGIN, login);
         content.putRequestAttribute(ATTR_NAME_BIRTHDAY, birthday);
         content.putRequestAttribute(ATTR_NAME_EMAIL, email);
@@ -58,8 +58,12 @@ public class SignUpCommand implements Command {
         String messageManager;
         try {
             account = service.createAccount(parameterMap);
-            List<Advert> advertList = advertService.findAdvertBelongAccount(account);
-            content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, advertList);
+            List<Advert> userAdvertList = advertService.findAdvertBelongAccount(account);
+            content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, userAdvertList);
+            List<Advert> allAdvertList = advertService.findAllAdvert();
+            logger.log(Level.INFO, "from SignUpCommand. List<Advert> allAdvertList = advertService.findAllAdvert();");
+            content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
+            content.putRequestAttribute(ATTR_NAME_USER, name);
             // TODO: 15.10.2019 В сессию или в реквест можно передавать сам объект account?
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);

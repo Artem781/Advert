@@ -95,9 +95,13 @@ public class CreateAdvertCommand implements Command {
         try {
             advert = advertService.createAdvert(carAdParameterMap, accountId);
             account = accountService.findAccount(accountLogin);
-            List<Advert> sessionAttributeList = advertService.findAdvertBelongAccount(account);
-            logger.log(Level.INFO, "from CreateAdvertCommand. sessionAttributeList.add(advert);");
-            content.putSessionAttribute(ATTR_NAME_LIST_ADVERT, sessionAttributeList);
+            List<Advert> listUserAdvert = advertService.findAdvertBelongAccount(account);
+            logger.log(Level.INFO, "from CreateAdvertCommand. listUserAdvert.add(advert);");
+            content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, listUserAdvert);
+            List<Advert> allAdvertList = advertService.findAllAdvert();
+            logger.log(Level.INFO, "from SignInCommand. List<Advert> allAdvertList = advertService.findAllAdvert();");
+            content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
+
 //            content.putRequestAttribute(ATTR_CREATED_ADVERT, "Well done");
 //            // TODO: 15.10.2019 Можно ли самого Advert как объект передавать в сессию или request?
             content.putRequestAttribute(ATTR_OBJECT_ADVERT, advert);

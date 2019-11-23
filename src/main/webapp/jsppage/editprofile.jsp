@@ -29,19 +29,17 @@
     <form class="form-horizontal" method="post" action="upload" enctype="multipart/form-data">
         <input type="hidden" name="command" value="update_photo"/>
         <fieldset>
-
             <!-- Form Name -->
             <legend>Form Name</legend>
-
             <!-- File Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="filebutton">File Button</label>
+                <label class="col-md-4 control-label" for="filebutton">
+                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>
+                </label>
                 <div class="col-md-4">
                     <input id="filebutton" name="file" value="" class="input-file" type="file">
                 </div>
             </div>
-
-
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
@@ -53,10 +51,225 @@
                     </button>
                 </div>
             </div>
-
-
         </fieldset>
     </form>
+    <br>
+    <hr>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+   <h4>
+       ${feedback}
+   </h4>
+    <form class="form-horizontal" action="controller" method="post">
+        <input type="hidden" name="command" value="update_profile_data"/>
+        <%--<input type="hidden" name="accesslevel" value="user"/>--%>
+        <fieldset>
+            <br>
+            <br>
+            <!-- Form Name -->
+            <legend>
+                <fmt:message key="label.sign-up" bundle="${rb}"/>
+            </legend>
+            <br>
+            ${checkEnterData}
+            <div class="alert-danger">
+                ${errorMessageAttr}
+            </div>
+            <div class="alert-danger">
+                ${incorrectNameAttr}
+            </div>
+            <!-- Name input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name">
+                    <fmt:message key="label.name" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+                    <input id="name"
+                           name="name"
+                           value="${nameUser}"
+                           type="text"
+                           placeholder="<fmt:message key="label.name-placeholder" bundle="${rb}"/>"
+                           class="form-control input-md"
+                           required=""
+                           aria-describedby="nameHelpBlock"
+                    >
+                    <small id="nameHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-name" bundle="${rb}"/>
+                    </small>
+                </div>
+            </div>
+
+<%--            <!-- Login input-->--%>
+<%--            <div class="alert-danger">--%>
+<%--                ${incorrectLoginAttr}--%>
+<%--            </div>--%>
+<%--            <div class="alert-danger">--%>
+<%--                ${busyLoginAttr}--%>
+<%--            </div>--%>
+<%--            <div class="form-group">--%>
+<%--                <label class="col-md-4 control-label" for="login">--%>
+<%--                    <fmt:message key="label.login" bundle="${rb}"/>--%>
+<%--                </label>--%>
+<%--                <div class="col-md-4">--%>
+<%--                    <input id="login"--%>
+<%--                           name="login"--%>
+<%--                           value="${login}"--%>
+<%--                           type="text"--%>
+<%--                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"--%>
+<%--                    &lt;%&ndash;pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"&ndash;%&gt;--%>
+<%--                           class="form-control input-md"--%>
+<%--                           required=""--%>
+<%--                           aria-describedby="loginHelpBlock"--%>
+<%--                    >--%>
+<%--                    <small id="loginHelpBlock" class="text-muted">--%>
+<%--                        <fmt:message key="label.format-login" bundle="${rb}"/>--%>
+<%--                    </small>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+
+            <!-- Password input-->
+            <div class="alert-danger">
+                ${incorrectPassAttr}
+            </div>
+            <div class="alert-danger">
+                ${noConfirmPassAttr}
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordfirst">
+                    <fmt:message key="label.pass" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+                    <input id="passwordfirst"
+                           name="passwordfirst"
+                           type="password"
+                           placeholder="<fmt:message key="label.password-placeholder" bundle="${rb}"/>"
+                    <%--pattern="^[a-z0-9_-]*" minlength="6" maxlength="18"--%>
+                           class="form-control input-md"
+                           required=""
+                           aria-describedby="passHelpBlock"
+                    >
+                    <small id="passHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-pass" bundle="${rb}"/>
+                    </small>
+                </div>
+            </div>
+
+            <!-- Password confirm input-->
+            <div class="alert-danger">
+                ${incorrectPassAttr}
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordsecond">
+                    <fmt:message key="label.pass-confirm" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+                    <input id="passwordsecond"
+                           name="passwordsecond"
+                           type="password"
+                           placeholder="<fmt:message key="label.confirm-placeholder" bundle="${rb}"/>"
+                           class="form-control input-md"
+                           required="">
+                    <span class="help-block"></span>
+                </div>
+            </div>
+
+<%--            <!-- Birthday input-->--%>
+<%--            <div class="alert-danger">--%>
+<%--                ${incorrectBirthAttr}--%>
+<%--            </div>--%>
+<%--            <div class="form-group">--%>
+<%--                <label class="col-md-4 control-label" for="dateofbirth">--%>
+<%--                    <fmt:message key="label.birth" bundle="${rb}"/>--%>
+<%--                </label>--%>
+<%--                <div class="col-md-4">--%>
+<%--                    <input id="dateofbirth"--%>
+<%--                           name="birthday"--%>
+<%--                           value="${birthdayAttr}"--%>
+<%--                           type="text"--%>
+<%--                           placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"--%>
+<%--                           class="form-control input-md"--%>
+<%--                           aria-describedby="birthHelpBlock"--%>
+<%--                           required="">--%>
+<%--                    <small id="birthHelpBlock" class="text-muted">--%>
+<%--                        <fmt:message key="label.format-birth" bundle="${rb}"/>--%>
+<%--                    </small>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+
+            <!-- E-mail input-->
+            <div class="alert-danger">
+                ${incorrectEmailAttr}
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">
+                    <fmt:message key="label.email" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+
+
+                    <!-- заменить type="text" на type="email" -->
+
+
+                    <input id="email"
+                           name="email"
+                           value="${emailAttr}"
+                           type="text"
+                           placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
+                           class="form-control input-md"
+                           aria-describedby="emailHelpBlock"
+                           required="">
+                    <small id="emailHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-email" bundle="${rb}"/>
+                    </small>
+                </div>
+            </div>
+
+            <!-- Telephone input-->
+            <div class="alert-danger">
+                ${incorrectTelAttr}
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="tel">
+                    <fmt:message key="label.tel" bundle="${rb}"/>
+                </label>
+                <div class="col-md-4">
+                    <input id="tel"
+                           name="tel"
+                           value="${telAttr}"
+                           type="text"
+                           placeholder="<fmt:message key="label.tel-placeholder" bundle="${rb}"/>"
+                           class="form-control input-md"
+                           aria-describedby="telHelpBlock"
+                           required="">
+                    <small id="telHelpBlock" class="text-muted">
+                        <fmt:message key="label.format-tel" bundle="${rb}"/>
+                    </small>
+                </div>
+            </div>
+
+
+            <%--            <input type="submit" value="" name="signinbutton">--%>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submitButton"></label>
+                <div class="col-md-4">
+                    <button id="submitButton"
+                            value=""
+                            type="submit"
+                            name="submitButton"
+                            class="btn btn-primary">
+                        <fmt:message key="label.sign-up" bundle="${rb}"/>
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+
+
+
+
+
 
 
     <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"

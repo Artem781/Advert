@@ -1,4 +1,4 @@
-package by.it.advertproject.tester.examl.polimorfizm2;
+package by.it.advertproject.tester.examl.polimorfizmtask.polimorfizm2;
 
 public class Res {
     public static void main(String[] args) {
