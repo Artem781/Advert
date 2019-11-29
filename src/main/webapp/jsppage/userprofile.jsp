@@ -157,21 +157,15 @@
                 <div class="page-header">
                     <h3>
                         <fmt:message key="label.advert" bundle="${rb}"/> ${nameUser}
+                        <label class="switch">
+                            <input type="checkbox" onclick="toggle_visibility('UsersList','edit')">
+                            <span class="slider round"></span>
+                        </label>
                     </h3>
-                    <label class="switch">
-                        <input type="checkbox" onclick="toggle_visibility('list','edit')">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div>
-                    <label class="switch">
-                        <input type="checkbox" onclick="toggle_visibility('list','edit')">
-                        <span class="slider round"></span>
-                    </label>
                 </div>
             </div>
         </div>
-        <div id="list" style="display: block">
+        <div id="UsersList" style="display: block">
             <c:set var="countAdvert" scope="session" value="1"/>
             <div class="table-responsive">
                 <table class="table table-bordered ">
@@ -180,7 +174,7 @@
                     </caption>
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">№</th>
                         <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>
@@ -231,17 +225,15 @@
                 <div class="page-header">
                     <h3>
                         <fmt:message key="label.all-advert" bundle="${rb}"/>
+                        <label class="switch">
+                            <input type="checkbox" onclick="toggle_visibility('AllList','edit')">
+                            <span class="slider round"></span>
+                        </label>
                     </h3>
                 </div>
-                <%--                <div>--%>
-                <%--                    <label class="switch">--%>
-                <%--                        <input type="checkbox" onclick="toggle_visibility('list','edit')">--%>
-                <%--                        <span class="slider round"></span>--%>
-                <%--                    </label>--%>
-                <%--                </div>--%>
             </div>
         </div>
-        <div id="list" style="display: block">
+        <div id="AllList" style="display: block">
             <c:set var="countAdvert" scope="session" value="1"/>
             <div class="table-responsive">
                 <table class="table table-bordered ">
@@ -250,7 +242,7 @@
                     </caption>
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">№</th>
                         <th scope="col"><fmt:message key="label.ad-title" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.ad-description" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.ad-brand" bundle="${rb}"/></th>

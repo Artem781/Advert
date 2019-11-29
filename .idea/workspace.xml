@@ -7,42 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/increment/increment1/SomeIncrement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/wordstatic/static1/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/5. Database example.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/initblock/initblock1/InitPol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/equalsexample/ExampleEquals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandUrlBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandUrlBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToMainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToMainCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToUserProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToUserProfileCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/img/LoadAccountPhotoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/img/LoadAccountPhotoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/SignUpParameterValidationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/UserDataValidationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm1/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm1/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/A0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/A1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/A1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizm2/Res.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/Res.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polomorfizm/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Parent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/CommandType.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,6 +115,10 @@
   </component>
   <component name="ProjectId" id="1T4bsznJHAqJsvbRof1Ptwd0fBI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -187,18 +165,6 @@
       <recent name="by.it.advertproject.command.impl" />
       <recent name="by.it.advertproject.daofinalprj.impl" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tommy">
     <configuration name="AdvertDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -357,14 +323,15 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.13369398" />
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -580,7 +547,9 @@
       <workItem from="1574256370086" duration="2601000" />
       <workItem from="1574288597963" duration="4020000" />
       <workItem from="1574433278022" duration="3351000" />
-      <workItem from="1574490229745" duration="6101000" />
+      <workItem from="1574490229745" duration="8261000" />
+      <workItem from="1575029507456" duration="754000" />
+      <workItem from="1575031768867" duration="938000" />
     </task>
     <task id="LOCAL-00001" summary="advert">
       <created>1565678607623</created>
@@ -820,7 +789,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574117782224</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix view user">
+      <created>1574497314151</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1574497314151</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -840,7 +816,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added command sign up" />
     <MESSAGE value="added param, attribute, config" />
     <MESSAGE value="fill class param and attribute" />
     <MESSAGE value="added router and transmission type classes" />
@@ -865,7 +840,8 @@
     <MESSAGE value="added load ava1" />
     <MESSAGE value="create dumb" />
     <MESSAGE value="fix column name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix column name" />
+    <MESSAGE value="fix view user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix view user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
