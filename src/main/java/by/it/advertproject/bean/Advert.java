@@ -25,7 +25,6 @@ public class Advert extends Bean {
     private String equipment;
     private int milage;
     private String crashed;
-    //    private double price;
     private BigDecimal price;
     private long accountIdFk;
 

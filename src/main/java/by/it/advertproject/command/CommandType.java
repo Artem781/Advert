@@ -10,6 +10,7 @@ public enum CommandType {
     TO_EDIT_PROFILE(new ToEditProfile()),
     TO_USER_PROFILE(new ToUserProfileCommand()),
     TO_CREATE_ADVERT(new ToCreateAdvertCommand()),
+    TO_ERROR(new ToErrorPageCommand()),
     UPDATE_PHOTO(new UpdatePhotoCommand()),
     UPDATE_PROFILE_DATA(new UpdateProfileCommand()),
     SIGN_IN(new SignInCommand()),

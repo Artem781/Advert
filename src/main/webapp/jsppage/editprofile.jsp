@@ -30,7 +30,9 @@
         <input type="hidden" name="command" value="update_photo"/>
         <fieldset>
             <!-- Form Name -->
-            <legend>Form Name</legend>
+            <legend>
+
+            </legend>
             <!-- File Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">
@@ -55,10 +57,10 @@
     </form>
     <br>
     <hr>
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-   <h4>
-       ${feedback}
-   </h4>
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    <h4>
+        ${feedback}
+    </h4>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="update_profile_data"/>
         <%--<input type="hidden" name="accesslevel" value="user"/>--%>
@@ -67,7 +69,7 @@
             <br>
             <!-- Form Name -->
             <legend>
-                <fmt:message key="label.sign-up" bundle="${rb}"/>
+                <fmt:message key="label.update-data-user" bundle="${rb}"/>
             </legend>
             <br>
             ${checkEnterData}
@@ -98,33 +100,33 @@
                 </div>
             </div>
 
-<%--            <!-- Login input-->--%>
-<%--            <div class="alert-danger">--%>
-<%--                ${incorrectLoginAttr}--%>
-<%--            </div>--%>
-<%--            <div class="alert-danger">--%>
-<%--                ${busyLoginAttr}--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <label class="col-md-4 control-label" for="login">--%>
-<%--                    <fmt:message key="label.login" bundle="${rb}"/>--%>
-<%--                </label>--%>
-<%--                <div class="col-md-4">--%>
-<%--                    <input id="login"--%>
-<%--                           name="login"--%>
-<%--                           value="${login}"--%>
-<%--                           type="text"--%>
-<%--                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"--%>
-<%--                    &lt;%&ndash;pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"&ndash;%&gt;--%>
-<%--                           class="form-control input-md"--%>
-<%--                           required=""--%>
-<%--                           aria-describedby="loginHelpBlock"--%>
-<%--                    >--%>
-<%--                    <small id="loginHelpBlock" class="text-muted">--%>
-<%--                        <fmt:message key="label.format-login" bundle="${rb}"/>--%>
-<%--                    </small>--%>
-<%--                </div>--%>
-<%--            </div>--%>
+            <%--            <!-- Login input-->--%>
+            <%--            <div class="alert-danger">--%>
+            <%--                ${incorrectLoginAttr}--%>
+            <%--            </div>--%>
+            <%--            <div class="alert-danger">--%>
+            <%--                ${busyLoginAttr}--%>
+            <%--            </div>--%>
+            <%--            <div class="form-group">--%>
+            <%--                <label class="col-md-4 control-label" for="login">--%>
+            <%--                    <fmt:message key="label.login" bundle="${rb}"/>--%>
+            <%--                </label>--%>
+            <%--                <div class="col-md-4">--%>
+            <%--                    <input id="login"--%>
+            <%--                           name="login"--%>
+            <%--                           value="${login}"--%>
+            <%--                           type="text"--%>
+            <%--                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"--%>
+            <%--                    &lt;%&ndash;pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"&ndash;%&gt;--%>
+            <%--                           class="form-control input-md"--%>
+            <%--                           required=""--%>
+            <%--                           aria-describedby="loginHelpBlock"--%>
+            <%--                    >--%>
+            <%--                    <small id="loginHelpBlock" class="text-muted">--%>
+            <%--                        <fmt:message key="label.format-login" bundle="${rb}"/>--%>
+            <%--                    </small>--%>
+            <%--                </div>--%>
+            <%--            </div>--%>
 
             <!-- Password input-->
             <div class="alert-danger">
@@ -172,28 +174,28 @@
                 </div>
             </div>
 
-<%--            <!-- Birthday input-->--%>
-<%--            <div class="alert-danger">--%>
-<%--                ${incorrectBirthAttr}--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <label class="col-md-4 control-label" for="dateofbirth">--%>
-<%--                    <fmt:message key="label.birth" bundle="${rb}"/>--%>
-<%--                </label>--%>
-<%--                <div class="col-md-4">--%>
-<%--                    <input id="dateofbirth"--%>
-<%--                           name="birthday"--%>
-<%--                           value="${birthdayAttr}"--%>
-<%--                           type="text"--%>
-<%--                           placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"--%>
-<%--                           class="form-control input-md"--%>
-<%--                           aria-describedby="birthHelpBlock"--%>
-<%--                           required="">--%>
-<%--                    <small id="birthHelpBlock" class="text-muted">--%>
-<%--                        <fmt:message key="label.format-birth" bundle="${rb}"/>--%>
-<%--                    </small>--%>
-<%--                </div>--%>
-<%--            </div>--%>
+            <%--            <!-- Birthday input-->--%>
+            <%--            <div class="alert-danger">--%>
+            <%--                ${incorrectBirthAttr}--%>
+            <%--            </div>--%>
+            <%--            <div class="form-group">--%>
+            <%--                <label class="col-md-4 control-label" for="dateofbirth">--%>
+            <%--                    <fmt:message key="label.birth" bundle="${rb}"/>--%>
+            <%--                </label>--%>
+            <%--                <div class="col-md-4">--%>
+            <%--                    <input id="dateofbirth"--%>
+            <%--                           name="birthday"--%>
+            <%--                           value="${birthdayAttr}"--%>
+            <%--                           type="text"--%>
+            <%--                           placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"--%>
+            <%--                           class="form-control input-md"--%>
+            <%--                           aria-describedby="birthHelpBlock"--%>
+            <%--                           required="">--%>
+            <%--                    <small id="birthHelpBlock" class="text-muted">--%>
+            <%--                        <fmt:message key="label.format-birth" bundle="${rb}"/>--%>
+            <%--                    </small>--%>
+            <%--                </div>--%>
+            <%--            </div>--%>
 
             <!-- E-mail input-->
             <div class="alert-danger">
@@ -258,23 +260,27 @@
                             type="submit"
                             name="submitButton"
                             class="btn btn-primary">
-                        <fmt:message key="label.sign-up" bundle="${rb}"/>
+                        <fmt:message key="label.update-button" bundle="${rb}"/>
                     </button>
                 </div>
             </div>
         </fieldset>
     </form>
+    <br>
+    <hr>
+    <%--    <button type="button" class="btn btn-outline-danger">--%>
+    <%--        <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
+    <%--    </button>--%>
+    <a href="controller?command=delete_user" method="post" class="btn btn-sm btn-danger">
+        <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
+        <span class="glyphicon glyphicon-trash"></span>
+    </a>
 
 
-
-
-
-
-
-
-    <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
-            data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
-    </button>
+    <%--    <form class="form-horizontal" action="controller" method="post">--%>
+    <%--        <input type="hidden" name="command" value="update_profile_data"/>--%>
+    <br>
+    <hr>
 
 
 </div>

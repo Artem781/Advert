@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page errorPage="error.jsp" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" isErrorPage="true" %>
 <fmt:setLocale value="${lang}" scope="session"/>
 <fmt:setBundle basename="messages" var="rb"/>
 <!DOCTYPE html>
@@ -14,16 +15,16 @@
     <p>ERROR: ${message}</p>
 
     Request from ${pageContext.errorData.requestURI} is failed
-    <br/>
+    <br>
     Servlet name or type: ${pageContext.errorData.servletName}
-    <br/>
+    <br>
     Status code: ${pageContext.errorData.statusCode}
-    <br/>
+    <br>
     Exception: ${pageContext.errorData.throwable}
+    <br>
+    Message from exception: ${pageContext.exception.message}
     <div/>
     <%@ include file="include/scriptbottom.jsp" %>
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
