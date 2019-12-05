@@ -13,6 +13,7 @@ public enum CommandType {
     TO_ERROR(new ToErrorPageCommand()),
     UPDATE_PHOTO(new UpdatePhotoCommand()),
     UPDATE_PROFILE_DATA(new UpdateProfileCommand()),
+    DELETE_USER(new DeleteUserCommand()),
     SIGN_IN(new SignInCommand()),
     LOGOUT(new LogoutCommand()),
     SIGN_UP(new SignUpCommand()),

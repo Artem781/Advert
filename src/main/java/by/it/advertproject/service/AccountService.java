@@ -1,9 +1,11 @@
 package by.it.advertproject.service;
 
 import by.it.advertproject.bean.Account;
+import by.it.advertproject.bean.Advert;
 import by.it.advertproject.bean.Role;
 import by.it.advertproject.dao.AccountDao;
 import by.it.advertproject.dao.impl.AccountDaoImpl;
+import by.it.advertproject.dao.impl.AdvertDaoImpl;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -22,16 +24,13 @@ public class AccountService {
 
     public Account checkLogin(String login, String password) throws ServiceException {
         logger.log(Level.INFO, "from AccountService. method checkLogin ");
-
         String encryptedPassword = DigestUtils.md5Hex(password);
         AccountDaoImpl accountDao = new AccountDaoImpl();
         Account account;
         try {
             logger.log(Level.INFO, "from AccountService. try block ");
-
             account = accountDao.findAccountByLogin(login);
             logger.log(Level.INFO, "from AccountService. account: " + account.toString());
-
             if (account == null) {
 //                throw new ServiceException(MESSAGE_LOGIN_ERROR);
                 throw new ServiceException(MESSAGE_ERROR_LOGIN_PASSWORD);
@@ -45,7 +44,6 @@ public class AccountService {
             throw new ServiceException(CAN_NOT_LOGIN);
         }
         return account;
-
     }
 
     public Account findAccount(String login) throws ServiceException {
@@ -78,28 +76,21 @@ public class AccountService {
 
     public void updatePhoto(long accountId, byte[] photo) throws ServiceException {
         logger.log(Level.INFO, "From AccountService. updatePhoto method. ");
-
         AccountDaoImpl accountDao = new AccountDaoImpl();
         try {
             logger.log(Level.INFO, "From AccountService. try block. ");
-
             Account account = accountDao.findBeanById(accountId);
             logger.log(Level.INFO, "From AccountService. account = " + account.toString());
-
             if (account == null) {
                 logger.log(Level.INFO, "From AccountService. account == null ");
-
                 throw new ServiceException(ACCOUNT_IS_NULL);
             }
             account.setPhoto(photo);
             logger.log(Level.INFO, "From AccountService. account.setPhoto(photo) ");
-
             accountDao.update(account);
             logger.log(Level.INFO, "From AccountService. try block. end line");
-
         } catch (DaoException e) {
             logger.log(Level.INFO, "From AccountService. catch block. ");
-
             throw new ServiceException(LOAD_FILE_ERROR_MESSAGE);
         }
     }
@@ -139,6 +130,80 @@ public class AccountService {
         return account;
     }
 
+
+    public void deleteAccount(long accountId) throws ServiceException {
+        logger.log(Level.INFO, "from AccountService) deleteAccount method. ");
+//        TransactionManager transactionManager = new TransactionManager();
+        AccountDaoImpl accountDao = new AccountDaoImpl();
+        try {
+            Account account = accountDao.findBeanById(accountId);
+            if (account == null) {
+                throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);
+            }
+//            PostDaoImpl postDao = new PostDaoImpl();
+//            CommentDaoImpl commentDao = new CommentDaoImpl();
+//            TagDaoImpl tagDao = new TagDaoImpl();
+            AdvertDaoImpl advertDao = new AdvertDaoImpl();
+//            transactionManager.startTransaction(accountDao, postDao, commentDao, tagDao);
+//            List<Post> posts = postDao.findByAccount(account);
+            List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(accountId);
+
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. for (Advert element : advertList) { ");
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. advertList.size: " + advertList.size());
+            for (Advert element : advertList) {
+                logger.log(Level.INFO, "from AccountService) deleteAccount method. element: ");
+                advertDao.delete(element);
+            }
+
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. accountDao.delete(account); ");
+
+//            for (Post post : posts) {
+//                List<Comment> comments = commentDao.findByPost(post);
+//                for (Comment comment : comments) {
+//                    commentDao.delete(comment);
+//                }
+//                List<PicTag> tags = tagDao.findByPost(post);
+//                for (PicTag tag : tags) {
+//                    postDao.deleteTag(tag, post);
+//                }
+//                postDao.delete(post);
+//            }
+//
+//            List<Account> subs = accountDao.findSubscriptionsByAccount(account);
+//            for (Account sub : subs) {
+//                accountDao.deleteSubscription(account, sub);
+//            }
+//            List<Account> subscribers = accountDao.findSubscriberByAccount(account);
+//            for (Account subscriber : subscribers) {
+//                accountDao.deleteSubscription(subscriber, account);
+//            }
+//            List<Post> likedPosts = postDao.findPostsByLiker(account);
+//            for (Post post : likedPosts) {
+//                accountDao.deleteLike(account, post);
+//            }
+//            List<Comment> comments = commentDao.findByAuthor(account);
+//            for (Comment comment : comments) {
+//                commentDao.delete(comment);
+//            }
+            accountDao.delete(account);
+//            transactionManager.commit();
+        } catch (DaoException e) {
+//            try {
+////                transactionManager.rollback();
+//            } catch (DaoException e1) {
+//                throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);
+//            }
+            throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);
+        } finally {
+//            try {
+////                transactionManager.finishTransaction();
+//            } catch (DaoException e) {
+//                throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);
+//            }
+        }
+
+    }
+
     public Account updateProfileData(long accountId, String name, String password, String confirm, String email, String tel) throws ServiceException {
         logger.log(Level.INFO, "from AccountService. updateProfileData method. ");
         AccountDaoImpl accountDao = new AccountDaoImpl();
@@ -167,7 +232,6 @@ public class AccountService {
                     accountDao.update(account);
                 } catch (DaoException e) {
                     logger.log(Level.INFO, "from AccountService. updateProfileData method. catch (DaoException e)");
-
                     throw new ServiceException(BUSY_LOGIN_MESSAGE);
                 }
             }

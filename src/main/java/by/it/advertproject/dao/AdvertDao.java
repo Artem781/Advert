@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface AdvertDao extends BaseDao<Advert> {
     List<Advert> findAdvertByTitle(String patternTitle) throws DaoException;
-    List<Advert> findCountAdvertByAccountIdFk(String patternTitle) throws DaoException;
+    List<Advert> findCountAdvertByAccountIdFk(long patternIndex) throws DaoException;
 }

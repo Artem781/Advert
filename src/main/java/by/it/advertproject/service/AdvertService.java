@@ -71,7 +71,8 @@ public class AdvertService {
         logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.");
         AdvertDao advertDao = new AdvertDaoImpl();
         // TODO: 20.10.2019 из стринг в лонг
-        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));
+//        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));
+        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(account.getId());
         logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.\n" +
                 "List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));\n");
         return advertList;

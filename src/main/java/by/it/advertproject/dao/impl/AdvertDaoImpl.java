@@ -46,13 +46,15 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
                     " advert.accountidfk FROM advert WHERE advert.accountidfk = ?";
 
     @Override
-    public List<Advert> findCountAdvertByAccountIdFk(String AccountIdFk) throws DaoException {
+    public List<Advert> findCountAdvertByAccountIdFk(long AccountId) throws DaoException {
         logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method.");
-        List<Advert> entities = findBy(SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK, TABLE_NAME, AccountIdFk);
-        boolean isEmpty = entities.isEmpty();
-        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. entities.toString() = " + entities.toString());
-        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. entities.isEmpty() = " + entities.isEmpty());
-        return entities.isEmpty() ? null : entities;
+        logger.log(Level.INFO, "from AdvertDaoImpl) long AccountId: "+  AccountId);
+        logger.log(Level.INFO, "from AdvertDaoImpl) String.valueOf(AccountId): "+  String.valueOf(AccountId));
+        List<Advert> listAdverts = findBy(SQL_SELECT_ADVERT_BY_ACCOUNT_ID_FK, TABLE_NAME, String.valueOf(AccountId));
+        boolean isEmpty = listAdverts.isEmpty();
+//        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. listAdverts.toString() = " + listAdverts.toString());
+        logger.log(Level.INFO, "from AdvertDaoImpl) findCountAdvertByAccountIdFk method. isEmpty: " + isEmpty);
+        return listAdverts.isEmpty() ? null : listAdverts;
     }
 
     //language=SQL
@@ -95,7 +97,9 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
 
     @Override
     public void delete(Advert advert) throws DaoException {
+        logger.log(Level.INFO, "from AdvertDaoImpl) delete method.");
         super.delete(advert, SQL_DELETE_ADVERT);
+        logger.log(Level.INFO, "from AdvertDaoImpl) delete method. after super.delete(advert, SQL_DELETE_ADVERT);");
 
     }
 

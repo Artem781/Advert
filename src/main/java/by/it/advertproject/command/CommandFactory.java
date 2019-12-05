@@ -40,6 +40,7 @@ public class CommandFactory {
                     action + MessageManager.getProperty(WRONG_ACTION_MESSAGE, String.valueOf(ENGLISH)));
             throw new CommandException(COMMAND_NOT_DEFINE_ERROR);
         }
+        Logger.log(Level.INFO, " return current;");
         return current;
     }
 }

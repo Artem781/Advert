@@ -55,7 +55,6 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
         logger.log(Level.INFO, "from AccountDaoImpl) accounts.isEmpty(): " + accounts.isEmpty());
         if (!empty) {
             logger.log(Level.INFO, "from AccountDaoImpl). accounts.toString(): " + accounts.toString());
-
         }
         return accounts.isEmpty() ? null : accounts.get(0);
     }
@@ -70,6 +69,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     public void delete(Account account) throws DaoException {
         super.delete(account, SQL_DELETE_ACCOUNT);
     }
+
 
     //language=SQL
     private static final String SQL_CREATE_ACCOUNT = "INSERT INTO " +
