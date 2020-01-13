@@ -18,7 +18,7 @@ public class AdvertDaoImplTester {
                 .withDescription("adcscsdc")
                 .build();
         try {
-            advertDao.create(advert);
+            advertDao.delete(advert);
             System.out.println("OK");
         } catch (DaoException e) {
             System.out.println("e.getMessage: " + e.getMessage());

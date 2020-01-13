@@ -16,7 +16,6 @@ public class UpdateProfileCommand implements Command {
     @Override
     public Router execute(RequestContent content) {
         logger.log(Level.INFO, "from UpdateProfileCommand.");
-
         long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
         logger.log(Level.INFO, "from UpdateProfileCommand. accountId: " + accountId);
         String page;
@@ -38,16 +37,17 @@ public class UpdateProfileCommand implements Command {
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putRequestAttribute(ATTR_NAME_TELEPHONE, tel);
             content.putRequestAttribute(ATTR_NAME_EMAIL, email);
-
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, SUCCESS_UPDATE_MESSAGE).getUrl();
+            content.putRequestAttribute(ATTR_NAME_FB, SUCCESS_UPDATE_MESSAGE);
         } catch (ServiceException e) {
-            logger.log(Level.INFO, "from UpdateProfileCommand. catch ");
+            logger.log(Level.INFO, "from UpdateProfileCommand. catch. e.getMessage(): " + e.getMessage());
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
                     .getUrl();
+            content.putRequestAttribute(ATTR_NAME_FB, e.getMessage());
         }
         logger.log(Level.INFO, "from UpdateProfileCommand. return. page: " + page);
-        return new Router(page, TransmissionType.REDIRECT);
+        return new Router(page, TransmissionType.FORWARD);
     }
 }

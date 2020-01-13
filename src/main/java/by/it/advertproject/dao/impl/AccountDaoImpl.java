@@ -53,9 +53,9 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
         List<Account> accounts = findBy(SQL_SELECT_ACCOUNT_BY_LOGIN, TABLE_NAME, loginPattern);
         boolean empty = accounts.isEmpty();
         logger.log(Level.INFO, "from AccountDaoImpl) accounts.isEmpty(): " + accounts.isEmpty());
-        if (!empty) {
-            logger.log(Level.INFO, "from AccountDaoImpl). accounts.toString(): " + accounts.toString());
-        }
+//        if (!empty) {
+//            logger.log(Level.INFO, "from AccountDaoImpl). accounts.toString(): " + accounts.toString());
+//        }
         return accounts.isEmpty() ? null : accounts.get(0);
     }
 

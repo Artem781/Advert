@@ -16,29 +16,23 @@ import static by.it.advertproject.command.ParameterName.PARAM_NAME_FEEDBACK;
 
 public class DeleteUserCommand implements Command {
     private static final Logger logger = LogManager.getLogger(DeleteUserCommand.class);
+
     @Override
     public Router execute(RequestContent content) throws CommandException {
-        logger.log(Level.INFO, "from DeleteUserCommand. " );
+        logger.log(Level.INFO, "from DeleteUserCommand. ");
         long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
-        logger.log(Level.INFO, "from DeleteUserCommand. accountId: " + accountId );
-
-//        long deleteAccountId = Long.parseLong(content.getRequestParameters(PARAM_NAME_PAGE_ID,0));
-//        logger.log(Level.INFO, "from DeleteUserCommand. deleteAccountId: " + deleteAccountId );
-
+        logger.log(Level.INFO, "from DeleteUserCommand. accountId: " + accountId);
         AccountService accountService = new AccountService();
         try {
-//            accountService.deleteAccount(deleteAccountId);
-            logger.log(Level.INFO, "from DeleteUserCommand. try accountService.deleteAccount(accountId);" );
+            logger.log(Level.INFO, "from DeleteUserCommand. try accountService.deleteAccount(accountId);");
             accountService.deleteAccount(accountId);
+            content.invalidateSession();
+            String page = CommandUrlBuilder.TO_PERSONAL_PAGE.getUrl();
+            return new Router(page, TransmissionType.FORWARD);
         } catch (ServiceException e) {
-            logger.log(Level.INFO, "from DeleteUserCommand. e.getMessage: " + e.getMessage() );
+            logger.log(Level.INFO, "from DeleteUserCommand. e.getMessage: " + e.getMessage());
+            logger.log(Level.WARN, e.getMessage());
             throw new CommandException(e.getMessage());
         }
-        String page = CommandUrlBuilder.TO_PERSONAL_PAGE
-                .setParams(PARAM_NAME_PAGE_ID,String.valueOf(accountId))
-                .getUrl();
-        logger.log(Level.INFO, "from DeleteUserCommand. return new Router(page, TransmissionType.REDIRECT)");
-        logger.log(Level.INFO, "from DeleteUserCommand. return. page: " + page);
-        return new Router(page, TransmissionType.REDIRECT);
     }
 }

@@ -34,15 +34,18 @@ public class AuthFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {
+        logger.log(Level.INFO, "from AuthFilter. doFilter method.");
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         String parameterCommand = httpRequest.getParameter(PARAM_NAME_COMMAND);
-        logger.log(Level.INFO, "from AuthFilter. doFilter method.");
         logger.log(Level.INFO, "from AuthFilter. doFilter method. parameterCommand: " + parameterCommand);
+
         try {
+            logger.log(Level.INFO, "from AuthFilter. doFilter method. if (httpRequest.getParameter(PARAM_NAME_COMMAND) != null) { ");
             if (httpRequest.getParameter(PARAM_NAME_COMMAND) != null) {
+                logger.log(Level.INFO, "from AuthFilter. doFilter method.if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))): " + (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))));
                 if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))) {
-                    logger.log(Level.INFO, "from AuthFilter. doFilter method. if (httpRequest.getSession(false) == null) {");
+                    logger.log(Level.INFO, "from AuthFilter. doFilter method. if (httpRequest.getSession(false) == null): " + (httpRequest.getSession(false) == null));
 
                     if (httpRequest.getSession(false) == null) {
                         logger.log(Level.INFO, "from AuthFilter. throw new AdvertException(NOT_AUTH_MESSAGE);");
@@ -75,7 +78,7 @@ public class AuthFilter implements Filter {
         String publicActionProperty = ConfigurationManager.getProperty(PUBLIC_ACTION_PROPERTY_KEY);
         List<String> publicActions = Arrays.asList(publicActionProperty.split(COMMA));
         publicActions.forEach(a -> a = a.trim());
-        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method.");
+        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method. publicActions.forEach(a -> a = a.trim());");
         logger.log(Level.INFO, "from AuthFilter. publicActions.contains(action): " + publicActions.contains(action));
         return publicActions.contains(action);
     }

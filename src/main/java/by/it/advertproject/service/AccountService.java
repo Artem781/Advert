@@ -30,8 +30,9 @@ public class AccountService {
         try {
             logger.log(Level.INFO, "from AccountService. try block ");
             account = accountDao.findAccountByLogin(login);
-            logger.log(Level.INFO, "from AccountService. account: " + account.toString());
+            logger.log(Level.INFO, "from AccountService. account: ");
             if (account == null) {
+                logger.log(Level.INFO, "from AccountService. try block (account == null) ");
 //                throw new ServiceException(MESSAGE_LOGIN_ERROR);
                 throw new ServiceException(MESSAGE_ERROR_LOGIN_PASSWORD);
             }
@@ -119,7 +120,6 @@ public class AccountService {
                 accountDao.create(account);
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.create(account)");
                 logger.log(Level.INFO, "from AccountService) account.getLogin(): " + account.getLogin());
-
                 account = accountDao.findAccountByLogin(account.getLogin());
                 logger.log(Level.INFO, "from AccountService) createAccount method. accountDao.findAccountByLogin(account.getLogin())");
             } catch (DaoException e) {
@@ -136,8 +136,11 @@ public class AccountService {
 //        TransactionManager transactionManager = new TransactionManager();
         AccountDaoImpl accountDao = new AccountDaoImpl();
         try {
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. Account account = accountDao.findBeanById(accountId);");
             Account account = accountDao.findBeanById(accountId);
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. (account == null): " + (account == null));
             if (account == null) {
+                logger.log(Level.INFO, "from AccountService) deleteAccount method. throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);");
                 throw new ServiceException(CAN_NOT_DELETE_ACCOUNT);
             }
 //            PostDaoImpl postDao = new PostDaoImpl();
@@ -146,15 +149,16 @@ public class AccountService {
             AdvertDaoImpl advertDao = new AdvertDaoImpl();
 //            transactionManager.startTransaction(accountDao, postDao, commentDao, tagDao);
 //            List<Post> posts = postDao.findByAccount(account);
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(accountId)");
             List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(accountId);
 
-            logger.log(Level.INFO, "from AccountService) deleteAccount method. for (Advert element : advertList) { ");
-            logger.log(Level.INFO, "from AccountService) deleteAccount method. advertList.size: " + advertList.size());
-            for (Advert element : advertList) {
-                logger.log(Level.INFO, "from AccountService) deleteAccount method. element: ");
-                advertDao.delete(element);
+            logger.log(Level.INFO, "from AccountService) deleteAccount method. (advertList == null): " + (advertList != null));
+            if (advertList != null) {
+                for (Advert element : advertList) {
+                    logger.log(Level.INFO, "from AccountService) deleteAccount method. element: ");
+                    advertDao.delete(element);
+                }
             }
-
             logger.log(Level.INFO, "from AccountService) deleteAccount method. accountDao.delete(account); ");
 
 //            for (Post post : posts) {
@@ -217,6 +221,7 @@ public class AccountService {
                     logger.log(Level.INFO, "from AccountService. updateProfileData method. try block (account == null) ");
                     throw new ServiceException(ACCOUNT_IS_NULL);
                 }
+                logger.log(Level.INFO, "from AccountService. updateProfileData method. before catch catch (DaoException e)");
             } catch (DaoException e) {
                 logger.log(Level.INFO, "from AccountService. updateProfileData method. catch block ");
                 throw new ServiceException(MESSAGE_LOGIN_ERROR);
@@ -226,6 +231,8 @@ public class AccountService {
             account.setPassword(encryptedPassword);
             userDataValidationState = DataParameterValidator
                     .validateParameter(name, password, tel, email);
+            logger.log(Level.INFO, "from AccountService. updateProfileData method. (userDataValidationState == UserDataValidationState.VALID): "
+                    + (userDataValidationState == UserDataValidationState.VALID));
             if (userDataValidationState == UserDataValidationState.VALID) {
                 try {
                     logger.log(Level.INFO, "from AccountService. updateProfileData method. try block accountDao.update(account)");
@@ -255,21 +262,35 @@ public class AccountService {
         private static final String PASSWORD_EQUALS_CONFIRM_PASSWORD = "passEqualsConfirmPass";
 
         public static UserDataValidationState validateParameter(String name, String password, String tel, String email) throws ServiceException {
+            logger.log(Level.INFO, "from AccountService) DataParameterValidator) validateParameter method.");
             UserDataValidationState validationState = UserDataValidationState.VALID;
+            logger.log(Level.INFO, "from AccountService) DataParameterValidator) validateParameter method." +
+                    " (!(Pattern.matches(NAME_REGEX, name): " + (!(Pattern.matches(NAME_REGEX, name))));
             if (!(Pattern.matches(NAME_REGEX, name)
 //                    || Pattern.matches(RUSSIAN_LOGIN_PATTERN, login)
             )) {
+                logger.log(Level.INFO, "throw new ServiceException(LOGIN_INCORRECT_FORMAT_MESSAGE);");
                 throw new ServiceException(LOGIN_INCORRECT_FORMAT_MESSAGE);
             }
+            logger.log(Level.INFO, "from AccountService) DataParameterValidator) validateParameter method." +
+                    " (!Pattern.matches(PASSWORD_PATTERN, password)): " + (!Pattern.matches(PASSWORD_PATTERN, password)));
             if (!Pattern.matches(PASSWORD_PATTERN, password)) {
+                logger.log(Level.INFO, "throw new ServiceException(PASSWORD_INCORRECT_FORMAT_MESSAGE);");
                 throw new ServiceException(PASSWORD_INCORRECT_FORMAT_MESSAGE);
             }
+            logger.log(Level.INFO, "from AccountService) DataParameterValidator) validateParameter method." +
+                    " (!Pattern.matches(EMAIL_REGEX, email)): " + (!Pattern.matches(EMAIL_REGEX, email)));
             if (!Pattern.matches(EMAIL_REGEX, email)) {
+                logger.log(Level.INFO, "throw new ServiceException(EMAIL_INCORRECT_FORMAT_MESSAGE);");
                 throw new ServiceException(EMAIL_INCORRECT_FORMAT_MESSAGE);
             }
+            logger.log(Level.INFO, "from AccountService) DataParameterValidator) validateParameter method." +
+                    " (!Pattern.matches(TEL_REGEX, tel)): " + (!Pattern.matches(TEL_REGEX, tel)));
             if (!Pattern.matches(TEL_REGEX, tel)) {
+                logger.log(Level.INFO, "throw new ServiceException(TEL_INCORRECT_FORMAT_MESSAGE);");
                 throw new ServiceException(TEL_INCORRECT_FORMAT_MESSAGE);
             }
+            logger.log(Level.INFO, "return validationState.name: " + validationState.name());
             return validationState;
         }
 

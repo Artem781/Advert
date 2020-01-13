@@ -44,12 +44,14 @@
             </div>
             <!-- Button -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+                <label class="col-md-4 control-label" for="singlebutton">
+                    </label>
                 <div class="col-md-4">
                     <button type="submit"
                             id="singlebutton"
                             name="singlebutton"
-                            class="btn btn-primary">Button
+                            class="btn btn-primary">
+                        <fmt:message key="label.upload-photo" bundle="${rb}"/>
                     </button>
                 </div>
             </div>
@@ -58,8 +60,12 @@
     <br>
     <hr>
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //make attribute success colour
     <h4>
         ${feedback}
+    </h4>
+    <h4>
+        ${fbAttr}
     </h4>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="update_profile_data"/>

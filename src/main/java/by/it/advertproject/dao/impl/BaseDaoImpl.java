@@ -19,7 +19,8 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
     private static final Logger logger = LogManager.getLogger(BaseDao.class);
 
     protected void delete(Bean bean, String sqlRequest) throws DaoException {
-        Connection connection = null;
+//        Connection connection = null;
+        Connection connection = ConnectionPool.INSTANCE.takeConnection();
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(sqlRequest);
