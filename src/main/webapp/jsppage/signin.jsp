@@ -12,7 +12,7 @@
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
         <%@include file="include/menustart.jsp" %>
         <a class="dropdown-item" href="controller?command=set_lang&page=to-signin">

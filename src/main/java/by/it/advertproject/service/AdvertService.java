@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
@@ -93,10 +94,16 @@ public class AdvertService {
         private static final String MODEL_REGEX = "[a-zA-Zа-яА-Я0-9 ]{1,45}";
         private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я- ]{1,45}";
         private static final String BODY_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
+        private static final String PRODUCTION_YEAR_REGEX = "[0-9]{4}";
+        private static final String ENGINE_VOLUME_REGEX = "[0-9]{4}";
+        private static final String AT_TYPE_REGEX = "[a-zA-Zа-яА-Я]{1,5}";
         private static final String DRIVEUNIT_REGEX = "[a-zA-Zа-яА-Я0-9()]{1,45}";
         private static final String EQUIPMENT_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
+        private static final String CAR_MILLAGE_REGEX = "[0-9]{1,9}";
+        private static final String IF_CRASHED_REGEX = "[a-zA-Zа-яА-Я]{1,5}";
+        private static final String CAR_PRICE_REGEX = "[0-9]{1,5}";
 
-        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) {
+        public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) throws ServiceException {
             AdvertParameterValidationState advertParameterValidationState = AdvertParameterValidationState.VALID;
             logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method.");
             Map<String, String> advertRegexMap = new HashMap<>();
@@ -105,33 +112,33 @@ public class AdvertService {
             advertRegexMap.put(PARAM_CAR_MODEL, MODEL_REGEX);
             advertRegexMap.put(PARAM_CAR_COLOR, COLOR_REGEX);
             advertRegexMap.put(PARAM_CAR_BODY, BODY_REGEX);
-//            advertRegexMap.put(PARAM_CAR_PRODUCTION_YEAR, PASSWORD_PATTERN);
-//            advertRegexMap.put(PARAM_ENGINE_VOLUME, PASSWORD_PATTERN);
-//            advertRegexMap.put(PARAM_AT_TYPE, PASSWORD_PATTERN);
+            advertRegexMap.put(PARAM_CAR_PRODUCTION_YEAR, PRODUCTION_YEAR_REGEX);
+            advertRegexMap.put(PARAM_ENGINE_VOLUME, ENGINE_VOLUME_REGEX);
+            advertRegexMap.put(PARAM_AT_TYPE, AT_TYPE_REGEX);
             advertRegexMap.put(PARAM_CAR_DRIVEUNIT, DRIVEUNIT_REGEX);
             advertRegexMap.put(PARAM_CAR_EQUIPMENT, EQUIPMENT_REGEX);
-//            advertRegexMap.put(PARAM_CAR_MILLAGE, PASSWORD_PATTERN);
-//            advertRegexMap.put(PARAM_IF_CRASHED, PASSWORD_PATTERN);
+            advertRegexMap.put(PARAM_CAR_MILLAGE, CAR_MILLAGE_REGEX);
+            advertRegexMap.put(PARAM_IF_CRASHED, IF_CRASHED_REGEX);
             advertRegexMap.put(PARAM_CAR_DESCRIPTION, DESCRIPTION_REGEX);
-//            advertRegexMap.put(PARAM_CAR_PRICE, PASSWORD_PATTERN);
+            advertRegexMap.put(PARAM_CAR_PRICE, CAR_PRICE_REGEX);
 //            advertRegexMap.put(PARAM_CAR_PHOTO_UPLOAD, PASSWORD_PATTERN);
 //            advertRegexMap.put(PARAM_CREATE_AD, PASSWORD_PATTERN);
 
             Map<String, String> errorMessageMapAdvert = new HashMap<>();
-            errorMessageMapAdvert.put(PARAM_CAR_TITLE, NAME_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_BRAND, LOGIN_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_MODEL, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_COLOR, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_BODY, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_PRODUCTION_YEAR, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_ENGINE_VOLUME, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_AT_TYPE, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_DRIVEUNIT, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_EQUIPMENT, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_MILLAGE, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_IF_CRASHED, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_DESCRIPTION, PASSWORD_INCORRECT_FORMAT_MESSAGE);
-            errorMessageMapAdvert.put(PARAM_CAR_PRICE, PASSWORD_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_TITLE, CAR_TITLE_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_BRAND, CAR_BRAND_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_MODEL, CAR_MODEL_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_COLOR, CAR_COLOR_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_BODY, CAR_BODY_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_PRODUCTION_YEAR, CAR_PRODUCTION_YEAR_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_ENGINE_VOLUME, ENGINE_VOLUME_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_AT_TYPE, AT_TYPE_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_DRIVEUNIT, CAR_DRIVEUNIT_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_EQUIPMENT, CAR_EQUIPMENT_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_MILLAGE, CAR_MILLAGE_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_IF_CRASHED, IF_CRASHED_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_DESCRIPTION, CAR_DESCRIPTION_INCORRECT_FORMAT_MESSAGE);
+            errorMessageMapAdvert.put(PARAM_CAR_PRICE, CAR_PRICE_INCORRECT_FORMAT_MESSAGE);
 //            errorMessageMapAdvert.put(PARAM_CREATE_AD, PASSWORD_CONFIRM_INCORRECT_FORMAT_MESSAGE);
             //14
             logger.log(Level.INFO, "errorMessageMapAdvert size: " + errorMessageMapAdvert.size());
@@ -139,16 +146,16 @@ public class AdvertService {
             logger.log(Level.INFO, "advertRegexMap size: " + advertRegexMap.size());
             //16
             logger.log(Level.INFO, "carAdParameterMap size: " + carAdParameterMap.size());
-//            StringBuilder errorMessageSbAdvert = new StringBuilder();
-//            for (Map.Entry<String, String> element : carAdParameterMap.entrySet()) {
-//                if (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())) {
-//                    errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
-//                }
-//            }
-//            if (errorMessageSbAdvert.length() != 0) {
-//                logger.log(Level.INFO, "errorMessageSbAdvert !== null. errorMessageSbAdvert: " + errorMessageSbAdvert);
-//                throw new ServiceException(String.valueOf(errorMessageSbAdvert));
-//            }
+            StringBuilder errorMessageSbAdvert = new StringBuilder();
+            for (Map.Entry<String, String> element : carAdParameterMap.entrySet()) {
+                if (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())) {
+                    errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
+                }
+            }
+            if (errorMessageSbAdvert.length() != 0) {
+                logger.log(Level.INFO, "errorMessageSbAdvert !== null. errorMessageSbAdvert: " + errorMessageSbAdvert);
+                throw new ServiceException(String.valueOf(errorMessageSbAdvert));
+            }
             logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method. " +
                     "return AdvertParameterValidationState: " + advertParameterValidationState.name());
             return advertParameterValidationState;

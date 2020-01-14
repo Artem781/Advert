@@ -11,7 +11,7 @@
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <p>ERROR: ${message}</p>
 
     Request from ${pageContext.errorData.requestURI} is failed

@@ -10,7 +10,7 @@
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
 <header>
     <%@include file="include/menustart.jsp" %>
 </header>

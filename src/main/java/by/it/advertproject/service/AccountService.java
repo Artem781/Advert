@@ -226,14 +226,19 @@ public class AccountService {
                 logger.log(Level.INFO, "from AccountService. updateProfileData method. catch block ");
                 throw new ServiceException(MESSAGE_LOGIN_ERROR);
             }
-            account.setName(name);
-            String encryptedPassword = DigestUtils.md5Hex(password);
-            account.setPassword(encryptedPassword);
+//            account.setName(name);
+//            String encryptedPassword = DigestUtils.md5Hex(password);
+//            account.setPassword(encryptedPassword);
             userDataValidationState = DataParameterValidator
                     .validateParameter(name, password, tel, email);
             logger.log(Level.INFO, "from AccountService. updateProfileData method. (userDataValidationState == UserDataValidationState.VALID): "
                     + (userDataValidationState == UserDataValidationState.VALID));
             if (userDataValidationState == UserDataValidationState.VALID) {
+                account.setName(name);
+                String encryptedPassword = DigestUtils.md5Hex(password);
+                account.setPassword(encryptedPassword);
+                account.setEmail(email);
+                account.setTel(tel);
                 try {
                     logger.log(Level.INFO, "from AccountService. updateProfileData method. try block accountDao.update(account)");
                     accountDao.update(account);

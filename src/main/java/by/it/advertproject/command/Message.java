@@ -20,6 +20,26 @@ public class Message {
     public static final String EMAIL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-email";
     public static final String TEL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-telephone";
 
+
+
+
+    public static final String CAR_TITLE_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-title";
+    public static final String CAR_BRAND_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-brand";
+    public static final String CAR_MODEL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-model";
+    public static final String CAR_COLOR_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-color";
+    public static final String CAR_BODY_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-body";
+    public static final String CAR_PRODUCTION_YEAR_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-production-year";
+    public static final String ENGINE_VOLUME_INCORRECT_FORMAT_MESSAGE = "message.non-valid-engine-volume";
+    public static final String AT_TYPE_INCORRECT_FORMAT_MESSAGE = "message.non-valid-at-type";
+    public static final String CAR_DRIVEUNIT_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-driveunit";
+    public static final String CAR_EQUIPMENT_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-equipment";
+    public static final String CAR_MILLAGE_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-millage";
+    public static final String IF_CRASHED_INCORRECT_FORMAT_MESSAGE = "message.non-valid-if-crashed";
+    public static final String CAR_DESCRIPTION_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-description";
+    public static final String CAR_PRICE_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-price";
+
+
+
     public static final String SUCCESS_UPDATE_MESSAGE = "messages.success-update-login-password";
     public static final String CREATE_POST_ERROR_MESSAGE = "message.can-not-create-post";
     public static final String UNSUPPORTED_IMAGE_FORMAT_MESSAGE = "message.invalid-photo-format";

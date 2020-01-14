@@ -12,7 +12,7 @@
     <%@include file="include/head.jsp" %>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
         <%@include file="include/menustart.jsp" %>
         <a class="dropdown-item" href="controller?command=set_lang&page=to-createad">
@@ -319,54 +319,56 @@
         <%--        value="${car_if_crashed_attr}"--%>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">
+            <label class="col-md-4 control-label" for="accident-try">
                 <fmt:message key="label.choose-is-crashed" bundle="${rb}"/>
             </label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input"
-                       type="radio"
-                       name="if-crashed-true"
-                       id="inlineRadio1"
-                       value=""
-                >
-                <label class="form-check-label" for="inlineRadio1">yes</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input"
-                       type="radio"
-                       name="if-crashed-false"
-                       id="inlineRadio2"
-                       value=""
-                >
-                <label class="form-check-label" for="inlineRadio2">no</label>
+            <%--            <div class="form-check form-check-inline">--%>
+            <div class="col-md-4">
+                <%--                <input class="form-check-input"--%>
+                <label class="radio-inline" for="accident-try">
+                    <input type="radio"
+                           name="if-crashed"
+                           id="accident-try"
+                           value=""
+                    >
+                    <fmt:message key="label.choose-is-crashed-yes" bundle="${rb}"/>
+                </label>
+                <label class="radio-inline" for="accident-no">
+                    <input type="radio"
+                           name="if-crashed"
+                           id="accident-no"
+                           value=""
+                    >
+                    <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>
+                </label>
             </div>
         </div>
 
 
-<%--        <div class="form-group">--%>
-<%--            <label class="col-md-4 control-label">--%>
-<%--                <fmt:message key="label.choose-is-crashed" bundle="${rb}"/>--%>
-<%--            </label>--%>
-<%--            <div class="col-md-4">--%>
-<%--                <label class="radio-inline" for="crashed-0">--%>
-<%--                    <input type="radio"--%>
-<%--                           name="ifcrashed"--%>
-<%--                           id="crashed-0"--%>
-<%--                           value="${car_if_crashed_attr}"--%>
-<%--                    &lt;%&ndash;checked="checked"&ndash;%&gt;--%>
-<%--                    >--%>
-<%--                    <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>--%>
-<%--                </label>--%>
-<%--                <label class="radio-inline" for="crashed-1">--%>
-<%--                    <input type="radio"--%>
-<%--                           name="ifcrashed"--%>
-<%--                           id="crashed-1"--%>
-<%--                           value="${car_if_crashed_attr}"--%>
-<%--                    >--%>
-<%--                    <fmt:message key="label.choose-is-crashed-yes" bundle="${rb}"/>--%>
-<%--                </label>--%>
-<%--            </div>--%>
-<%--        </div>--%>
+        <%--        <div class="form-group">--%>
+        <%--            <label class="col-md-4 control-label">--%>
+        <%--                <fmt:message key="label.choose-is-crashed" bundle="${rb}"/>--%>
+        <%--            </label>--%>
+        <%--            <div class="col-md-4">--%>
+        <%--                <label class="radio-inline" for="crashed-0">--%>
+        <%--                    <input type="radio"--%>
+        <%--                           name="ifcrashed"--%>
+        <%--                           id="crashed-0"--%>
+        <%--                           value="${car_if_crashed_attr}"--%>
+        <%--                    &lt;%&ndash;checked="checked"&ndash;%&gt;--%>
+        <%--                    >--%>
+        <%--                    <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>--%>
+        <%--                </label>--%>
+        <%--                <label class="radio-inline" for="crashed-1">--%>
+        <%--                    <input type="radio"--%>
+        <%--                           name="ifcrashed"--%>
+        <%--                           id="crashed-1"--%>
+        <%--                           value="${car_if_crashed_attr}"--%>
+        <%--                    >--%>
+        <%--                    <fmt:message key="label.choose-is-crashed-yes" bundle="${rb}"/>--%>
+        <%--                </label>--%>
+        <%--            </div>--%>
+        <%--        </div>--%>
 
         <!-- Description input-->
         <div class="form-group">

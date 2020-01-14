@@ -1,5 +1,6 @@
 package by.it.advertproject.command.impl.account;
 
+import by.it.advertproject.bean.Account;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.ServiceException;
 import by.it.advertproject.service.AccountService;
@@ -32,11 +33,13 @@ public class UpdateProfileCommand implements Command {
         AccountService accountService = new AccountService();
         try {
             logger.log(Level.INFO, "from UpdateProfileCommand. try ");
-            accountService.updateProfileData(accountId, name, password, confirm, email, tel);
+            Account account = accountService.updateProfileData(accountId, name, password, confirm, email, tel);
             logger.log(Level.INFO, "from UpdateProfileCommand. try. after updateProfileData ");
-            content.putSessionAttribute(ATTR_NAME_USER, name);
-            content.putRequestAttribute(ATTR_NAME_TELEPHONE, tel);
-            content.putRequestAttribute(ATTR_NAME_EMAIL, email);
+//            content.putSessionAttribute(ATTR_NAME_USER, name);
+            content.putSessionAttribute(ATTR_NAME_USER, account.getName());
+            content.putRequestAttribute(ATTR_NAME_TELEPHONE, account.getTel());
+            content.putRequestAttribute(ATTR_NAME_EMAIL, account.getEmail());
+            content.putRequestAttribute(ATTR_NAME_ACCOUNT, account);
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, SUCCESS_UPDATE_MESSAGE).getUrl();
             content.putRequestAttribute(ATTR_NAME_FB, SUCCESS_UPDATE_MESSAGE);

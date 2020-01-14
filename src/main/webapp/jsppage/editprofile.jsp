@@ -12,7 +12,7 @@
     <%@include file="include/head.jsp" %>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
         <%@include file="include/menustart.jsp" %>
         <a class="dropdown-item" href="controller?command=set_lang&page=to_edit_profile">
@@ -31,12 +31,12 @@
         <fieldset>
             <!-- Form Name -->
             <legend>
-
+                <fmt:message key="label.choose-avatar" bundle="${rb}"/>
             </legend>
             <!-- File Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">
-                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>
+<%--                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>--%>
                 </label>
                 <div class="col-md-4">
                     <input id="filebutton" name="file" value="" class="input-file" type="file">
@@ -45,7 +45,7 @@
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton">
-                    </label>
+                </label>
                 <div class="col-md-4">
                     <button type="submit"
                             id="singlebutton"
@@ -59,8 +59,10 @@
     </form>
     <br>
     <hr>
+    <!--
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     //make attribute success colour
+    -->
     <h4>
         ${feedback}
     </h4>

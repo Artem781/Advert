@@ -163,6 +163,14 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public void update(Account account) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) name: {" + account.getName());
+        logger.log(Level.INFO, "from AccountDaoImpl) login: {" + account.getLogin());
+        logger.log(Level.INFO, "from AccountDaoImpl) password {" + account.getPassword());
+        logger.log(Level.INFO, "from AccountDaoImpl) birthday {" + account.getBirthday());
+        logger.log(Level.INFO, "from AccountDaoImpl) tel {" + account.getTel());
+        logger.log(Level.INFO, "from AccountDaoImpl) email {" + account.getEmail());
+
+
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
