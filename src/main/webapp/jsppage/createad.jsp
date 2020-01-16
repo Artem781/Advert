@@ -28,13 +28,20 @@
           method="POST"
     <%--enctype="multipart/form-data">--%>
     <%--<input type="hidden" name="command" value="create_advert"/>--%>
-
+    <div class="alert-danger">
+        ${errorMessageAttrCreateAdvert}
+    </div>
     <fieldset>
         <!-- Form Create advert -->
         <legend>
             <fmt:message key="label.create-ad" bundle="${rb}"/>
         </legend>
-
+        <div class="alert-danger">
+            ${incorrectCarTitleAttr}
+        </div>
+        <div class="alert-danger">
+            ${incorrectCarTitleAttr}
+        </div>
         <!-- Title input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="title">
@@ -57,6 +64,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarBrandAttr}
+        </div>
         <!-- Select Brand -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="brnd">
@@ -123,6 +133,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarModelAttr}
+        </div>
         <!-- Model input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="model">
@@ -146,6 +159,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarColorAttr}
+        </div>
         <!-- Color input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="color">
@@ -169,6 +185,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarBodyAttr}
+        </div>
         <!-- Select body -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="body">
@@ -197,6 +216,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarProductionYearAttr}
+        </div>
         <!-- Production year input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="year">
@@ -217,6 +239,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectEngineVolumeAttr}
+        </div>
         <!-- Volume engine input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="engine">
@@ -235,6 +260,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectAtTypeAttr}
+        </div>
         <!-- At Multiple Radios (inline) -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="at-0">
@@ -261,6 +289,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarDriveunitAttr}
+        </div>
         <!-- Select drive unit -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="driveunit">
@@ -279,6 +310,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarEquipmentAttr}
+        </div>
         <!-- Select equipment -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="equipment">
@@ -298,6 +332,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarMillageAttr}
+        </div>
         <!-- Text Mileage-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="millage">
@@ -315,6 +352,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectIfCrashedAttr}
+        </div>
         <!-- Is crashed Multiple Radios (inline) -->
         <%--        value="${car_if_crashed_attr}"--%>
 
@@ -370,6 +410,9 @@
         <%--            </div>--%>
         <%--        </div>--%>
 
+        <div class="alert-danger">
+            ${incorrectCarDescriptionAttr}
+        </div>
         <!-- Description input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="description">
@@ -389,6 +432,9 @@
             </div>
         </div>
 
+        <div class="alert-danger">
+            ${incorrectCarPriceAttr}
+        </div>
         <!-- Price input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="price">

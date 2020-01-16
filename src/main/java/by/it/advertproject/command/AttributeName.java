@@ -1,11 +1,12 @@
 package by.it.advertproject.command;
 
 public class AttributeName {
-//    public static final String ATTR_NAME_USER = "user";
+    //    public static final String ATTR_NAME_USER = "user";
     public static final String ATTR_NAME_USER = "nameUser";
     public static final String ATTR_NAME_FB = "fbAttr";
 
     public static final String ATTR_NAME_ERROR_MESSAGE = "errorMessageAttr";
+    public static final String ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT = "errorMessageAttrCreateAdvert";
     public static final String ATTR_NAME_ERROR_NAME = "incorrectNameAttr";
     public static final String ATTR_NAME_ERROR_LOGIN = "incorrectLoginAttr";
     public static final String ATTR_NAME_ERROR_PASSWORD = "incorrectPassAttr";
@@ -16,6 +17,21 @@ public class AttributeName {
     public static final String ATTR_NAME_BUSY_LOGIN = "busyLoginAttr";
     public static final String ATTR_NAME_LIST_ALL_ADVERT = "listAllAdvertAttr";
     public static final String ATTR_NAME_LIST_USER_ADVERT = "listUserAdvertAttr";
+
+    public static final String ATTR_NAME_ERROR_CAR_TITLE = "incorrectCarTitleAttr";
+    public static final String ATTR_NAME_ERROR_CAR_BRAND = "incorrectCarBrandAttr";
+    public static final String ATTR_NAME_ERROR_CAR_MODEL = "incorrectCarModelAttr";
+    public static final String ATTR_NAME_ERROR_CAR_COLOR = "incorrectCarColorAttr";
+    public static final String ATTR_NAME_ERROR_CAR_BODY = "incorrectCarBodyAttr";
+    public static final String ATTR_NAME_ERROR_CAR_PRODUCTION_YEAR = "incorrectCarProductionYearAttr";
+    public static final String ATTR_NAME_ERROR_ENGINE_VOLUME = "incorrectEngineVolumeAttr";
+    public static final String ATTR_NAME_ERROR_AT_TYPE_INCORRECT = "incorrectAtTypeAttr";
+    public static final String ATTR_NAME_ERROR_CAR_DRIVEUNIT = "incorrectCarDriveunitAttr";
+    public static final String ATTR_NAME_ERROR_CAR_EQUIPMENT = "incorrectCarEquipmentAttr";
+    public static final String ATTR_NAME_ERROR_CAR_MILLAGE = "incorrectCarMillageAttr";
+    public static final String ATTR_NAME_ERROR_IF_CRASHED = "incorrectIfCrashedAttr";
+    public static final String ATTR_NAME_ERROR_CAR_DESCRIPTION = "incorrectCarDescriptionAttr";
+    public static final String ATTR_NAME_ERROR_CAR_PRICE = "incorrectCarPriceAttr";
 
     public static final String ATTR_NAME_CHECK_ENTER_DATA = "checkEnterData";
     public static final String ATTR_NAME_ERROR_LOGIN_PASS_MESSAGE = "errorLoginPassMessage";
@@ -31,7 +47,7 @@ public class AttributeName {
     public static final String ATTR_NAME_SUBSCRIPTION = "subscribe";
     public static final String ATTR_NAME_WRONG_ACTION = "wrongAction";
     public static final String ATTR_NAME_LANG = "lang";
-//    public static final String ATTR_IMG_LANG = "imgLangAttr";
+    //    public static final String ATTR_IMG_LANG = "imgLangAttr";
 //    public static final String ATTR_IMG_ALT_LANG = "imgAltLangAttr";
     public static final String ATTR_NAME_IMG_STATUS = "img_status";
     public static final String ATTR_NAME_GIVE_ADMIN_LEVEL = "give_admin_level";
@@ -52,6 +68,7 @@ public class AttributeName {
     public static final String ATTR_CAR_PRICE = "car_price_attr";
     public static final String ATTR_CREATED_ADVERT = "created_advert_attr";
     public static final String ATTR_OBJECT_ADVERT = "object_advert_attr";
+
     public AttributeName() {
     }
 }

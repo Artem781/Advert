@@ -142,14 +142,26 @@ public class AdvertService {
 //            errorMessageMapAdvert.put(PARAM_CREATE_AD, PASSWORD_CONFIRM_INCORRECT_FORMAT_MESSAGE);
             //14
             logger.log(Level.INFO, "errorMessageMapAdvert size: " + errorMessageMapAdvert.size());
-            //8
+            //14
             logger.log(Level.INFO, "advertRegexMap size: " + advertRegexMap.size());
-            //16
+            //14
             logger.log(Level.INFO, "carAdParameterMap size: " + carAdParameterMap.size());
             StringBuilder errorMessageSbAdvert = new StringBuilder();
+            int count = 0;
             for (Map.Entry<String, String> element : carAdParameterMap.entrySet()) {
-                if (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())) {
+                if (element.getValue() != null) {
+                    logger.log(Level.INFO, "(!Pattern.matches(advertRegexMap.get(element.getKey()): " + element.getKey() +
+                            ", element.getValue(): " + element.getValue());
+                    logger.log(Level.INFO, "Pattern.matches:  " + (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())));
+                    if (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())) {
+                        logger.log(Level.INFO, "Pattern.matches: yes ");
+                        errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
+                    }
+                    count++;
+                } else {
+                    logger.log(Level.INFO, "(element.getValue() != null):  " + (element.getValue() != null));
                     errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
+
                 }
             }
             if (errorMessageSbAdvert.length() != 0) {

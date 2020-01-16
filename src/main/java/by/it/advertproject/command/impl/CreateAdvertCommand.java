@@ -7,6 +7,7 @@ import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
 import by.it.advertproject.service.AccountService;
 import by.it.advertproject.service.AdvertService;
+import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +17,9 @@ import java.util.List;
 import java.util.Map;
 
 import static by.it.advertproject.command.AttributeName.*;
+import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
+import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
 public class CreateAdvertCommand implements Command {
     private static final Logger logger = LogManager.getLogger(CreateAdvertCommand.class);
@@ -51,20 +54,24 @@ public class CreateAdvertCommand implements Command {
         carAdParameterMap.put(PARAM_CAR_EQUIPMENT, carEquipment);
         String carMillage = content.getRequestParameters(PARAM_CAR_MILLAGE, 0);
         carAdParameterMap.put(PARAM_CAR_MILLAGE, carMillage);
-        String ifCrashedTrue = content.getRequestParameters(PARAM_IF_CRASHED_TRUE, 0);
-        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedTrue);
-        String ifCrashedFalse = content.getRequestParameters(PARAM_IF_CRASHED_FALSE, 0);
-        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedFalse);
+        String ifCrashed = content.getRequestParameters(PARAM_IF_CRASHED, 0);
+        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashed);
+
+//        String ifCrashedTrue = content.getRequestParameters(PARAM_IF_CRASHED_TRUE, 0);
+//        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedTrue);
+//        String ifCrashedFalse = content.getRequestParameters(PARAM_IF_CRASHED_FALSE, 0);
+//        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedFalse);
+
         String carDescription = content.getRequestParameters(PARAM_CAR_DESCRIPTION, 0);
         carAdParameterMap.put(PARAM_CAR_DESCRIPTION, carDescription);
         String carPrice = content.getRequestParameters(PARAM_CAR_PRICE, 0);
         carAdParameterMap.put(PARAM_CAR_PRICE, carPrice);
 //        String carPhotoUpload = content.getRequestParameters(PARAM_CAR_PHOTO_UPLOAD, 0);
 //        carAdParameterMap.put(PARAM_CAR_PHOTO_UPLOAD, carPhotoUpload);
-        String createAd = content.getRequestParameters(PARAM_CREATE_AD, 0);
-        carAdParameterMap.put(PARAM_CREATE_AD, createAd);
+//        String createAd = content.getRequestParameters(PARAM_CREATE_AD, 0);
+//        carAdParameterMap.put(PARAM_CREATE_AD, createAd);
         String accountLogin = (String) content.getSessionAttribute(ATTR_NAME_LOGIN);
-        carAdParameterMap.put(ATTR_NAME_LOGIN, accountLogin);
+//        carAdParameterMap.put(ATTR_NAME_LOGIN, accountLogin);
 //        String accountId = (String) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
         Long accountId = (Long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
 //        carAdParameterMap.put(ATTR_NAME_ACCOUNT_ID, accountId);
@@ -80,8 +87,9 @@ public class CreateAdvertCommand implements Command {
         content.putRequestAttribute(ATTR_CAR_DRIVEUNIT, carDriveUnit);
         content.putRequestAttribute(ATTR_CAR_EQUIPMENT, carEquipment);
         content.putRequestAttribute(ATTR_CAR_MILLAGE, carMillage);
-        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedTrue);
-        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedFalse);
+        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashed);
+//        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedTrue);
+//        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedFalse);
         content.putRequestAttribute(ATTR_CAR_DESCRIPTION, carDescription);
         content.putRequestAttribute(ATTR_CAR_PRICE, carPrice);
 //        content.putRequestAttribute(PARAM_CAR_PHOTO_UPLOAD, carPhotoUpload);
@@ -114,47 +122,71 @@ public class CreateAdvertCommand implements Command {
             logger.log(Level.INFO, "from CreateAdvertCommand. page: " + page);
         } catch (ServiceException e) {
             logger.log(Level.INFO, "from CreateAdvertCommand. catch block. e.getMessage(): " + e.getMessage());
-//            messageManager = e.getMessage().trim();
-//            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
-//                    MessageManager.getProperty(MESSAGE_INCORRECT_SIGN_UP_DATA, String.valueOf(ENGLISH)));
-//            String[] splitAttr = messageManager.split("\t");
-//            for (String element : splitAttr) {
-//                logger.log(Level.INFO, "element: " + element);
-//                switch (element.trim()) {
-//                    case NAME_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_NAME,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case LOGIN_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_LOGIN,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case PASSWORD_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_PASSWORD,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case BIRTHDAY_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_BIRTHDAY,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case EMAIL_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_EMAIL,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case TEL_INCORRECT_FORMAT_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_TEL,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case NON_CONFIRM_PASSWORD_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_PASS_NO_EQUALS_PASS_CONFIRM,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                    case BUSY_LOGIN_MESSAGE:
-//                        content.putRequestAttribute(ATTR_NAME_BUSY_LOGIN,
-//                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
-//                        break;
-//                }
-//            }
+            messageManager = e.getMessage().trim();
+            content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT,
+                    MessageManager.getProperty(MESSAGE_INCORRECT_CREATE_AD_DATA, String.valueOf(ENGLISH)));
+            String[] splitAttr = messageManager.split("\t");
+            for (String element : splitAttr) {
+                logger.log(Level.INFO, "element: " + element);
+                switch (element.trim()) {
+                    case CAR_TITLE_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_TITLE,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_BRAND_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_BRAND,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_MODEL_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_MODEL,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_COLOR_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_COLOR,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_BODY_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_BODY,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_PRODUCTION_YEAR_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_PRODUCTION_YEAR,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case ENGINE_VOLUME_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_ENGINE_VOLUME,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case AT_TYPE_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_AT_TYPE_INCORRECT,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_DRIVEUNIT_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_DRIVEUNIT,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_EQUIPMENT_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_EQUIPMENT,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_MILLAGE_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_MILLAGE,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case IF_CRASHED_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_IF_CRASHED,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_DESCRIPTION_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_DESCRIPTION,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                    case CAR_PRICE_INCORRECT_FORMAT_MESSAGE:
+                        content.putRequestAttribute(ATTR_NAME_ERROR_CAR_PRICE,
+                                MessageManager.getProperty(element, String.valueOf(ENGLISH)));
+                        break;
+                }
+            }
             page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
             transmissionType = TransmissionType.FORWARD;

@@ -36,7 +36,7 @@
             <!-- File Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">
-<%--                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>--%>
+                    <%--                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>--%>
                 </label>
                 <div class="col-md-4">
                     <input id="filebutton" name="file" value="" class="input-file" type="file">

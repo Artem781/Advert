@@ -22,7 +22,7 @@ public class Message {
 
 
 
-
+    public static final String MESSAGE_INCORRECT_CREATE_AD_DATA = "massage.incorrect-create-ad-data";
     public static final String CAR_TITLE_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-title";
     public static final String CAR_BRAND_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-brand";
     public static final String CAR_MODEL_INCORRECT_FORMAT_MESSAGE = "message.non-valid-car-model";
