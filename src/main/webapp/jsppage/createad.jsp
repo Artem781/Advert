@@ -28,16 +28,13 @@
           method="POST"
     <%--enctype="multipart/form-data">--%>
     <%--<input type="hidden" name="command" value="create_advert"/>--%>
-    <div class="alert-danger">
-        ${errorMessageAttrCreateAdvert}
-    </div>
     <fieldset>
         <!-- Form Create advert -->
         <legend>
             <fmt:message key="label.create-ad" bundle="${rb}"/>
         </legend>
         <div class="alert-danger">
-            ${incorrectCarTitleAttr}
+            ${errorMessageAttrCreateAdvert}
         </div>
         <div class="alert-danger">
             ${incorrectCarTitleAttr}
@@ -198,20 +195,20 @@
                         name="carbody"
                         value="${car_body_attr}"
                         class="form-control">
-                    <option value="Sedan">Седан</option>
-                    <option value="Hatchback">Хэтчбек</option>
-                    <option value="Universal">Универсал</option>
-                    <option value="Liftback">Лифтбек</option>
-                    <option value="Coupe">Купе</option>
-                    <option value="Cabriolet">Кабриолет</option>
-                    <option value="Roadster">Роадстер</option>
-                    <option value="Targa">Тарга</option>
-                    <option value="Limo">Лимузин</option>
-                    <option value="Offroad">Джип</option>
-                    <option value="Crossover">Кроссовер</option>
-                    <option value="Pickup">Пикап</option>
-                    <option value="Furgon">Фургон</option>
-                    <option value="Minivan">Минивен</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Universal">Universal</option>
+                    <option value="Liftback">Liftback</option>
+                    <option value="Coupe">Coupe</option>
+                    <option value="Cabriolet">Cabriolet</option>
+                    <option value="Roadster">Roadster</option>
+                    <option value="Targa">Targa</option>
+                    <option value="Limo">Limo</option>
+                    <option value="Offroad">Offroad</option>
+                    <option value="Crossover">Crossover</option>
+                    <option value="Pickup">Pickup</option>
+                    <option value="Furgon">Furgon</option>
+                    <option value="Minivan">Minivan</option>
                 </select>
             </div>
         </div>
@@ -236,6 +233,12 @@
                 <%--maxlength="4"--%>
                 <%--min="1900" --%>
                 <%--max="2019">--%>
+                >
+                <span class="form__error">
+                        <fmt:message key="label.format-car-production-year" bundle="${rb}"/>
+                    </span>
+
+
             </div>
         </div>
 
@@ -257,6 +260,9 @@
                 <%--required--%>
                        class="form-control input-md"
                 >
+                <span class="form__error">
+                        <fmt:message key="label.format-car-engine-volume" bundle="${rb}"/>
+                    </span>
             </div>
         </div>
 
@@ -271,17 +277,17 @@
             <div class="col-md-4">
                 <label class="radio-inline" for="at-0">
                     <input type="radio"
-                           name="attype"
+                           name="atType"
                            id="at-0"
-                           value="${car_at_type_attr}"
-                    <%--checked="checked"--%>
+                           value="Automatic"
+                           checked="checked"
                     >
                     <fmt:message key="label.choose-at-automatic" bundle="${rb}"/>
                 </label>
                 <label class="radio-inline" for="at-1">
                     <input type="radio"
-                           name="attype"
-                           value="${car_at_type_attr}"
+                           name="atType"
+                           value="Mechanic"
                            id="at-1"
                     >
                     <fmt:message key="label.choose-at-mechanical" bundle="${rb}"/>
@@ -302,10 +308,10 @@
                         name="cardriveunit"
                         value="${car_driveunit_attr}"
                         class="form-control">
-                    <option value="FWD">Передний</option>
-                    <option value="RWD">Задний</option>
-                    <option value="4WD">Полный(постоянный)</option>
-                    <option value="AWD">Полный(подключаемый)</option>
+                    <option value="FWD">Front-Wheel Drive</option>
+                    <option value="RWD">Rear Wheel Drive</option>
+                    <option value="4WD">Full(constant) 4WD</option>
+                    <option value="AWD">Full(plug-in) AWD</option>
                 </select>
             </div>
         </div>
@@ -323,11 +329,11 @@
                         name="carequipment"
                         value="${car_equipment_attr}"
                         class="form-control">
-                    <option value="Base">Базовая</option>
-                    <option value="Minimal">Минимальная</option>
-                    <option value="Middle">Средняя</option>
-                    <option value="Top">Люкс</option>
-                    <option value="Premium">Премиум</option>
+                    <option value="Base">Base</option>
+                    <option value="Minimal">Minimal</option>
+                    <option value="Middle">Middle</option>
+                    <option value="Top">Top</option>
+                    <option value="Premium">Premium</option>
                 </select>
             </div>
         </div>
@@ -356,28 +362,25 @@
             ${incorrectIfCrashedAttr}
         </div>
         <!-- Is crashed Multiple Radios (inline) -->
-        <%--        value="${car_if_crashed_attr}"--%>
-
         <div class="form-group">
             <label class="col-md-4 control-label" for="accident-try">
                 <fmt:message key="label.choose-is-crashed" bundle="${rb}"/>
             </label>
-            <%--            <div class="form-check form-check-inline">--%>
             <div class="col-md-4">
-                <%--                <input class="form-check-input"--%>
                 <label class="radio-inline" for="accident-try">
                     <input type="radio"
-                           name="if-crashed"
+                           name="trafficAccident"
                            id="accident-try"
-                           value=""
+                           value="wasTrafficAccident"
                     >
                     <fmt:message key="label.choose-is-crashed-yes" bundle="${rb}"/>
                 </label>
                 <label class="radio-inline" for="accident-no">
                     <input type="radio"
-                           name="if-crashed"
+                           name="trafficAccident"
                            id="accident-no"
-                           value=""
+                           value="notTrafficAccident"
+                           checked="checked"
                     >
                     <fmt:message key="label.choose-is-crashed-not" bundle="${rb}"/>
                 </label>
@@ -450,6 +453,9 @@
                 <%--required--%>
                        class="form-control input-md"
                 >
+                <span class="form__error">
+                        <fmt:message key="label.format-car-price" bundle="${rb}"/>
+                    </span>
             </div>
         </div>
 

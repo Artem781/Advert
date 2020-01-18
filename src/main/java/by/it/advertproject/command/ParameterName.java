@@ -18,13 +18,12 @@ public class ParameterName {
     public static final String PARAM_CAR_BODY = "carbody";
     public static final String PARAM_CAR_PRODUCTION_YEAR = "productionyear";
     public static final String PARAM_ENGINE_VOLUME = "enginevolume";
-    public static final String PARAM_AT_TYPE = "attype";
+//    public static final String PARAM_AT_TYPE = "attype";
+    public static final String PARAM_AT_TYPE = "atType";
     public static final String PARAM_CAR_DRIVEUNIT = "cardriveunit";
     public static final String PARAM_CAR_EQUIPMENT = "carequipment";
     public static final String PARAM_CAR_MILLAGE = "carmillage";
-    public static final String PARAM_IF_CRASHED_TRUE = "if-crashed-true";
-    public static final String PARAM_IF_CRASHED_FALSE = "if-crashed-false";
-    public static final String PARAM_IF_CRASHED = "ifcrashed";
+    public static final String PARAM_IF_CRASHED = "trafficAccident";
     public static final String PARAM_CAR_DESCRIPTION = "cardescription";
     public static final String PARAM_CAR_PRICE = "carprice";
     public static final String PARAM_CAR_PHOTO_UPLOAD = "carphotoupload";

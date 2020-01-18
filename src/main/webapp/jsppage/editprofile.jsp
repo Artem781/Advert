@@ -80,7 +80,9 @@
                 <fmt:message key="label.update-data-user" bundle="${rb}"/>
             </legend>
             <br>
-            ${checkEnterData}
+            <div class="alert-danger">
+                ${checkEnterData}
+            </div>
             <div class="alert-danger">
                 ${errorMessageAttr}
             </div>

@@ -95,13 +95,13 @@ public class AdvertService {
         private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я- ]{1,45}";
         private static final String BODY_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
         private static final String PRODUCTION_YEAR_REGEX = "[0-9]{4}";
-        private static final String ENGINE_VOLUME_REGEX = "[0-9]{4}";
-        private static final String AT_TYPE_REGEX = "[a-zA-Zа-яА-Я]{1,5}";
+        private static final String ENGINE_VOLUME_REGEX = "[1-9]{1}[0-9]{3}";
+        private static final String AT_TYPE_REGEX = "Automatic|Mechanic";
         private static final String DRIVEUNIT_REGEX = "[a-zA-Zа-яА-Я0-9()]{1,45}";
         private static final String EQUIPMENT_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
-        private static final String CAR_MILLAGE_REGEX = "[0-9]{1,9}";
-        private static final String IF_CRASHED_REGEX = "[a-zA-Zа-яА-Я]{1,5}";
-        private static final String CAR_PRICE_REGEX = "[0-9]{1,5}";
+        private static final String CAR_MILLAGE_REGEX = "\\d{1,9}";
+        private static final String IF_CRASHED_REGEX = "wasTrafficAccident|notTrafficAccident";
+        private static final String CAR_PRICE_REGEX = "\\d{1,5}";
 
         public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) throws ServiceException {
             AdvertParameterValidationState advertParameterValidationState = AdvertParameterValidationState.VALID;
