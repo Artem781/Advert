@@ -20,6 +20,7 @@ public class PartsRequestContent extends RequestContent {
     private Collection<Part> parts;
 
     public void extractValues(HttpServletRequest request) throws CommandException {
+        logger.log(Level.INFO, "from PartsRequestContent. extractValues method. ");
 
         super.extractValues(request);
         try {

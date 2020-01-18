@@ -25,7 +25,9 @@
     </h2>
     <br>
     <hr>
-
+    <h4>
+        ${exampleAttr}
+    </h4>
     <form class="form-horizontal" method="post" action="upload" enctype="multipart/form-data">
         <input type="hidden" name="command" value="update_photo"/>
         <fieldset>
@@ -33,6 +35,9 @@
             <legend>
                 <fmt:message key="label.choose-avatar" bundle="${rb}"/>
             </legend>
+            <div class="alert-danger">
+                ${errorMessageAttrUploadMessage}
+            </div>
             <!-- File Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">
@@ -79,13 +84,19 @@
             <legend>
                 <fmt:message key="label.update-data-user" bundle="${rb}"/>
             </legend>
-            <br>
+            <div class="alert-danger">
+                ${feedback}
+            </div>
+            <div class="alert-danger">
+                ${fbAttr}
+            </div>
             <div class="alert-danger">
                 ${checkEnterData}
             </div>
             <div class="alert-danger">
                 ${errorMessageAttr}
             </div>
+            <br>
             <div class="alert-danger">
                 ${incorrectNameAttr}
             </div>

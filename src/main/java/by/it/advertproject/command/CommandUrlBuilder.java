@@ -34,7 +34,7 @@ public enum CommandUrlBuilder {
         public String getUrl() {
             String params = this.params;
             this.params = "";
-            System.out.println("from CommandUrlBuilder\tTO_USER_PROFILE_PAGE enum) getUrl. " +
+            System.out.println("from CommandUrlBuilder\tTO_EDIT_USER_PROFILE_PAGE enum) getUrl. " +
                     "COMMAND_URL + params: " + COMMAND_URL + params);
             return COMMAND_URL + params;
         }

@@ -6,6 +6,7 @@ public class AttributeName {
     public static final String ATTR_NAME_FB = "fbAttr";
 
     public static final String ATTR_NAME_ERROR_MESSAGE = "errorMessageAttr";
+    public static final String ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE = "errorMessageAttrUploadMessage";
     public static final String ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT = "errorMessageAttrCreateAdvert";
     public static final String ATTR_NAME_ERROR_NAME = "incorrectNameAttr";
     public static final String ATTR_NAME_ERROR_LOGIN = "incorrectLoginAttr";

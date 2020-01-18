@@ -43,6 +43,7 @@ public class Message {
     public static final String SUCCESS_UPDATE_MESSAGE = "messages.success-update-login-password";
     public static final String CREATE_POST_ERROR_MESSAGE = "message.can-not-create-post";
     public static final String UNSUPPORTED_IMAGE_FORMAT_MESSAGE = "message.invalid-photo-format";
+    public static final String INCORRECT_CALL_FILE_MESSAGE = "message.invalid-photo-format";
     public static final String DELETE_POST_ERROR_MESSAGE = "message.can-not-delete-post";
     public static final String CAN_NOT_CREATE_COMMENT_MESSAGE = "message.can-not-create-comment";
     public static final String CAN_NOT_DELETE_COMMENT_MESSAGE = "message.can-not-delete-comment";
