@@ -58,6 +58,7 @@ public class RequestContent {
     }
 
     public void insertAttributes(HttpServletRequest request) {
+        Logger.log(Level.INFO, "requestAttributes.isEmpty(): " + requestAttributes.isEmpty());
         Logger.log(Level.INFO, "from insertAttributes. requestAttributes: " + requestAttributes.toString());
         for (Map.Entry<String, Object> entry : requestAttributes.entrySet()) {
             String key = entry.getKey();
@@ -79,6 +80,7 @@ public class RequestContent {
         Logger.log(Level.INFO, "attr: " + attr);
         requestAttributes.put(name, attr);
         Logger.log(Level.INFO, "from putRequestAttribute. requestAttributes: " + requestAttributes.toString());
+        Logger.log(Level.INFO, "requestAttributes.isEmpty(): " + requestAttributes.isEmpty());
 
     }
 

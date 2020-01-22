@@ -25,9 +25,9 @@
     </h2>
     <br>
     <hr>
-    <h4>
-        ${exampleAttr}
-    </h4>
+<%--    <h4>--%>
+<%--        ${exampleAttr}--%>
+<%--    </h4>--%>
     <form class="form-horizontal" method="post" action="upload" enctype="multipart/form-data">
         <input type="hidden" name="command" value="update_photo"/>
         <fieldset>
