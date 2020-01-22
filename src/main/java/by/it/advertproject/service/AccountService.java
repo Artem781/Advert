@@ -325,11 +325,15 @@ public class AccountService {
             logger.log(Level.INFO, "parameterMap size: " + parameterMap.size());
             StringBuilder errorMessageSb = new StringBuilder();
             for (Map.Entry<String, String> element : parameterMap.entrySet()) {
+                logger.log(Level.INFO, "!Pattern.matches(regexMap.get(element.getKey()): " +
+                        regexMap.get(element.getKey()) + ", element.getValue()): " + element.getValue() +
+                        " = " + (!Pattern.matches(regexMap.get(element.getKey()), element.getValue())));
                 if (!Pattern.matches(regexMap.get(element.getKey()), element.getValue())) {
                     errorMessageSb.append(errorMessageMap.get(element.getKey()) + "\t");
                 }
             }
             if (!parameterMap.get(PARAM_PASSWORD).equals(parameterMap.get(PARAM_PASSWORD_CONFIRM))) {
+                logger.log(Level.INFO, "!parameterMap.get(PARAM_PASSWORD).equals(parameterMap.get(PARAM_PASSWORD_CONFIRM))");
                 errorMessageSb.append(errorMessageMap.get(PASSWORD_EQUALS_CONFIRM_PASSWORD));
             }
             if (errorMessageSb.length() != 0) {

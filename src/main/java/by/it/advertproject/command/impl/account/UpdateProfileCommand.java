@@ -4,6 +4,7 @@ import by.it.advertproject.bean.Account;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.ServiceException;
 import by.it.advertproject.service.AccountService;
+import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import static by.it.advertproject.command.AttributeName.*;
 import static by.it.advertproject.command.Message.SUCCESS_UPDATE_MESSAGE;
 import static by.it.advertproject.command.ParameterName.*;
+import static java.util.Locale.ENGLISH;
 
 public class UpdateProfileCommand implements Command {
     private static final Logger logger = LogManager.getLogger(UpdatePhotoCommand.class);
@@ -41,8 +43,11 @@ public class UpdateProfileCommand implements Command {
             content.putRequestAttribute(ATTR_NAME_EMAIL, account.getEmail());
             content.putRequestAttribute(ATTR_NAME_ACCOUNT, account);
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
-                    .setParams(PARAM_NAME_FEEDBACK, SUCCESS_UPDATE_MESSAGE).getUrl();
-            content.putRequestAttribute(ATTR_NAME_FB, SUCCESS_UPDATE_MESSAGE);
+                    .setParams(PARAM_NAME_FEEDBACK,
+                            MessageManager.getProperty(SUCCESS_UPDATE_MESSAGE, String.valueOf(ENGLISH))
+//                            SUCCESS_UPDATE_MESSAGE
+                    ).getUrl();
+//            content.putRequestAttribute(ATTR_NAME_FB, SUCCESS_UPDATE_MESSAGE);
         } catch (ServiceException e) {
             logger.log(Level.INFO, "from UpdateProfileCommand. catch. e.getMessage(): " + e.getMessage());
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE

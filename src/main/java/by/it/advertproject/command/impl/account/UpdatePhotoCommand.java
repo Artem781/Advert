@@ -78,12 +78,13 @@ public class UpdatePhotoCommand implements Command {
                         InputStream inputStream = part.getInputStream();
                         accountService.updatePhoto(accountId, inputStream.readAllBytes());
                         mark = true;
-                    } else {
-                        logger.log(Level.INFO, UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
-//                        content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE, UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
-//                        return new Router(page, TransmissionType.REDIRECT);
-                        throw new CommandException(UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
                     }
+//                    else {
+//                        logger.log(Level.INFO, UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
+////                        content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE, UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
+////                        return new Router(page, TransmissionType.REDIRECT);
+//                        throw new CommandException(UNSUPPORTED_IMAGE_FORMAT_MESSAGE);
+//                    }
                 } else {
                     logger.log(Level.INFO, "elseeee");
                 }
@@ -92,7 +93,6 @@ public class UpdatePhotoCommand implements Command {
             logger.log(Level.INFO, "mark: " + mark);
             if (mark) {
                 logger.log(Level.INFO, "TO_USER_PROFILE_PAGE: ");
-
                 page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                         .setParams(PARAM_NAME_PAGE_ID, String.valueOf(accountId))
                         .getUrl();

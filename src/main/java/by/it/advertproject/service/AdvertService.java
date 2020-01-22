@@ -88,15 +88,15 @@ public class AdvertService {
     }
 
     private static class AdvertParameterValidator {
-        private static final String TITLE_REGEX = "[a-zа-яA-Z-А-Я][a-zа-яA-ZА-Я0-9\\-!?,. ]{7,49}";
-        private static final String DESCRIPTION_REGEX = "[a-zа-яA-Z-А-Я0-9.,?!\\- ]{7,2000}";
+        private static final String TITLE_REGEX = "[\\w]{1,49}";
+        private static final String DESCRIPTION_REGEX = "[a-zа-яA-Z-А-Я0-9.,?!\\- ]{7, 1999}";
         private static final String BRAND_REGEX = "[a-zA-Zа-яА-Я0-9- ]{1,45}";
         private static final String MODEL_REGEX = "[a-zA-Zа-яА-Я0-9 ]{1,45}";
         private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я- ]{1,45}";
         private static final String BODY_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
         private static final String PRODUCTION_YEAR_REGEX = "[0-9]{4}";
         private static final String ENGINE_VOLUME_REGEX = "[1-9]{1}[0-9]{3}";
-        private static final String AT_TYPE_REGEX = "Automatic|Mechanic";
+        private static final String AT_TYPE_REGEX = "Automatic|Mechanic{1,19}";
         private static final String DRIVEUNIT_REGEX = "[a-zA-Zа-яА-Я0-9()]{1,45}";
         private static final String EQUIPMENT_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
         private static final String CAR_MILLAGE_REGEX = "\\d{1,9}";

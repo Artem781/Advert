@@ -58,6 +58,7 @@ public class RequestContent {
     }
 
     public void insertAttributes(HttpServletRequest request) {
+        Logger.log(Level.INFO, "from insertAttributes. requestAttributes: " + requestAttributes.toString());
         for (Map.Entry<String, Object> entry : requestAttributes.entrySet()) {
             String key = entry.getKey();
             Object value = entry.getValue();
@@ -73,7 +74,12 @@ public class RequestContent {
     }
 
     public void putRequestAttribute(String name, Object attr) {
+        Logger.log(Level.INFO, "putRequestAttribute: ");
+        Logger.log(Level.INFO, "name: " + name);
+        Logger.log(Level.INFO, "attr: " + attr);
         requestAttributes.put(name, attr);
+        Logger.log(Level.INFO, "from putRequestAttribute. requestAttributes: " + requestAttributes.toString());
+
     }
 
     public void putSessionAttribute(String name, Object attr) {

@@ -68,12 +68,6 @@
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     //make attribute success colour
     -->
-    <h4>
-        ${feedback}
-    </h4>
-    <h4>
-        ${fbAttr}
-    </h4>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="update_profile_data"/>
         <%--<input type="hidden" name="accesslevel" value="user"/>--%>
