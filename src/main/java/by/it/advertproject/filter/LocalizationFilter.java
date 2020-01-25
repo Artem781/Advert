@@ -9,9 +9,8 @@ import java.io.IOException;
 import static by.it.advertproject.command.AttributeName.ATTR_NAME_LANG;
 import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
-@WebFilter(filterName = "SharingPicLocalizationFilter", urlPatterns = "/*")
+@WebFilter(filterName = "AdvertLocalizationFilter", urlPatterns = "/*")
 public class LocalizationFilter implements Filter {
-
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
                          FilterChain filterChain) throws IOException, ServletException {

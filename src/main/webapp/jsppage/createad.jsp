@@ -432,6 +432,9 @@
                               class="form-control input-md"
                     >
                     </textarea>
+                <span class="form__error">
+                        <fmt:message key="label.format-car-description" bundle="${rb}"/>
+                    </span>
             </div>
         </div>
 

@@ -89,7 +89,7 @@ public class AdvertService {
 
     private static class AdvertParameterValidator {
         private static final String TITLE_REGEX = "[\\w]{1,49}";
-        private static final String DESCRIPTION_REGEX = "[a-zа-яA-Z-А-Я0-9.,?!\\- ]{7, 1999}";
+        private static final String DESCRIPTION_REGEX = "[\\w]{1, 1900}";
         private static final String BRAND_REGEX = "[a-zA-Zа-яА-Я0-9- ]{1,45}";
         private static final String MODEL_REGEX = "[a-zA-Zа-яА-Я0-9 ]{1,45}";
         private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я- ]{1,45}";

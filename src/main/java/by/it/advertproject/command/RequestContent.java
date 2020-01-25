@@ -33,7 +33,7 @@ public class RequestContent {
         while (attrNames.hasMoreElements()) {
             String name = attrNames.nextElement();
             Object attr = request.getAttribute(name);
-            Logger.log(Level.INFO,  " \t" + name + ": " + attr.toString());
+            Logger.log(Level.INFO, " \t" + name + ": " + attr.toString());
             requestAttributes.put(name, attr);
         }
         Enumeration<String> paramNames = request.getParameterNames();
@@ -42,7 +42,7 @@ public class RequestContent {
             String name = paramNames.nextElement();
             String[] param = request.getParameterValues(name);
             for (String element : param) {
-                Logger.log(Level.INFO," \t" + name + ": " + element);
+                Logger.log(Level.INFO, " \t" + name + ": " + element);
             }
             requestParameters.put(name, param);
         }
@@ -51,7 +51,7 @@ public class RequestContent {
         while (sessionAttrNames.hasMoreElements()) {
             String name = sessionAttrNames.nextElement();
             Object sessionAttr = request.getSession().getAttribute(name);
-            Logger.log(Level.INFO,  " \t" + name + ": " + sessionAttr);
+            Logger.log(Level.INFO, " \t" + name + ": " + sessionAttr);
             sessionAttributes.put(name, sessionAttr);
         }
         session = request.getSession(false);
@@ -75,13 +75,7 @@ public class RequestContent {
     }
 
     public void putRequestAttribute(String name, Object attr) {
-        Logger.log(Level.INFO, "putRequestAttribute: ");
-        Logger.log(Level.INFO, "name: " + name);
-        Logger.log(Level.INFO, "attr: " + attr);
         requestAttributes.put(name, attr);
-        Logger.log(Level.INFO, "from putRequestAttribute. requestAttributes: " + requestAttributes.toString());
-        Logger.log(Level.INFO, "requestAttributes.isEmpty(): " + requestAttributes.isEmpty());
-
     }
 
     public void putSessionAttribute(String name, Object attr) {
