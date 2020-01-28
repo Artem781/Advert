@@ -428,7 +428,7 @@
                     <%--minlength="7"--%>
                     <%--maxlength="2000"--%>
                     <%--required--%>
-                              placeholder=" "
+                              placeholder=""
                               class="form-control input-md"
                     >
                     </textarea>
