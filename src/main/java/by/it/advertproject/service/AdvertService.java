@@ -88,12 +88,11 @@ public class AdvertService {
     }
 
     private static class AdvertParameterValidator {
-        private static final String TITLE_REGEX = "[\\w]{1,49}";
-//        private static final String DESCRIPTION_REGEX = "[a-zA-Zа-яА-Я0-9]{1,1900}";
-        private static final String DESCRIPTION_REGEX = "[\\w]{1,1900}";
+        private static final String TITLE_REGEX = "[a-zA-Zа-яА-Я0-9_ ]{1,49}";
+        private static final String DESCRIPTION_REGEX = "[a-zA-Zа-яА-Я0-9_ ]{1,1900}";
         private static final String BRAND_REGEX = "[a-zA-Zа-яА-Я0-9-]{1,45}";
-        private static final String MODEL_REGEX = "[a-zA-Zа-яА-Я0-9 ]{1,45}";
-        private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я- ]{1,45}";
+        private static final String MODEL_REGEX = "[a-zA-Zа-яА-Я0-9_ ]{1,45}";
+        private static final String COLOR_REGEX = "[a-zA-Zа-яА-Я0-9_ ]{1,45}";
         private static final String BODY_REGEX = "[a-zA-Zа-яА-Я]{1,45}";
         private static final String PRODUCTION_YEAR_REGEX = "[0-9]{4}";
         private static final String ENGINE_VOLUME_REGEX = "[1-9]{1}[0-9]{3}";

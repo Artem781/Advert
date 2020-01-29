@@ -14,11 +14,13 @@
 <body>
 <div class="container-fluid">
     <header>
+
         <%@include file="include/menustart.jsp" %>
         <a class="dropdown-item" href="controller?command=set_lang&page=to-createad">
             <fmt:message key="label.language.type" bundle="${rb}"/>
         </a>
         <%@include file="include/menuend.jsp" %>
+
     </header>
     <h2>
         <fmt:message key="label.create-ad" bundle="${rb}"/>
@@ -39,6 +41,7 @@
         <div class="alert-danger">
             ${incorrectCarTitleAttr}
         </div>
+
         <!-- Title input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="title">
@@ -60,10 +63,10 @@
                       </span>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarBrandAttr}
         </div>
+
         <!-- Select Brand -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="brnd">
@@ -129,10 +132,10 @@
                 </select>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarModelAttr}
         </div>
+
         <!-- Model input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="model">
@@ -155,10 +158,10 @@
                       </span>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarColorAttr}
         </div>
+
         <!-- Color input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="color">
@@ -181,10 +184,10 @@
                     </span>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarBodyAttr}
         </div>
+
         <!-- Select body -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="body">
@@ -212,10 +215,10 @@
                 </select>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarProductionYearAttr}
         </div>
+
         <!-- Production year input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="year">
@@ -237,14 +240,12 @@
                 <span class="form__error">
                         <fmt:message key="label.format-car-production-year" bundle="${rb}"/>
                     </span>
-
-
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectEngineVolumeAttr}
         </div>
+
         <!-- Volume engine input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="engine">
@@ -265,10 +266,10 @@
                     </span>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectAtTypeAttr}
         </div>
+
         <!-- At Multiple Radios (inline) -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="at-0">
@@ -294,10 +295,10 @@
                 </label>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarDriveunitAttr}
         </div>
+
         <!-- Select drive unit -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="driveunit">
@@ -315,10 +316,10 @@
                 </select>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarEquipmentAttr}
         </div>
+
         <!-- Select equipment -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="equipment">
@@ -337,10 +338,10 @@
                 </select>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectCarMillageAttr}
         </div>
+
         <!-- Text Mileage-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="millage">
@@ -355,12 +356,15 @@
                 <%--required=""--%>
                        class="form-control input-md"
                 >
+                <span class="form__error">
+                        <fmt:message key="label.format-car-mileage" bundle="${rb}"/>
+                    </span>
             </div>
         </div>
-
         <div class="alert-danger">
             ${incorrectIfCrashedAttr}
         </div>
+
         <!-- Is crashed Multiple Radios (inline) -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="accident-try">
@@ -416,6 +420,7 @@
         <div class="alert-danger">
             ${incorrectCarDescriptionAttr}
         </div>
+
         <!-- Description input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="description">
@@ -441,6 +446,7 @@
         <div class="alert-danger">
             ${incorrectCarPriceAttr}
         </div>
+
         <!-- Price input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="price">
