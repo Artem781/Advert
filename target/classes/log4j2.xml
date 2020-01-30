@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
-
     <Properties>
-        <Property name="filename">log/CelsiusConverter.log</Property>
+        <Property name="logPath">log/</Property>
+        <Property name="rollingFileName">log</Property>
     </Properties>
 
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue} %logger{10} - %msg%n"
-                           disableAnsi="false"/>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%highlight{%-5level}] %d{dd.MM.yyyy HH:mm:ss} %L  %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>
         </Console>
-        <File name="File" fileName="logs/app.log">
-            <PatternLayout pattern="%d %-5p %d{HH:mm:ss.SSS} [%t] %level %logger{36} - %msg%n"/>
-        </File>
+        <RollingFile name="rollingFile"
+                     immediateFlush="false"
+                     fileName="${logPath}/${rollingFileName}.txt"
+                     filePattern="${logPath}/${rollingFileName}_%d{yyyy-MM-dd-hh-mm-ss}.txt">
+            <PatternLayout pattern="[%-5level] %d{dd.MM.yyyy HH:mm:ss} %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="2" modulate="true"/>
+            </Policies>
+        </RollingFile>
     </Appenders>
-
     <Loggers>
-        <Root level="DEBUG">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="File"/>
+        <Root level="DEBUG" additivity="false">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="rollingFile"/>
         </Root>
     </Loggers>
-
 </Configuration>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--&lt;!&ndash;<Configuration status="DEBUG">&ndash;&gt;-->
+<!--<Configuration status="WARN">-->
+<!--    <Appenders>-->
+<!--        <Console name="LogToConsole" target="SYSTEM_OUT">-->
+<!--            &lt;!&ndash;            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>&ndash;&gt;-->
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
+<!--            INFO=green, DEBUG=blue} %logger{10} - %msg%n"/>-->
+<!--        </Console>-->
+<!--&lt;!&ndash;        <RollingFile name="LogToRollingFile" fileName="log/AdsApp.log"&ndash;&gt;-->
+<!--&lt;!&ndash;                     filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">&ndash;&gt;-->
+<!--&lt;!&ndash;            <PatternLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;            </PatternLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Policies>&ndash;&gt;-->
+<!--&lt;!&ndash;                <TimeBasedTriggeringPolicy/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <SizeBasedTriggeringPolicy size="10 MB"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </Policies>&ndash;&gt;-->
+<!--&lt;!&ndash;        </RollingFile>&ndash;&gt;-->
+<!--        <RollingFile-->
+<!--                name="LogToRollingFile"-->
+<!--                fileName="log/application.log"-->
+<!--                filePattern="log/application.%d{dd-MMM}.log"-->
+<!--                ignoreExceptions="false">-->
+<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
+<!--            INFO=green, DEBUG=blue} %logger{10} - %msg%n"/>-->
+<!--&lt;!&ndash;            <PatternLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;            </PatternLayout>&ndash;&gt;-->
+<!--            <Policies>-->
+<!--                <OnStartupTriggeringPolicy />-->
+<!--                <SizeBasedTriggeringPolicy size="10 MB" />-->
+<!--                <TimeBasedTriggeringPolicy />-->
+<!--            </Policies>-->
+<!--            <DefaultRolloverStrategy max="5" />-->
+<!--        </RollingFile>-->
+
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        &lt;!&ndash; avoid duplicated logs with additivity=false &ndash;&gt;-->
+<!--        <Logger name="com.ads" level="DEBUG" additivity="false">-->
+<!--            <AppenderRef ref="LogToRollingFile"/>-->
+<!--        </Logger>-->
+<!--        <Root level="DEBUG">-->
+<!--            <AppenderRef ref="LogToConsole"/>-->
+<!--            <AppenderRef ref="LogToRollingFile"/>-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<Configuration status="WARN">-->
+
+        <!--    <Properties>-->
+        <!--        <Property name="filename">log/CelsiusConverter.log</Property>-->
+        <!--    </Properties>-->
+
+        <!--    <Appenders>-->
+        <!--        <Console name="Console" target="SYSTEM_OUT">-->
+        <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
+        <!--                                    INFO=green, DEBUG=blue} %logger{10} - %msg%n"-->
+        <!--                           disableAnsi="false"/>-->
+        <!--        </Console>-->
+        <!--        <File name="File" fileName="logs/app.log">-->
+        <!--            <PatternLayout pattern="%d %-5p %d{HH:mm:ss.SSS} [%t] %level %logger{36} - %msg%n"/>-->
+        <!--        </File>-->
+        <!--    </Appenders>-->
+
+        <!--    <Loggers>-->
+        <!--        <Root level="DEBUG">-->
+        <!--            <AppenderRef ref="Console"/>-->
+        <!--            <AppenderRef ref="File"/>-->
+        <!--        </Root>-->
+        <!--    </Loggers>-->
+
+        <!--</Configuration>-->
+
