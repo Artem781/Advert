@@ -1,82 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
-    <Properties>
-        <Property name="logPath">log/</Property>
-        <Property name="rollingFileName">log</Property>
-    </Properties>
-
+<Configuration status="WARN" name="AdsApp" packages="">
     <Appenders>
-        <Console name="console" target="SYSTEM_OUT">
-            <PatternLayout pattern="[%highlight{%-5level}] %d{dd.MM.yyyy HH:mm:ss} %L  %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <RollingFile name="rollingFile"
-                     immediateFlush="false"
-                     fileName="${logPath}/${rollingFileName}.txt"
-                     filePattern="${logPath}/${rollingFileName}_%d{yyyy-MM-dd-hh-mm-ss}.txt">
-            <PatternLayout pattern="[%-5level] %d{dd.MM.yyyy HH:mm:ss} %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>
+        <File name="File" fileName="log/app.log">
+            <PatternLayout pattern="%d %-5p %d{HH:mm:ss.SSS} [%t] %level %logger{36} - %msg%n"/>
+        </File>
+
+
+        <!--        <File name="fileLogAds" fileName="logs/AdsApp.log">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--        </File>-->
+
+
+        <RollingFile name="LogToRollingFile" filePattern="logs/app-%d{yyyy-MM-dd-HH}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
             <Policies>
-                <OnStartupTriggeringPolicy/>
-                <TimeBasedTriggeringPolicy interval="2" modulate="true"/>
+                <CronTriggeringPolicy schedule="0 0 * * * ?"/>
+                <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
+            <DirectWriteRolloverStrategy maxFiles="2"/>
         </RollingFile>
+
+        <!--   ========================================================================================     -->
+        <!--        <RollingFile name="LogToRollingFile"-->
+        <!--                     fileName="log/AdsAppLog.txt"-->
+        <!--                     filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.txt"-->
+        <!--                     append="true"-->
+        <!--                     bufferedIO="true">-->
+        <!--            <PatternLayout>-->
+        <!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+        <!--            </PatternLayout>-->
+        <!--            <Policies>-->
+        <!--                <TimeBasedTriggeringPolicy interval="2" modulate="true"/>-->
+        <!--                <OnStartupTriggeringPolicy/>-->
+        <!--                <TimeBasedTriggeringPolicy/>-->
+        <!--                <SizeBasedTriggeringPolicy size="5 MB"/>-->
+        <!--            </Policies>-->
+        <!--            <DefaultRolloverStrategy max="5"/>-->
+        <!--        </RollingFile>-->
+        <!--   ========================================================================================     -->
+        <!--        <RollingFile-->
+        <!--                name="LogToRollingFile"-->
+        <!--                fileName="log/application.log"-->
+        <!--                filePattern="log/application.%d{dd-MMM}.log"-->
+        <!--                ignoreExceptions="false">-->
+        <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
+        <!--            INFO=green, DEBUG=blue} %logger{10} - %msg%n"/>-->
+        <!--&lt;!&ndash;            <PatternLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </PatternLayout>&ndash;&gt;-->
+        <!--            <Policies>-->
+        <!--                <OnStartupTriggeringPolicy />-->
+        <!--                <SizeBasedTriggeringPolicy size="10 MB" />-->
+        <!--                <TimeBasedTriggeringPolicy />-->
+        <!--            </Policies>-->
+        <!--            <DefaultRolloverStrategy max="5" />-->
+        <!--        </RollingFile>-->
+
     </Appenders>
     <Loggers>
-        <Root level="DEBUG" additivity="false">
-            <AppenderRef ref="console"/>
-            <AppenderRef ref="rollingFile"/>
+        <!-- avoid duplicated logs with additivity=false -->
+        <!--        <Logger name="com.ads" level="DEBUG" additivity="false">-->
+        <!--            <AppenderRef ref="LogToRollingFile"/>-->
+        <!--        </Logger>-->
+        <Root level="DEBUG">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToRollingFile"/>
+<!--            <AppenderRef ref="fileLogAds"/>-->
+            <AppenderRef ref="File"/>
+"/>
         </Root>
     </Loggers>
 </Configuration>
 
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--&lt;!&ndash;<Configuration status="DEBUG">&ndash;&gt;-->
-<!--<Configuration status="WARN">-->
-<!--    <Appenders>-->
-<!--        <Console name="LogToConsole" target="SYSTEM_OUT">-->
-<!--            &lt;!&ndash;            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>&ndash;&gt;-->
-<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
-<!--            INFO=green, DEBUG=blue} %logger{10} - %msg%n"/>-->
-<!--        </Console>-->
-<!--&lt;!&ndash;        <RollingFile name="LogToRollingFile" fileName="log/AdsApp.log"&ndash;&gt;-->
-<!--&lt;!&ndash;                     filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">&ndash;&gt;-->
-<!--&lt;!&ndash;            <PatternLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>&ndash;&gt;-->
-<!--&lt;!&ndash;            </PatternLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;            <Policies>&ndash;&gt;-->
-<!--&lt;!&ndash;                <TimeBasedTriggeringPolicy/>&ndash;&gt;-->
-<!--&lt;!&ndash;                <SizeBasedTriggeringPolicy size="10 MB"/>&ndash;&gt;-->
-<!--&lt;!&ndash;            </Policies>&ndash;&gt;-->
-<!--&lt;!&ndash;        </RollingFile>&ndash;&gt;-->
-<!--        <RollingFile-->
-<!--                name="LogToRollingFile"-->
-<!--                fileName="log/application.log"-->
-<!--                filePattern="log/application.%d{dd-MMM}.log"-->
-<!--                ignoreExceptions="false">-->
-<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-15t %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow,-->
-<!--            INFO=green, DEBUG=blue} %logger{10} - %msg%n"/>-->
-<!--&lt;!&ndash;            <PatternLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>&ndash;&gt;-->
-<!--&lt;!&ndash;            </PatternLayout>&ndash;&gt;-->
-<!--            <Policies>-->
-<!--                <OnStartupTriggeringPolicy />-->
-<!--                <SizeBasedTriggeringPolicy size="10 MB" />-->
-<!--                <TimeBasedTriggeringPolicy />-->
-<!--            </Policies>-->
-<!--            <DefaultRolloverStrategy max="5" />-->
-<!--        </RollingFile>-->
 
-<!--    </Appenders>-->
-<!--    <Loggers>-->
-<!--        &lt;!&ndash; avoid duplicated logs with additivity=false &ndash;&gt;-->
-<!--        <Logger name="com.ads" level="DEBUG" additivity="false">-->
-<!--            <AppenderRef ref="LogToRollingFile"/>-->
-<!--        </Logger>-->
-<!--        <Root level="DEBUG">-->
-<!--            <AppenderRef ref="LogToConsole"/>-->
-<!--            <AppenderRef ref="LogToRollingFile"/>-->
-<!--        </Root>-->
-<!--    </Loggers>-->
-<!--</Configuration>-->
+        <!--maevski-->
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<Configuration status="WARN">-->
+        <!--    <Properties>-->
+        <!--        <Property name="logPath">log/</Property>-->
+        <!--        <Property name="rollingFileName">log</Property>-->
+        <!--    </Properties>-->
+
+        <!--    <Appenders>-->
+        <!--        <Console name="console" target="SYSTEM_OUT">-->
+        <!--            <PatternLayout pattern="[%highlight{%-5level}] %d{dd.MM.yyyy HH:mm:ss} %L  %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>-->
+        <!--        </Console>-->
+        <!--        <RollingFile name="rollingFile"-->
+        <!--                     immediateFlush="false"-->
+        <!--                     fileName="${logPath}/${rollingFileName}.txt"-->
+        <!--                     filePattern="${logPath}/${rollingFileName}_%d{yyyy-MM-dd-hh-mm-ss}.txt">-->
+        <!--            <PatternLayout pattern="[%-5level] %d{dd.MM.yyyy HH:mm:ss} %c{1}.%M() - %m%n%throwable{short.lineNumber}"/>-->
+        <!--            <Policies>-->
+        <!--                <OnStartupTriggeringPolicy/>-->
+        <!--                <TimeBasedTriggeringPolicy interval="2" modulate="true"/>-->
+        <!--            </Policies>-->
+        <!--        </RollingFile>-->
+        <!--    </Appenders>-->
+        <!--    <Loggers>-->
+        <!--        <Root level="DEBUG" additivity="false">-->
+        <!--            <AppenderRef ref="console"/>-->
+        <!--            <AppenderRef ref="rollingFile"/>-->
+        <!--        </Root>-->
+        <!--    </Loggers>-->
+        <!--</Configuration>-->
 
 
         <!--<?xml version="1.0" encoding="UTF-8"?>-->
