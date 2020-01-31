@@ -17,8 +17,7 @@ import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCOUNT_ID;
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE;
+import static by.it.advertproject.command.AttributeName.*;
 import static by.it.advertproject.command.Message.LOAD_FILE_ERROR_MESSAGE;
 import static by.it.advertproject.command.Message.UNSUPPORTED_IMAGE_FORMAT_MESSAGE;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_PAGE_ID;
@@ -28,7 +27,7 @@ import static java.util.Locale.ENGLISH;
 public class UpdatePhotoCommand implements Command {
     private static final Logger logger = LogManager.getLogger(UpdatePhotoCommand.class);
     private static final String PATTERN_IMG_FILE = "([^\\s]+(\\.(?i)(jpg|png|gif|bmp))$)";
-//    This regular expression refers to a pattern which must have 1 or more strings (but not white space),
+    //    This regular expression refers to a pattern which must have 1 or more strings (but not white space),
 //    follow by dot “.” and string end in “jpg” or “png” or “gif” or “bmp”, and the file extensive is case-insensitive.
     private static final String JPG_FORMAT = ".jpg";
     private static final String PNG_FORMAT = ".png";
@@ -78,7 +77,7 @@ public class UpdatePhotoCommand implements Command {
                     Pattern pattern = Pattern.compile(PATTERN_IMG_FILE);
                     Matcher matcher = pattern.matcher(path);
                     logger.log(Level.INFO, "if (matcher.matches()){ : " + matcher.matches());
-                    if (matcher.matches()){
+                    if (matcher.matches()) {
                         logger.log(Level.INFO, "if (matcher.matches()){");
                         InputStream inputStream = part.getInputStream();
                         accountService.updatePhoto(accountId, inputStream.readAllBytes());
@@ -114,16 +113,9 @@ public class UpdatePhotoCommand implements Command {
                         .getUrl();
             } else {
                 logger.log(Level.INFO, "TO_EDIT_USER_PROFILE_PAGE: ");
-                // TODO: 18.01.2020 почему нельза положить в putRequestAttribute.
-//                content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE, String.valueOf(
-//                        UNSUPPORTED_IMAGE_FORMAT_MESSAGE));
-//                content.putRequestAttribute("exampleAttr","HELLLLLOOO");
-
-//                content.putSessionAttribute(ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE,
-//                        MessageManager.getProperty(UNSUPPORTED_IMAGE_FORMAT_MESSAGE, String.valueOf(ENGLISH)));
                 content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE,
-                        MessageManager.getProperty(UNSUPPORTED_IMAGE_FORMAT_MESSAGE, String.valueOf(ENGLISH)));
-
+                        MessageManager.getProperty(UNSUPPORTED_IMAGE_FORMAT_MESSAGE,
+                                String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
                 page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
                         .setParams(PARAM_NAME_PAGE_ID, String.valueOf(accountId))
                         .getUrl();

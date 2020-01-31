@@ -7,9 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/regex/RegTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/regex/RegTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +178,7 @@
       <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\jsp\testjsp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestLogWrite">
+  <component name="RunManager" selected="Tomcat Server.Tommy">
     <configuration name="AdvertDaoImplTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="9" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -319,8 +328,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestLogWrite" />
         <item itemvalue="Application.RegTest" />
+        <item itemvalue="Application.TestLogWrite" />
         <item itemvalue="Application.AdvertDaoImplTester" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.SomeIncrement" />
@@ -597,13 +606,7 @@
       <workItem from="1580378411549" duration="331000" />
       <workItem from="1580389878798" duration="7442000" />
       <workItem from="1580465162585" duration="3684000" />
-    </task>
-    <task id="LOCAL-00002" summary="add pattern login and psw">
-      <created>1565859389781</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1565859389781</updated>
+      <workItem from="1580476896702" duration="12596000" />
     </task>
     <task id="LOCAL-00003" summary="so com">
       <created>1566321764649</created>
@@ -941,7 +944,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580395047773</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="logger fix write in file rollings">
+      <created>1580476944164</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1580476944165</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -961,7 +971,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix sign up page. return attr" />
     <MESSAGE value="fix sign up jsp page. front" />
     <MESSAGE value="fix sign in command." />
     <MESSAGE value="set lang tester" />
@@ -986,7 +995,8 @@
     <MESSAGE value="fix sign up" />
     <MESSAGE value="reg" />
     <MESSAGE value="layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout" />
+    <MESSAGE value="logger fix write in file rollings" />
+    <option name="LAST_COMMIT_MESSAGE" value="logger fix write in file rollings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="400" y="26" key="#AdvertDaoImplTester" timestamp="1575582545923">
@@ -1005,58 +1015,58 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1575575596271" />
-    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580395046793">
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580476943200">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580395046793" />
-    <state width="1275" height="319" key="GridCell.Tab.0.bottom" timestamp="1580468912907">
+    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580476943200" />
+    <state width="1275" height="410" key="GridCell.Tab.0.bottom" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580468912907" />
-    <state width="1275" height="319" key="GridCell.Tab.0.center" timestamp="1580468912907">
+    <state width="1275" height="410" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.0.center" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580468912907" />
-    <state width="1275" height="319" key="GridCell.Tab.0.left" timestamp="1580468912907">
+    <state width="1275" height="410" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.0.left" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580468912907" />
-    <state width="1275" height="319" key="GridCell.Tab.0.right" timestamp="1580468912907">
+    <state width="1275" height="410" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.0.right" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580468912907" />
-    <state width="1275" height="319" key="GridCell.Tab.1.bottom" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.1.bottom" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.1.center" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.1.center" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.1.left" timestamp="1580468912907">
+    <state width="1275" height="410" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.1.left" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580468912907" />
-    <state width="1275" height="319" key="GridCell.Tab.1.right" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.1.right" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.2.bottom" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.2.bottom" timestamp="1580490133050">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.2.center" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580490133050" />
+    <state width="1275" height="410" key="GridCell.Tab.2.center" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.2.left" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.2.left" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
-    <state width="1275" height="319" key="GridCell.Tab.2.right" timestamp="1580468912909">
+    <state width="1275" height="410" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
+    <state width="1275" height="410" key="GridCell.Tab.2.right" timestamp="1580490133049">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="319" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580468912909" />
+    <state width="1275" height="410" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580490133049" />
     <state x="213" y="23" key="Maven.ArtifactSearchDialog" timestamp="1575043277058">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1065,10 +1075,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1579338764699" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580395050493">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580476946254">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580395050493" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580476946254" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1579349074565">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1095,8 +1105,8 @@
       <map>
         <entry key="flags" value="0" />
         <entry key="mode" value="1" />
-        <entry key="regex" value="[a-zA-Zа-яА-Я0-9_ ]{1,49}" />
-        <entry key="text" value="s4swwысы фы_" />
+        <entry key="regex" value="[375]{1}" />
+        <entry key="text" value="375" />
       </map>
     </option>
   </component>

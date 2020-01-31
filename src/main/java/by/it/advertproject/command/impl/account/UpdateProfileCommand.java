@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import static by.it.advertproject.command.AttributeName.*;
 import static by.it.advertproject.command.Message.SUCCESS_UPDATE_MESSAGE;
+import static by.it.advertproject.command.Message.SUCCESS_UPDATE_USER_PROFILE_DATA;
 import static by.it.advertproject.command.ParameterName.*;
 import static java.util.Locale.ENGLISH;
 
@@ -39,21 +40,23 @@ public class UpdateProfileCommand implements Command {
             logger.log(Level.INFO, "from UpdateProfileCommand. try. after updateProfileData ");
 //            content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_USER, account.getName());
-            content.putRequestAttribute(ATTR_NAME_TELEPHONE, account.getTel());
-            content.putRequestAttribute(ATTR_NAME_EMAIL, account.getEmail());
-            content.putRequestAttribute(ATTR_NAME_ACCOUNT, account);
+            content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
+            content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
+//            content.putRequestAttribute(ATTR_NAME_ACCOUNT, account);
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
-                    .setParams(PARAM_NAME_FEEDBACK,
-                            MessageManager.getProperty(SUCCESS_UPDATE_MESSAGE, String.valueOf(ENGLISH))
-//                            SUCCESS_UPDATE_MESSAGE
-                    ).getUrl();
-//            content.putRequestAttribute(ATTR_NAME_FB, SUCCESS_UPDATE_MESSAGE);
+                    .setParams(PARAM_NAME_FEEDBACK, MessageManager.getProperty(SUCCESS_UPDATE_MESSAGE,
+                            String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))))
+                    .getUrl();
+            content.putRequestAttribute(ATTR_NAME_SUCCESS_UPDATE_PROFILE_DATA,
+                    MessageManager.getProperty(SUCCESS_UPDATE_USER_PROFILE_DATA,
+                            String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
         } catch (ServiceException e) {
             logger.log(Level.INFO, "from UpdateProfileCommand. catch. e.getMessage(): " + e.getMessage());
             page = CommandUrlBuilder.TO_EDIT_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
                     .getUrl();
-            content.putRequestAttribute(ATTR_NAME_FB, e.getMessage());
+            content.putRequestAttribute(ATTR_NAME_FB, MessageManager.getProperty(e.getMessage(),
+                    String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
         }
         logger.log(Level.INFO, "from UpdateProfileCommand. return. page: " + page);
         return new Router(page, TransmissionType.FORWARD);

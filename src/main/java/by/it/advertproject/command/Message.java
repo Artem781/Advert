@@ -41,6 +41,7 @@ public class Message {
 
 
     public static final String SUCCESS_UPDATE_MESSAGE = "messages.success-update-login-password";
+    public static final String SUCCESS_UPDATE_USER_PROFILE_DATA = "messages.success-update-user-profile-data";
     public static final String CREATE_POST_ERROR_MESSAGE = "message.can-not-create-post";
     public static final String UNSUPPORTED_IMAGE_FORMAT_MESSAGE = "message.invalid-photo-format";
     public static final String INCORRECT_CALL_FILE_MESSAGE = "message.invalid-photo-format";

@@ -260,13 +260,17 @@ public class AccountService {
         private static final String RUSSIAN_LOGIN_PATTERN = "([А-Я][а-я]{2,15})\\s([А-Я][а-я]{2,15})";
 //        This regular expression refers to a pattern with at least one digit, one upper case letter, one lower case letter and one special symbol (“@#$%”).
 //                ((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,15})
-        private static final String PASSWORD_PATTERN = "^[a-zA-Z0-9_-]{6,18}$";
-        private static final String PASSWORD_CONFIRM_PATTERN = "^[a-zA-Z0-9_-]{6,18}$";
-        private static final String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
+//        private static final String PASSWORD_PATTERN = "^[a-zA-Z0-9_-]{6,18}$";
+        private static final String PASSWORD_PATTERN = "[a-zA-Zа-яА-Я0-9_ -]{6,12}";
+//        private static final String PASSWORD_CONFIRM_PATTERN = "^[a-zA-Z0-9_-]{6,18}$";
+        private static final String PASSWORD_CONFIRM_PATTERN = "[a-zA-Zа-яА-Я0-9_ -]{6,12}";
+        private static final String NAME_REGEX = "[a-zA-Zа-яА-Я0-9_ ]{1,20}";
+//        private static final String NAME_REGEX = "([a-zA-z]{1}[a-zA-z_'-,.]{0,23}[a-zA-Z]{0,1})";
         //        private static final String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
         private static final String DATE_BIRTHDAY_REGEX = "^([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
         private static final String EMAIL_REGEX = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
-        private static final String TEL_REGEX = "^(\\+)?([ 0-9]){10,16}$";
+//        private static final String TEL_REGEX = "^(\\+)?([ 0-9]){10,16}$";
+        private static final String TEL_REGEX = "[+][\\d]{5}[-][\\d]{7}";
         private static final String PASSWORD_EQUALS_CONFIRM_PASSWORD = "passEqualsConfirmPass";
 
         public static UserDataValidationState validateParameter(String name, String password, String tel, String email) throws ServiceException {

@@ -58,14 +58,12 @@
 
 <main>
     <div class="container-fluid">
+        <br>
         <h2>
             <fmt:message key="label.edit-profile" bundle="${rb}"/>
         </h2>
-        <br>
         <hr>
-        <%--    <h4>--%>
-        <%--        ${exampleAttr}--%>
-        <%--    </h4>--%>
+        <%--        FORM UPDATE PHOTO--%>
         <form class="form-horizontal" method="post" action="upload" enctype="multipart/form-data">
             <input type="hidden" name="command" value="update_photo"/>
             <fieldset>
@@ -85,6 +83,9 @@
                         <input id="filebutton" name="file" value="" class="input-file" type="file">
                     </div>
                 </div>
+                <span class="form__error">
+                        <fmt:message key="label.format-photo" bundle="${rb}"/>
+                    </span>
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">
@@ -100,22 +101,29 @@
                 </div>
             </fieldset>
         </form>
-        <br>
         <hr>
-        <!--
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //make attribute success colour
-        -->
+        <%--        FORM UPDATE USER DATA--%>
         <form class="form-horizontal" action="controller" method="post">
             <input type="hidden" name="command" value="update_profile_data"/>
             <%--<input type="hidden" name="accesslevel" value="user"/>--%>
             <fieldset>
-                <br>
-                <br>
                 <!-- Form Name -->
                 <legend>
                     <fmt:message key="label.update-data-user" bundle="${rb}"/>
                 </legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="alert-success">
+                            <%--            <strong>Well done!</strong>--%>
+                            <h4>
+                                <strong>
+                                    ${successUpdateProfileDataAttr}
+                                </strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <%--                    <div class="col-md-6">col-md-6</div>--%>
+                </div>
                 <div class="alert-danger">
                     ${feedback}
                 </div>
@@ -325,8 +333,9 @@
         <%--        <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
         <%--    </button>--%>
         <%--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////    --%>
+
         <!-- Кнопка, вызывающее модальное окно -->
-        <a href="#deleteUserModal" class="btn btn-sm btn-danger" data-toggle="modal">
+        <a href="#deleteUserModal" class="btn  btn-danger btn-sm" data-toggle="modal">
             <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
         </a>
         <%--<p>Абзац</p>--%>
