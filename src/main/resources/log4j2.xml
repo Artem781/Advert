@@ -69,7 +69,8 @@
         <!--        <Logger name="com.ads" level="DEBUG" additivity="false">-->
         <!--            <AppenderRef ref="LogToRollingFile"/>-->
         <!--        </Logger>-->
-        <Root level="DEBUG">
+<!--        <Root level="DEBUG">-->
+        <Root level="INFO">
             <AppenderRef ref="LogToConsole"/>
             <AppenderRef ref="LogToRollingFile"/>
 <!--            <AppenderRef ref="fileLogAds"/>-->

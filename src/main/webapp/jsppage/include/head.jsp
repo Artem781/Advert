@@ -17,4 +17,4 @@
 <%--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">--%>
 <link  rel="stylesheet" href="../vendor/fontawesome/css/all.css">
 
-
+<script src="https://kit.fontawesome.com/6dfa15eb84.js" crossorigin="anonymous"></script>

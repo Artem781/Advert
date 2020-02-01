@@ -336,8 +336,10 @@
 
         <!-- Кнопка, вызывающее модальное окно -->
         <a href="#deleteUserModal" class="btn  btn-danger btn-sm" data-toggle="modal">
+            <i class="fa fa-trash-o fa-lg"></i>
             <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
         </a>
+
         <%--<p>Абзац</p>--%>
         <%--<a href="controller?command=delete_user" method="post" class="btn btn-sm btn-danger">--%>
         <%--    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>

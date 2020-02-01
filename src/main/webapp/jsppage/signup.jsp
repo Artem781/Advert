@@ -53,7 +53,7 @@
 
 
 
-
+<br>
 
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
