@@ -87,7 +87,6 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
     public Advert findBeanById(long index) throws DaoException {
         List<Advert> adverts = super.findBy(SQL_SELECT_ADVERT_BY_ID, TABLE_NAME, String.valueOf(index));
         return adverts.isEmpty() ? null : adverts.get(0);
-
     }
 
 
