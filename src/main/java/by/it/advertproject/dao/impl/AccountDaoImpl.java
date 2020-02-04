@@ -38,6 +38,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public Account findBeanById(long index) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) findBeanById method.");
         List<Account> accounts = super.findBy(SQL_SELECT_ACCOUNT_BY_ID, TABLE_NAME, String.valueOf(index));
         return accounts.isEmpty() ? null : accounts.get(0);
     }
@@ -68,6 +69,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public void delete(Account account) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) delete method.");
         super.delete(account, SQL_DELETE_ACCOUNT);
     }
 
@@ -164,6 +166,7 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
 
     @Override
     public void update(Account account) throws DaoException {
+        logger.log(Level.INFO, "from AccountDaoImpl) update method");
         logger.log(Level.INFO, "from AccountDaoImpl) name: {" + account.getName());
         logger.log(Level.INFO, "from AccountDaoImpl) login: {" + account.getLogin());
         logger.log(Level.INFO, "from AccountDaoImpl) password {" + account.getPassword());

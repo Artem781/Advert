@@ -21,6 +21,9 @@ public class TestLogWrite {
         logger.log(Level.WARN, "Level.WARN");
         logger.log(Level.ERROR, "Level.ERROR");
         logger.log(Level.FATAL, "Level.FATAL");
+        logger.debug("Debug Message Logged !!!");
+        logger.info("Info Message Logged !!!");
+        logger.error("Error Message Logged !!!", new NullPointerException("NullError"));
 
 
 
