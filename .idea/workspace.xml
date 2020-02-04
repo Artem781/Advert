@@ -340,7 +340,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -349,7 +349,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:MySQL - @localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@678809cf" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@591742db" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -612,14 +612,8 @@
       <workItem from="1580634636927" duration="41000" />
       <workItem from="1580634942692" duration="13000" />
       <workItem from="1580635008253" duration="852000" />
-      <workItem from="1580746910412" duration="1321000" />
-    </task>
-    <task id="LOCAL-00005" summary="added param, attribute, config">
-      <created>1566553676593</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1566553676593</updated>
+      <workItem from="1580746910412" duration="1840000" />
+      <workItem from="1580800954008" duration="1184000" />
     </task>
     <task id="LOCAL-00006" summary="fill class param and attribute">
       <created>1566998037119</created>
@@ -957,7 +951,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580564861408</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="added admin page">
+      <created>1580748238954</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1580748238955</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1021,58 +1022,58 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1575575596271" />
-    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580564860586">
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580748237277">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580564860586" />
-    <state width="1275" height="229" key="GridCell.Tab.0.bottom" timestamp="1580748227760">
+    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580748237277" />
+    <state width="1275" height="229" key="GridCell.Tab.0.bottom" timestamp="1580801841861">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580748227760" />
-    <state width="1275" height="229" key="GridCell.Tab.0.center" timestamp="1580748227760">
+    <state width="1275" height="229" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580801841861" />
+    <state width="1275" height="229" key="GridCell.Tab.0.center" timestamp="1580801841861">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580748227760" />
-    <state width="1275" height="229" key="GridCell.Tab.0.left" timestamp="1580748227760">
+    <state width="1275" height="229" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580801841861" />
+    <state width="1275" height="229" key="GridCell.Tab.0.left" timestamp="1580801841860">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580748227760" />
-    <state width="1275" height="229" key="GridCell.Tab.0.right" timestamp="1580748227760">
+    <state width="1275" height="229" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580801841860" />
+    <state width="1275" height="229" key="GridCell.Tab.0.right" timestamp="1580801841861">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580748227760" />
-    <state width="1275" height="229" key="GridCell.Tab.1.bottom" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580801841861" />
+    <state width="1275" height="229" key="GridCell.Tab.1.bottom" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.1.center" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.1.center" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.1.left" timestamp="1580748227760">
+    <state width="1275" height="229" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.1.left" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580748227760" />
-    <state width="1275" height="229" key="GridCell.Tab.1.right" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.1.right" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.2.bottom" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.2.bottom" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.2.center" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.2.center" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.2.left" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.2.left" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
-    <state width="1275" height="229" key="GridCell.Tab.2.right" timestamp="1580748227761">
+    <state width="1275" height="229" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
+    <state width="1275" height="229" key="GridCell.Tab.2.right" timestamp="1580748752258">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1275" height="229" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580748227761" />
+    <state width="1275" height="229" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580748752258" />
     <state x="213" y="23" key="Maven.ArtifactSearchDialog" timestamp="1575043277058">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

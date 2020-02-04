@@ -2,31 +2,37 @@
 <Configuration status="WARN" name="AdsApp" packages="">
     <Appenders>
         <Console name="LogToConsole" target="SYSTEM_OUT">
-<!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
-<!--            Igor Blinov example-->
+            <!--            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+            <!--            Igor Blinov example-->
             <PatternLayout pattern="%d{yyyy:MM:dd HH:ss.SSS} [%t] %-5level %logger{5} - %msg%n"/>
         </Console>
         <File name="File" fileName="logs/adsLog.txt" bufferedIO="true">
-            <PatternLayout pattern="%d %-5p %d{HH:mm:ss.SSS} [%t] %level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d %-5p %d{HH:mm:ss.SSS} [%t] %level %logger{5} - %msg%n"/>
         </File>
 
 
         <!--        <File name="fileLogAds" fileName="logs/AdsApp.log">-->
-<!--            <PatternLayout>-->
-<!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
-<!--            </PatternLayout>-->
-<!--        </File>-->
+        <!--            <PatternLayout>-->
+        <!--                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>-->
+        <!--            </PatternLayout>-->
+        <!--        </File>-->
 
 
-        <RollingFile name="LogToRollingFile" filePattern="logs/app-%d{yyyy-MM-dd-HH}-%i.log.gz">
+        <RollingFile name="LogToRollingFile"
+                     fileName="logs/adsLogRolling.txt"
+                     append="true"
+                     filePattern="logs/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}_%i.log">
             <PatternLayout>
-                <Pattern>[%-5level] %d{dd.MM.yyyy HH:mm:ss} %c{1}.%M() - %m%n%throwable{short.lineNumber}</Pattern>
+                <!--                <Pattern>[%-5level] %d{dd.MM.yyyy HH:mm:ss} %c{1}.%M() - %m%n%throwable{short.lineNumber}</Pattern>-->
+                <Pattern pattern="%d{yyyy:MM:dd HH:ss.SSS} [%t] %-5level %logger{5} - %msg%n"/>
             </PatternLayout>
             <Policies>
-                <CronTriggeringPolicy schedule="0 0 * * * ?"/>
-                <SizeBasedTriggeringPolicy size="2 MB"/>
+                <!--                <CronTriggeringPolicy schedule="0 0 * * * ?"/>-->
+                <TimeBasedTriggerPolicy/>
+                <SizeBasedTriggeringPolicy size="25 KB"/>
             </Policies>
-            <DirectWriteRolloverStrategy maxFiles="2"/>
+            <DefaultRollowerStrategy max="10"/>
+<!--            <Direc/tWriteRolloverStrategy maxFiles="2"/>-->
         </RollingFile>
 
         <!--   ========================================================================================     -->
@@ -71,13 +77,13 @@
         <!--        <Logger name="com.ads" level="DEBUG" additivity="false">-->
         <!--            <AppenderRef ref="LogToRollingFile"/>-->
         <!--        </Logger>-->
-<!--        <Root level="DEBUG">-->
+        <!--        <Root level="DEBUG">-->
         <Root level="debug">
             <AppenderRef ref="LogToConsole"/>
             <AppenderRef ref="LogToRollingFile"/>
-<!--            <AppenderRef ref="fileLogAds"/>-->
+            <!--            <AppenderRef ref="fileLogAds"/>-->
             <AppenderRef ref="File" level="debug"/>
-"/>
+            "/>
         </Root>
     </Loggers>
 </Configuration>
