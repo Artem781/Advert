@@ -95,6 +95,22 @@ public enum CommandUrlBuilder {
             return COMMAND_URL + params;
         }
     },
+    TO_ADMIN_PROFILE_PAGE {
+
+        private static final String COMMAND_URL = "/controller?command=to_admin_profile";
+        private String params = "";
+
+        public CommandUrlBuilder setParams(String name, String param) {
+            params = params + "&" + name + "=" + param;
+            return this;
+        }
+
+        public String getUrl() {
+            String params = this.params;
+            this.params = "";
+            return COMMAND_URL + params;
+        }
+    },
     TO_LOGIN {
         private static final String COMMAND_URL = "/controller?command=TO_SIGN_IN";
         private String params = "";

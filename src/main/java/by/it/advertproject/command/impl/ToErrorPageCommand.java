@@ -1,5 +1,9 @@
-package by.it.advertproject.command;
+package by.it.advertproject.command.impl;
 
+import by.it.advertproject.command.Command;
+import by.it.advertproject.command.RequestContent;
+import by.it.advertproject.command.Router;
+import by.it.advertproject.command.TransmissionType;
 import by.it.advertproject.util.ConfigurationManager;
 import by.it.advertproject.util.MessageManager;
 

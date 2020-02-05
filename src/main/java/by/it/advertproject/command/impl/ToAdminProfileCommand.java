@@ -16,39 +16,40 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static by.it.advertproject.command.AttributeName.*;
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_GIVE_ADMIN_LEVEL;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_PAGE_ID;
 
-public class ToUserProfileCommand implements Command {
-    private static Logger Logger = LogManager.getRootLogger();
+public class ToAdminProfileCommand implements Command {
+    private static org.apache.logging.log4j.Logger Logger = LogManager.getRootLogger();
 
     private static final String MAIN_PAGE = "path.page.main";
-    private static final String USERPROFILE_PAGE = "path.page.userprofile";
+    private static final String USER_PROFILE_PAGE = "path.page.userprofile";
     private static final String SUBSCRIBE_LABEL = "label.subscribe";
     private static final String UNSUBSCRIBE_LABEL = "label.unsubscribe";
     private static final String REMOVE_ADMIN_LABEL = "label.remove-admin";
     private static final String GIVE_ADMIN_LABEL = "label.give-admin";
+
     @Override
     public Router execute(RequestContent content) throws CommandException {
-        Logger.log(Level.INFO, "from ToUserProfileCommand.");
+        Logger.log(Level.INFO, "from ToAdminProfileCommand.");
 
-//        String page = ConfigurationManager.getProperty(MAIN_PAGE);
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. page: " + ConfigurationManager.getProperty(MAIN_PAGE));
+//        String page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. page: " +
+//                ConfigurationManager.getProperty(USER_PROFILE_PAGE));
 //
 //        TransmissionType transmissionType = TransmissionType.FORWARD;
 //        String lang = (String) content.getSessionAttribute(ATTR_NAME_LANG);
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. lang: " + lang);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. lang: " + lang);
 //        long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. accountId: " + accountId);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. accountId: " + accountId);
 //        String login = (String) content.getSessionAttribute(ATTR_NAME_LOGIN);
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. login: " + login);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. login: " + login);
 //        Role role = (Role) content.getSessionAttribute(ATTR_NAME_ACCESS_LEVEL);
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. role: " + role);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. role: " + role);
 //        long pageId = Long.parseLong(content.getRequestParameters(PARAM_NAME_PAGE_ID, 0));
-//        Logger.log(Level.INFO, "from ToUserProfileCommand. pageId: " + pageId);
+//        Logger.log(Level.INFO, "from ToAdminProfileCommand. pageId: " + pageId);
 //        AccountService accountService = null;
 //        try {
-//            Logger.log(Level.INFO, "from ToUserProfileCommand. try");
+//            Logger.log(Level.INFO, "from ToAdminProfileCommand. try");
 //            Account account = accountService.findAccount(pageId);
 //            Logger.log(Level.INFO, "from ToUserProfileCommand. account: " + account);
 ////            List<Post> posts = PostLogic.findPostsByAuthor(pageId);
@@ -79,13 +80,7 @@ public class ToUserProfileCommand implements Command {
 //        return new Router(page, transmissionType);
 
 
-
-
-
-
-
-
-        String page = "/jsppage/userprofile.jsp";
+        String page = "/jsppage/adminprofile.jsp";
         Logger.log(Level.INFO, "from ToUserProfileCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
 
