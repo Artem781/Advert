@@ -77,6 +77,7 @@ public class SignInCommand implements Command {
                 logger.log(Level.INFO, "else if user role: ADMINISTRATOR");
                 List<Account> allAccount = accountService.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
+//                content.putRequestAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
                 logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);");
                 content.putRequestAttribute(ATTR_NAME_USER, account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());

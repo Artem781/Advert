@@ -11,6 +11,44 @@
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
+<div>
+    <!-- HTML-код модального окна-->
+    <div id="adminDeleteUserModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <%--                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>--%>
+                    <h4 class="modal-title">
+                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <fmt:message key="label.delete-user-button-close" bundle="${rb}"/>
+                    </button>
+                    <%--                    <button type="button" class="btn btn-primary">--%>
+                    <%--                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
+                    <%--                    </button>--%>
+                    <a href="controller?command=delete_user&id_user_for_delete=${accountId}&mark_if_admin=false"
+                       class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash">
+                            <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--<!-- Кнопка, вызывающее модальное окно -->--%>
+<%--<a href="#adminDeleteUserModal" class="btn  btn-danger btn-sm" data-toggle="modal">--%>
+<%--    <i class="fa fa-trash-o fa-lg"></i>--%>
+<%--    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
+<%--</a>--%>
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -106,6 +144,7 @@
                     </caption>
                     <thead class="thead-light">
                     <tr>
+                        <th>Id</th>
                         <th scope="col"><fmt:message key="label.table-login" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.table-name" bundle="${rb}"/></th>
                         <th scope="col"><fmt:message key="label.table-date-of-birth" bundle="${rb}"/></th>
@@ -120,44 +159,26 @@
                         <c:if test="${account.login != AdminLogin}">
                             <tr>
                                     <%--                            <th scope="row">${countAdvert}</th>--%>
+                                <td>${account.getId()}</td>
                                 <td>${account.login}</td>
                                 <td>${account.name}</td>
                                 <td>${account.birthday}</td>
                                 <td>${account.email}</td>
                                 <td>${account.tel}</td>
-                                    <%--                            <td>--%>
-                                    <%--                                <button type="button" class="btn btn-outline-info">--%>
-                                    <%--                                    Info--%>
-                                    <%--                                </button>--%>
-                                    <%--                                --%>
-                                    <%--                                Action countAdvert--%>
-                                    <%--                            </td>--%>
                                 <td>
-                                        <%--                                <button type="submit" class="btn btn-outline-danger">--%>
-                                        <%--                                    <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
-                                        <%--                                </button>--%>
-
-
-                                        <%--                                    <a class="btn btn-outline-danger"--%>
-                                        <%--&lt;%&ndash;                                       href="controller?command=delete_user&id_user_for_delete=${account.Id}&mark_if_admin=true">&ndash;%&gt;--%>
-                                        <%--                                       href="controller?command=delete_user&mark_if_admin=true">--%>
-                                        <%--                                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
-                                        <%--                                    </a>--%>
-
-                                        <%--                                    <a href="controller?command=delete_user&id_user_for_delete=${account.Id}&mark_if_admin=true"--%>
+                                        <%--                                    <a href="controller?command=delete_user&id_user_for_delete=${account.getId()}&mark_if_admin=true"--%>
                                         <%--                                       class="btn btn-danger">--%>
                                         <%--                        <span class="glyphicon glyphicon-trash">--%>
-                                        <%--                            <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${account.name}--%>
                                         <%--                        </span>--%>
                                         <%--                                    </a>--%>
 
-                                            <!-- Button delete user -->
-                                            <div class="form-group">
-                                                <label class="col-md-4 control-label" for="singlebutton"></label>
-                                                <div class="col-md-4">
-                                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Delete</button>
-                                                </div>
-                                            </div>
+                                    <a href="controller?command=delete_user&id_user_for_delete=${account.getId()}&mark_if_admin=true"
+                                       class="btn btn-sm btn-danger">
+                                        <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${account.name}
+                                        <span class="glyphicon glyphicon-trash">
+
+                                        </span>
+                                    </a>
                                 </td>
                             </tr>
                         </c:if>
