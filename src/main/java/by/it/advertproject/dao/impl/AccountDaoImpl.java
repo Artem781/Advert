@@ -21,8 +21,8 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
     //language=SQL
     private static final String SQL_SELECT_ALL_ACCOUNTS =
             "select anaron.account.idaccounts, anaron.account.name, anaron.account.login, anaron.account.password," +
-                    " anaron.account.birthday, anaron.account.email, anaron.account.tel, " +
-                    "anaron.account.accesslevel from anaron.account";
+                    " anaron.account.birthday, anaron.account.email, anaron.account.tel, anaron.account.accesslevel," +
+                    " anaron.account.photo from anaron.account";
 
     @Override
     public List<Account> findAll() throws DaoException {

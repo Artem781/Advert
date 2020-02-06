@@ -7,15 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToAdminProfileCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/adminprofile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/admin/AdminDeleteAccountCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/exception/ServletException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/some/CommandEquals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandUrlBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandUrlBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ToErrorPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToErrorPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToUserProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToUserProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ParameterName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SetLanguageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SetLanguageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToAdminProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToAdminProfileCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AccountDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/adminprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/adminprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/it/advertproject/command/CommandType.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +191,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tommy">
+    <configuration name="CommandEquals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.some.CommandEquals" />
+      <module name="5. Database example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.it.advertproject.tester.examl.some.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountDaoImplTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="5. Database example" />
       <extension name="coverage">
@@ -203,24 +232,6 @@
       <option name="PACKAGE_NAME" value="by.it.advertproject.dao.impl" />
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.dao.impl.AdvertDaoImplTester" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdvertDaoImplTester.findCountAdvertByAccountIdFk" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="5. Database example" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.it.advertproject.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.it.advertproject.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="by.it.advertproject.dao.impl.AdvertDaoImplTester" />
-      <option name="METHOD_NAME" value="findCountAdvertByAccountIdFk" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -337,20 +348,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.AdvertDaoImplTester.findCountAdvertByAccountIdFk" />
       <item itemvalue="TestNG.AdvertDaoImplTester.testFindByTime" />
       <item itemvalue="TestNG.AdvertDaoImplTester.testFindByTimeExpectedNull" />
       <item itemvalue="TestNG.AdvertDaoImplTester" />
       <item itemvalue="TestNG.AccountDaoImplTest" />
       <item itemvalue="Tomcat Server.Tommy" />
+      <item itemvalue="Application.CommandEquals" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CommandEquals" />
         <item itemvalue="TestNG.AdvertDaoImplTester" />
         <item itemvalue="TestNG.AccountDaoImplTest" />
         <item itemvalue="TestNG.AdvertDaoImplTester.testFindByTimeExpectedNull" />
         <item itemvalue="TestNG.AdvertDaoImplTester.testFindByTime" />
-        <item itemvalue="TestNG.AdvertDaoImplTester.findCountAdvertByAccountIdFk" />
       </list>
     </recent_temporary>
   </component>
@@ -358,7 +369,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.08114374" />
+          <option name="contentProportion" value="0.013921114" />
           <treeState>
             <expand>
               <path>
@@ -635,21 +646,13 @@
       <workItem from="1580800954008" duration="17650000" />
       <workItem from="1580833872998" duration="3114000" />
       <workItem from="1580839105901" duration="3389000" />
-      <workItem from="1580890782315" duration="1173000" />
-    </task>
-    <task id="LOCAL-00009" summary="added router">
-      <created>1567771392435</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1567771392435</updated>
-    </task>
-    <task id="LOCAL-00010" summary="fix param">
-      <created>1568015847184</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1568015847184</updated>
+      <workItem from="1580890782315" duration="5912000" />
+      <workItem from="1580899570192" duration="10074000" />
+      <workItem from="1580912579063" duration="726000" />
+      <workItem from="1580913490712" duration="4056000" />
+      <workItem from="1580924477368" duration="3427000" />
+      <workItem from="1580969454592" duration="11174000" />
+      <workItem from="1580984810280" duration="6659000" />
     </task>
     <task id="LOCAL-00011" summary="fix sign up">
       <created>1568446896980</created>
@@ -980,7 +983,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580839943103</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="create AdvertDaoImplTest.java">
+      <created>1580892011367</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1580892011368</updated>
+    </task>
+    <task id="LOCAL-00059" summary="create admin page jsp">
+      <created>1580892053779</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1580892053779</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1030,8 +1047,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added added custom style" />
-    <MESSAGE value="added create advert page, command, service" />
     <MESSAGE value="fixed create advert page, command, service" />
     <MESSAGE value="userprofile" />
     <MESSAGE value="signin" />
@@ -1055,7 +1070,9 @@
     <MESSAGE value="added rolling file appender" />
     <MESSAGE value="create AccountDaoImplTest.java" />
     <MESSAGE value="create AdvertDaoImplTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="create AdvertDaoImplTest.java" />
+    <MESSAGE value="create admin page" />
+    <MESSAGE value="create admin page jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="create admin page jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="15" key="#AccountDaoImplTest" timestamp="1580809819175">
@@ -1078,62 +1095,78 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="403" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1580378217098" />
-    <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser" timestamp="1580891453444">
+    <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser" timestamp="1580926824122">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1580891453444" />
-    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580892030608">
+    <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1580926824122" />
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1580892052871">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580892030608" />
-    <state width="1188" height="324" key="GridCell.Tab.0.bottom" timestamp="1580890967093">
+    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580892052871" />
+    <state width="1275" height="306" key="GridCell.Tab.0.bottom" timestamp="1580994683373">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.0.center" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580994683373" />
+    <state width="1275" height="306" key="GridCell.Tab.0.center" timestamp="1580994683373">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.0.left" timestamp="1580890967092">
+    <state width="1275" height="306" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580994683373" />
+    <state width="1275" height="306" key="GridCell.Tab.0.left" timestamp="1580994683373">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580890967092" />
-    <state width="1188" height="324" key="GridCell.Tab.0.right" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580994683373" />
+    <state width="1275" height="306" key="GridCell.Tab.0.right" timestamp="1580994683373">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.1.bottom" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580994683373" />
+    <state width="1275" height="306" key="GridCell.Tab.1.bottom" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.1.center" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.1.center" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.1.left" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.1.left" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.1.right" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.1.right" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.2.bottom" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.2.bottom" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.2.center" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.2.center" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.2.left" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.2.left" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
-    <state width="1188" height="324" key="GridCell.Tab.2.right" timestamp="1580890967093">
+    <state width="1275" height="306" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1275" height="306" key="GridCell.Tab.2.right" timestamp="1580993007888">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1188" height="324" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580890967093" />
+    <state width="1275" height="306" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1580993007888" />
+    <state width="1180" height="251" key="GridCell.Tab.3.bottom" timestamp="1580915827563">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1180" height="251" key="GridCell.Tab.3.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580915827563" />
+    <state width="1180" height="251" key="GridCell.Tab.3.center" timestamp="1580915827563">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1180" height="251" key="GridCell.Tab.3.center/0.0.1366.738@0.0.1366.738" timestamp="1580915827563" />
+    <state width="1180" height="251" key="GridCell.Tab.3.left" timestamp="1580915827563">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1180" height="251" key="GridCell.Tab.3.left/0.0.1366.738@0.0.1366.738" timestamp="1580915827563" />
+    <state width="1180" height="251" key="GridCell.Tab.3.right" timestamp="1580915827563">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1180" height="251" key="GridCell.Tab.3.right/0.0.1366.738@0.0.1366.738" timestamp="1580915827563" />
     <state x="213" y="23" key="Maven.ArtifactSearchDialog" timestamp="1575043277058">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1142,10 +1175,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1579338764699" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580892015219">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580892056379">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580892015219" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580892056379" />
     <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580833941395">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1154,10 +1187,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="502" y="195" key="export.test.results/0.0.1366.738@0.0.1366.738" timestamp="1580836386977" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1579349074565">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1580926440316">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1579349074565" />
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1580926440316" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

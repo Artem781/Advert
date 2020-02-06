@@ -9,6 +9,7 @@ public enum CommandType {
     TO_MAIN(new ToMainCommand()),
     TO_EDIT_PROFILE(new ToEditProfile()),
     TO_USER_PROFILE(new ToUserProfileCommand()),
+    TO_ADMIN_PROFILE(new ToAdminProfileCommand()),
     TO_CREATE_ADVERT(new ToCreateAdvertCommand()),
     TO_ERROR(new ToErrorPageCommand()),
     UPDATE_PHOTO(new UpdatePhotoCommand()),
@@ -19,7 +20,6 @@ public enum CommandType {
     SIGN_UP(new SignUpCommand()),
     SET_LANG(new SetLanguageCommand()),
     CREATE_ADVERT(new CreateAdvertCommand());
-
 
     CommandType(Command command) {
         this.command = command;

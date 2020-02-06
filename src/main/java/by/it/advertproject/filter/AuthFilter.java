@@ -38,34 +38,48 @@ public class AuthFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         String parameterCommand = httpRequest.getParameter(PARAM_NAME_COMMAND);
-        logger.log(Level.INFO, "from AuthFilter. doFilter method. parameterCommand: " + parameterCommand);
+        logger.log(Level.INFO, "parameterCommand: " + parameterCommand);
 
         try {
-            logger.log(Level.INFO, "from AuthFilter. doFilter method. if (httpRequest.getParameter(PARAM_NAME_COMMAND) != null) { ");
+            logger.log(Level.INFO, "if 1) (httpRequest.getParameter(PARAM_NAME_COMMAND) != null): " +
+                    (httpRequest.getParameter(PARAM_NAME_COMMAND) != null));
             if (httpRequest.getParameter(PARAM_NAME_COMMAND) != null) {
-                logger.log(Level.INFO, "from AuthFilter. doFilter method.if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))): " + (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))));
-                if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))) {
-                    logger.log(Level.INFO, "from AuthFilter. doFilter method. if (httpRequest.getSession(false) == null): " + (httpRequest.getSession(false) == null));
 
+                logger.log(Level.INFO, "if 2) (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))): " +
+                        (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))));
+                if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))) {
+                    logger.log(Level.INFO, "if 3) (httpRequest.getSession(false) == null): " +
+                            (httpRequest.getSession(false) == null));
                     if (httpRequest.getSession(false) == null) {
-                        logger.log(Level.INFO, "from AuthFilter. throw new AdvertException(NOT_AUTH_MESSAGE);");
+                        logger.log(Level.INFO, "from AuthFilter. FIRST place throw new AdvertException(NOT_AUTH_MESSAGE);");
                         throw new AdvertException(NOT_AUTH_MESSAGE);
                     } else {
 
-                        logger.log(Level.INFO, "from AuthFilter. if (httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCOUNT_ID) == null) {");
+                        logger.log(Level.INFO, "if 4) (httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCOUNT_ID) == null)" +
+                                (httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCOUNT_ID) == null));
                         if (httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCOUNT_ID) == null) {
-                            logger.log(Level.INFO, "from AuthFilter. throw new AdvertException(NOT_AUTH_MESSAGE);");
-
+                            logger.log(Level.INFO, "from AuthFilter. SECOND place throw new AdvertException(NOT_AUTH_MESSAGE);");
                             throw new AdvertException(NOT_AUTH_MESSAGE);
                         }
                     }
                 }
+                logger.log(Level.INFO, "from AuthFilter. doFilter method.");
+                logger.log(Level.INFO, "(isAdminAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND)) && \n" +
+                        " httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCESS_LEVEL).equals(Role.USER)): " +
+                        (isAdminAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND)) && httpRequest.getSession(false)
+                                .getAttribute(ATTR_NAME_ACCESS_LEVEL).equals(Role.USER)));
+
+
                 if (isAdminAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND)) &&
                         httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCESS_LEVEL)
                                 .equals(Role.USER)) {
+                    logger.log(Level.INFO, "from AuthFilter. doFilter method. throw new AdvertException(BAD_ACCESS_LEVEL)");
+
                     throw new AdvertException(BAD_ACCESS_LEVEL);
                 }
             }
+            logger.log(Level.INFO, "from AuthFilter. doFilter method. after ifov");
+
             filterChain.doFilter(httpRequest, httpResponse);
         } catch (AdvertException e) {
             logger.log(Level.WARN, e.getMessage());
@@ -74,14 +88,32 @@ public class AuthFilter implements Filter {
     }
 
     private boolean isPublicAccessAction(String action) {
-        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method.");
+//        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method.");
         String publicActionProperty = ConfigurationManager.getProperty(PUBLIC_ACTION_PROPERTY_KEY);
+        String[] split = publicActionProperty.split(COMMA);
+        List<String> strings = Arrays.asList(split);
         List<String> publicActions = Arrays.asList(publicActionProperty.split(COMMA));
-        publicActions.forEach(a -> a = a.trim());
-        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method. publicActions.forEach(a -> a = a.trim());");
-        logger.log(Level.INFO, "from AuthFilter. publicActions.contains(action): " + publicActions.contains(action));
+
+        for (String element : publicActions) {
+            element = element.trim();
+//            logger.log(Level.INFO, "from isPublicAccessAction. element: " + element);
+
+        }
+//        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method. publicActions.forEach(a -> a = a.trim());");
+//        logger.log(Level.INFO, "from AuthFilter. publicActions.contains(action): " + publicActions.contains(action));
         return publicActions.contains(action);
     }
+
+
+//    private boolean isPublicAccessAction(String action) {
+//        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method.");
+//        String publicActionProperty = ConfigurationManager.getProperty(PUBLIC_ACTION_PROPERTY_KEY);
+//        List<String> publicActions = Arrays.asList(publicActionProperty.split(COMMA));
+//        publicActions.forEach(a -> a = a.trim());
+//        logger.log(Level.INFO, "from AuthFilter. isPublicAccessAction method. publicActions.forEach(a -> a = a.trim());");
+//        logger.log(Level.INFO, "from AuthFilter. publicActions.contains(action): " + publicActions.contains(action));
+//        return publicActions.contains(action);
+//    }
 
     private boolean isAdminAccessAction(String action) {
         String adminActionProperty = ConfigurationManager.getProperty(ADMIN_ACTION_PROPERTY_KEY);

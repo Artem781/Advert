@@ -46,6 +46,19 @@
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
 
+<!--    <filter>-->
+<!--        <filter-name>SecurityFilter</filter-name>-->
+<!--        <filter-class>by.it.advertproject.filter.SecurityFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>SecurityFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--        <dispatcher>REQUEST</dispatcher>-->
+<!--        <dispatcher>FORWARD</dispatcher>-->
+<!--    </filter-mapping>-->
+
+
+
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>by.it.advertproject.filter.AuthFilter</filter-class>
@@ -56,6 +69,8 @@
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+
+
 
     <error-page>
         <error-code>500</error-code>

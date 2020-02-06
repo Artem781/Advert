@@ -283,23 +283,23 @@
                     </tr>
                     </thead>
                     <tbody class="table table-striped">
-                    <c:forEach var="allAd" items="${listAllAdvertAttr}">
+                    <c:forEach var="account" items="${listAllAdvertAttr}">
                         <tr>
                             <th scope="row">${countAdvert}</th>
-                            <td>${allAd.getTitle()}</td>
-                            <td>${allAd.getDescription()}</td>
-                            <td>${allAd.getBrand()}</td>
-                            <td>${allAd.getModel()}</td>
-                            <td>${allAd.getColor()}</td>
-                            <td>${allAd.getBody()}</td>
-                            <td>${allAd.getYear()}</td>
-                            <td>${allAd.getAt()}</td>
-                            <td>${allAd.getDriveunit()}</td>
-                            <td>${allAd.getEquipment()}</td>
-                            <td>${allAd.getMilage()}</td>
-                            <td>${allAd.getCrashed()}</td>
-                            <td>${allAd.getEngine()}</td>
-                            <td>${allAd.getPrice()}</td>
+                            <td>${account.getTitle()}</td>
+                            <td>${account.getDescription()}</td>
+                            <td>${account.getBrand()}</td>
+                            <td>${account.getModel()}</td>
+                            <td>${account.getColor()}</td>
+                            <td>${account.getBody()}</td>
+                            <td>${account.getYear()}</td>
+                            <td>${account.getAt()}</td>
+                            <td>${account.getDriveunit()}</td>
+                            <td>${account.getEquipment()}</td>
+                            <td>${account.getMilage()}</td>
+                            <td>${account.getCrashed()}</td>
+                            <td>${account.getEngine()}</td>
+                            <td>${account.getPrice()}</td>
                             <td>@photo</td>
                         </tr>
                     </c:forEach>

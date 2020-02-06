@@ -35,7 +35,8 @@
                     <%--                    <button type="button" class="btn btn-primary">--%>
                     <%--                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
                     <%--                    </button>--%>
-                    <a href="controller?command=delete_user" method="post" class="btn btn-danger">
+                    <a href="controller?command=delete_user&id_user_for_delete=${accountId}&mark_if_admin=false"
+                       class="btn btn-danger">
                         <span class="glyphicon glyphicon-trash">
                             <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
                         </span>
@@ -329,9 +330,6 @@
         </form>
         <br>
         <hr>
-        <%--    <button type="button" class="btn btn-outline-danger">--%>
-        <%--        <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
-        <%--    </button>--%>
         <%--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////    --%>
 
         <!-- Кнопка, вызывающее модальное окно -->
@@ -339,23 +337,13 @@
             <i class="fa fa-trash-o fa-lg"></i>
             <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
         </a>
-
-        <%--<p>Абзац</p>--%>
-        <%--<a href="controller?command=delete_user" method="post" class="btn btn-sm btn-danger">--%>
-        <%--    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
-        <%--    <span class="glyphicon glyphicon-trash">SPAN</span>--%>
-        <%--</a>--%>
-
-
-        <%--    <form class="form-horizontal" action="controller" method="post">--%>
-        <%--        <input type="hidden" name="command" value="update_profile_data"/>--%>
         <br>
         <hr>
     </div>
 </main>
 <footer>
     <div class="container-fluid">
-        <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
+        <button type="submit" class="btn btn-primary" data-toggle="popover" title="Сообщение"
                 data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
         </button>
     </div>

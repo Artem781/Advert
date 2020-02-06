@@ -1,36 +1,27 @@
 package by.it.advertproject.command.impl;
 
-import by.it.advertproject.bean.Account;
-import by.it.advertproject.bean.Role;
 import by.it.advertproject.command.Command;
 import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.command.Router;
 import by.it.advertproject.command.TransmissionType;
 import by.it.advertproject.exception.CommandException;
-import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
-import by.it.advertproject.util.ConfigurationManager;
-import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static by.it.advertproject.command.AttributeName.*;
-import static by.it.advertproject.command.ParameterName.PARAM_NAME_PAGE_ID;
-
 public class ToAdminProfileCommand implements Command {
-    private static org.apache.logging.log4j.Logger Logger = LogManager.getRootLogger();
+    private final static Logger LOGGER = LogManager.getRootLogger();
 
-    private static final String MAIN_PAGE = "path.page.main";
-    private static final String USER_PROFILE_PAGE = "path.page.userprofile";
-    private static final String SUBSCRIBE_LABEL = "label.subscribe";
-    private static final String UNSUBSCRIBE_LABEL = "label.unsubscribe";
-    private static final String REMOVE_ADMIN_LABEL = "label.remove-admin";
-    private static final String GIVE_ADMIN_LABEL = "label.give-admin";
+//    private static final String MAIN_PAGE = "path.page.main";
+//    private static final String USER_PROFILE_PAGE = "path.page.userprofile";
+//    private static final String SUBSCRIBE_LABEL = "label.subscribe";
+//    private static final String UNSUBSCRIBE_LABEL = "label.unsubscribe";
+//    private static final String REMOVE_ADMIN_LABEL = "label.remove-admin";
+//    private static final String GIVE_ADMIN_LABEL = "label.give-admin";
 
     @Override
     public Router execute(RequestContent content) throws CommandException {
-        Logger.log(Level.INFO, "from ToAdminProfileCommand.");
+        LOGGER.log(Level.INFO, "from ToAdminProfileCommand.");
 
 //        String page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
 //        Logger.log(Level.INFO, "from ToAdminProfileCommand. page: " +
@@ -79,9 +70,8 @@ public class ToAdminProfileCommand implements Command {
 //        }
 //        return new Router(page, transmissionType);
 
-
         String page = "/jsppage/adminprofile.jsp";
-        Logger.log(Level.INFO, "from ToUserProfileCommand. page: " + page);
+        LOGGER.log(Level.INFO, "from ToUserProfileCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
 
     }

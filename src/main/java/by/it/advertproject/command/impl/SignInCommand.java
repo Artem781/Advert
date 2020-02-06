@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static by.it.advertproject.command.AttributeName.*;
@@ -73,7 +74,10 @@ public class SignInCommand implements Command {
                         PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
                 logger.log(Level.INFO, "page: " + page);
             } else if (account.getRole().equals(Role.ADMINISTRATOR)) {
-                logger.log(Level.INFO, "user role: ADMINISTRATOR");
+                logger.log(Level.INFO, "else if user role: ADMINISTRATOR");
+                List<Account> allAccount = accountService.findAllAccount();
+                content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
+                logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);");
                 content.putRequestAttribute(ATTR_NAME_USER, account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
@@ -82,12 +86,14 @@ public class SignInCommand implements Command {
                 content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
                 content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
-                page = CommandUrlBuilder.TO_PERSONAL_PAGE
-                        .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
+                logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());");
+                page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE
+//                        .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId()))
+                        .getUrl();
+                logger.log(Level.INFO, "page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE. page:" + page);
             }
         } catch (ServiceException e) {
-            logger.log(Level.INFO, "from SignInCommand. Catch block. ");
-            logger.log(Level.INFO, "from SignInCommand. Catch block. \n" +
+            logger.log(Level.INFO, "from SignInCommand. Catch block. (ServiceException e) \n" +
                     " e.getMessage(): " + e.getMessage());
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
                     MessageManager.getProperty(e.getMessage(), String.valueOf(ENGLISH)));
@@ -98,12 +104,16 @@ public class SignInCommand implements Command {
             logger.log(Level.INFO, "from SignInCommand. Catch block. \n page: " + page);
             transmissionType = TransmissionType.FORWARD;
         } catch (DaoException e) {
-            logger.log(Level.INFO, "from SignInCommand. Catch block. DaoException.  e.getMessage = " +e.getMessage() +
-                    "\n page: " + page);
+            logger.log(Level.INFO, "from SignInCommand. Catch block. (DaoException e).  e.getMessage = " + e.getMessage());
 
             page = CommandUrlBuilder.TO_LOGIN
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
-                    .getUrl();        }
+                    .getUrl();
+            logger.log(Level.INFO, "from SignInCommand. Catch block. \n page: " + page);
+
+        }
+        logger.log(Level.INFO, "from SignInCommand. After catch block. ");
+        logger.log(Level.INFO, "from SignInCommand. return new Router(page, transmissionType); ");
         return new Router(page, transmissionType);
     }
 }

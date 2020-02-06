@@ -29,6 +29,7 @@ public class SetLanguageCommand implements Command {
     private static final String SIGN_IN = "to-signin";
     private static final String SIGN_UP = "to-signup";
     private static final String USER_PROFILE = "to-userprofile";
+    private static final String ADMIN_PROFILE = "to-adminprofile";
     private static final String EDIT_PROFILE = "to_edit_profile";
 
 
@@ -42,6 +43,7 @@ public class SetLanguageCommand implements Command {
     private static final String MAIN_PAGE = "path.page.main";
     private static final String CREATE_AD_PAGE = "path.page.createad";
     private static final String USER_PROFILE_PAGE = "path.page.userprofile";
+    private static final String ADMIN_PROFILE_PAGE = "path.page.adminprofile";
     private static final String EDIT_PROFILE_PAGE = "path.page.editprofile";
 
 
@@ -98,6 +100,10 @@ public class SetLanguageCommand implements Command {
                 page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
                 logger.log(Level.INFO, "case USER_PROFILE: page = " + page);
                 break;
+            case ADMIN_PROFILE:
+                page = ConfigurationManager.getProperty(ADMIN_PROFILE_PAGE);
+                logger.log(Level.INFO, "case ADMIN_PROFILE: page = " + page);
+                break;
             case EDIT_PROFILE:
                 page = ConfigurationManager.getProperty(EDIT_PROFILE_PAGE);
                 logger.log(Level.INFO, "case EDIT_PROFILE_PAGE: page = " + page);
@@ -128,7 +134,7 @@ public class SetLanguageCommand implements Command {
             default:
                 logger.log(Level.INFO, "from default");
 
-//                throw new CommandException(NEXT_PAGE_EXCEPTION);
+                throw new CommandException(NEXT_PAGE_EXCEPTION);
         }
 
         logger.log(Level.INFO, "String page = " + page);

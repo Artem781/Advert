@@ -62,7 +62,7 @@
     <%--<hr>--%>
     <%--</c:forEach>--%>
 
-    <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
+    <button type="submit" class="btn btn-primary" data-toggle="popover" title="Сообщение"
             data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
     </button>
 </div>

@@ -38,6 +38,8 @@ public class AttributeName {
     public static final String ATTR_NAME_CHECK_ENTER_DATA = "checkEnterData";
     public static final String ATTR_NAME_ERROR_LOGIN_PASS_MESSAGE = "errorLoginPassMessage";
     public static final String ATTR_NAME_ACCESS_LEVEL = "access_level";
+    public static final String ATTR_NAME_ALL_ACCOUNT_LIST = "allAccountList";
+//    public static final String ATTR_NAME_QUANTITY_ACCOUNT = "quantityAccount";
     public static final String ATTR_NAME_ACCOUNT_ID = "accountId";
     public static final String ATTR_NAME_LOGIN = "login";
     public static final String ATTR_NAME_TELEPHONE = "telAttr";

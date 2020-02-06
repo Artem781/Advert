@@ -7,7 +7,7 @@
 //import javax.servlet.http.HttpServletResponse;
 //import java.io.IOException;
 //
-//@WebFilter(urlPatterns = {"/jsp/*"},
+//@WebFilter(urlPatterns = {"/*"},
 //        initParams = {@WebInitParam(name = "INDEX_PATH", value = "/index.jsp")})
 //public class SecurityFilter implements Filter {
 //    private String indexPath;

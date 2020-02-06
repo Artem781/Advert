@@ -46,6 +46,8 @@ public class ParameterName {
     public static final String PARAM_NAME_TAG = "tag";
     public static final String PARAM_NAME_ERROR_MESSAGE = "errorMessage";
     public static final String PARAM_NAME_PAGE = "page";
+    public static final String PARAM_ID_USER_FOR_DEL = "id_user_for_delete";
+    public static final String PARAM_MARK_IF_ADMIN = "mark_if_admin";
 
     public ParameterName() {
     }
