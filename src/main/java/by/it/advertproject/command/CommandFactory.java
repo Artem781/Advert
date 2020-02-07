@@ -32,6 +32,9 @@ public class CommandFactory {
             current = currentEnum.getCommand();
             if(current == null){
                 // TODO: 05.09.2019 бросать исключение?
+                Logger.log(Level.INFO, "from CommandFactory)defineCommand. if(current == null){");
+                throw new CommandException(COMMAND_NOT_DEFINE_ERROR);
+
             }
         } catch (IllegalArgumentException e) {
             Logger.log(Level.INFO, "from CommandFactory)defineCommand. catch block");

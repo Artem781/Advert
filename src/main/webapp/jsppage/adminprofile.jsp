@@ -11,44 +11,6 @@
     <%@ include file="include/head.jsp" %>
 </head>
 <body>
-<div>
-    <!-- HTML-код модального окна-->
-    <div id="adminDeleteUserModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <%--                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>--%>
-                    <h4 class="modal-title">
-                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>
-                    </h4>
-                </div>
-                <div class="modal-body">
-                    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">
-                        <fmt:message key="label.delete-user-button-close" bundle="${rb}"/>
-                    </button>
-                    <%--                    <button type="button" class="btn btn-primary">--%>
-                    <%--                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
-                    <%--                    </button>--%>
-                    <a href="controller?command=delete_user&id_user_for_delete=${accountId}&mark_if_admin=false"
-                       class="btn btn-danger">
-                        <span class="glyphicon glyphicon-trash">
-                            <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<%--<!-- Кнопка, вызывающее модальное окно -->--%>
-<%--<a href="#adminDeleteUserModal" class="btn  btn-danger btn-sm" data-toggle="modal">--%>
-<%--    <i class="fa fa-trash-o fa-lg"></i>--%>
-<%--    <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${nameUser}--%>
-<%--</a>--%>
 <header>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -90,7 +52,6 @@
         <br>
         <div class="row">
             <div class="col-md-auto">
-                <%--                <h2>${nameUser} <fmt:message key="label.admin-profile" bundle="${rb}"/></h2>--%>
                 <h2><fmt:message key="label.admin-profile" bundle="${rb}"/></h2>
             </div>
         </div>
@@ -100,7 +61,6 @@
                     <%--<h4 class="alert-heading">Well done!</h4>--%>
                     <%--                    <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>--%>
                     <p class="mb-0">
-                        Welcome
                         <strong>
                             <h2><fmt:message key="label.admin-profile" bundle="${rb}"/></h2>
                         </strong>
@@ -120,21 +80,6 @@
         </div>
         <br>
         <hr>
-        <%--////////////////////////////////////////////////////////////////////////////////////////////////////////        --%>
-        <%--        <div class="row">--%>
-        <%--            <div class="col-md-12">--%>
-        <%--                <div class="page-header">--%>
-        <%--                    <h3>--%>
-        <%--                        <fmt:message key="label.all-advert" bundle="${rb}"/>--%>
-        <%--                        <label class="switch">--%>
-        <%--                            <input type="checkbox" onclick="toggle_visibility('AllList','edit')">--%>
-        <%--                            <span class="slider round"></span>--%>
-        <%--                        </label>--%>
-        <%--                    </h3>--%>
-        <%--                </div>--%>
-        <%--            </div>--%>
-        <%--        </div>--%>
-
         <div id="AllList" style="display: block">
             <c:set var="countAdvert" scope="session" value="1"/>
             <div class="table-responsive">
@@ -166,12 +111,6 @@
                                 <td>${account.email}</td>
                                 <td>${account.tel}</td>
                                 <td>
-                                        <%--                                    <a href="controller?command=delete_user&id_user_for_delete=${account.getId()}&mark_if_admin=true"--%>
-                                        <%--                                       class="btn btn-danger">--%>
-                                        <%--                        <span class="glyphicon glyphicon-trash">--%>
-                                        <%--                        </span>--%>
-                                        <%--                                    </a>--%>
-
                                     <a href="controller?command=delete_user&id_user_for_delete=${account.getId()}&mark_if_admin=true"
                                        class="btn btn-sm btn-danger">
                                         <fmt:message key="label.delete-user-button" bundle="${rb}"/> ${account.name}
