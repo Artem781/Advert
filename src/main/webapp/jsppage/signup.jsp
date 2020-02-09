@@ -20,40 +20,36 @@
     </header>
 
 
-
-<%--    <form action="/controller" method="post">--%>
-<%--        First name:<br>--%>
-<%--        <input type="text" name="firstname" value="Mickey">--%>
-<%--        <br>--%>
-<%--        Last name:<br>--%>
-<%--        <input type="text" name="lastname" value="Mouse">--%>
-<%--        <br><br>--%>
-<%--        <input type="submit" value="Submit">--%>
-<%--    </form>--%>
-
+    <%--    <form action="/controller" method="post">--%>
+    <%--        First name:<br>--%>
+    <%--        <input type="text" name="firstname" value="Mickey">--%>
+    <%--        <br>--%>
+    <%--        Last name:<br>--%>
+    <%--        <input type="text" name="lastname" value="Mouse">--%>
+    <%--        <br><br>--%>
+    <%--        <input type="submit" value="Submit">--%>
+    <%--    </form>--%>
 
 
+    <%--    <form name="test" method="post" action="controller">--%>
+    <%--        <input type="hidden" name="command" value="sign_up"/>--%>
 
-<%--    <form name="test" method="post" action="controller">--%>
-<%--        <input type="hidden" name="command" value="sign_up"/>--%>
-
-<%--        <p><b>Ваше имя:</b><br>--%>
-<%--            <input type="text" size="40">--%>
-<%--        </p>--%>
-<%--        <p><b>Каким браузером в основном пользуетесь:</b><Br>--%>
-<%--            <input type="radio" name="browser" value="ie"> Internet Explorer<Br>--%>
-<%--            <input type="radio" name="browser" value="opera"> Opera<Br>--%>
-<%--            <input type="radio" name="browser" value="firefox"> Firefox<Br>--%>
-<%--        </p>--%>
-<%--        <p>Комментарий<Br>--%>
-<%--            <textarea name="comment" cols="40" rows="3"></textarea></p>--%>
-<%--        <p><input type="submit" value="Отправить">--%>
-<%--            <input type="reset" value="Очистить"></p>--%>
-<%--    </form>--%>
-
+    <%--        <p><b>Ваше имя:</b><br>--%>
+    <%--            <input type="text" size="40">--%>
+    <%--        </p>--%>
+    <%--        <p><b>Каким браузером в основном пользуетесь:</b><Br>--%>
+    <%--            <input type="radio" name="browser" value="ie"> Internet Explorer<Br>--%>
+    <%--            <input type="radio" name="browser" value="opera"> Opera<Br>--%>
+    <%--            <input type="radio" name="browser" value="firefox"> Firefox<Br>--%>
+    <%--        </p>--%>
+    <%--        <p>Комментарий<Br>--%>
+    <%--            <textarea name="comment" cols="40" rows="3"></textarea></p>--%>
+    <%--        <p><input type="submit" value="Отправить">--%>
+    <%--            <input type="reset" value="Очистить"></p>--%>
+    <%--    </form>--%>
 
 
-<br>
+    <br>
 
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
@@ -243,7 +239,7 @@
             </div>
 
 
-<%--            <input type="submit" value="" name="signinbutton">--%>
+            <%--            <input type="submit" value="" name="signinbutton">--%>
 
             <!-- Button -->
             <div class="form-group">
@@ -267,7 +263,6 @@
 </div>
 
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -280,6 +275,17 @@
     $(function () {
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
+</script>
+
+<script>
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode)
+    })
+    document.addEventListener('keyup', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode);
+    })
 </script>
 
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>

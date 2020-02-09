@@ -501,6 +501,17 @@
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 
 <script>
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode)
+    })
+    document.addEventListener('keyup', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode);
+    })
+</script>
+
+<script>
     $(function () {
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });

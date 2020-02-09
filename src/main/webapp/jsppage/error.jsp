@@ -35,5 +35,15 @@
             crossorigin="anonymous"></script>
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'F5') e.preventDefault();
+            console.log(e.key, e.keyCode)
+        })
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'F5') e.preventDefault();
+            console.log(e.key, e.keyCode);
+        })
+    </script>
 </body>
 </html>

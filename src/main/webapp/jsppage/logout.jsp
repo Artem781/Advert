@@ -39,6 +39,16 @@
     });
 </script>
 
+<script>
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode)
+    })
+    document.addEventListener('keyup', (e) => {
+        if (e.key === 'F5') e.preventDefault();
+        console.log(e.key, e.keyCode);
+    })
+</script>
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>
