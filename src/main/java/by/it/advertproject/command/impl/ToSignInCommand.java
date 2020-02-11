@@ -10,8 +10,6 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.http.HttpServletRequest;
-
 import static by.it.advertproject.command.AttributeName.ATTR_LOGIN_ERROR;
 import static by.it.advertproject.command.AttributeName.ATTR_NAME_LANG;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_FEEDBACK;
@@ -34,11 +32,5 @@ public class ToSignInCommand implements Command {
         }
         Logger.log(Level.INFO, "from ToSignInCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
-
-
-////        String page = "/jsppage/signin.jsp";
-//        String page = "/jsppage/testjsp.jsp";
-//        Logger.log(Level.INFO, "from ToSignInCommand. page: " + page);
-//        return new Router(page, TransmissionType.FORWARD);
     }
 }

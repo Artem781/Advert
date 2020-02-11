@@ -8,11 +8,8 @@
 <head>
     <title><fmt:message key="label.user-profile" bundle="${rb}"/></title>
     <%@ include file="include/head.jsp" %>
-
-    <%--<link rel="stylesheet" type="text/css" href="../css/personalPage.css">--%>
-
     <style>
-        div.hiden { /* this will hide all divs on the page */
+        div.hidden { /* this will hide all divs on the page */
             display: none;
         }
 
@@ -79,11 +76,8 @@
             border-radius: 50%;
         }
     </style>
-
-
 </head>
 <body>
-<%--<div class="container">--%>
 <header>
     <div class="container-fluid">
         <%@include file="include/menustart.jsp" %>
@@ -119,7 +113,6 @@
 
 <main>
     <div class="container-fluid">
-
         <br>
         <div class="row">
             <div class="col-md-auto">
@@ -144,7 +137,6 @@
                 >
             </div>
         </div>
-
         <br>
         <hr>
         <div class="table-responsive">
@@ -218,8 +210,8 @@
                     <c:forEach var="ad" items="${listUserAdvertAttr}">
                         <tr>
                             <th scope="row">${countAdvert}</th>
-                            <td>${ad.getTitle()}</td>
-                            <td>${ad.getDescription()}</td>
+                            <td>${ad.title}</td>
+                            <td>${ad.description}</td>
                             <td>${ad.getBrand()}</td>
                             <td>${ad.getModel()}</td>
                             <td>${ad.getColor()}</td>
@@ -241,7 +233,6 @@
         </div>
         <br>
         <hr>
-        <%--////////////////////////////////////////////////////////////////////////////////////////////////////////        --%>
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
@@ -309,7 +300,6 @@
         </div>
     </div>
 </main>
-
 <footer>
     <div class="container-fluid">
         <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
@@ -317,9 +307,6 @@
         </button>
     </div>
 </footer>
-<%--</div>--%>
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -327,8 +314,6 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
 <script type="text/javascript">
     function toggle_visibility(id, id2) {
         var e = document.getElementById(id);
@@ -344,8 +329,6 @@
             c.style.display = 'block';
     }
 </script>
-
-
 <script>
     document.addEventListener('keydown', (e) => {
         if (e.key === 'F5') e.preventDefault();
@@ -356,7 +339,6 @@
         console.log(e.key, e.keyCode);
     })
 </script>
-
 <script>
     $(function () {
         $('[data-toggle="popover"]').popover({trigger: 'hover'});

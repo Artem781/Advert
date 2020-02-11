@@ -23,6 +23,8 @@
     Exception: ${pageContext.errorData.throwable}
     <br>
     Message from exception: ${pageContext.exception.message}
+    <br>
+    ${pageErrorMessageAttr}
     <div/>
     <%@ include file="include/scriptbottom.jsp" %>
 

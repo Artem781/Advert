@@ -13,7 +13,6 @@ import static by.it.advertproject.command.AttributeName.ATTR_NAME_LANG;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_ERROR_MESSAGE;
 
 public class ToErrorPageCommand implements Command {
-
     private static final String ERROR_PAGE = "path.page.error";
     private static final String UNKNOWN_ERROR = "Unknown error";
 

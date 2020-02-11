@@ -7,6 +7,7 @@ public class AttributeName {
     public static final String ATTR_NAME_SUCCESS_UPDATE_PROFILE_DATA = "successUpdateProfileDataAttr";
 
     public static final String ATTR_NAME_ERROR_MESSAGE = "errorMessageAttr";
+    public static final String ATTR_NAME_PAGE_ERROR_MESSAGE = "pageErrorMessageAttr";
     public static final String ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE = "errorMessageAttrUploadMessage";
     public static final String ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT = "errorMessageAttrCreateAdvert";
     public static final String ATTR_NAME_ERROR_NAME = "incorrectNameAttr";

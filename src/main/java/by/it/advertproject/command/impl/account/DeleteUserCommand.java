@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 
 import static by.it.advertproject.command.AttributeName.ATTR_NAME_ALL_ACCOUNT_LIST;
+import static by.it.advertproject.command.Message.ACCOUNT_IS_NULL;
 import static by.it.advertproject.command.ParameterName.*;
 
 public class DeleteUserCommand implements Command {
@@ -36,12 +37,6 @@ public class DeleteUserCommand implements Command {
             if (paramMarkIfAdmin) {
                 String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
                 logger.log(Level.INFO, "from DeleteUserCommand. TO_ADMIN_PROFILE_PAGE");
-
-                if (accountCheckExist == null) {
-                    logger.log(Level.INFO, "return new Router(page, TransmissionType.FORWARD);");
-                    return new Router(page, TransmissionType.FORWARD);
-
-                }
                 List<Account> allAccount = accountService.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
                 logger.log(Level.INFO, "content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);");
@@ -54,13 +49,19 @@ public class DeleteUserCommand implements Command {
                 return new Router(page, TransmissionType.FORWARD);
             }
         } catch (ServiceException e) {
+            if (e.getMessage().equals(ACCOUNT_IS_NULL)) {
+                logger.log(Level.INFO, "from DeleteUserCommand. (e.getMessage().equals(ACCOUNT_IS_NULL))");
+                String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
+                logger.log(Level.INFO, "from DeleteUserCommand. TO_ADMIN_PROFILE_PAGE");
+                return new Router(page, TransmissionType.FORWARD);
+            }
             logger.log(Level.INFO, "from DeleteUserCommand. ServiceException. e.getMessage: " + e.getMessage());
-            logger.log(Level.WARN, e.getMessage());
+            logger.log(Level.WARN, e);
             throw new CommandException(e.getMessage());
         } catch (DaoException e) {
             logger.log(Level.INFO, "from DeleteUserCommand. DaoException. e.getMessage: " + e.getMessage());
-            logger.log(Level.WARN, e.getMessage());
-            throw new CommandException(e.getMessage());
+            logger.log(Level.WARN, e);
+            throw new CommandException(e);
         }
     }
 }

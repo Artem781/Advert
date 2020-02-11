@@ -12,6 +12,10 @@ class ConnectionCheckThread extends Thread {
     private final static String RUN_CHECK_THREAD_MESSAGE = "START CHECK CONNECTIONS THREAD.";
     private final static String ADD_CONN_MESSAGE = "ADD CONNECTION. SIZE OF FREE CONNECTIONS:";
 
+    public ConnectionCheckThread() {
+        this.setDaemon(true);
+    }
+
     @Override
     public void run() {
         ConnectionPool connectionPool = ConnectionPool.INSTANCE;
@@ -27,7 +31,7 @@ class ConnectionCheckThread extends Thread {
                         connectionPool.getFreeConnectionBlockingQueue().size());
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            logger.log(Level.ERROR, e);
         }
     }
 }

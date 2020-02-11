@@ -12,9 +12,7 @@
     <%@include file="include/head.jsp" %>
 </head>
 <body>
-
 <div>
-
     <!-- HTML-код модального окна-->
     <div id="deleteUserModal" class="modal fade">
         <div class="modal-dialog">
@@ -45,7 +43,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <header>
     <div class="container-fluid">
@@ -56,7 +53,6 @@
         <%@include file="include/menuend.jsp" %>
     </div>
 </header>
-
 <main>
     <div class="container-fluid">
         <br>
@@ -161,35 +157,6 @@
                         </small>
                     </div>
                 </div>
-
-                <%--            <!-- Login input-->--%>
-                <%--            <div class="alert-danger">--%>
-                <%--                ${incorrectLoginAttr}--%>
-                <%--            </div>--%>
-                <%--            <div class="alert-danger">--%>
-                <%--                ${busyLoginAttr}--%>
-                <%--            </div>--%>
-                <%--            <div class="form-group">--%>
-                <%--                <label class="col-md-4 control-label" for="login">--%>
-                <%--                    <fmt:message key="label.login" bundle="${rb}"/>--%>
-                <%--                </label>--%>
-                <%--                <div class="col-md-4">--%>
-                <%--                    <input id="login"--%>
-                <%--                           name="login"--%>
-                <%--                           value="${login}"--%>
-                <%--                           type="text"--%>
-                <%--                           placeholder="<fmt:message key="label.login-placeholder" bundle="${rb}"/>"--%>
-                <%--                    &lt;%&ndash;pattern="^[a-z0-9_-]*" minlength="3" maxlength="16"&ndash;%&gt;--%>
-                <%--                           class="form-control input-md"--%>
-                <%--                           required=""--%>
-                <%--                           aria-describedby="loginHelpBlock"--%>
-                <%--                    >--%>
-                <%--                    <small id="loginHelpBlock" class="text-muted">--%>
-                <%--                        <fmt:message key="label.format-login" bundle="${rb}"/>--%>
-                <%--                    </small>--%>
-                <%--                </div>--%>
-                <%--            </div>--%>
-
                 <!-- Password input-->
                 <div class="alert-danger">
                     ${incorrectPassAttr}
@@ -235,29 +202,6 @@
                         <span class="help-block"></span>
                     </div>
                 </div>
-
-                <%--            <!-- Birthday input-->--%>
-                <%--            <div class="alert-danger">--%>
-                <%--                ${incorrectBirthAttr}--%>
-                <%--            </div>--%>
-                <%--            <div class="form-group">--%>
-                <%--                <label class="col-md-4 control-label" for="dateofbirth">--%>
-                <%--                    <fmt:message key="label.birth" bundle="${rb}"/>--%>
-                <%--                </label>--%>
-                <%--                <div class="col-md-4">--%>
-                <%--                    <input id="dateofbirth"--%>
-                <%--                           name="birthday"--%>
-                <%--                           value="${birthdayAttr}"--%>
-                <%--                           type="text"--%>
-                <%--                           placeholder="<fmt:message key="label.birth-placeholder" bundle="${rb}"/>"--%>
-                <%--                           class="form-control input-md"--%>
-                <%--                           aria-describedby="birthHelpBlock"--%>
-                <%--                           required="">--%>
-                <%--                    <small id="birthHelpBlock" class="text-muted">--%>
-                <%--                        <fmt:message key="label.format-birth" bundle="${rb}"/>--%>
-                <%--                    </small>--%>
-                <%--                </div>--%>
-                <%--            </div>--%>
 
                 <!-- E-mail input-->
                 <div class="alert-danger">
@@ -310,9 +254,6 @@
                     </div>
                 </div>
 
-
-                <%--            <input type="submit" value="" name="signinbutton">--%>
-
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="submitButton"></label>
@@ -330,7 +271,6 @@
         </form>
         <br>
         <hr>
-        <%--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////    --%>
 
         <!-- Кнопка, вызывающее модальное окно -->
         <a href="#deleteUserModal" class="btn  btn-danger btn-sm" data-toggle="modal">
@@ -348,8 +288,6 @@
         </button>
     </div>
 </footer>
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -357,14 +295,11 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
 <script>
     $(function () {
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
 </script>
-
 <script>
     document.addEventListener('keydown', (e) => {
         if (e.key === 'F5') e.preventDefault();
@@ -375,6 +310,5 @@
         console.log(e.key, e.keyCode);
     })
 </script>
-<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

@@ -15,19 +15,18 @@ public class Account extends Bean {
     private Role role;
     private byte[] photo = new byte[0];
 
-//
-//    public Account() {
-//    }
-//
-//    public Account(String name, String login, String password, String birthday, String email, String tel, Role role) {
-//        this.name = name;
-//        this.login = login;
-//        this.password = password;
-//        this.birthday = birthday;
-//        this.email = email;
-//        this.tel = tel;
-//        this.role = role;
-//    }
+    public Account() {
+    }
+
+    public Account(String name, String login, String password, String birthday, String email, String tel, Role role) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
+        this.birthday = birthday;
+        this.email = email;
+        this.tel = tel;
+        this.role = role;
+    }
 
     public String getName() {
         return name;

@@ -2,6 +2,7 @@ package by.it.advertproject.controller;
 
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.CommandException;
+import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +17,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
+import static by.it.advertproject.command.AttributeName.ATTR_NAME_LANG;
+import static by.it.advertproject.command.AttributeName.ATTR_NAME_PAGE_ERROR_MESSAGE;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_ERROR_MESSAGE;
 
 public abstract class AbstractController extends HttpServlet {
@@ -23,10 +26,11 @@ public abstract class AbstractController extends HttpServlet {
 
     //    private static final String COMMAND = "command";
 //    private static final String INDEX = "../index.jsp";
-private final Logger LOGGER = LogManager.getRootLogger();
+    private final Logger LOGGER = LogManager.getRootLogger();
+
     protected void process(HttpServletRequest request, HttpServletResponse response,
                            RequestContent content) throws ServletException, IOException {
-        response.setContentType("text/html; charset=UTF-8");
+
         try {
             content.extractValues(request);
             Command command = CommandFactory.defineCommand(content);
@@ -42,6 +46,9 @@ private final Logger LOGGER = LogManager.getRootLogger();
             }
         } catch (CommandException e) {
             logger.log(Level.INFO, "from AbstractController. Catch block. \n e.getMessage(): " + e.getMessage());
+//            content.putRequestAttribute(ATTR_NAME_PAGE_ERROR_MESSAGE,
+//                    MessageManager.getProperty(e.getMessage(),
+//                            String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
 
             response.sendRedirect(CommandUrlBuilder.TO_ERROR
                     .setParams(PARAM_NAME_ERROR_MESSAGE, e.getMessage())
@@ -49,23 +56,6 @@ private final Logger LOGGER = LogManager.getRootLogger();
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //

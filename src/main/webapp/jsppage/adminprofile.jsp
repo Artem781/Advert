@@ -15,7 +15,6 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-
                 <div class="dropdown form-inline my-2 my-lg-0">
                     <button class="btn btn-secondary dropdown-toggle"
                             type="button"
@@ -41,20 +40,13 @@
                         <fmt:message key="label.logout" bundle="${rb}"/>
                     </button>
                 </form>
-                <%--                </c:if>--%>
             </div>
-            <%--    </div>--%>
         </nav>
     </div>
 </header>
 <main>
     <div class="container-fluid">
         <br>
-        <div class="row">
-            <div class="col-md-auto">
-                <h2><fmt:message key="label.admin-profile" bundle="${rb}"/></h2>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-8" style="height: 200px;">
                 <div class="alert alert-success" role="alert">
@@ -135,7 +127,6 @@
         </button>
     </div>
 </footer>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -143,8 +134,6 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
 <script>
     document.addEventListener('keydown', (e) => {
         if (e.key === 'F5') e.preventDefault();
@@ -160,7 +149,5 @@
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
 </script>
-
-
 </body>
 </html>

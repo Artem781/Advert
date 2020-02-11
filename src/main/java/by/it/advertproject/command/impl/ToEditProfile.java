@@ -5,18 +5,17 @@ import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.command.Router;
 import by.it.advertproject.command.TransmissionType;
 import by.it.advertproject.exception.CommandException;
+import by.it.advertproject.util.ConfigurationManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCOUNT_ID;
 
 public class ToEditProfile implements Command {
     private static org.apache.logging.log4j.Logger Logger = LogManager.getRootLogger();
+    private static final String EDIT_PROFILE_PAGE = "path.page.editprofile";
 
     @Override
     public Router execute(RequestContent content) throws CommandException {
-        String page = "/jsppage/editprofile.jsp";
+        String page = ConfigurationManager.getProperty(EDIT_PROFILE_PAGE);
         Logger.log(Level.INFO, "from ToEditProfileCommand. page: " + page);
         return new Router(page, TransmissionType.FORWARD);
     }

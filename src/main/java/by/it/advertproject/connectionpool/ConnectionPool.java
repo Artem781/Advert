@@ -65,7 +65,7 @@ public enum ConnectionPool {
                 freeСonnectionBlockingQueue.add(connection);
             } catch (SQLException e) {
                 logger.log(Level.ERROR, "can not take connection " +
-                        "and add in freeСonnectionBlockingQueue.", e.getMessage());
+                        "and add in freeСonnectionBlockingQueue.", e);
                 throw new ConnectionPoolException(e);
             }
         }

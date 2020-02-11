@@ -13,16 +13,13 @@ import static by.it.advertproject.command.Message.COMMAND_NOT_DEFINE_ERROR;
 
 public class CommandFactory {
     private static Logger Logger = LogManager.getRootLogger();
-
     public static final String PARAM_NAME_COMMAND = "command";
-
     private static final String WRONG_ACTION_MESSAGE = "message.wrong-action";
 
-    public static Command defineCommand(RequestContent content)
-            throws CommandException {
+    public static Command defineCommand(RequestContent content) throws CommandException {
         Command current;
-        String action = content.getRequestParameters(PARAM_NAME_COMMAND,0);
-        Logger.log(Level.INFO,"from CommandFactory)defineCommand. String action: " + action);
+        String action = content.getRequestParameters(PARAM_NAME_COMMAND, 0);
+        Logger.log(Level.INFO, "from CommandFactory)defineCommand. String action: " + action);
         if (action == null || action.isEmpty()) {
             throw new CommandException(COMMAND_NOT_DEFINE_ERROR);
         }
@@ -30,13 +27,12 @@ public class CommandFactory {
             CommandType currentEnum = CommandType.valueOf(action.toUpperCase());
             Logger.log(Level.INFO, "from CommandFactory)defineCommand. currentEnum: " + currentEnum.name());
             current = currentEnum.getCommand();
-            if(current == null){
+            if (current == null) {
                 // TODO: 05.09.2019 бросать исключение? нет
                 Logger.log(Level.WARN, "from CommandFactory)defineCommand. if(current == null){");
             }
         } catch (IllegalArgumentException e) {
             Logger.log(Level.INFO, "from CommandFactory)defineCommand. catch block");
-
             content.putRequestAttribute(ATTR_NAME_WRONG_ACTION,
                     action + MessageManager.getProperty(WRONG_ACTION_MESSAGE, String.valueOf(ENGLISH)));
             throw new CommandException(COMMAND_NOT_DEFINE_ERROR);
@@ -45,11 +41,6 @@ public class CommandFactory {
         return current;
     }
 }
-
-
-
-
-
 
 
 //
