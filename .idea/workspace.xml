@@ -10,30 +10,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/question.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/AttributeName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToCreateAdvertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToCreateAdvertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToEditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToEditProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToErrorPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToErrorPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToMainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToMainCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignInCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToSignUpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/bean/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/PartsRequestContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/PartsRequestContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/EmptyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToAdminProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/ToAdminProfileCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/ConnectionCheckThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/ConnectionCheckThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/DbParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/connectionpool/DbParameter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/adminprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/adminprofile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/createad.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/createad.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/editprofile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/logout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsppage/userprofile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/UploadController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,9 +85,9 @@
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -164,12 +152,11 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\img" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\avatar" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\java\by\it\databasetask" />
-      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\jsp\testjsp" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.it.advertproject.command" />
+      <recent name="by.it.advertproject.service" />
+      <recent name="by.it.advertproject.command.impl" />
+      <recent name="by.it.advertproject.daofinalprj.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\IdeaProj\5. Database example\src\main\webapp\WEB-INF" />
@@ -185,14 +172,15 @@
       <recent name="by.it.advertproject.command.impl.account" />
       <recent name="by.it.advertproject.connectionpool" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.it.advertproject.command" />
-      <recent name="by.it.advertproject.service" />
-      <recent name="by.it.advertproject.command.impl" />
-      <recent name="by.it.advertproject.daofinalprj.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\img" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\avatar" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\java\by\it\databasetask" />
+      <recent name="D:\JAVA\Progects_Idea\5. Database example\src\main\webapp\jsp\testjsp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExampleBigDecimal">
+  <component name="RunManager" selected="Tomcat Server.Tommy">
     <configuration name="CommandEquals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.it.advertproject.tester.examl.some.CommandEquals" />
       <module name="5. Database example" />
@@ -651,14 +639,8 @@
       <workItem from="1581266873749" duration="11097000" />
       <workItem from="1581326856083" duration="1047000" />
       <workItem from="1581351183306" duration="1662000" />
-      <workItem from="1581434400214" duration="637000" />
-    </task>
-    <task id="LOCAL-00015" summary="fix sign in command.">
-      <created>1569857455898</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1569857455898</updated>
+      <workItem from="1581434400214" duration="1078000" />
+      <workItem from="1581582498279" duration="1523000" />
     </task>
     <task id="LOCAL-00016" summary="set lang tester">
       <created>1570261669966</created>
@@ -996,7 +978,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581268283860</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="fix mistakes">
+      <created>1581439228929</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1581439228929</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1046,7 +1035,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upload controller" />
     <MESSAGE value="added load ava" />
     <MESSAGE value="added load ava1" />
     <MESSAGE value="create dumb" />
@@ -1071,7 +1059,8 @@
     <MESSAGE value="fix admin page" />
     <MESSAGE value="find exception admin page?" />
     <MESSAGE value="added script disable key F5" />
-    <option name="LAST_COMMIT_MESSAGE" value="added script disable key F5" />
+    <MESSAGE value="fix mistakes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mistakes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="15" key="#AccountDaoImplTest" timestamp="1580809819175">
@@ -1102,26 +1091,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581328192772" />
-    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1581268283031">
+    <state x="479" y="227" width="408" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581583846511">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581268283031" />
-    <state width="1323" height="333" key="GridCell.Tab.0.bottom" timestamp="1581438981988">
+    <state x="479" y="227" width="408" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.738@0.0.1366.738" timestamp="1581583846511" />
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1581590778742">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="333" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581438981988" />
-    <state width="1323" height="333" key="GridCell.Tab.0.center" timestamp="1581438981988">
+    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581590778742" />
+    <state width="1323" height="333" key="GridCell.Tab.0.bottom" timestamp="1581439343969">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="333" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1581438981988" />
-    <state width="1323" height="333" key="GridCell.Tab.0.left" timestamp="1581438981988">
+    <state width="1323" height="333" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581439343969" />
+    <state width="1323" height="333" key="GridCell.Tab.0.center" timestamp="1581439343969">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="333" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1581438981988" />
-    <state width="1323" height="333" key="GridCell.Tab.0.right" timestamp="1581438981988">
+    <state width="1323" height="333" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1581439343969" />
+    <state width="1323" height="333" key="GridCell.Tab.0.left" timestamp="1581439343969">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="333" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1581438981988" />
+    <state width="1323" height="333" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1581439343969" />
+    <state width="1323" height="333" key="GridCell.Tab.0.right" timestamp="1581439343969">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="333" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1581439343969" />
     <state width="1090" height="328" key="GridCell.Tab.1.bottom" timestamp="1581328319470">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1178,10 +1171,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1579338764699" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1581268286576">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1581439236711">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581268286576" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581439236711" />
     <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1581271577770">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

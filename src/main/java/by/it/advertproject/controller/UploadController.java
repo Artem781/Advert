@@ -52,7 +52,7 @@ public class UploadController extends AbstractController {
             ImageLoadCommand loadCommand = ImageLoadCommandFactory.defineCommand(requestContent);
             response.getOutputStream().write(loadCommand.load(requestContent));
         } catch (CommandException e) {
-            logger.log(Level.INFO, "from UploadController. method getImageToClient. catch block ");
+            logger.log(Level.INFO, "from UploadController. method getImageToClient. catch block ", e);
 
             response.sendRedirect(CommandUrlBuilder.TO_ERROR
                     .setParams(PARAM_NAME_ERROR_MESSAGE, e.getMessage())

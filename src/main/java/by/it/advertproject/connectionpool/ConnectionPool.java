@@ -52,7 +52,7 @@ public enum ConnectionPool {
             Class.forName(DRIVER_NAME);
         } catch (ClassNotFoundException e) {
             //в логах и эксепшенах в константы выносить не надо) без локализации
-            logger.log(Level.ERROR, "driver registration error.", e.getMessage());
+            logger.log(Level.ERROR, "driver registration error.", e);
             // runtime exception
             throw new ConnectionPoolException(e);
         }
@@ -128,7 +128,7 @@ public enum ConnectionPool {
                 givenAwayConnectionQueue.take();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            logger.log(Level.ERROR, e);
         } catch (InterruptedException e) {
             logger.log(Level.ERROR, e.getMessage());
             Thread.currentThread().interrupt();

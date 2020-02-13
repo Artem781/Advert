@@ -26,8 +26,8 @@ public class PartsRequestContent extends RequestContent {
         try {
             parts = request.getParts();
         } catch (IOException e) {
-            logger.log(Level.ERROR, e.getMessage());
-            throw new CommandException(LOAD_FILE_ERROR_MESSAGE);
+            logger.log(Level.ERROR, e);
+            throw new CommandException(LOAD_FILE_ERROR_MESSAGE, e);
         } catch (ServletException e) {
             logger.log(Level.ERROR, e.getMessage());
             throw new CommandException(INTERNAL_ERROR);

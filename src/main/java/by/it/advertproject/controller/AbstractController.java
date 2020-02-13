@@ -34,8 +34,7 @@ public abstract class AbstractController extends HttpServlet {
         try {
             content.extractValues(request);
             Command command = CommandFactory.defineCommand(content);
-            Router router;
-            router = command.execute(content);
+            Router router = command.execute(content);
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {
                 logger.log(Level.INFO, "from AbstractController. if block. ");

@@ -26,11 +26,7 @@ public class CreateAdvertCommand implements Command {
 
     @Override
     public Router execute(RequestContent content) {
-        logger.log(Level.INFO, "from CreateAdvertCommand");
         String page;
-        // TODO: 15.10.2019 параметры я записываю в HashMap, и потом эту Map я передаю в сервис класс
-        // TODO: 15.10.2019 Map параметризована <String, String>  будет ли лучше параметризовать <String, Object>?
-        //так как Id тип Long.
         Map<String, String> carAdParameterMap = new HashMap<>();
         String carTitle = content.getRequestParameters(PARAM_CAR_TITLE, 0);
         carAdParameterMap.put(PARAM_CAR_TITLE, carTitle);
@@ -56,26 +52,12 @@ public class CreateAdvertCommand implements Command {
         carAdParameterMap.put(PARAM_CAR_MILLAGE, carMillage);
         String ifCrashed = content.getRequestParameters(PARAM_IF_CRASHED, 0);
         carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashed);
-
-//        String ifCrashedTrue = content.getRequestParameters(PARAM_IF_CRASHED_TRUE, 0);
-//        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedTrue);
-//        String ifCrashedFalse = content.getRequestParameters(PARAM_IF_CRASHED_FALSE, 0);
-//        carAdParameterMap.put(PARAM_IF_CRASHED, ifCrashedFalse);
-
         String carDescription = content.getRequestParameters(PARAM_CAR_DESCRIPTION, 0);
         carAdParameterMap.put(PARAM_CAR_DESCRIPTION, carDescription);
         String carPrice = content.getRequestParameters(PARAM_CAR_PRICE, 0);
         carAdParameterMap.put(PARAM_CAR_PRICE, carPrice);
-//        String carPhotoUpload = content.getRequestParameters(PARAM_CAR_PHOTO_UPLOAD, 0);
-//        carAdParameterMap.put(PARAM_CAR_PHOTO_UPLOAD, carPhotoUpload);
-//        String createAd = content.getRequestParameters(PARAM_CREATE_AD, 0);
-//        carAdParameterMap.put(PARAM_CREATE_AD, createAd);
         String accountLogin = (String) content.getSessionAttribute(ATTR_NAME_LOGIN);
-//        carAdParameterMap.put(ATTR_NAME_LOGIN, accountLogin);
-//        String accountId = (String) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
         Long accountId = (Long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
-//        carAdParameterMap.put(ATTR_NAME_ACCOUNT_ID, accountId);
-//    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
         content.putRequestAttribute(ATTR_CAR_TITLE, carTitle);
         content.putRequestAttribute(ATTR_CAR_BRAND, carBrand);
         content.putRequestAttribute(ATTR_CAR_MODEL, carModel);
@@ -88,40 +70,28 @@ public class CreateAdvertCommand implements Command {
         content.putRequestAttribute(ATTR_CAR_EQUIPMENT, carEquipment);
         content.putRequestAttribute(ATTR_CAR_MILLAGE, carMillage);
         content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashed);
-//        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedTrue);
-//        content.putRequestAttribute(ATTR_CAR_IF_CRASHED, ifCrashedFalse);
         content.putRequestAttribute(ATTR_CAR_DESCRIPTION, carDescription);
         content.putRequestAttribute(ATTR_CAR_PRICE, carPrice);
-//        content.putRequestAttribute(PARAM_CAR_PHOTO_UPLOAD, carPhotoUpload);
         TransmissionType transmissionType;
         Account account;
         Advert advert;
         AccountService accountService = new AccountService();
         AdvertService advertService = new AdvertService();
-        logger.log(Level.INFO, "from CreateAdvertCommand before try block");
         String messageManager;
         try {
             advert = advertService.createAdvert(carAdParameterMap, accountId);
             account = accountService.findAccount(accountLogin);
             List<Advert> listUserAdvert = advertService.findAdvertBelongAccount(account);
-            logger.log(Level.INFO, "from CreateAdvertCommand. listUserAdvert.add(advert);");
             content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, listUserAdvert);
             List<Advert> allAdvertList = advertService.findAllAdvert();
-            logger.log(Level.INFO, "from SignInCommand. List<Advert> allAdvertList = advertService.findAllAdvert();");
             content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
-
-//            content.putRequestAttribute(ATTR_CREATED_ADVERT, "Well done");
-//            // TODO: 15.10.2019 Можно ли самого Advert как объект передавать в сессию или request?
             content.putRequestAttribute(ATTR_OBJECT_ADVERT, advert);
             content.putRequestAttribute(ATTR_NAME_LOGIN, accountLogin);
             content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
-            logger.log(Level.INFO, "from CreateAdvertCommand) try block) advert: " + advert);
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, accountId.toString()).getUrl();
             transmissionType = TransmissionType.FORWARD;
-            logger.log(Level.INFO, "from CreateAdvertCommand. page: " + page);
         } catch (ServiceException e) {
-            logger.log(Level.INFO, "from CreateAdvertCommand. catch block. e.getMessage(): " + e.getMessage());
             messageManager = e.getMessage().trim();
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT,
                     MessageManager.getProperty(MESSAGE_INCORRECT_CREATE_AD_DATA, String.valueOf(ENGLISH)));
@@ -191,11 +161,10 @@ public class CreateAdvertCommand implements Command {
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
             transmissionType = TransmissionType.FORWARD;
         } catch (DaoException e) {
-            logger.log(Level.INFO, "from CreateAdvertCommand. catch block. DaoException e.getMessage(): " + e.getMessage());
-
             page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
-            transmissionType = TransmissionType.FORWARD;        }
+            transmissionType = TransmissionType.FORWARD;
+        }
         return new Router(page, transmissionType);
     }
 }
