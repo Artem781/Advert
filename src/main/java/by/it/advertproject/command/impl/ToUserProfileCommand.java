@@ -4,6 +4,7 @@ import by.it.advertproject.command.ActionCommand;
 import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.command.Router;
 import by.it.advertproject.command.TransmissionType;
+import by.it.advertproject.util.ConfigurationManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +16,7 @@ public class ToUserProfileCommand implements ActionCommand {
     @Override
     public Router execute(RequestContent content) {
         Logger.log(Level.INFO, "ToUserProfileCommand");
-        String page = USER_PROFILE_PAGE;
+        String page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
         return new Router(page, TransmissionType.FORWARD);
 
     }
