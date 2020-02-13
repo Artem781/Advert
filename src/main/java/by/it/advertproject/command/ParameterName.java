@@ -18,7 +18,6 @@ public class ParameterName {
     public static final String PARAM_CAR_BODY = "carbody";
     public static final String PARAM_CAR_PRODUCTION_YEAR = "productionyear";
     public static final String PARAM_ENGINE_VOLUME = "enginevolume";
-//    public static final String PARAM_AT_TYPE = "attype";
     public static final String PARAM_AT_TYPE = "atType";
     public static final String PARAM_CAR_DRIVEUNIT = "cardriveunit";
     public static final String PARAM_CAR_EQUIPMENT = "carequipment";
@@ -29,21 +28,12 @@ public class ParameterName {
     public static final String PARAM_CAR_PHOTO_UPLOAD = "carphotoupload";
     public static final String PARAM_CREATE_AD = "createad";
 
-
     public static final String PARAM_NAME_PAGE_ID = "page_id";
-    public static final String PARAM_NAME_PAGE_LOGIN = "page_login";
     public static final String PARAM_NAME_FEEDBACK = "feedback";
-    public static final String PARAM_NAME_COMMENT_ID = "comment_id";
-    public static final String PARAM_NAME_COMMENT_MESSAGE = "comment_message";
-    public static final String PARAM_NAME_POST_ID = "post_id";
-    public static final String PARAM_NAME_CONFIRM = "confirm";
     public static final String PARAM_NAME_ACCOUNT_ID = "account_id";
-    public static final String PARAM_NAME_MESSAGE = "msg";
     public static final String PARAM_NAME_COMMAND = "command";
     public static final String PARAM_VALUE_POST_IMG = "get_post_image";
     public static final String PARAM_VALUE_ACCOUNT_IMG = "get_account_image";
-    public static final String PARAM_NAME_WINDOW_OFFSET = "offset";
-    public static final String PARAM_NAME_TAG = "tag";
     public static final String PARAM_NAME_ERROR_MESSAGE = "errorMessage";
     public static final String PARAM_NAME_PAGE = "page";
     public static final String PARAM_ID_USER_FOR_DEL = "id_user_for_delete";

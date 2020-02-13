@@ -1,7 +1,6 @@
 package by.it.advertproject.command.impl;
 
-
-import by.it.advertproject.command.Command;
+import by.it.advertproject.command.ActionCommand;
 import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.command.Router;
 import by.it.advertproject.command.TransmissionType;
@@ -9,20 +8,14 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.http.HttpServletRequest;
-
-public class LogoutCommand implements Command {
-    private static Logger Logger = LogManager.getRootLogger();
+public class LogoutCommand implements ActionCommand {
+    private final static Logger LOGGER = LogManager.getRootLogger();
+    private static final String LOG_OUT_PAGE = "path.page.index";
 
     @Override
     public Router execute(RequestContent content) {
-
-//        String page = ConfigurationManager.getProperty("path.page.index");
-        String page = "/index.jsp";
-        Logger.log(Level.INFO, "from LogoutCommand. return page: " + page);
-
-// уничтожение сессии
-//        request.getSession().invalidate();
+        String page = LOG_OUT_PAGE;
+        LOGGER.log(Level.INFO, "LogoutCommand");
         content.invalidateSession();
         return new Router(page, TransmissionType.FORWARD);
     }

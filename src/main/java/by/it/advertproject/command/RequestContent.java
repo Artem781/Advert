@@ -27,39 +27,28 @@ public class RequestContent {
     }
 
     public void extractValues(HttpServletRequest request) throws CommandException {
-        Logger.log(Level.INFO, "from RequestContent)extractValues method==================================");
         Enumeration<String> attrNames = request.getAttributeNames();
-        Logger.log(Level.INFO, "requestAttributes:");
         while (attrNames.hasMoreElements()) {
             String name = attrNames.nextElement();
             Object attr = request.getAttribute(name);
-            Logger.log(Level.INFO, " \t" + name + ": " + attr.toString());
             requestAttributes.put(name, attr);
         }
         Enumeration<String> paramNames = request.getParameterNames();
-        Logger.log(Level.INFO, "requestParameters:");
         while (paramNames.hasMoreElements()) {
             String name = paramNames.nextElement();
             String[] param = request.getParameterValues(name);
-            for (String element : param) {
-                Logger.log(Level.INFO, " \t" + name + ": " + element);
-            }
             requestParameters.put(name, param);
         }
         Enumeration<String> sessionAttrNames = request.getSession().getAttributeNames();
-        Logger.log(Level.INFO, "sessionAttributes: ");
         while (sessionAttrNames.hasMoreElements()) {
             String name = sessionAttrNames.nextElement();
             Object sessionAttr = request.getSession().getAttribute(name);
-            Logger.log(Level.INFO, " \t" + name + ": " + sessionAttr);
             sessionAttributes.put(name, sessionAttr);
         }
         session = request.getSession(false);
     }
 
     public void insertAttributes(HttpServletRequest request) {
-        Logger.log(Level.INFO, "requestAttributes.isEmpty(): " + requestAttributes.isEmpty());
-        Logger.log(Level.INFO, "from insertAttributes. requestAttributes: " + requestAttributes.toString());
         for (Map.Entry<String, Object> entry : requestAttributes.entrySet()) {
             String key = entry.getKey();
             Object value = entry.getValue();

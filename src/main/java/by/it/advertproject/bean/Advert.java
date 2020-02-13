@@ -1,16 +1,9 @@
 package by.it.advertproject.bean;
 
-import by.it.advertproject.service.AccountService;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Advert extends Bean {
-    private static final Logger logger = LogManager.getLogger(Advert.class);
-
     static final long serialVersionUID = 42L;
     private String title;
     private String description;
@@ -189,7 +182,6 @@ public class Advert extends Bean {
                 ", accountIdFk=" + accountIdFk +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object o) {

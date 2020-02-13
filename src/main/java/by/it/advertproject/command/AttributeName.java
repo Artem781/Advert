@@ -1,13 +1,11 @@
 package by.it.advertproject.command;
 
 public class AttributeName {
-    //    public static final String ATTR_NAME_USER = "user";
     public static final String ATTR_NAME_USER = "nameUser";
     public static final String ATTR_NAME_FB = "fbAttr";
     public static final String ATTR_NAME_SUCCESS_UPDATE_PROFILE_DATA = "successUpdateProfileDataAttr";
 
     public static final String ATTR_NAME_ERROR_MESSAGE = "errorMessageAttr";
-    public static final String ATTR_NAME_PAGE_ERROR_MESSAGE = "pageErrorMessageAttr";
     public static final String ATTR_NAME_ERROR_MESSAGE_UPLOAD_IMAGE = "errorMessageAttrUploadMessage";
     public static final String ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT = "errorMessageAttrCreateAdvert";
     public static final String ATTR_NAME_ERROR_NAME = "incorrectNameAttr";
@@ -36,26 +34,16 @@ public class AttributeName {
     public static final String ATTR_NAME_ERROR_CAR_DESCRIPTION = "incorrectCarDescriptionAttr";
     public static final String ATTR_NAME_ERROR_CAR_PRICE = "incorrectCarPriceAttr";
 
-    public static final String ATTR_NAME_CHECK_ENTER_DATA = "checkEnterData";
-    public static final String ATTR_NAME_ERROR_LOGIN_PASS_MESSAGE = "errorLoginPassMessage";
     public static final String ATTR_NAME_ACCESS_LEVEL = "access_level";
     public static final String ATTR_NAME_ALL_ACCOUNT_LIST = "allAccountList";
-//    public static final String ATTR_NAME_QUANTITY_ACCOUNT = "quantityAccount";
     public static final String ATTR_NAME_ACCOUNT_ID = "accountId";
     public static final String ATTR_NAME_LOGIN = "login";
     public static final String ATTR_NAME_TELEPHONE = "telAttr";
     public static final String ATTR_NAME_EMAIL = "emailAttr";
     public static final String ATTR_NAME_BIRTHDAY = "birthdayAttr";
-    public static final String ATTR_NAME_POSTS = "posts";
-    public static final String ATTR_NAME_ACCOUNT = "account";
     public static final String ATTR_LOGIN_ERROR = "login_error";
-    public static final String ATTR_NAME_SUBSCRIPTION = "subscribe";
     public static final String ATTR_NAME_WRONG_ACTION = "wrongAction";
     public static final String ATTR_NAME_LANG = "lang";
-    //    public static final String ATTR_IMG_LANG = "imgLangAttr";
-//    public static final String ATTR_IMG_ALT_LANG = "imgAltLangAttr";
-    public static final String ATTR_NAME_IMG_STATUS = "img_status";
-    public static final String ATTR_NAME_GIVE_ADMIN_LEVEL = "give_admin_level";
 
     public static final String ATTR_CAR_TITLE = "car_title_attr";
     public static final String ATTR_CAR_BRAND = "car_brand_attr";
@@ -71,7 +59,6 @@ public class AttributeName {
     public static final String ATTR_CAR_IF_CRASHED = "car_if_crashed_attr";
     public static final String ATTR_CAR_DESCRIPTION = "car_description_attr";
     public static final String ATTR_CAR_PRICE = "car_price_attr";
-    public static final String ATTR_CREATED_ADVERT = "created_advert_attr";
     public static final String ATTR_OBJECT_ADVERT = "object_advert_attr";
 
     public AttributeName() {

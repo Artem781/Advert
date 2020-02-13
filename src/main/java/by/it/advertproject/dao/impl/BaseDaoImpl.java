@@ -13,13 +13,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import static by.it.advertproject.constantmessage.Message.INTERNAL_ERROR;
+import static by.it.advertproject.command.Message.INTERNAL_ERROR;
 
 public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
-    private static final Logger logger = LogManager.getLogger(BaseDao.class);
+    private static final Logger LOGGER = LogManager.getLogger(BaseDao.class);
 
     protected void delete(Bean bean, String sqlRequest) throws DaoException {
-//        Connection connection = null;
         Connection connection = ConnectionPool.INSTANCE.takeConnection();
         PreparedStatement preparedStatement = null;
         try {
@@ -27,14 +26,12 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             preparedStatement.setLong(1, bean.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException(e.getMessage(), e);
+            throw new DaoException(e);
         } finally {
             try {
                 closeResources(preparedStatement, connection);
             } catch (Exception e) {
-                // TODO: 19.10.2019 ??????
-                //////////
-                logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
+                LOGGER.log(Level.ERROR, INTERNAL_ERROR, e);
             }
         }
     }
@@ -53,7 +50,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
                 beans.add(bean);
             }
         } catch (SQLException e) {
-            throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
+            throw new DaoException(INTERNAL_ERROR, e);
         } finally {
             closeResources(statement, connection);
         }
@@ -65,7 +62,6 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-//        ResultSet resultSet;
         try {
             connection = ConnectionPool.INSTANCE.takeConnection();
             preparedStatement = connection.prepareStatement(sqlSelect);
@@ -79,12 +75,12 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
                 beans.add(bean);
             }
         } catch (SQLException e) {
-            throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
+            throw new DaoException(INTERNAL_ERROR, e);
         } finally {
             try {
                 closeResources(preparedStatement, connection);
             } catch (Exception e) {
-                logger.log(Level.ERROR, INTERNAL_ERROR, e.getMessage());
+                LOGGER.log(Level.ERROR, INTERNAL_ERROR, e);
             }
         }
         return beans;
@@ -96,21 +92,21 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
                 resultSet.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "ResultSet isn't closed.");
+            LOGGER.log(Level.ERROR, "ResultSet isn't closed.");
         }
         try {
             if (!(statement == null || statement.isClosed())) {
                 statement.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "Statement isn't closed.");
+            LOGGER.log(Level.ERROR, "Statement isn't closed.");
         }
         try {
             if (!(connection == null || connection.isClosed())) {
                 connection.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "connection isn't return to the pool.");
+            LOGGER.log(Level.ERROR, "connection isn't return to the pool.");
         }
         ConnectionPool.INSTANCE.releaseConnection(connection);
     }
@@ -124,7 +120,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             statement.close();
             ConnectionPool.INSTANCE.releaseConnection(connection);
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            LOGGER.log(Level.ERROR, e);
             throw new DaoException(INTERNAL_ERROR);
         }
     }
@@ -136,7 +132,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             }
             statement.close();
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            LOGGER.log(Level.ERROR, e);
             throw new DaoException(INTERNAL_ERROR);
         }
     }
@@ -153,7 +149,7 @@ public abstract class BaseDaoImpl<T extends Bean> implements BaseDao<T> {
             }
             statement.close();
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            LOGGER.log(Level.ERROR, e);
             throw new DaoException(INTERNAL_ERROR);
         }
     }

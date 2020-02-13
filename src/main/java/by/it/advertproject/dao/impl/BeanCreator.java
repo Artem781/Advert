@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static by.it.advertproject.constantmessage.Message.INTERNAL_ERROR;
+import static by.it.advertproject.command.Message.INTERNAL_ERROR;
 
 public class BeanCreator<T extends Bean> {
     private static final Logger logger = LogManager.getLogger(BeanCreator.class);
@@ -90,8 +90,8 @@ public class BeanCreator<T extends Bean> {
             }
             return (T) bean;
         } catch (IOException e) {
-            logger.log(Level.ERROR, e.getMessage());
-            throw new DaoException(INTERNAL_ERROR + e.getMessage(), e);
+            logger.log(Level.ERROR, e);
+            throw new DaoException(INTERNAL_ERROR, e);
         }
     }
 }

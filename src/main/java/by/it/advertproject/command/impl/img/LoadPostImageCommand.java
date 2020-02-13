@@ -8,8 +8,6 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static by.it.advertproject.command.Message.LOAD_FILE_ERROR_MESSAGE;
-import static by.it.advertproject.command.ParameterName.PARAM_NAME_POST_ID;
 public class LoadPostImageCommand implements ImageLoadCommand {
     private static final Logger logger = LogManager.getLogger(LoadPostImageCommand.class);
     private static final String NOT_FOUND = "Image not found.";

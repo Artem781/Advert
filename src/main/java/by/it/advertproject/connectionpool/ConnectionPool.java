@@ -15,7 +15,7 @@ import java.util.concurrent.*;
 public enum ConnectionPool {
     INSTANCE;
 
-    private final static Logger logger = LogManager.getRootLogger();
+    private final static Logger LOGGER = LogManager.getRootLogger();
     private static final int DEFAULT_SIZE_POOL = 30;
     private static final int DEFAULT_HOURS_CHECK_DELAY = 24;
     private BlockingQueue<Connection> freeСonnectionBlockingQueue;
@@ -27,21 +27,22 @@ public enum ConnectionPool {
     private final String PASSWORD;
     private int poolSize;
 
-     ConnectionPool() {
+    ConnectionPool() {
         DbResourceManager dbResourceManager = DbResourceManager.getInstance();
         this.DRIVER_NAME = dbResourceManager.getValue(DbParameter.DB_DRIVER);
         this.URL = dbResourceManager.getValue(DbParameter.DB_URL);
         this.USER = dbResourceManager.getValue(DbParameter.DB_USER);
         this.PASSWORD = dbResourceManager.getValue(DbParameter.DB_PASSWORD);
-        try { poolSize = Integer.parseInt(
-                dbResourceManager.getValue(DbParameter.DB_POOL_SIZE));
+        try {
+            poolSize = Integer.parseInt(
+                    dbResourceManager.getValue(DbParameter.DB_POOL_SIZE));
         } catch (NumberFormatException e) {
             poolSize = DEFAULT_SIZE_POOL;
         }
         try {
             initPoolData();
         } catch (ConnectionPoolException e) {
-            throw new RuntimeException("do not initPoolData",e);
+            throw new RuntimeException("do not initPoolData", e);
         }
         startConnectionCheck();
     }
@@ -51,9 +52,8 @@ public enum ConnectionPool {
         try {
             Class.forName(DRIVER_NAME);
         } catch (ClassNotFoundException e) {
-            //в логах и эксепшенах в константы выносить не надо) без локализации
-            logger.log(Level.ERROR, "driver registration error.", e);
-            // runtime exception
+            LOGGER.log(Level.ERROR, "driver registration error.", e);
+            // TODO: 13.02.2020 runtime exception?
             throw new ConnectionPoolException(e);
         }
         freeСonnectionBlockingQueue = new LinkedBlockingDeque<>(poolSize);
@@ -64,12 +64,12 @@ public enum ConnectionPool {
                 Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                 freeСonnectionBlockingQueue.add(connection);
             } catch (SQLException e) {
-                logger.log(Level.ERROR, "can not take connection " +
+                LOGGER.log(Level.ERROR, "can not take connection " +
                         "and add in freeСonnectionBlockingQueue.", e);
                 throw new ConnectionPoolException(e);
             }
         }
-        //проверить сколько создалось конекшенов
+        // TODO: 13.02.2020 проверить сколько создалось конекшенов
     }
 
     public String getUrl() {
@@ -105,7 +105,7 @@ public enum ConnectionPool {
             closeConnectionsQueue(givenAwayConnectionQueue);
             closeConnectionsQueue(freeСonnectionBlockingQueue);
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "Error closing the connection.", e);
+            LOGGER.log(Level.ERROR, "Error closing the connection.", e);
         }
     }
 
@@ -116,7 +116,7 @@ public enum ConnectionPool {
             givenAwayConnectionQueue.offer(connection);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            logger.log(Level.ERROR, "Error closing the connection.", e);
+            LOGGER.log(Level.ERROR, "Error closing the connection.", e);
         }
         return connection;
     }
@@ -128,9 +128,9 @@ public enum ConnectionPool {
                 givenAwayConnectionQueue.take();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, e);
+            LOGGER.log(Level.ERROR, e);
         } catch (InterruptedException e) {
-            logger.log(Level.ERROR, e.getMessage());
+            LOGGER.log(Level.ERROR, e.getMessage());
             Thread.currentThread().interrupt();
         }
     }
@@ -140,27 +140,28 @@ public enum ConnectionPool {
         executorService.scheduleAtFixedRate(checkThread, 0, DEFAULT_HOURS_CHECK_DELAY,
                 TimeUnit.HOURS);
     }
+
     public void closeConnection(Connection con, Statement st, ResultSet rs) {
         try {
             if (!(rs == null) || rs.isClosed()) {
                 rs.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "ResultSet isn't closed.");
+            LOGGER.log(Level.ERROR, "ResultSet isn't closed.");
         }
         try {
             if (!(st == null || st.isClosed())) {
                 st.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "Statement isn't closed.");
+            LOGGER.log(Level.ERROR, "Statement isn't closed.");
         }
         try {
             if (!(con == null || con.isClosed())) {
                 con.close();
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "connection isn't return to the pool.");
+            LOGGER.log(Level.ERROR, "connection isn't return to the pool.");
         }
     }
 
@@ -181,7 +182,7 @@ public enum ConnectionPool {
                         new PooledConnection(freeСonnectionBlockingQueue.take());
                 pooledConnection.reallyClose();
             } catch (InterruptedException e) {
-                logger.log(Level.ERROR, "destroyPool isn't closed.");
+                LOGGER.log(Level.ERROR, "destroyPool isn't closed.");
             }
         }
         deregisterDrivers();
@@ -195,7 +196,7 @@ public enum ConnectionPool {
                 DriverManager.deregisterDriver(driver);
             }
         } catch (SQLException e) {
-            logger.log(Level.ERROR, "deregisterDrivers isn't closed.");
+            LOGGER.log(Level.ERROR, "deregisterDrivers isn't closed.");
         }
     }
 
@@ -207,7 +208,7 @@ public enum ConnectionPool {
             try {
                 this.connection.setAutoCommit(true);
             } catch (SQLException e) {
-                logger.log(Level.ERROR, e.getMessage());
+                LOGGER.log(Level.ERROR, e.getMessage());
             }
         }
 
@@ -245,7 +246,7 @@ public enum ConnectionPool {
             try {
                 connection.close();
             } catch (SQLException e) {
-                logger.log(Level.ERROR, "connection isn't closed.");
+                LOGGER.log(Level.ERROR, "connection isn't closed.");
             }
         }
 
@@ -261,7 +262,7 @@ public enum ConnectionPool {
 
         @Override
         public void close() throws SQLException {
-            // проверка на null
+            // TODO: 13.02.2020 проверка на null?
             if (connection.isClosed()) {
                 throw new SQLException("Attempting to close closed connection.");
             }
@@ -275,7 +276,6 @@ public enum ConnectionPool {
                 throw new SQLException("Error allocating connection in the pool");
             }
         }
-
 
         @Override
         public boolean isClosed() throws SQLException {
@@ -531,8 +531,5 @@ public enum ConnectionPool {
         public boolean isWrapperFor(Class<?> iface) throws SQLException {
             return connection.isWrapperFor(iface);
         }
-
     }
-
-
 }

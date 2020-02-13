@@ -7,7 +7,7 @@ public enum CommandType {
     TO_SIGN_UP(new ToSignUpCommand()),
     TO_SIGN_IN(new ToSignInCommand()),
     TO_MAIN(new ToMainCommand()),
-    TO_EDIT_PROFILE(new ToEditProfile()),
+    TO_EDIT_PROFILE(new ToEditProfileCommand()),
     TO_USER_PROFILE(new ToUserProfileCommand()),
     TO_ADMIN_PROFILE(new ToAdminProfileCommand()),
     TO_CREATE_ADVERT(new ToCreateAdvertCommand()),
@@ -21,13 +21,13 @@ public enum CommandType {
     SET_LANG(new SetLanguageCommand()),
     CREATE_ADVERT(new CreateAdvertCommand());
 
-    CommandType(Command command) {
+    CommandType(ActionCommand command) {
         this.command = command;
     }
 
-    private Command command;
+    private ActionCommand command;
 
-    public Command getCommand() {
+    public ActionCommand getCommand() {
         return command;
     }
 }

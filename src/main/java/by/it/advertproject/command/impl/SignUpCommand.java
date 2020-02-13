@@ -22,12 +22,12 @@ import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
 import static java.util.Locale.ENGLISH;
 
-public class SignUpCommand implements Command {
-    private static Logger logger = LogManager.getLogger(SignUpCommand.class);
+public class SignUpCommand implements ActionCommand {
+    private final static Logger LOGGER = LogManager.getLogger(SignUpCommand.class);
 
     @Override
     public Router execute(RequestContent content) {
-        logger.log(Level.INFO, "from SignUpCommand");
+        LOGGER.log(Level.INFO, "SignUpCommand");
         String page;
         Map<String, String> parameterMap = new HashMap<>();
         String name = content.getRequestParameters(PARAM_NAME, 0);
@@ -44,8 +44,6 @@ public class SignUpCommand implements Command {
         parameterMap.put(PARAM_EMAIL, email);
         String tel = content.getRequestParameters(PARAM_TEL, 0);
         parameterMap.put(PARAM_TEL, tel);
-//    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
-//        content.putRequestAttribute(ATTR_NAME_USER, name);
         content.putRequestAttribute(ATTR_NAME_LOGIN, login);
         content.putRequestAttribute(ATTR_NAME_BIRTHDAY, birthday);
         content.putRequestAttribute(ATTR_NAME_EMAIL, email);
@@ -61,10 +59,8 @@ public class SignUpCommand implements Command {
             List<Advert> userAdvertList = advertService.findAdvertBelongAccount(account);
             content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, userAdvertList);
             List<Advert> allAdvertList = advertService.findAllAdvert();
-            logger.log(Level.INFO, "from SignUpCommand. List<Advert> allAdvertList = advertService.findAllAdvert();");
             content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
             content.putRequestAttribute(ATTR_NAME_USER, name);
-            // TODO: 15.10.2019 В сессию или в реквест можно передавать сам объект account?
             content.putSessionAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
@@ -74,15 +70,12 @@ public class SignUpCommand implements Command {
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             transmissionType = TransmissionType.FORWARD;
-            logger.log(Level.INFO, "from SignUpCommand. page: " + page);
         } catch (ServiceException | DaoException e) {
-            logger.log(Level.INFO, "from SignUpCommand. catch block. e.getMessage(): " + e.getMessage());
             messageManager = e.getMessage().trim();
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
                     MessageManager.getProperty(MESSAGE_INCORRECT_SIGN_UP_DATA, String.valueOf(ENGLISH)));
             String[] splitAttr = messageManager.split("\t");
             for (String element : splitAttr) {
-                logger.log(Level.INFO, "element: " + element);
                 switch (element.trim()) {
                     case NAME_INCORRECT_FORMAT_MESSAGE:
                         content.putRequestAttribute(ATTR_NAME_ERROR_NAME,
@@ -125,37 +118,3 @@ public class SignUpCommand implements Command {
         return new Router(page, transmissionType);
     }
 }
-
-
-//
-//    AccountService service = new AccountService();
-//    Account account;
-//    String page = null;
-//    String name = request.getParameter(PARAM_NAME);
-//    String login = request.getParameter(PARAM_NAME_LOGIN);
-//    String password = request.getParameter(PARAM_PASSWORD);
-//    String passwordConfirm = request.getParameter(PARAM_PASSWORD_CONFIRM);
-//    String birthday = request.getParameter(PARAM_BIRTHDAY);
-//    String email = request.getParameter(PARAM_EMAIL);
-//    String tel = request.getParameter(PARAM_TEL);
-//    Role role = Role.valueOf(request.getParameter(PARAM_ACCESS_LEVEL).toUpperCase());
-////        System.out.println("name: " + name + "\n" +
-////                           "login: " + login + "\n" +
-////                           "password: " + password + "\n" +
-////                           "passwordConfirm: " + passwordConfirm + "\n" +
-////                           "birthday: " + birthday + "\n" +
-////                           "email: " + email + "\n" +
-////                           "tel: " + tel + "\n" +
-////                           "role" + role.name() + "\n");
-//        try {
-//                account = service.createAccount(name, login, password, passwordConfirm,
-//                birthday, email, tel, role);
-//                request.setAttribute(ATTR_NAME_USER, account.getName());
-//                page = "/jsppage/userprofile.jsp";
-//                } catch (ServiceException e) {
-//                request.setAttribute(ATTR_NAME_CHECK_ENTER_DATA, e.getMessage());
-//                logger.log(Level.INFO, e.getMessage());
-//                page = "/jsppage/signup.jsp";
-//                }
-//                return page;
-//                }

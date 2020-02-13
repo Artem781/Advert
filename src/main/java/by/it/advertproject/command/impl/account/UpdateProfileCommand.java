@@ -14,11 +14,12 @@ import static by.it.advertproject.command.Message.SUCCESS_UPDATE_MESSAGE;
 import static by.it.advertproject.command.Message.SUCCESS_UPDATE_USER_PROFILE_DATA;
 import static by.it.advertproject.command.ParameterName.*;
 
-public class UpdateProfileCommand implements Command {
-    private static final Logger logger = LogManager.getLogger(UpdatePhotoCommand.class);
+public class UpdateProfileCommand implements ActionCommand {
+    private static final Logger LOGGER = LogManager.getLogger(UpdateProfileCommand.class);
 
     @Override
     public Router execute(RequestContent content) {
+        LOGGER.log(Level.INFO, "UpdateProfileCommand.");
         long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
         String page;
         String name = content.getRequestParameters(PARAM_NAME, 0);

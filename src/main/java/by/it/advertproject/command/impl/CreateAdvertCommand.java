@@ -21,11 +21,12 @@ import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
 import static by.it.advertproject.command.impl.SetLanguageCommand.ENGLISH;
 
-public class CreateAdvertCommand implements Command {
-    private static final Logger logger = LogManager.getLogger(CreateAdvertCommand.class);
+public class CreateAdvertCommand implements ActionCommand {
+    private static final Logger LOGGER = LogManager.getLogger(CreateAdvertCommand.class);
 
     @Override
     public Router execute(RequestContent content) {
+        LOGGER.log(Level.INFO, "CreateAdvertCommand.");
         String page;
         Map<String, String> carAdParameterMap = new HashMap<>();
         String carTitle = content.getRequestParameters(PARAM_CAR_TITLE, 0);
@@ -97,7 +98,6 @@ public class CreateAdvertCommand implements Command {
                     MessageManager.getProperty(MESSAGE_INCORRECT_CREATE_AD_DATA, String.valueOf(ENGLISH)));
             String[] splitAttr = messageManager.split("\t");
             for (String element : splitAttr) {
-                logger.log(Level.INFO, "element: " + element);
                 switch (element.trim()) {
                     case CAR_TITLE_INCORRECT_FORMAT_MESSAGE:
                         content.putRequestAttribute(ATTR_NAME_ERROR_CAR_TITLE,

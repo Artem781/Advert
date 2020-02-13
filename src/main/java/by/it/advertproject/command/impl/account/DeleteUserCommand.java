@@ -16,11 +16,12 @@ import static by.it.advertproject.command.AttributeName.ATTR_NAME_ALL_ACCOUNT_LI
 import static by.it.advertproject.command.Message.ACCOUNT_IS_NULL;
 import static by.it.advertproject.command.ParameterName.*;
 
-public class DeleteUserCommand implements Command {
-    private static final Logger logger = LogManager.getLogger(DeleteUserCommand.class);
+public class DeleteUserCommand implements ActionCommand {
+    private static final Logger LOGGER = LogManager.getLogger(DeleteUserCommand.class);
 
     @Override
     public Router execute(RequestContent content) throws CommandException {
+        LOGGER.log(Level.INFO, "DeleteUserCommand.");
         AccountService accountService = new AccountService();
         try {
             long idAccountForDelete = Long.parseLong(content.getRequestParameters(PARAM_ID_USER_FOR_DEL, 0));
@@ -41,8 +42,10 @@ public class DeleteUserCommand implements Command {
                 String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
                 return new Router(page, TransmissionType.FORWARD);
             }
+            LOGGER.log(Level.WARN, "DeleteUserCommand." + e);
             throw new CommandException(e.getMessage());
         } catch (DaoException e) {
+            LOGGER.log(Level.WARN, "DeleteUserCommand." + e);
             throw new CommandException(e);
         }
     }

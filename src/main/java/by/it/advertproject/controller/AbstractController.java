@@ -2,23 +2,17 @@ package by.it.advertproject.controller;
 
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.CommandException;
-import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Enumeration;
 
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_LANG;
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_PAGE_ERROR_MESSAGE;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_ERROR_MESSAGE;
 
 public abstract class AbstractController extends HttpServlet {
@@ -33,7 +27,7 @@ public abstract class AbstractController extends HttpServlet {
 
         try {
             content.extractValues(request);
-            Command command = CommandFactory.defineCommand(content);
+            ActionCommand command = CommandFactory.defineCommand(content);
             Router router = command.execute(content);
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {
