@@ -2,9 +2,7 @@ package by.it.advertproject.service;
 
 import by.it.advertproject.bean.Account;
 import by.it.advertproject.bean.Advert;
-import by.it.advertproject.dao.AccountDao;
 import by.it.advertproject.dao.AdvertDao;
-import by.it.advertproject.dao.impl.AccountDaoImpl;
 import by.it.advertproject.dao.impl.AdvertDaoImpl;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
@@ -22,16 +20,13 @@ import static by.it.advertproject.command.Message.*;
 import static by.it.advertproject.command.ParameterName.*;
 
 public class AdvertService {
-    private static final Logger logger = LogManager.getLogger(AccountService.class);
+    private static Logger logger = LogManager.getLogger(AdvertService.class);
+    AdvertDao advertDao = new AdvertDaoImpl();
 
     public Advert createAdvert(Map<String, String> carAdParameterMap, Long accountId) throws ServiceException {
-        logger.log(Level.INFO, "from AdvertService) createAdvert method.");
+        logger.log(Level.INFO, "AdvertService. createAdvert");
         AdvertParameterValidationState advertParameterValidationState
                 = AdvertParameterValidator.AdvertValidateParameter(carAdParameterMap);
-        logger.log(Level.INFO, "from AdvertService) createAdvert method. after AdvertParameterValidator ");
-        AdvertDao advertDao = new AdvertDaoImpl();
-//        AccountDao accountDao = new AccountDaoImpl();
-        logger.log(Level.INFO, "from AdvertService) createAdvert method. before Advert.Builder() ");
         Advert advert = new Advert.Builder()
                 .withTitle(carAdParameterMap.get(PARAM_CAR_TITLE))
                 .withDescription(carAdParameterMap.get(PARAM_CAR_DESCRIPTION))
@@ -47,21 +42,12 @@ public class AdvertService {
                 .withMileage(Integer.parseInt(carAdParameterMap.get(PARAM_CAR_MILLAGE)))
                 .withCrashed(carAdParameterMap.get(PARAM_IF_CRASHED))
                 .withPrice(BigDecimal.valueOf(Double.parseDouble(carAdParameterMap.get(PARAM_CAR_PRICE))))
-                // TODO: 12.10.2019 как правильно записать ошибку? как назвать?
-//                .withAccountIdFk(accountDao.findAccountByLogin(carAdParameterMap.get(ATTR_NAME_LOGIN)).getId())
                 .withAccountIdFk(accountId)
                 .build();
-        logger.log(Level.INFO, "from AdvertService) createAdvert method. after Advert.Builder() ");
-
         if (advertParameterValidationState == AdvertParameterValidationState.VALID) {
             try {
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. try block");
-
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. create advert with Builder");
                 advertDao.create(advert);
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. advertDao.create(advertDao)");
             } catch (DaoException e) {
-                logger.log(Level.INFO, "from AdvertService) createAdvert method. throw new ServiceException(CAN_NOT_CREATE_AD_MESSAGE) e.getMessage(): " + e.getMessage());
                 throw new ServiceException(CAN_NOT_CREATE_AD_MESSAGE);
             }
         }
@@ -69,22 +55,11 @@ public class AdvertService {
     }
 
     public List<Advert> findAdvertBelongAccount(Account account) throws DaoException {
-        logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.");
-        AdvertDao advertDao = new AdvertDaoImpl();
-        // TODO: 20.10.2019 из стринг в лонг
-//        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));
-        List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(account.getId());
-        logger.log(Level.INFO, "from AdvertService) findAdvertBelongAccount method.\n" +
-                "List<Advert> advertList = advertDao.findCountAdvertByAccountIdFk(String.valueOf(account.getId()));\n");
-        return advertList;
+        return advertDao.findCountAdvertByAccountIdFk(account.getId());
     }
 
     public List<Advert> findAllAdvert() throws DaoException {
-        logger.log(Level.INFO, "from AdvertService) findAllAdvert method.");
-        AdvertDao advertDao = new AdvertDaoImpl();
-        List<Advert> advertList = advertDao.findAll();
-        logger.log(Level.INFO, "from AdvertService) findAllAdvert method. return advertList");
-        return advertList;
+        return advertDao.findAll();
     }
 
     private static class AdvertParameterValidator {
@@ -105,7 +80,6 @@ public class AdvertService {
 
         public static AdvertParameterValidationState AdvertValidateParameter(Map<String, String> carAdParameterMap) throws ServiceException {
             AdvertParameterValidationState advertParameterValidationState = AdvertParameterValidationState.VALID;
-            logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method.");
             Map<String, String> advertRegexMap = new HashMap<>();
             advertRegexMap.put(PARAM_CAR_TITLE, TITLE_REGEX);
             advertRegexMap.put(PARAM_CAR_BRAND, BRAND_REGEX);
@@ -121,9 +95,6 @@ public class AdvertService {
             advertRegexMap.put(PARAM_IF_CRASHED, IF_CRASHED_REGEX);
             advertRegexMap.put(PARAM_CAR_DESCRIPTION, DESCRIPTION_REGEX);
             advertRegexMap.put(PARAM_CAR_PRICE, CAR_PRICE_REGEX);
-//            advertRegexMap.put(PARAM_CAR_PHOTO_UPLOAD, PASSWORD_PATTERN);
-//            advertRegexMap.put(PARAM_CREATE_AD, PASSWORD_PATTERN);
-
             Map<String, String> errorMessageMapAdvert = new HashMap<>();
             errorMessageMapAdvert.put(PARAM_CAR_TITLE, CAR_TITLE_INCORRECT_FORMAT_MESSAGE);
             errorMessageMapAdvert.put(PARAM_CAR_BRAND, CAR_BRAND_INCORRECT_FORMAT_MESSAGE);
@@ -139,37 +110,19 @@ public class AdvertService {
             errorMessageMapAdvert.put(PARAM_IF_CRASHED, IF_CRASHED_INCORRECT_FORMAT_MESSAGE);
             errorMessageMapAdvert.put(PARAM_CAR_DESCRIPTION, CAR_DESCRIPTION_INCORRECT_FORMAT_MESSAGE);
             errorMessageMapAdvert.put(PARAM_CAR_PRICE, CAR_PRICE_INCORRECT_FORMAT_MESSAGE);
-//            errorMessageMapAdvert.put(PARAM_CREATE_AD, PASSWORD_CONFIRM_INCORRECT_FORMAT_MESSAGE);
-            //14
-            logger.log(Level.INFO, "errorMessageMapAdvert size: " + errorMessageMapAdvert.size());
-            //14
-            logger.log(Level.INFO, "advertRegexMap size: " + advertRegexMap.size());
-            //14
-            logger.log(Level.INFO, "carAdParameterMap size: " + carAdParameterMap.size());
             StringBuilder errorMessageSbAdvert = new StringBuilder();
-            int count = 0;
             for (Map.Entry<String, String> element : carAdParameterMap.entrySet()) {
                 if (element.getValue() != null) {
-                    logger.log(Level.INFO, "(!Pattern.matches(advertRegexMap.get(element.getKey()): " + element.getKey() +
-                            ", element.getValue(): " + element.getValue());
-                    logger.log(Level.INFO, "Pattern.matches:  " + (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())));
                     if (!Pattern.matches(advertRegexMap.get(element.getKey()), element.getValue())) {
-                        logger.log(Level.INFO, "Pattern.matches: yes ");
-                        errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
+                        errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey())).append("\t");
                     }
-                    count++;
                 } else {
-                    logger.log(Level.INFO, "(element.getValue() != null):  " + (element.getValue() != null));
-                    errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey()) + "\t");
-
+                    errorMessageSbAdvert.append(errorMessageMapAdvert.get(element.getKey())).append("\t");
                 }
             }
             if (errorMessageSbAdvert.length() != 0) {
-                logger.log(Level.INFO, "errorMessageSbAdvert !== null. errorMessageSbAdvert: " + errorMessageSbAdvert);
                 throw new ServiceException(String.valueOf(errorMessageSbAdvert));
             }
-            logger.log(Level.INFO, "from AdvertService) AdvertParameterValidator) AdvertValidateParameter method. " +
-                    "return AdvertParameterValidationState: " + advertParameterValidationState.name());
             return advertParameterValidationState;
         }
     }
