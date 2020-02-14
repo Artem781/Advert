@@ -23,7 +23,7 @@ public abstract class AbstractController extends HttpServlet {
         logger.log(Level.INFO, "AbstractController.");
         try {
             content.extractValues(request);
-            ActionCommand command = CommandFactory.defineCommand(content);
+            ActionCommand command = CommandProvider.defineCommand(content);
             Router router = command.execute(content);
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {

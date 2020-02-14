@@ -10,7 +10,7 @@ import static by.it.advertproject.command.AttributeName.ATTR_NAME_WRONG_ACTION;
 import static java.util.Locale.ENGLISH;
 import static by.it.advertproject.command.Message.COMMAND_NOT_DEFINE_ERROR;
 
-public class CommandFactory {
+public class CommandProvider {
     private static Logger Logger = LogManager.getRootLogger();
     public static final String PARAM_NAME_COMMAND = "command";
     private static final String WRONG_ACTION_MESSAGE = "message.wrong-action";

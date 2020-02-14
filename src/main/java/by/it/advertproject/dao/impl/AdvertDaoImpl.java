@@ -84,8 +84,7 @@ public class AdvertDaoImpl extends BaseDaoImpl<Advert> implements AdvertDao {
 
     @Override
     public List<Advert> findAll() throws DaoException {
-        List<Advert> adverts = super.findAllEntities(SQL_SELECT_ALL_ADVERTS, TABLE_NAME);
-        return adverts;
+        return super.findAllEntities(SQL_SELECT_ALL_ADVERTS, TABLE_NAME);
     }
 
     @Override

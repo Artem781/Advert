@@ -4,7 +4,7 @@ package by.it.advertproject.command.impl.account;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.CommandException;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.impl.AccountServiceImpl;
 import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -30,7 +30,7 @@ public class UpdatePhotoCommand implements ActionCommand {
     public Router execute(RequestContent content) throws CommandException {
         LOGGER.log(Level.INFO, "UpdatePhotoCommand.");
         String page;
-        AccountService accountService = new AccountService();
+        AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
         boolean mark = false;
         try {
             long accountId = (long) content.getSessionAttribute(ATTR_NAME_ACCOUNT_ID);
@@ -42,7 +42,7 @@ public class UpdatePhotoCommand implements ActionCommand {
                     Matcher matcher = pattern.matcher(path);
                     if (matcher.matches()) {
                         InputStream inputStream = part.getInputStream();
-                        accountService.updatePhoto(accountId, inputStream.readAllBytes());
+                        accountServiceImpl.updatePhoto(accountId, inputStream.readAllBytes());
                         mark = true;
                     }
                 }

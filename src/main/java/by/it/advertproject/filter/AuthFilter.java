@@ -17,7 +17,7 @@ import java.util.List;
 
 import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCESS_LEVEL;
 import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCOUNT_ID;
-import static by.it.advertproject.command.CommandFactory.PARAM_NAME_COMMAND;
+import static by.it.advertproject.command.CommandProvider.PARAM_NAME_COMMAND;
 
 @WebFilter(filterName = "AuthFilter", urlPatterns = "/*")
 public class AuthFilter implements Filter {

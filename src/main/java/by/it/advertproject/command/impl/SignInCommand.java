@@ -6,8 +6,8 @@ import by.it.advertproject.bean.Role;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
-import by.it.advertproject.service.AdvertService;
+import by.it.advertproject.service.impl.AccountServiceImpl;
+import by.it.advertproject.service.impl.AdvertServiceImpl;
 import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -29,14 +29,14 @@ public class SignInCommand implements ActionCommand {
         String pass = content.getRequestParameters(PARAM_NAME_PASSWORD, 0);
         TransmissionType transmissionType = TransmissionType.REDIRECT;
         Account account;
-        AccountService accountService = new AccountService();
-        AdvertService advertService = new AdvertService();
+        AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
+        AdvertServiceImpl advertServiceImpl = new AdvertServiceImpl();
         try {
-            account = accountService.checkLogin(login, pass);
+            account = accountServiceImpl.checkLogin(login, pass);
             if (account.getRole().equals(Role.USER)) {
-                List<Advert> userAdvertList = advertService.findAdvertBelongAccount(account);
+                List<Advert> userAdvertList = advertServiceImpl.findAdvertBelongAccount(account);
                 content.putSessionAttribute(ATTR_NAME_LIST_USER_ADVERT, userAdvertList);
-                List<Advert> allAdvertList = advertService.findAllAdvert();
+                List<Advert> allAdvertList = advertServiceImpl.findAllAdvert();
                 content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
                 content.putSessionAttribute(ATTR_NAME_BIRTHDAY, account.getBirthday());
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
@@ -48,7 +48,7 @@ public class SignInCommand implements ActionCommand {
                 page = CommandUrlBuilder.TO_USER_PROFILE_PAGE.setParams(
                         PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
             } else if (account.getRole().equals(Role.ADMINISTRATOR)) {
-                List<Account> allAccount = accountService.findAllAccount();
+                List<Account> allAccount = accountServiceImpl.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
                 content.putRequestAttribute(ATTR_NAME_USER, account.getName());
                 content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());

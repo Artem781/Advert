@@ -7,14 +7,13 @@ import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.command.impl.SignInCommand;
 import by.it.advertproject.exception.CommandException;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.impl.AccountServiceImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
-import static by.it.advertproject.command.AttributeName.ATTR_NAME_ACCOUNT_ID;
 import static by.it.advertproject.command.Message.LOAD_FILE_ERROR_MESSAGE;
 import static by.it.advertproject.command.ParameterName.PARAM_NAME_ACCOUNT_ID;
 
@@ -29,7 +28,7 @@ public class LoadAccountPhotoCommand implements ImageLoadCommand {
         Account account;
         logger.log(Level.INFO, "from LoadAccountPhotoCommand. create account service");
 
-        AccountService accountService = new AccountService();
+        AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
         logger.log(Level.INFO, "from LoadAccountPhotoCommand. create byte[] photo");
 
         byte[] photo;
@@ -42,7 +41,7 @@ public class LoadAccountPhotoCommand implements ImageLoadCommand {
         try {
             logger.log(Level.INFO, "from LoadAccountPhotoCommand. try block ");
 
-            account = accountService.findAccount(accountId);
+            account = accountServiceImpl.findAccount(accountId);
             logger.log(Level.INFO, "from LoadAccountPhotoCommand. account = " + account.toString());
 
         } catch (ServiceException e) {

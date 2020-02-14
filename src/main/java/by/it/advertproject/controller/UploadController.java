@@ -42,7 +42,7 @@ public class UploadController extends AbstractController {
         RequestContent requestContent = new RequestContent();
         try {
             requestContent.extractValues(request);
-            ImageLoadCommand loadCommand = ImageLoadCommandFactory.defineCommand(requestContent);
+            ImageLoadCommand loadCommand = ImageLoadCommandProvider.defineCommand(requestContent);
             response.getOutputStream().write(loadCommand.load(requestContent));
         } catch (CommandException e) {
             response.sendRedirect(CommandUrlBuilder.TO_ERROR

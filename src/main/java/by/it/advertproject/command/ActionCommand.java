@@ -8,7 +8,7 @@ import by.it.advertproject.exception.CommandException;
 public interface ActionCommand {
     /**
      * @param content - content that contains: request parameters,request attribute,
-     *               session attribute
+     *                session attribute
      * @return {@link Router}
      * @throws CommandException
      */

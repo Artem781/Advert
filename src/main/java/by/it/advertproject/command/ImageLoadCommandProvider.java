@@ -10,9 +10,9 @@ import org.apache.logging.log4j.Logger;
 import static by.it.advertproject.command.Message.COMMAND_NOT_DEFINE_ERROR;
 import static by.it.advertproject.command.ParameterName.*;
 
-public class ImageLoadCommandFactory {
+public class ImageLoadCommandProvider {
 
-    private static Logger logger = LogManager.getLogger(ImageLoadCommandFactory.class);
+    private static Logger logger = LogManager.getLogger(ImageLoadCommandProvider.class);
 
     public static ImageLoadCommand defineCommand(RequestContent content)
             throws CommandException {

@@ -5,7 +5,7 @@ import by.it.advertproject.command.*;
 import by.it.advertproject.exception.CommandException;
 import by.it.advertproject.exception.DaoException;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.impl.AccountServiceImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,14 +22,14 @@ public class DeleteUserCommand implements ActionCommand {
     @Override
     public Router execute(RequestContent content) throws CommandException {
         LOGGER.log(Level.INFO, "DeleteUserCommand.");
-        AccountService accountService = new AccountService();
+        AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
         try {
             long idAccountForDelete = Long.parseLong(content.getRequestParameters(PARAM_ID_USER_FOR_DEL, 0));
             boolean paramMarkIfAdmin = Boolean.parseBoolean(content.getRequestParameters(PARAM_MARK_IF_ADMIN, 0));
-            accountService.deleteAccount(idAccountForDelete);
+            accountServiceImpl.deleteAccount(idAccountForDelete);
             if (paramMarkIfAdmin) {
                 String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
-                List<Account> allAccount = accountService.findAllAccount();
+                List<Account> allAccount = accountServiceImpl.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
                 return new Router(page, TransmissionType.REDIRECT);
             } else {

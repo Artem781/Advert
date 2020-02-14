@@ -3,7 +3,7 @@ package by.it.advertproject.command.impl.account;
 import by.it.advertproject.bean.Account;
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.ServiceException;
-import by.it.advertproject.service.AccountService;
+import by.it.advertproject.service.impl.AccountServiceImpl;
 import by.it.advertproject.util.MessageManager;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -27,9 +27,9 @@ public class UpdateProfileCommand implements ActionCommand {
         String confirm = content.getRequestParameters(PARAM_PASSWORD_CONFIRM, 0);
         String email = content.getRequestParameters(PARAM_EMAIL, 0);
         String tel = content.getRequestParameters(PARAM_TEL, 0);
-        AccountService accountService = new AccountService();
+        AccountServiceImpl accountServiceImpl = new AccountServiceImpl();
         try {
-            Account account = accountService.updateProfileData(accountId, name, password, confirm, email, tel);
+            Account account = accountServiceImpl.updateProfileData(accountId, name, password, confirm, email, tel);
             content.putSessionAttribute(ATTR_NAME_USER, account.getName());
             content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
             content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
