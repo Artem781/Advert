@@ -40,5 +40,6 @@
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
 </script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

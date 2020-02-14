@@ -26,6 +26,7 @@
     <%--enctype="multipart/form-data">--%>
     <%--<input type="hidden" name="command" value="create_advert"/>--%>
     <fieldset>
+
         <!-- Form Create advert -->
         <legend>
             <fmt:message key="label.create-ad" bundle="${rb}"/>
@@ -476,6 +477,7 @@
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
 </script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>
 

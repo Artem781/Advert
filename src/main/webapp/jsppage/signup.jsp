@@ -21,7 +21,6 @@
     <br>
     <form class="form-horizontal" action="controller" method="post">
         <input type="hidden" name="command" value="sign_up"/>
-        <%--<input type="hidden" name="accesslevel" value="user"/>--%>
         <fieldset>
             <br>
             <br>
@@ -165,15 +164,10 @@
                     <fmt:message key="label.email" bundle="${rb}"/>
                 </label>
                 <div class="col-md-4">
-
-
-                    <!-- заменить type="text" на type="email" -->
-
-
                     <input id="email"
                            name="email"
                            value="${emailAttr}"
-                           type="text"
+                           type="email"
                            placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
                            class="form-control input-md"
                            aria-describedby="emailHelpBlock"
@@ -248,7 +242,6 @@
         console.log(e.key, e.keyCode);
     })
 </script>
-
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

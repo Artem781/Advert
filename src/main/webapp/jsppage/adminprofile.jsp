@@ -25,16 +25,13 @@
                         <fmt:message key="label.language" bundle="${rb}"/>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <%--        ====================================================================                --%>
+
                         <%--                                CHANGE LANGUAGE                                             --%>
                         <a class="dropdown-item" href="controller?command=set_lang&page=to-adminprofile">
                             <fmt:message key="label.language.type" bundle="${rb}"/>
                         </a>
-                        <%--       ====================================================================                --%>
-
                     </div>
                 </div>
-                <%--                <c:if test="${nameUser!=null}">--%>
                 <form class="form-inline my-2 my-lg-0" action="controller?command=Logout" method="POST">
                     <button type="submit" id="logout" name="logout" class="btn btn-dark">
                         <fmt:message key="label.logout" bundle="${rb}"/>
@@ -50,19 +47,14 @@
         <div class="row">
             <div class="col-md-8" style="height: 200px;">
                 <div class="alert alert-success" role="alert">
-                    <%--<h4 class="alert-heading">Well done!</h4>--%>
-                    <%--                    <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>--%>
                     <p class="mb-0">
                         <strong>
                             <h2><fmt:message key="label.admin-profile" bundle="${rb}"/></h2>
                         </strong>
                     </p>
-                    <%--                    <p>accountId: ${accountId}</p>--%>
-                    <%--                    <p>\${account.getId()}: ${accountId}</p>--%>
                 </div>
             </div>
             <div class="col-md-4">
-                <%--                <img class="rounded img-fluid"--%>
                 <img class="img-responsive"
                      src="upload?command=get_account_image&account_id=${accountId}"
                      alt=""
@@ -95,7 +87,6 @@
                         <c:set var="AdminLogin" scope="session" value="AdminLevel"/>
                         <c:if test="${account.login != AdminLogin}">
                             <tr>
-                                    <%--                            <th scope="row">${countAdvert}</th>--%>
                                 <td>${account.getId()}</td>
                                 <td>${account.login}</td>
                                 <td>${account.name}</td>
@@ -149,5 +140,6 @@
         $('[data-toggle="popover"]').popover({trigger: 'hover'});
     });
 </script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

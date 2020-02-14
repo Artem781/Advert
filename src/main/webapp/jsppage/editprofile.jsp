@@ -13,12 +13,12 @@
 </head>
 <body>
 <div>
+
     <!-- HTML-код модального окна-->
     <div id="deleteUserModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <%--                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>--%>
                     <h4 class="modal-title">
                         <fmt:message key="label.delete-user-button" bundle="${rb}"/>
                     </h4>
@@ -30,9 +30,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">
                         <fmt:message key="label.delete-user-button-close" bundle="${rb}"/>
                     </button>
-                    <%--                    <button type="button" class="btn btn-primary">--%>
-                    <%--                        <fmt:message key="label.delete-user-button" bundle="${rb}"/>--%>
-                    <%--                    </button>--%>
                     <a href="controller?command=delete_user&id_user_for_delete=${accountId}&mark_if_admin=false"
                        class="btn btn-danger">
                         <span class="glyphicon glyphicon-trash">
@@ -60,10 +57,12 @@
             <fmt:message key="label.edit-profile" bundle="${rb}"/>
         </h2>
         <hr>
+
         <%--        FORM UPDATE PHOTO--%>
         <form class="form-horizontal" method="post" action="upload" enctype="multipart/form-data">
             <input type="hidden" name="command" value="update_photo"/>
             <fieldset>
+
                 <!-- Form Name -->
                 <legend>
                     <fmt:message key="label.choose-avatar" bundle="${rb}"/>
@@ -71,10 +70,10 @@
                 <div class="alert-danger">
                     ${errorMessageAttrUploadMessage}
                 </div>
+
                 <!-- File Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="filebutton">
-                        <%--                    <fmt:message key="label.choose-avatar" bundle="${rb}"/>--%>
                     </label>
                     <div class="col-md-4">
                         <input id="filebutton" name="file" value="" class="input-file" type="file">
@@ -83,6 +82,7 @@
                 <span class="form__error">
                         <fmt:message key="label.format-photo" bundle="${rb}"/>
                     </span>
+
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">
@@ -99,11 +99,12 @@
             </fieldset>
         </form>
         <hr>
+
         <%--        FORM UPDATE USER DATA--%>
         <form class="form-horizontal" action="controller" method="post">
             <input type="hidden" name="command" value="update_profile_data"/>
-            <%--<input type="hidden" name="accesslevel" value="user"/>--%>
             <fieldset>
+
                 <!-- Form Name -->
                 <legend>
                     <fmt:message key="label.update-data-user" bundle="${rb}"/>
@@ -111,7 +112,6 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="alert-success">
-                            <%--            <strong>Well done!</strong>--%>
                             <h4>
                                 <strong>
                                     ${successUpdateProfileDataAttr}
@@ -119,7 +119,6 @@
                             </h4>
                         </div>
                     </div>
-                    <%--                    <div class="col-md-6">col-md-6</div>--%>
                 </div>
                 <div class="alert-danger">
                     ${feedback}
@@ -137,6 +136,7 @@
                 <div class="alert-danger">
                     ${incorrectNameAttr}
                 </div>
+
                 <!-- Name input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="name">
@@ -157,6 +157,7 @@
                         </small>
                     </div>
                 </div>
+
                 <!-- Password input-->
                 <div class="alert-danger">
                     ${incorrectPassAttr}
@@ -212,19 +213,15 @@
                         <fmt:message key="label.email" bundle="${rb}"/>
                     </label>
                     <div class="col-md-4">
-
-
-                        <!-- заменить type="text" на type="email" -->
-
-
-                        <input id="email"
-                               name="email"
-                               value="${emailAttr}"
-                               type="text"
-                               placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
-                               class="form-control input-md"
-                               aria-describedby="emailHelpBlock"
-                               required="">
+                        <input
+                                id="email"
+                                name="email"
+                                value="${emailAttr}"
+                                type="email"
+                                placeholder="<fmt:message key="label.email-placeholder" bundle="${rb}"/>"
+                                class="form-control input-md"
+                                aria-describedby="emailHelpBlock"
+                                required="">
                         <small id="emailHelpBlock" class="text-muted">
                             <fmt:message key="label.format-email" bundle="${rb}"/>
                         </small>
@@ -310,5 +307,6 @@
         console.log(e.key, e.keyCode);
     })
 </script>
+<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

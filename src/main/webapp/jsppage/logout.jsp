@@ -11,14 +11,10 @@
 </head>
 <body>
 <div class="container-fluid">
-<header>
-    <%@include file="include/menustart.jsp" %>
-
-
-
-
-</header>
-<p>Cmd Logout: ${message}</p>
+    <header>
+        <%@include file="include/menustart.jsp" %>
+    </header>
+    <p>Cmd Logout: ${message}</p>
     <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
             data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
     </button>

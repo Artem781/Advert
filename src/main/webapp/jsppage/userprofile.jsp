@@ -87,30 +87,6 @@
         <%@include file="include/menuend.jsp" %>
     </div>
 </header>
-
-
-<%--
-
-
-
-
-
-
-
-
-Вставить тэг - админ или юзер
-
-
-
-
-
-
-
-
-
-
---%>
-
 <main>
     <div class="container-fluid">
         <br>
@@ -122,14 +98,10 @@
         <div class="row">
             <div class="col-md-8" style="height: 200px;">
                 <div class="alert alert-success" role="alert">
-                    <%--<h4 class="alert-heading">Well done!</h4>--%>
                     <p class="mb-0">Welcome <strong>${nameUser}</strong>!</p>
-                    <%--                    <p>accountId: ${accountId}</p>--%>
-                    <%--                    <p>\${account.getId()}: ${accountId}</p>--%>
                 </div>
             </div>
             <div class="col-md-4">
-                <%--                <img class="rounded img-fluid"--%>
                 <img class="img-responsive"
                      src="upload?command=get_account_image&account_id=${accountId}"
                      alt=""
