@@ -64,6 +64,6 @@ public class UpdatePhotoCommand implements ActionCommand {
         } catch (ServiceException e) {
             throw new CommandException(e.getMessage());
         }
-        return new Router(page, TransmissionType.FORWARD);
+        return new Router(page, TransmissionType.REDIRECT);
     }
 }

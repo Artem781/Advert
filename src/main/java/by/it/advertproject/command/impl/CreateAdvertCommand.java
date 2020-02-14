@@ -91,7 +91,7 @@ public class CreateAdvertCommand implements ActionCommand {
             content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, accountId.toString()).getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         } catch (ServiceException e) {
             messageManager = e.getMessage().trim();
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE_CREATE_ADVERT,
@@ -159,11 +159,11 @@ public class CreateAdvertCommand implements ActionCommand {
             }
             page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         } catch (DaoException e) {
             page = CommandUrlBuilder.TO_CREATE_ADVERT_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         }
         return new Router(page, transmissionType);
     }

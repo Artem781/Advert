@@ -27,7 +27,7 @@ public class SignInCommand implements ActionCommand {
         String page = null;
         String login = content.getRequestParameters(PARAM_NAME_LOGIN, 0);
         String pass = content.getRequestParameters(PARAM_NAME_PASSWORD, 0);
-        TransmissionType transmissionType = TransmissionType.FORWARD;
+        TransmissionType transmissionType = TransmissionType.REDIRECT;
         Account account;
         AccountService accountService = new AccountService();
         AdvertService advertService = new AdvertService();
@@ -66,7 +66,7 @@ public class SignInCommand implements ActionCommand {
             page = CommandUrlBuilder.TO_SIGN_IN
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())
                     .getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         } catch (DaoException e) {
             page = CommandUrlBuilder.TO_SIGN_IN
                     .setParams(PARAM_NAME_FEEDBACK, e.getMessage())

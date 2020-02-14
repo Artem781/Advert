@@ -69,7 +69,7 @@ public class SignUpCommand implements ActionCommand {
             content.putSessionAttribute(ATTR_OBJECT_ADVERT, account);
             page = CommandUrlBuilder.TO_USER_PROFILE_PAGE
                     .setParams(PARAM_NAME_PAGE_ID, String.valueOf(account.getId())).getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         } catch (ServiceException | DaoException e) {
             messageManager = e.getMessage().trim();
             content.putRequestAttribute(ATTR_NAME_ERROR_MESSAGE,
@@ -113,7 +113,7 @@ public class SignUpCommand implements ActionCommand {
             }
             page = CommandUrlBuilder.TO_SIGN_UP_PAGE
                     .setParams(PARAM_NAME_FEEDBACK, "").getUrl();
-            transmissionType = TransmissionType.FORWARD;
+            transmissionType = TransmissionType.REDIRECT;
         }
         return new Router(page, transmissionType);
     }

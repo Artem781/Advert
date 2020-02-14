@@ -31,16 +31,16 @@ public class DeleteUserCommand implements ActionCommand {
                 String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
                 List<Account> allAccount = accountService.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
-                return new Router(page, TransmissionType.FORWARD);
+                return new Router(page, TransmissionType.REDIRECT);
             } else {
                 content.invalidateSession();
                 String page = CommandUrlBuilder.TO_MAIN_PAGE.getUrl();
-                return new Router(page, TransmissionType.FORWARD);
+                return new Router(page, TransmissionType.REDIRECT);
             }
         } catch (ServiceException e) {
             if (e.getMessage().equals(ACCOUNT_IS_NULL)) {
                 String page = CommandUrlBuilder.TO_ADMIN_PROFILE_PAGE.getUrl();
-                return new Router(page, TransmissionType.FORWARD);
+                return new Router(page, TransmissionType.REDIRECT);
             }
             LOGGER.log(Level.WARN, "DeleteUserCommand." + e);
             throw new CommandException(e.getMessage());

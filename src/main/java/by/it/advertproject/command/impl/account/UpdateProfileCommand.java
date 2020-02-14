@@ -47,6 +47,6 @@ public class UpdateProfileCommand implements ActionCommand {
             content.putRequestAttribute(ATTR_NAME_FB, MessageManager.getProperty(e.getMessage(),
                     String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
         }
-        return new Router(page, TransmissionType.FORWARD);
+        return new Router(page, TransmissionType.REDIRECT);
     }
 }

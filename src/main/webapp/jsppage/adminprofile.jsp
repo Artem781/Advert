@@ -112,11 +112,6 @@
     </div>
 </main>
 <footer>
-    <div class="container-fluid">
-        <button type="button" class="btn btn-primary" data-toggle="popover" title="Сообщение"
-                data-content="Ура, Bootstrap 4 работает">Поднеси ко мне курсор
-        </button>
-    </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -134,11 +129,6 @@
         if (e.key === 'F5') e.preventDefault();
         console.log(e.key, e.keyCode);
     })
-</script>
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({trigger: 'hover'});
-    });
 </script>
 <%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>

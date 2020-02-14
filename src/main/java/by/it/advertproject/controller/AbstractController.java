@@ -18,63 +18,24 @@ import static by.it.advertproject.command.ParameterName.PARAM_NAME_ERROR_MESSAGE
 public abstract class AbstractController extends HttpServlet {
     private static Logger logger = LogManager.getLogger(AbstractController.class);
 
-    //    private static final String COMMAND = "command";
-//    private static final String INDEX = "../index.jsp";
-    private final Logger LOGGER = LogManager.getRootLogger();
-
     protected void process(HttpServletRequest request, HttpServletResponse response,
                            RequestContent content) throws ServletException, IOException {
-
+        logger.log(Level.INFO, "AbstractController.");
         try {
             content.extractValues(request);
             ActionCommand command = CommandFactory.defineCommand(content);
             Router router = command.execute(content);
             content.insertAttributes(request);
             if (router.getTransmissionType().equals(TransmissionType.FORWARD)) {
-                logger.log(Level.INFO, "from AbstractController. if block. ");
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(router.getPath());
                 dispatcher.forward(request, response);
             } else {
                 response.sendRedirect(request.getContextPath() + router.getPath());
             }
         } catch (CommandException e) {
-            logger.log(Level.INFO, "from AbstractController. Catch block. \n e.getMessage(): " + e.getMessage());
-//            content.putRequestAttribute(ATTR_NAME_PAGE_ERROR_MESSAGE,
-//                    MessageManager.getProperty(e.getMessage(),
-//                            String.valueOf(content.getSessionAttribute(ATTR_NAME_LANG))));
-
             response.sendRedirect(CommandUrlBuilder.TO_ERROR
                     .setParams(PARAM_NAME_ERROR_MESSAGE, e.getMessage())
                     .getUrl());
         }
     }
 }
-
-
-//
-////        ActionFactory client = new ActionFactory();
-////        ActionCommand command = client.defineCommand(request);
-//
-//        System.out.print("+++++++++++++++++++++++\n command = " + request.getParameter("command") + "\n");
-//                // определение команды, пришедшей из JSP
-//                Command command = CommandFactory.defineCommand(request.getParameter(COMMAND));
-//                /*
-//                 * вызов реализованного метода execute() и передача параметров
-//                 * классу-обработчику конкретной команды
-//                 */
-//                page = command.execute(request);
-//                System.out.println("from AbstractController. page: "+page);
-//// метод возвращает страницу ответа
-//// page = null; // поэксперементировать!
-//                if (page != null) {
-//                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
-//// вызов страницы ответа на запрос
-//                dispatcher.forward(request, response);
-//                } else {
-//// установка страницы c cообщением об ошибке
-////            page = ConfigurationManager.getProperty("path.page.index");
-//                page = INDEX;
-////            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage"));
-//                request.getSession().setAttribute("nullPage", "message nullpage");
-//                response.sendRedirect(request.getContextPath() + page);
-//                }

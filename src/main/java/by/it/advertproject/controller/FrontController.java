@@ -3,7 +3,6 @@ package by.it.advertproject.controller;
 import by.it.advertproject.command.RequestContent;
 import by.it.advertproject.connectionpool.ConnectionPool;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +26,5 @@ public class FrontController extends AbstractController {
     @Override
     public void destroy() {
         ConnectionPool.INSTANCE.destroyPool();
-//        super.destroy();
     }
 }
