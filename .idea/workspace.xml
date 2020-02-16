@@ -7,164 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a349d7b-e3e8-4f10-94cf-7e5b1775767b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/impl/AdvertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/532e1f84-b6a4-4f12-9d36-b6f5f0e38c6a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ActionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ActionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/CommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ImageLoadCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/ImageLoadCommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/CreateAdvertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignInCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/SignUpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/DeleteUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdatePhotoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/account/UpdateProfileCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/img/LoadAccountPhotoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/command/impl/img/LoadAccountPhotoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/dao/impl/AdvertDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/it/advertproject/service/AdvertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountDaoImplTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountServiceCreateAccountTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AccountServiceTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/AdvertDaoImplTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/BaseDaoImplTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/Child.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/LocaleTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/PoolTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/SetLanguageCommandTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/SomeTester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/bigdecimal/ExampleBigDecimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/classesmistaces/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/enumexample/EnumExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/finalfields/ClassBB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/finalfields/FinalFieldsInitialisation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/increment/increment1/SomeIncrement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/initblock/initblock1/InitPol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/innerclasses/Inh1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/innerclasses/OuterX.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/log/Bar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/log/TestLogWrite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/mapentryset/MapEntrySet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/methodcallinmethod/CallInSout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/methodcallinmethod/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/namesmethodlikeconstructor/NamesMethodLikeConstructor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm1/MainClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/A0.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/A1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polimorfizm2/Res.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Child.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/polimorfizmtask/polomorfizm/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/regex/RegTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/Fifth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/First.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/Fourth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/Second.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/Third.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/enumvanilia/IceCream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/equalsexample/ExampleEquals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn/Base1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn/ISome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn1/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn1/IApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn1/Start.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn2/Task47Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn3/Parent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/increment/jn4/MainArchitec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/polimorfizm/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/polimorfizm/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/sololearn/polimorfizm/TestPol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/some/CommandEquals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/MainExpert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/buble/BubbleSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/insertsort/IS7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSortForExpert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/mergesort/MergeSortNextVersion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/PartitionArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/QuickSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/quicksort/QuickSortNextVersion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/selectionsort/SS7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/taskexpert/selectionsort/SelectionSortNextVersion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/advertproject/tester/examl/wordstatic/static1/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/TaskCookieServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/TaskSessionServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/TestDaoFinalPrj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/TesterDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandCreateAdvert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandEditAds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandEditUsers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandIndex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandProfile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandReset.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandSearchResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/command/CommandSignUp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/controller/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/controller/Form.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/controller/FrontController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/controller/Tools.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/AdvertDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/Dao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/InnerJoinById.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/InterfaceDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/RoleDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/daoB/BaseDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/filter/EncodeFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/filter/ImagesFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/ad8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/noimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/images/tlogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/include/head.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/include/menu.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/createad.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/editads.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/editusers.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/profile.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/searchresult.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/signup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/testjsp/addUser.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/testjsp/cookie.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/testjsp/sessionattr.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/jsp/testjsp/users.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/pool/Connect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/pool/ConnectionCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/pool/ConnectionPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/pool/CustomConnectionPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/databasetask/pool/ProxyConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/dao/CrudDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/dao/UsersDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/dao/UsersDaoJdbcImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/dao/UsersDaojdbcTemplateImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/model/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/servlets/UsersServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/it/db/servlets/UsersServletWithDao.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,20 +41,6 @@
         <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="anaron: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="anaron: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="account: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="anaron: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="advert: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -284,7 +114,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572509878183" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -508,6 +338,15 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - @localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - @localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1bd78444" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -790,14 +629,8 @@
       <workItem from="1581434400214" duration="1078000" />
       <workItem from="1581582498279" duration="13200000" />
       <workItem from="1581672646678" duration="14239000" />
-      <workItem from="1581692976410" duration="2157000" />
-    </task>
-    <task id="LOCAL-00022" summary="signin">
-      <created>1571405612574</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1571405612574</updated>
+      <workItem from="1581692976410" duration="2446000" />
+      <workItem from="1581878873201" duration="4491000" />
     </task>
     <task id="LOCAL-00023" summary="signin">
       <created>1571517161984</created>
@@ -1135,7 +968,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581689772762</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="redirect">
+      <created>1581695166078</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1581695166078</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1229,10 +1069,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581282234006" />
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580546509926">
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581882516046">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580546509926" />
+    <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1581882516046" />
     <state x="92" y="92" width="1182" height="554" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1580810757087">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1241,6 +1081,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="403" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1580378217098" />
+    <state x="432" y="204" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581884309466">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="432" y="204" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.738@0.0.1366.738" timestamp="1581884309466" />
     <state x="488" y="77" key="#com.intellij.ide.util.MemberChooser" timestamp="1581607383311">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1253,58 +1097,66 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="157" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581693908188" />
-    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1581689771588">
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1581695164835">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581689771588" />
-    <state width="1090" height="236" key="GridCell.Tab.0.bottom" timestamp="1581693557091">
+    <state x="288" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581695164835" />
+    <state x="451" y="179" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1581882750921">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581693557091" />
-    <state width="1090" height="236" key="GridCell.Tab.0.center" timestamp="1581693557091">
+    <state x="451" y="179" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1366.738@0.0.1366.738" timestamp="1581882750921" />
+    <state x="551" y="129" key="FileChooserDialogImpl" timestamp="1581884267745">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1581693557091" />
-    <state width="1090" height="236" key="GridCell.Tab.0.left" timestamp="1581693557091">
+    <state x="551" y="129" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1581884267745" />
+    <state width="1090" height="235" key="GridCell.Tab.0.bottom" timestamp="1581881885931">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1581693557091" />
-    <state width="1090" height="236" key="GridCell.Tab.0.right" timestamp="1581693557091">
+    <state width="1090" height="235" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581881885931" />
+    <state width="1090" height="235" key="GridCell.Tab.0.center" timestamp="1581881885931">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1581693557091" />
-    <state width="1090" height="236" key="GridCell.Tab.1.bottom" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1581881885931" />
+    <state width="1090" height="235" key="GridCell.Tab.0.left" timestamp="1581881885931">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.1.center" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1581881885931" />
+    <state width="1090" height="235" key="GridCell.Tab.0.right" timestamp="1581881885931">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.1.left" timestamp="1581693557091">
+    <state width="1090" height="235" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1581881885931" />
+    <state width="1090" height="235" key="GridCell.Tab.1.bottom" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1581693557091" />
-    <state width="1090" height="236" key="GridCell.Tab.1.right" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.1.center" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.2.bottom" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.1.left" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.2.center" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.1.right" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.2.left" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.2.bottom" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
-    <state width="1090" height="236" key="GridCell.Tab.2.right" timestamp="1581693557092">
+    <state width="1090" height="235" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.2.center" timestamp="1581881885932">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1090" height="236" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1581693557092" />
+    <state width="1090" height="235" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.2.left" timestamp="1581881885932">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1090" height="235" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
+    <state width="1090" height="235" key="GridCell.Tab.2.right" timestamp="1581881885932">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1090" height="235" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1581881885932" />
     <state width="1090" height="328" key="GridCell.Tab.3.bottom" timestamp="1581282462101">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -1329,14 +1181,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1579338764699" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1581689777675">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1581695168601">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581689777675" />
-    <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1581271577770">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581695168601" />
+    <state x="504" y="250" width="357" height="241" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1581884171657">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1581271577770" />
+    <state x="504" y="250" width="357" height="241" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.738@0.0.1366.738" timestamp="1581884171657" />
+    <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1581883358752">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="392" y="9" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1581883358752" />
+    <state x="531" y="89" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1581883321565">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="531" y="89" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.738@0.0.1366.738" timestamp="1581883321565" />
     <state x="502" y="195" key="export.test.results" timestamp="1580836386977">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
