@@ -30,13 +30,14 @@ public class AuthFilter implements Filter {
     private static final String BAD_ACCESS_LEVEL = "user attempt use admin action";
 
     @Override
-    public void doFilter(
-            ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
+                         FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest httpRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         try {
+            //есть команда
             if (httpRequest.getParameter(PARAM_NAME_COMMAND) != null) {
+                //не в списке команд паблик
                 if (!isPublicAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND))) {
                     if (httpRequest.getSession(false) == null) {
                         throw new AdvertException(NOT_AUTH_MESSAGE);
@@ -46,6 +47,8 @@ public class AuthFilter implements Filter {
                         }
                     }
                 }
+                // в списке паблик команд
+                // в списке админ команд и
                 if (isAdminAccessAction(httpRequest.getParameter(PARAM_NAME_COMMAND)) &&
                         httpRequest.getSession(false).getAttribute(ATTR_NAME_ACCESS_LEVEL)
                                 .equals(Role.USER)) {
