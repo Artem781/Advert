@@ -42,7 +42,7 @@ public class SignInCommand implements ActionCommand {
                 content.putSessionAttribute(ATTR_NAME_EMAIL, account.getEmail());
                 content.putSessionAttribute(ATTR_NAME_TELEPHONE, account.getTel());
                 content.putSessionAttribute(ATTR_NAME_USER, account.getName());
-                content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
+                content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole().name());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);
                 page = CommandUrlBuilder.TO_USER_PROFILE_PAGE.setParams(
@@ -51,7 +51,7 @@ public class SignInCommand implements ActionCommand {
                 List<Account> allAccount = accountServiceImpl.findAllAccount();
                 content.putSessionAttribute(ATTR_NAME_ALL_ACCOUNT_LIST, allAccount);
                 content.putRequestAttribute(ATTR_NAME_USER, account.getName());
-                content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole());
+                content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, account.getRole().name());
                 content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
                 content.putSessionAttribute(ATTR_NAME_LOGIN, login);

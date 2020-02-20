@@ -9,6 +9,7 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
@@ -46,28 +47,28 @@
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
 
-    <!--    <filter>-->
-    <!--        <filter-name>SecurityFilter</filter-name>-->
-    <!--        <filter-class>by.it.advertproject.filter.SecurityFilter</filter-class>-->
-    <!--    </filter>-->
-    <!--    <filter-mapping>-->
-    <!--        <filter-name>SecurityFilter</filter-name>-->
-    <!--        <url-pattern>/*</url-pattern>-->
-    <!--        <dispatcher>REQUEST</dispatcher>-->
-    <!--        <dispatcher>FORWARD</dispatcher>-->
-    <!--    </filter-mapping>-->
-
-
     <filter>
-        <filter-name>AuthFilter</filter-name>
-        <filter-class>by.it.advertproject.filter.AuthFilter</filter-class>
+        <filter-name>PageRedirectSecurityFilter</filter-name>
+        <filter-class>by.it.advertproject.filter.PageRedirectSecurityFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>AuthFilter</filter-name>
+        <filter-name>PageRedirectSecurityFilter</filter-name>
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+
+
+<!--    <filter>-->
+<!--        <filter-name>AuthFilter</filter-name>-->
+<!--        <filter-class>by.it.advertproject.filter.AuthFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>AuthFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--        <dispatcher>REQUEST</dispatcher>-->
+<!--        <dispatcher>FORWARD</dispatcher>-->
+<!--    </filter-mapping>-->
 
 
     <error-page>

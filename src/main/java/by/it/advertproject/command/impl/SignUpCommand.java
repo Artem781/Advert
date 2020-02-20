@@ -48,7 +48,7 @@ public class SignUpCommand implements ActionCommand {
         content.putRequestAttribute(ATTR_NAME_BIRTHDAY, birthday);
         content.putRequestAttribute(ATTR_NAME_EMAIL, email);
         content.putRequestAttribute(ATTR_NAME_TELEPHONE, tel);
-        content.putRequestAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
+        content.putRequestAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER.name());
         TransmissionType transmissionType;
         Account account;
         AccountServiceImpl service = new AccountServiceImpl();
@@ -62,7 +62,7 @@ public class SignUpCommand implements ActionCommand {
             content.putSessionAttribute(ATTR_NAME_LIST_ALL_ADVERT, allAdvertList);
             content.putRequestAttribute(ATTR_NAME_USER, name);
             content.putSessionAttribute(ATTR_NAME_USER, name);
-            content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER);
+            content.putSessionAttribute(ATTR_NAME_ACCESS_LEVEL, Role.USER.name());
             content.putSessionAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putRequestAttribute(ATTR_NAME_ACCOUNT_ID, account.getId());
             content.putSessionAttribute(ATTR_NAME_LOGIN, login);
