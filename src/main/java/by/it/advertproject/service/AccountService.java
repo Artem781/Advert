@@ -7,7 +7,6 @@ import by.it.advertproject.exception.ServiceException;
 import java.util.List;
 import java.util.Map;
 
-// TODO: 14.02.2020 как генерировать описание интерфейса?
 public interface AccountService {
     List<Account> findAllAccount() throws DaoException;
 

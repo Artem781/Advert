@@ -12,7 +12,7 @@ class ConnectionCheckThread extends Thread {
     private final static String RUN_CHECK_THREAD_MESSAGE = "START CHECK CONNECTIONS THREAD.";
     private final static String ADD_CONN_MESSAGE = "ADD CONNECTION. SIZE OF FREE CONNECTIONS:";
 
-    public ConnectionCheckThread() {
+    ConnectionCheckThread() {
         this.setDaemon(true);
     }
 

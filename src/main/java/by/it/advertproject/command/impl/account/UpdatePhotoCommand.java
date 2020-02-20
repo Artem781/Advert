@@ -1,6 +1,5 @@
 package by.it.advertproject.command.impl.account;
 
-
 import by.it.advertproject.command.*;
 import by.it.advertproject.exception.CommandException;
 import by.it.advertproject.exception.ServiceException;

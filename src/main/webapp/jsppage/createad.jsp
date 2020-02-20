@@ -28,8 +28,6 @@
         <form class="form-horizontal"
               action="controller?command=create_advert"
               method="POST">
-            <%--enctype="multipart/form-data">--%>
-            <%--<input type="hidden" name="command" value="create_advert"/>--%>
             <fieldset>
 
                 <!-- Form Create advert -->

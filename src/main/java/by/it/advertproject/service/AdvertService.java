@@ -7,7 +7,6 @@ import by.it.advertproject.exception.ServiceException;
 
 import java.util.List;
 import java.util.Map;
-// TODO: 14.02.2020 как генерировать описание интерфейса?
 
 public interface AdvertService {
     Advert createAdvert(Map<String, String> carAdParameterMap, Long accountId) throws ServiceException;

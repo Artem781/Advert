@@ -1,7 +1,6 @@
 package by.it.advertproject.command;
 
 import by.it.advertproject.exception.CommandException;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

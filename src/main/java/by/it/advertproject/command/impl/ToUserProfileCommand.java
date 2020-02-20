@@ -18,6 +18,5 @@ public class ToUserProfileCommand implements ActionCommand {
         Logger.log(Level.INFO, "ToUserProfileCommand");
         String page = ConfigurationManager.getProperty(USER_PROFILE_PAGE);
         return new Router(page, TransmissionType.FORWARD);
-
     }
 }

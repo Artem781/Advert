@@ -282,7 +282,9 @@
 </main>
 <footer>
     <div class="container-fluid">
-        <p><%@include file="include/footer.jsp" %></p>
+        <p>
+            <%@include file="include/footer.jsp" %>
+        </p>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

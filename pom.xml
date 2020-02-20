@@ -12,8 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <maven.compiler.source>1.7</maven.compiler.source>
-                <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -43,11 +43,6 @@
             <artifactId>javax.servlet.jsp.jstl-api</artifactId>
             <version>1.2.1</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>jstl</groupId>-->
-        <!--            <artifactId>jstl</artifactId>-->
-        <!--            <version>1.2</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>webjars-locator</artifactId>
@@ -80,45 +75,12 @@
             <version>9.0.12</version>
         </dependency>
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>2.23.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito2</artifactId>
-            <version>1.7.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-support</artifactId>
-            <version>1.7.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <!--<build>-->
-    <!--<plugins>-->
-    <!--&lt;!&ndash; target Java 9 &ndash;&gt;-->
-    <!--<plugin>-->
-    <!--<artifactId>maven-compiler-plugin</artifactId>-->
-    <!--<configuration>-->
-    <!--&lt;!&ndash; fork compilation and use the-->
-    <!--specified executable &ndash;&gt;-->
-    <!--<fork>true</fork>-->
-    <!--<executable>javac9</executable>-->
-    <!--</configuration>-->
-    <!--</plugin>-->
-    <!--</plugins>-->
-    <!--</build>-->
-
 
     <build>
         <finalName>advert</finalName>
@@ -166,5 +128,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

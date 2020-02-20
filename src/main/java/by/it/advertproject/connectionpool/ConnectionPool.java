@@ -53,8 +53,7 @@ public enum ConnectionPool {
             Class.forName(DRIVER_NAME);
         } catch (ClassNotFoundException e) {
             LOGGER.log(Level.ERROR, "driver registration error.", e);
-            // TODO: 13.02.2020 runtime exception?
-            throw new ConnectionPoolException(e);
+            throw new RuntimeException(e);
         }
         freeСonnectionBlockingQueue = new LinkedBlockingDeque<>(poolSize);
         givenAwayConnectionQueue = new LinkedBlockingDeque<>();
@@ -69,7 +68,6 @@ public enum ConnectionPool {
                 throw new ConnectionPoolException(e);
             }
         }
-        // TODO: 13.02.2020 проверить сколько создалось конекшенов
     }
 
     public String getUrl() {
@@ -202,7 +200,6 @@ public enum ConnectionPool {
 
     private class PooledConnection implements Connection {
         private Connection connection;
-
         PooledConnection(Connection c) {
             this.connection = c;
             try {
@@ -262,7 +259,6 @@ public enum ConnectionPool {
 
         @Override
         public void close() throws SQLException {
-            // TODO: 13.02.2020 проверка на null?
             if (connection.isClosed()) {
                 throw new SQLException("Attempting to close closed connection.");
             }

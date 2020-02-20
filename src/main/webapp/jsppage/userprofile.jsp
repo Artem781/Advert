@@ -311,6 +311,5 @@
         console.log(e.key, e.keyCode);
     })
 </script>
-<%--<%@ include file="include/scriptbottom.jsp" %>--%>
 </body>
 </html>

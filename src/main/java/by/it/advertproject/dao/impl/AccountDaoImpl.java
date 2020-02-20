@@ -104,7 +104,6 @@ public class AccountDaoImpl extends BaseDaoImpl<Account> implements AccountDao {
             } catch (Exception e) {
                 logger.log(Level.ERROR, INTERNAL_ERROR, e);
             }
-
         }
     }
 
