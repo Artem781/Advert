@@ -128,7 +128,7 @@ public enum ConnectionPool {
         } catch (SQLException e) {
             LOGGER.log(Level.ERROR, e);
         } catch (InterruptedException e) {
-            LOGGER.log(Level.ERROR, e.getMessage());
+            LOGGER.log(Level.ERROR, e);
             Thread.currentThread().interrupt();
         }
     }
